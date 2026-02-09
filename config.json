@@ -1,0 +1,50 @@
+{
+  "project": {
+    "name": "LLM Causal Discovery Meta-Knowledge",
+    "version": "1.0.0",
+    "description": "Evaluating LLM understanding of causal discovery algorithms with variance analysis"
+  },
+  "experiments": {
+    "n_runs": 100,
+    "algorithms": ["PC", "LiNGAM", "FCI", "NOTEARS"],
+    "datasets": [
+      "titanic",
+      "credit",
+      "wine",
+      "asia",
+      "cancer",
+      "earthquake",
+      "sachs",
+      "survey",
+      "child",
+      "synthetic_12",
+      "synthetic_30"
+    ],
+    "llm_models": [
+      "gpt4",
+      "deepseek",
+      "claude",
+      "gemini",
+      "llama"
+    ],
+    "prompt_formulations": [1, 2, 3]
+  },
+  "paths": {
+    "results": "results",
+    "plots": "plots",
+    "datasets": "src/datasets",
+    "prompts": "prompts"
+  },
+  "visualization": {
+    "dpi": 300,
+    "style": "whitegrid",
+    "font_size": 10,
+    "font_family": "Arial"
+  },
+  "llm_settings": {
+    "temperature": 0.1,
+    "max_tokens": 1024,
+    "max_retries": 3,
+    "retry_delay": 5
+  }
+}

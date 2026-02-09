@@ -1,0 +1,44 @@
+You are tasked with predicting the performance of the FCI (Fast Causal Inference) algorithm on a causal discovery task.
+
+Dataset: ASIA
+Description: Asia benchmark network
+Number of nodes: 8
+Number of edges: 8
+Variables: asia, bronc, dysp, either, lung, smoke, tub, xray
+
+The FCI algorithm:
+- Handles latent confounders and selection bias
+- Uses conditional independence tests (Fisher's z-test)
+- Outputs a Partial Ancestral Graph (PAG) with various edge types
+- Varies alpha parameter from 0.01 to 0.10 across 100 runs
+- Uses bootstrap sampling for robustness
+
+Based on your knowledge of:
+1. The FCI algorithm's characteristics and typical performance
+2. The dataset domain and structure
+3. Statistical properties of the data
+
+Please predict the following performance metrics for FCI on this dataset:
+
+**Your Task:**
+Provide your predicted ranges (min, max) for:
+1. Precision (fraction of predicted edges that are correct): [min, max]
+2. Recall (fraction of true edges that are detected): [min, max]
+3. F1-score (harmonic mean of precision and recall): [min, max]
+. SHD (Structural Hamming Distance - number of edge errors): [min, max]
+
+**Format your response as JSON:**
+{
+  "precision": [min, max],
+  "recall": [min, max],
+  "f1": [min, max],
+  "shd": [min, max],
+  "reasoning": "Brief explanation of your predictions"
+}
+
+**Ground Truth (Hidden from LLM):**
+After you provide your predictions, they will be compared with the actual results:
+- Precision: 0.4509 [0.4397, 0.4618]
+- Recall: 0.6900 [0.6737, 0.7063]
+- F1: 0.5406 [0.5307, 0.5504]
+- SHD: 15.0 [14.6, 15.6]
