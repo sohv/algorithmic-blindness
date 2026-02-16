@@ -8,14 +8,9 @@
     "n_runs": 100,
     "algorithms": ["PC", "LiNGAM", "FCI", "NOTEARS"],
     "datasets": [
-      "titanic",
-      "credit",
-      "wine",
       "asia",
-      "cancer",
-      "earthquake",
       "sachs",
-      "survey",
+      "cancer",
       "child",
       "synthetic_12",
       "synthetic_30"
