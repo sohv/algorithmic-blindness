@@ -183,16 +183,12 @@ class StatisticalTester:
             output_file: Path to save report
         """
         report_lines = [
-            "=" * 80,
             "STATISTICAL RIGOR ENHANCEMENT REPORT",
-            "=" * 80,
             "",
             f"Total Comparisons: {len(results)}",
             f"Significance Level (α): {self.alpha}",
             "",
-            "-" * 80,
             "PAIRWISE COMPARISON RESULTS",
-            "-" * 80,
             ""
         ]
         

@@ -176,16 +176,20 @@ def plot_overlap_heatmap(results_dir: Path, output_dir: Path):
     # Plot heatmap
     fig, ax = plt.subplots(figsize=(14, 8))
     
-    sns.heatmap(pivot, annot=True, fmt='.1f', cmap='RdYlGn', 
+    # Use blue-green colormap matching original visualization
+    cmap = sns.color_palette("viridis_r", as_cmap=True)
+    
+    sns.heatmap(pivot, annot=True, fmt='.1f', cmap=cmap, 
                 vmin=0, vmax=100, cbar_kws={'label': 'Overlap %'},
-                linewidths=0.5, ax=ax)
+                annot_kws={'fontsize': 10, 'color': 'black'},
+                linewidths=0.5, linecolor='gray', ax=ax)
     
     ax.set_title('LLM Prediction Accuracy: Overlap with Algorithmic 95% CI', 
                 fontsize=14, fontweight='bold')
-    ax.set_xlabel('LLM Model / Metric', fontsize=12)
-    ax.set_ylabel('Dataset / Algorithm', fontsize=12)
+    ax.set_xlabel('LLM Model / Metric', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Dataset / Algorithm', fontsize=12, fontweight='bold')
     
-    plt.tight_layout()
+    plt.tight_layout(pad=2.5, w_pad=3.0)
     plt.savefig(output_dir / 'all_datasets_algorithms_overlap_heatmap.png', dpi=300, bbox_inches='tight')
     plt.close()
     

@@ -3,13 +3,14 @@
 Unified LLM Query Interface for Causal Discovery Meta-Knowledge Testing
 ========================================================================
 
-Supports 6 LLMs:
+Supports 7 LLMs:
 1. GPT 5.2 (OpenAI)
 2. Claude Opus 4.6 (Anthropic)
 3. Gemini 2.5 Pro (Google AI)
-4. Llama 3.3 70B (Together AI)
-5. Qwen 3 32B (Together AI)
-6. DeepSeek R1 0528 (Together AI)
+4. Gemini 3 Pro Preview (Google AI)
+5. Llama 3.3 70B (Together AI)
+6. Qwen 3 32B (Together AI)
+7. DeepSeek R1 0528 (Together AI)
 
 Usage:
     from llm_interface import LLMQueryInterface
@@ -51,6 +52,7 @@ class LLMQueryInterface:
         'deepseek': 'deepseek-ai/DeepSeek-R1',
         'claude': 'claude-opus-4-6',
         'gemini': 'gemini-2.5-pro',
+        'gemini3': 'gemini-3-pro-preview',
         'llama': 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
         'qwen': 'Qwen/Qwen3-32B'
     }
@@ -60,7 +62,7 @@ class LLMQueryInterface:
         Initialize LLM query interface.
 
         Args:
-            model_name: Name of the model ('gpt5', 'deepseek', 'claude', 'gemini', 'llama', 'qwen')
+            model_name: Name of the model ('gpt5', 'deepseek', 'claude', 'gemini', 'gemini3', 'llama', 'qwen')
             max_retries: Maximum number of retry attempts (default: 3)
             retry_delay: Delay in seconds between retries (default: 5)
         """
@@ -83,7 +85,7 @@ class LLMQueryInterface:
             return self._init_together()
         elif self.model_name == 'claude':
             return self._init_anthropic()
-        elif self.model_name == 'gemini':
+        elif self.model_name in ['gemini', 'gemini3']:
             return self._init_google()
         elif self.model_name in ['llama', 'qwen']:
             return self._init_together()
@@ -163,7 +165,7 @@ class LLMQueryInterface:
                     content = self._query_deepseek(prompt, temperature)
                 elif self.model_name == 'claude':
                     content = self._query_claude(prompt, temperature)
-                elif self.model_name == 'gemini':
+                elif self.model_name in ['gemini', 'gemini3']:
                     content = self._query_gemini(prompt, temperature)
                 elif self.model_name == 'llama':
                     content = self._query_llama(prompt, temperature)
@@ -279,17 +281,14 @@ def test_llm_connection(model_name: str) -> bool:
 
 
 if __name__ == "__main__":
-    print("="*80)
-    print("LLM INTERFACE CONNECTION TESTS")
-    print("="*80)
 
-    models = ['gpt5', 'deepseek', 'claude', 'gemini', 'llama', 'qwen']
+    models = ['gpt5', 'deepseek', 'claude', 'gemini', 'gemini3', 'llama', 'qwen']
 
     for model in models:
         print(f"\nTesting {model}...")
         try:
             success = test_llm_connection(model)
-            status = "✓ SUCCESS" if success else "✗ FAILED"
+            status = "SUCCESS" if success else "FAILED"
             print(f"{model}: {status}")
         except Exception as e:
-            print(f"{model}: ✗ FAILED - {e}")
+            print(f"{model}: FAILED - {e}")

@@ -36,15 +36,8 @@ except ImportError:
     print("Warning: Credit/Wine datasets not available.")
     REALWORLD_DATASETS_AVAILABLE = False
 
-try:
-    from datasets.alarm_network import load_alarm
-    from datasets.stock_market import load_stock_market
-    from datasets.insurance_network import load_insurance
-    from datasets.barley_network import load_barley
-    NEW_DATASETS_AVAILABLE = True
-except ImportError:
-    print("Warning: New datasets not available (Alarm, Stock Market, Insurance, Barley).")
-    NEW_DATASETS_AVAILABLE = False
+# Note: All benchmark datasets (Asia, Alarm, Sachs, Survey, Child, Hepar2, Earthquake, Insurance)
+# are loaded from local .bif files using bnlearn - no module imports needed
 
 # ============================================================================
 # Dataset Loaders
@@ -116,7 +109,11 @@ def load_bnlearn_network(name: str):
         'sachs': 'sachs',
         'survey': 'survey',
         'child': 'child',
-        'hepar2': 'hepar2'
+        'cancer': 'cancer',
+        'hepar2': 'hepar2',
+        'earthquake': 'earthquake',
+        'insurance': 'insurance',
+        'win95pts': 'win95pts'
     }
 
     if name.lower() not in network_map:
@@ -278,14 +275,24 @@ def run_realworld_experiments(analyzer: VarianceAnalyzer):
     return all_results
 
 
-def run_all_algorithms_on_dataset(analyzer: VarianceAnalyzer, data, true_graph, dataset_name: str, all_results: dict):
-    """Run PC, LiNGAM, FCI, and NOTEARS algorithms on a single dataset."""
-    algorithms = [
+def run_all_algorithms_on_dataset(analyzer: VarianceAnalyzer, data, true_graph, dataset_name: str, all_results: dict, algorithms_to_run=None):
+    """Run PC, LiNGAM, FCI, and NOTEARS algorithms on a single dataset.
+    
+    Args:
+        algorithms_to_run: List of algorithm names to run (e.g., ['fci', 'notears']). If None, runs all.
+    """
+    all_algorithms = [
         ('pc', analyzer.run_pc_multiple),
         ('lingam', analyzer.run_lingam_multiple),
         ('fci', analyzer.run_fci_multiple),
         ('notears', analyzer.run_notears_multiple),
     ]
+    
+    # Filter algorithms if specified
+    if algorithms_to_run is not None:
+        algorithms = [(name, fn) for name, fn in all_algorithms if name in algorithms_to_run]
+    else:
+        algorithms = all_algorithms
 
     for algo_name, algo_fn in algorithms:
         print(f"\n--- Running {algo_name.upper()} Algorithm ---")
@@ -307,9 +314,9 @@ def run_all_algorithms_on_dataset(analyzer: VarianceAnalyzer, data, true_graph, 
     return all_results
 
 
-def run_benchmark_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None):
+def run_benchmark_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None, algorithms_to_run=None):
     """Run benchmarks for specified datasets."""
-    benchmarks = ['asia', 'alarm', 'sachs', 'survey', 'child', 'hepar2']
+    benchmarks = ['asia', 'alarm', 'sachs', 'survey', 'child', 'cancer', 'hepar2', 'earthquake', 'insurance', 'win95pts']
     
     # If no specific datasets requested, run all benchmarks
     if datasets_to_run is None:
@@ -329,7 +336,7 @@ def run_benchmark_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None):
             data, true_graph, nodes = load_bnlearn_network(bench_name)
             print(f"Loaded {bench_name}: {len(nodes)} nodes, {data.shape[0]} samples")
 
-            run_all_algorithms_on_dataset(analyzer, data, true_graph, bench_name, all_results)
+            run_all_algorithms_on_dataset(analyzer, data, true_graph, bench_name, all_results, algorithms_to_run)
 
         except Exception as e:
             print(f"Error processing {bench_name}: {e}")
@@ -338,8 +345,8 @@ def run_benchmark_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None):
     return all_results
 
 
-def run_synthetic_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None):
-    """Run ALL 6 algorithms on synthetic DAGs."""
+def run_synthetic_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None, algorithms_to_run=None):
+    """Run specified algorithms on synthetic DAGs."""
     synthetic_datasets = [('synthetic_12', 12), ('synthetic_30', 30)]
     
     if datasets_to_run:
@@ -363,7 +370,7 @@ def run_synthetic_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None):
         print(f"Generated DAG: {n_nodes} nodes, {np.sum(true_graph)} edges")
 
         dataset_name = f'synthetic_{n_nodes}'
-        run_all_algorithms_on_dataset(analyzer, data, true_graph, dataset_name, all_results)
+        run_all_algorithms_on_dataset(analyzer, data, true_graph, dataset_name, all_results, algorithms_to_run)
 
     return all_results
 
@@ -449,30 +456,25 @@ def main():
     parser.add_argument('--output', type=str, default='results',
                        help='Output directory')
     parser.add_argument('--experiments', nargs='+',
-                       choices=['asia', 'alarm', 'sachs', 'survey', 'child', 'hepar2', 'synthetic_12', 'synthetic_30', 'all'],
+                       choices=['asia', 'alarm', 'sachs', 'survey', 'child', 'cancer', 'hepar2', 'earthquake', 'insurance', 'win95pts', 'synthetic_12', 'synthetic_30', 'all'],
                        default=['all'],
                        help='Individual datasets to run (or "all" for everything)')
+    parser.add_argument('--algorithms', nargs='+',
+                       choices=['pc', 'lingam', 'fci', 'notears'],
+                       default=None,
+                       help='Algorithms to run (e.g., fci notears). If not specified, runs all algorithms')
 
     args = parser.parse_args()
 
     # Initialize analyzer
     analyzer = VarianceAnalyzer(n_runs=args.runs, output_dir=args.output)
 
-    print("="*80)
-    print("CAUSAL DISCOVERY VARIANCE ANALYSIS (UPDATED)")
-    print("="*80)
     print(f"Runs per algorithm: {args.runs}")
     print(f"Output directory: {args.output}")
-    if NEW_DATASETS_AVAILABLE:
-        print("✓ New datasets available: Alarm Network, Stock Market")
-    else:
-        print("✗ New datasets not available")
-    print()
-
     results = {}
 
     # Map of individual datasets to their runner functions
-    benchmark_datasets = {'asia', 'alarm', 'sachs', 'survey', 'child', 'hepar2'}
+    benchmark_datasets = {'asia', 'alarm', 'sachs', 'survey', 'child', 'cancer', 'hepar2', 'earthquake', 'insurance', 'win95pts'}
     synthetic_datasets = {'synthetic_12', 'synthetic_30'}
     
     # Determine which datasets to run
@@ -483,154 +485,16 @@ def main():
     
     # Run benchmark datasets
     if benchmark_datasets & datasets_to_run:
-        benchmark_results = run_benchmark_experiments(analyzer, datasets_to_run)
+        benchmark_results = run_benchmark_experiments(analyzer, datasets_to_run, args.algorithms)
         results.update(benchmark_results)
     
     # Run synthetic datasets
     if synthetic_datasets & datasets_to_run:
-        synthetic_results = run_synthetic_experiments(analyzer, datasets_to_run)
+        synthetic_results = run_synthetic_experiments(analyzer, datasets_to_run, args.algorithms)
         results.update(synthetic_results)
 
-    print("\n" + "="*80)
-    print("ALL EXPERIMENTS COMPLETE")
-    print("="*80)
     print(f"Results saved to: {args.output}/")
     print(f"\nTotal experiments run: {sum(len(v) if isinstance(v, dict) else 1 for v in results.values())}")
-
-    # Statistical Rigor Enhancement
-    print("\n" + "="*60)
-    print("RUNNING STATISTICAL RIGOR ANALYSIS...")
-    print("="*60)
-    
-    try:
-        from statistical_analysis import StatisticalTester
-        from statistical_analysis import ExplanatoryAnalyzer
-        
-        # 1. Statistical Significance Testing
-        tester = StatisticalTester()
-        
-        # Extract algorithm performance data across all experiments
-        all_algorithm_scores = []
-        algorithm_names = []
-        dataset_names = []
-        
-        for exp_type, exp_results in results.items():
-            if isinstance(exp_results, dict):
-                for dataset_algo, metrics in exp_results.items():
-                    if isinstance(metrics, dict) and 'f1' in metrics:
-                        all_algorithm_scores.append(metrics['f1'])
-                        parts = dataset_algo.split('_')
-                        if len(parts) >= 2:
-                            algorithm_names.append(parts[-1])  # Last part is algorithm
-                            dataset_names.append('_'.join(parts[:-1]))  # Everything else is dataset
-        
-        if len(all_algorithm_scores) >= 10:  # Need sufficient data
-            # Group by algorithm for comparison
-            algo_groups = {}
-            for i, algo in enumerate(algorithm_names):
-                if algo not in algo_groups:
-                    algo_groups[algo] = []
-                algo_groups[algo].append(all_algorithm_scores[i])
-            
-            # Compare algorithms pairwise
-            statistical_results = []
-            algo_list = list(algo_groups.keys())
-            
-            for i in range(len(algo_list)):
-                for j in range(i+1, len(algo_list)):
-                    algo1, algo2 = algo_list[i], algo_list[j]
-                    if len(algo_groups[algo1]) >= 5 and len(algo_groups[algo2]) >= 5:
-                        result = tester.paired_t_test(
-                            algo_groups[algo1][:min(len(algo_groups[algo1]), len(algo_groups[algo2]))],
-                            algo_groups[algo2][:min(len(algo_groups[algo1]), len(algo_groups[algo2]))],
-                            f"{algo1} vs {algo2}"
-                        )
-                        statistical_results.append(result)
-                        print(f"  {algo1} vs {algo2}: p={result.p_value:.4f}, d={result.effect_size:.3f}, sig={result.is_significant}")
-            
-            # Apply multiple comparison correction
-            if len(statistical_results) > 1:
-                corrected_results = tester.multiple_comparison_correction(statistical_results, method='fdr')
-                print(f"  Multiple comparison correction applied (FDR): {sum(r.is_significant for r in corrected_results)}/{len(corrected_results)} significant")
-            
-            # Generate comprehensive statistical report
-            report_path = Path(args.output) / "statistical_analysis_report.txt"
-            tester.generate_statistical_report(statistical_results, str(report_path))
-            print(f"  Statistical report saved: {report_path}")
-            
-        else:
-            print("  Insufficient data for statistical testing (need ≥10 algorithm results)")
-        
-        # 2. Explanatory Model Analysis
-        print("\n  Running explanatory factor analysis...")
-        explainer = ExplanatoryAnalyzer()
-        
-        # Prepare data structure for explanatory analysis
-        experimental_results = {}
-        graph_structures = {}
-        dataset_metadata = {}
-        
-        # Mock structures for now (real integration would load actual graph structures)
-        for exp_type, exp_results in results.items():
-            if isinstance(exp_results, dict):
-                for dataset_algo, metrics in exp_results.items():
-                    if isinstance(metrics, dict) and 'f1' in metrics:
-                        parts = dataset_algo.split('_')
-                        if len(parts) >= 2:
-                            dataset = '_'.join(parts[:-1])
-                            algorithm = parts[-1]
-                            
-                            if dataset not in experimental_results:
-                                experimental_results[dataset] = {}
-                            if algorithm not in experimental_results[dataset]:
-                                experimental_results[dataset][algorithm] = {}
-                            
-                            experimental_results[dataset][algorithm] = {
-                                'accuracy': metrics['f1'],
-                                'confidence_interval_width': metrics.get('ci_width', 0.1),
-                                'calibration_error': 0.05  # Default
-                            }
-                            
-                            # Mock graph structure and metadata
-                            if dataset not in graph_structures:
-                                n_nodes = {'titanic': 6, 'sachs': 11, 'alarm': 37}.get(dataset, 10)
-                                graph_structures[dataset] = np.random.randint(0, 2, (n_nodes, n_nodes))
-                                dataset_metadata[dataset] = {
-                                    'sample_size': {'titanic': 891, 'sachs': 7466, 'alarm': 20000}.get(dataset, 1000),
-                                    'dimensionality': n_nodes,
-                                    'noise_level': 0.1
-                                }
-        
-        # Group by mock "LLM" for explanatory analysis structure
-        mock_llm_results = {'Algorithm_Results': experimental_results}
-        
-        try:
-            insights = explainer.analyze_performance_factors(
-                mock_llm_results, graph_structures, dataset_metadata
-            )
-            
-            theory_report_path = Path(args.output) / "explanatory_theory_report.txt"
-            explainer.generate_theory_report(insights, output_file=str(theory_report_path))
-            print(f"  Explanatory report saved: {theory_report_path}")
-            
-            plots_dir = Path(args.output) / "explanatory_plots"
-            plots_dir.mkdir(exist_ok=True)
-            explainer.create_explanatory_plots(insights, output_dir=str(plots_dir))
-            print(f"  Explanatory plots saved: {plots_dir}")
-            
-        except Exception as e:
-            print(f"  Explanatory analysis error: {e}")
-        
-        print("\n" + "="*60)
-        print("STATISTICAL RIGOR ANALYSIS COMPLETE")
-        print("="*60)
-        
-    except ImportError as e:
-        print(f"  Statistical analysis modules not available: {e}")
-        print("  Available modules: statistical_testing.StatisticalTester, explanatory_model.ExplanatoryAnalyzer")
-    except Exception as e:
-        print(f"  Error in statistical analysis: {e}")
-
     return results
 
 

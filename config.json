@@ -7,11 +7,33 @@
   "experiments": {
     "n_runs": 100,
     "algorithms": ["PC", "LiNGAM", "FCI", "NOTEARS"],
-    "datasets": [
+    "benchmark_datasets": [
       "asia",
+      "alarm",
       "sachs",
-      "cancer",
+      "survey",
       "child",
+      "cancer",
+      "hepar2",
+      "earthquake",
+      "insurance",
+      "win95pts"
+    ],
+    "synthetic_datasets": [
+      "synthetic_12",
+      "synthetic_30"
+    ],
+    "all_datasets": [
+      "asia",
+      "alarm",
+      "sachs",
+      "survey",
+      "child",
+      "cancer",
+      "hepar2",
+      "earthquake",
+      "insurance",
+      "win95pts",
       "synthetic_12",
       "synthetic_30"
     ],

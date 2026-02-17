@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Three Prompt Formulations for LLM Meta-Knowledge Testing
 =========================================================
@@ -175,97 +174,76 @@ ALGORITHM_ASSUMPTIONS = {
 
 
 DATASET_PROPERTIES = {
-    'titanic': {
-        'domain': 'Social Science (survival prediction)',
-        'data_type': 'Mixed (categorical + continuous)',
-        'complexity': 'Low (7 variables)',
-        'n_nodes': 7,
-        'n_edges': 5
-    },
-    'credit': {
-        'domain': 'Finance (credit risk assessment)',
-        'data_type': 'Mixed (categorical + continuous)',
-        'complexity': 'Medium (16 variables, 7 edges)',
-        'n_nodes': 16,
-        'n_edges': 7
-    },
-    'wine': {
-        'domain': 'Chemistry (wine physicochemical properties)',
-        'data_type': 'Continuous',
-        'complexity': 'Medium (12 variables, 11 edges)',
-        'n_nodes': 12,
-        'n_edges': 11
-    },
-    'sachs': {
-        'domain': 'Biology (protein signaling)',
-        'data_type': 'Continuous (flow cytometry)',
-        'complexity': 'Medium (11 variables, 17 edges)',
-        'n_nodes': 11,
-        'n_edges': 17
-    },
-    'alarm': {
-        'domain': 'Medical (intensive care monitoring)',
-        'data_type': 'Discrete (patient monitoring)',
-        'complexity': 'High (37 variables, 46 edges)',
-        'n_nodes': 37,
-        'n_edges': 46
-    },
-    'stock_market': {
-        'domain': 'Finance (market relationships)',
-        'data_type': 'Continuous (time series)',
-        'complexity': 'Medium (10 variables, 18 edges)',
-        'n_nodes': 10,
-        'n_edges': 18
-    },
     'asia': {
-        'domain': 'Medical (diagnosis)',
+        'domain': 'Medical (lung cancer diagnosis)',
         'data_type': 'Discrete',
-        'complexity': 'Low (8 variables)',
+        'complexity': 'Small (8 variables, 8 edges)',
         'n_nodes': 8,
         'n_edges': 8
     },
     'alarm': {
-        'domain': 'Medical (ICU Monitoring)',
+        'domain': 'Medical (ICU alarm monitoring system)',
         'data_type': 'Discrete',
-        'complexity': 'High (37 variables)',
+        'complexity': 'Medium (37 variables, 46 edges)',
         'n_nodes': 37,
         'n_edges': 46
     },
+    'sachs': {
+        'domain': 'Biology (causal protein-signaling networks)',
+        'data_type': 'Continuous (flow cytometry)',
+        'complexity': 'Small (11 variables, 17 edges)',
+        'n_nodes': 11,
+        'n_edges': 17
+    },
     'survey': {
-        'domain': 'Social Science',
+        'domain': 'Social Science (attitudes survey)',
         'data_type': 'Discrete',
-        'complexity': 'Low (6 variables)',
+        'complexity': 'Small (6 variables, 6 edges)',
         'n_nodes': 6,
         'n_edges': 6
     },
     'child': {
-        'domain': 'Medical',
+        'domain': 'Medical (pediatric diagnosis expert system)',
         'data_type': 'Discrete',
-        'complexity': 'Medium (20 variables)',
+        'complexity': 'Small (20 variables, 25 edges)',
         'n_nodes': 20,
         'n_edges': 25
+    },
+    'cancer': {
+        'domain': 'Medical (lung cancer diagnosis)',
+        'data_type': 'Discrete',
+        'complexity': 'Small (5 variables, 4 edges)',
+        'n_nodes': 5,
+        'n_edges': 4
     },
     'hepar2': {
         'domain': 'Medical (Hepatitis diagnosis)',
         'data_type': 'Discrete',
-        'complexity': 'High (70 variables)',
+        'complexity': 'Large (70 variables, 120 edges)',
         'n_nodes': 70,
         'n_edges': 120
     },
-    'insurance': {
-        'domain': 'Insurance (risk assessment)',
+    'earthquake': {
+        'domain': 'Seismology (earthquake causes triggering of alarms and reports)',
         'data_type': 'Discrete',
-        'complexity': 'High (27 variables, 52 edges)',
+        'complexity': 'Small (5 variables, 4 edges)',
+        'n_nodes': 5,
+        'n_edges': 4
+    },
+    'insurance': {
+        'domain': 'Insurance (risk assessment with hidden variables)',
+        'data_type': 'Discrete',
+        'complexity': 'Medium (27 variables, 52 edges)',
         'n_nodes': 27,
         'n_edges': 52
     },
-    'barley': {
-        'domain': 'Agriculture (crop production)',
-        'data_type': 'Discrete',
-        'complexity': 'High (48 variables, 84 edges)',
-        'n_nodes': 48,
-        'n_edges': 84
-    }
+    'win95pts': {
+        'domain': 'Expert system for Windows 95 printer troubleshooting',
+        'data_type': 'Discrete (Bayesian network)',
+        'complexity': 'Large (76 variables, 112 edges)',
+        'n_nodes': 76,
+        'n_edges': 112
+    },
 }
 
 
