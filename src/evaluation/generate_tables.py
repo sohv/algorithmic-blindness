@@ -51,11 +51,12 @@ def format_main_table(results_df: pd.DataFrame) -> str:
         
         # Format model name
         model_display = {
-            'gpt4': 'GPT-4',
-            'claude': 'Claude 3.5',
-            'gemini': 'Gemini 1.5',
-            'deepseek': 'DeepSeek',
-            'llama': 'Llama 3',
+            'gpt5': 'GPT-5.2',
+            'claude': 'Claude Opus 4.6',
+            'gemini': 'Gemini 2.5 Pro',
+            'deepseek': 'DeepSeek R1',
+            'llama': 'Llama 3.3 70B',
+            'qwen': 'Qwen 3 32B',
             'heuristic': r'\textit{Heuristic}',
             'random': r'\textit{Random}'
         }.get(llm, llm)
@@ -105,16 +106,12 @@ def format_per_dataset_table(detailed_results: dict, datasets: list) -> str:
             continue  # Skip baselines in this table
         
         model_display = {
-            'gpt4': 'GPT-4',
-            'claude': 'Claude 3.5',
-            'gemini': 'Gemini 1.5',
-            'deepseek': 'DeepSeek',
-            'llama': 'Llama 3'
+            'gpt5': 'GPT-5.2',
+            'claude': 'Claude Opus 4.6',
+            'gemini': 'Gemini 2.5 Pro',
+            'deepseek': 'DeepSeek R1',
+            'llama': 'Llama 3.3 70B'
         }.get(llm_name, llm_name)
-        
-        latex += model_display
-        
-        by_dataset = results['by_dataset']
         for ds in datasets:
             coverage = by_dataset.get(ds, 0.0)
             latex += f" & {coverage:.2f}"
@@ -156,11 +153,11 @@ def format_per_algorithm_table(detailed_results: dict) -> str:
             continue
         
         model_display = {
-            'gpt4': 'GPT-4',
-            'claude': 'Claude 3.5',
-            'gemini': 'Gemini 1.5',
-            'deepseek': 'DeepSeek',
-            'llama': 'Llama 3'
+            'gpt5': 'GPT-5.2',
+            'claude': 'Claude Opus 4.6',
+            'gemini': 'Gemini 2.5 Pro',
+            'deepseek': 'DeepSeek R1',
+            'llama': 'Llama 3.3 70B'
         }.get(llm_name, llm_name)
         
         latex += model_display

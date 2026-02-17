@@ -31,7 +31,7 @@ from prompt_templates import generate_prompt, get_all_formulations
 TEST_DATASET = 'titanic'
 TEST_ALGORITHM = 'PC'
 TEST_N_SAMPLES = 891
-ALL_LLMS = ['gpt4', 'deepseek', 'claude', 'gemini', 'llama']
+ALL_LLMS = ['gpt5', 'deepseek', 'claude', 'gemini', 'llama', 'qwen']
 
 
 def test_single_llm(llm_name: str, verbose: bool = False) -> tuple[bool, dict]:

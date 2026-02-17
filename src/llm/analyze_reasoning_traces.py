@@ -383,7 +383,7 @@ def main():
     trace_1 = analyzer.analyze_trace(
         dataset_name='titanic',
         algorithm_name='PC',
-        llm_model='gpt4',
+        llm_model='gpt5',
         predictions=predictions_1,
         explanation=explanation_1
     )

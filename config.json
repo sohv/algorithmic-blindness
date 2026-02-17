@@ -16,11 +16,12 @@
       "synthetic_30"
     ],
     "llm_models": [
-      "gpt4",
-      "deepseek",
+      "gpt5",
       "claude",
       "gemini",
-      "llama"
+      "llama",
+      "qwen",
+      "deepseek"
     ],
     "prompt_formulations": [1, 2, 3]
   },

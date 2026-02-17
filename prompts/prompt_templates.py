@@ -8,13 +8,17 @@ whether LLM estimates are robust across different question styles.
 
 Formulations:
 1. DIRECT: Straightforward question about algorithm performance
-2. STEP-BY-STEP: Guides LLM through reasoning process
+2. STEP-BY-STEP: Guides LLM through reasoning process (asks LLM to recall assumptions)
 3. META-KNOWLEDGE: Frames as confidence interval estimation task
 
 Why this matters:
 - If variance across prompts is LOW (<20%): Results are robust
 - If variance is HIGH (>20%): Need to discuss sensitivity
 - Either way: Shows methodological thoroughness
+
+IMPORTANT: Before running full experiments, pilot test parsing with:
+    python src/llm/query_all_llms.py --datasets asia --algorithms pc --formulation 1 2 3 --models gpt5 claude gemini deepseek llama qwen
+    Then verify with: python test_parsing.py --verbose
 """
 
 from typing import Dict, List
@@ -41,27 +45,20 @@ FORMULATION_1_DIRECT = PromptTemplate(
     template="""You are an expert in causal discovery algorithms.
 
 Dataset: {dataset_name}
-- Domain: {domain}
 - Variables: {n_nodes}
 - Samples: {n_samples}
+- Data type: {data_type}
 
 Algorithm: {algorithm_name}
 
-Task: Estimate the algorithm's performance on this dataset.
+Estimate the algorithm's performance ranges [lower, upper] for:
 
-Provide your estimates as ranges [lower, upper] for:
-- Precision (proportion of predicted edges that are correct)
-- Recall (proportion of true edges that are recovered)
-- F1-score (harmonic mean of precision and recall)
-- SHD (Structural Hamming Distance - total edge errors)
-
-Format your response as:
 Precision: [X.XX, X.XX]
 Recall: [X.XX, X.XX]
 F1: [X.XX, X.XX]
 SHD: [X, X]
 
-Provide only numerical ranges."""
+YOU MUST USE EXACTLY THIS FORMAT. Provide only numerical ranges."""
 )
 
 
@@ -76,34 +73,25 @@ FORMULATION_2_STEPBYSTEP = PromptTemplate(
     template="""You are an expert in causal discovery algorithms.
 
 Dataset: {dataset_name}
-- Domain: {domain}
 - Variables: {n_nodes}
 - Samples: {n_samples}
-- Sample adequacy: {sample_adequacy}
+- Data type: {data_type}
+- Complexity: {complexity}
 
 Algorithm: {algorithm_name}
 
-Key assumptions:
-{algorithm_assumptions}
+Before predicting, reason through these questions:
+1. What are {algorithm_name}'s core assumptions and requirements?
+2. Does {dataset_name} (with {n_samples} samples, {data_type} data) satisfy these assumptions?
+3. How does the dataset complexity affect {algorithm_name}'s reliability?
+4. What performance range is realistic given these factors?
 
-Reasoning steps:
-1. Does the dataset satisfy the algorithm's assumptions?
-2. How do sample size and complexity affect performance?
-3. What performance range is realistic given these factors?
+After reasoning, provide performance ranges in EXACTLY this format:
 
-Provide your estimates as ranges [lower, upper] for:
-- Precision (proportion of predicted edges that are correct)
-- Recall (proportion of true edges that are recovered)
-- F1-score (overall edge recovery quality)
-- SHD (total edge errors: missing, extra, reversed)
-
-Format your response as:
 Precision: [X.XX, X.XX]
 Recall: [X.XX, X.XX]
 F1: [X.XX, X.XX]
-SHD: [X, X]
-
-Provide only numerical ranges."""
+SHD: [X, X]"""
 )
 
 
@@ -115,36 +103,24 @@ FORMULATION_3_METAKNOWLEDGE = PromptTemplate(
     name="Meta-Knowledge Framing",
     description="Frames task as predicting algorithm variance and confidence intervals",
     formulation_id=3,
-    template="""You are an expert in causal discovery algorithms.
+    template="""You are a statistician evaluating causal discovery algorithms.
 
-Scenario: A researcher will run {algorithm_name} on {dataset_name} 100 times with different random seeds to measure performance distribution.
+A researcher repeatedly runs {algorithm_name} on {dataset_name} with different random seeds.
 
-Dataset: {dataset_name}
-- Domain: {domain}
+Dataset characteristics:
 - Variables: {n_nodes}
 - Samples: {n_samples}
-- Complexity: {complexity}
+- Data type: {data_type}
 
-Task: Predict the 95% confidence interval for each metric based on your knowledge of {algorithm_name}'s behavior on similar datasets.
+Based on {algorithm_name}'s known behavior and {dataset_name}'s properties,
+predict the expected performance distribution.
 
-Consider:
-- {algorithm_name}'s algorithmic properties
-- Dataset characteristics
-- Typical performance ranges on similar data
+What ranges capture 95% of typical outcomes?
 
-Provide estimates as ranges [lower, upper] for:
-- Precision (proportion of predicted edges that are correct)
-- Recall (proportion of true edges that are recovered)
-- F1-score (overall edge recovery quality)
-- SHD (total edge errors)
-
-Format your response as:
 Precision: [X.XX, X.XX]
 Recall: [X.XX, X.XX]
 F1: [X.XX, X.XX]
-SHD: [X, X]
-
-Provide only numerical ranges."""
+SHD: [X, X]"""
 )
 
 
@@ -365,8 +341,6 @@ def generate_prompt(dataset_name: str,
     else:
         algo_key = 'PC'
 
-    assumptions = ALGORITHM_ASSUMPTIONS.get(algo_key, "Standard causal discovery assumptions")
-
     # Get n_nodes from props (all datasets now have this defined)
     n_nodes = props.get('n_nodes', 10)  # Default only for truly unknown datasets
 
@@ -380,7 +354,6 @@ def generate_prompt(dataset_name: str,
         n_edges=props.get('n_edges', 'unknown'),
         data_type=props.get('data_type', 'Mixed'),
         complexity=props.get('complexity', 'Medium'),
-        algorithm_assumptions=assumptions,
         sample_adequacy=sample_adequacy
     )
 

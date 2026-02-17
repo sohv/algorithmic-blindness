@@ -642,7 +642,7 @@ python src/experiments/run_experiments.py --runs 100 --experiments asia sachs ca
 # Day 3: Query LLMs (7 hours)
 python src/llm/query_all_llms.py --datasets asia sachs cancer child synthetic_12 synthetic_30 \
        --algorithms pc lingam fci notears --formulations 1 2 3 \
-       --models gpt4 claude gemini deepseek llama
+       --models gpt5 claude gemini deepseek llama qwen
 
 # Day 4: Compute metrics (PRIMARY)
 python src/evaluation/compute_metrics.py

@@ -24,6 +24,7 @@ lightgbm
 # Utilities
 tqdm
 joblib
+python-dotenv
 
 notears-pytorch
 
@@ -33,6 +34,8 @@ anthropic
 # Gemini 1.5 Pro (Google)
 google-generativeai
 
-# For GPT-5, DeepSeek, Qwen (via Together/DashScope), and Llama (via Together/Groq)
+# For GPT-5, DeepSeek, Qwen (via Together.ai), and Llama (via Together.ai)
 # OpenAI-compatible client used by Qwen and Llama integrations
 openai
+# Together AI client
+together
