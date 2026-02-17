@@ -9,15 +9,15 @@ KEY FINDINGS
 --------------------------------------------------------------------------------
 
 1. Graph Complexity (Sparsity/Density)
-   Impact Score: 44.9%
-   Correlation: -0.449
-   Graph density negatively correlates with performance
+   Impact Score: 22.2%
+   Correlation: 0.222
+   Graph density positively correlates with performance
 
    Evidence:
-     • Graph sparsity range: 0.071 - 0.222
+     • Graph sparsity range: 0.148 - 0.211
      • Performance range: 0.196 - 0.525
-     • Correlation: -0.449
-     • Sparser graphs perform better
+     • Correlation: 0.222
+     • Sparser graphs perform worse
 
 2. Problem Dimensionality
    Impact Score: 4.6%
@@ -68,5 +68,5 @@ THEORETICAL IMPLICATIONS
 --------------------------------------------------------------------------------
 
 Primary Explanatory Factor: Graph Complexity (Sparsity/Density)
-  This factor explains ~45% of performance variation,
+  This factor explains ~22% of performance variation,
   suggesting it is the primary driver of algorithm behavior in this domain.

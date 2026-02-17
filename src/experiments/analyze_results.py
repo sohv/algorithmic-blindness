@@ -374,10 +374,6 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
             # Mount asterisk for hepar2
             dataset_labels_x = [f"{d}*" if d == 'hepar2' else d for d in datasets]
             
-            # Only show x-axis label on the last subplot
-            if metric_idx == 2:
-                ax.set_xlabel('Dataset', fontweight='bold', fontsize=14)
-            
             ax.set_ylabel(metric_label, fontweight='bold', fontsize=14)
             ax.set_title(f'({chr(97 + metric_idx)}) {metric_label} by Dataset and Algorithm', 
                         fontweight='bold', fontsize=13, loc='left')
@@ -390,13 +386,13 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
         # Add common legend at bottom in one horizontal line
         fig.legend(handles_list, labels_list, loc='lower center', ncol=4, 
                   fontsize=11, framealpha=0.95, edgecolor='#333333', 
-                  bbox_to_anchor=(0.5, -0.05), frameon=True)
+                  bbox_to_anchor=(0.5, 0.0), frameon=True)
         
-        # Add hepar2 note on the left
-        fig.text(0.05, -0.02, '*FCI excluded from Hepar2 due to computational constraints', 
-                ha='left', fontsize=10, style='italic', color='#333333')
+        # Add hepar2 note on the left, aligned with legend
+        fig.text(0.05, -0.005, '*FCI excluded from Hepar2 due to computational constraints', 
+                ha='left', fontsize=11, style='italic', color='black')
         
-        plt.subplots_adjust(hspace=0.45, bottom=0.15)
+        plt.subplots_adjust(hspace=0.45, bottom=0.12)
         save_plots_hq(fig, plots_dir, "05b_metrics_by_dataset")
         plt.close()
         print(f"  ✓ 05b_metrics_by_dataset.pdf/png")
