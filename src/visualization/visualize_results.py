@@ -132,13 +132,14 @@ def plot_overlap_heatmap(results_dir: Path, output_dir: Path):
         dataset = data.get('dataset', 'unknown')
         algorithm = data.get('algorithm', 'unknown')
         
-        # Updated to support 5 LLMs
+        # Updated to support 6 LLMs
         llm_mapping = {
-            'gpt4_comparison': 'GPT-4',
+            'gpt5_comparison': 'GPT-5.2',
             'deepseek_comparison': 'DeepSeek R1',
-            'claude_comparison': 'Claude Sonnet 4',
-            'gemini_comparison': 'Gemini 2.0',
-            'llama_comparison': 'Llama 3.3'
+            'claude_comparison': 'Claude Opus 4.6',
+            'gemini_comparison': 'Gemini 2.5 Pro',
+            'llama_comparison': 'Llama 3.3 70B',
+            'qwen_comparison': 'Qwen 3 32B'
         }
 
         for llm, llm_name in llm_mapping.items():

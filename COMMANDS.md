@@ -25,7 +25,7 @@ python check_progress.py --mark-complete "Day 2"
 
 ### Day 3: Query All LLMs (~7 hours)
 ```bash
-python src/llm/query_all_llms.py --datasets asia sachs cancer child synthetic_12 synthetic_30 --algorithms pc lingam fci notears --formulations 1 2 3 --models gpt4 claude gemini deepseek llama
+python src/llm/query_all_llms.py --datasets asia sachs cancer child synthetic_12 synthetic_30 --algorithms pc lingam fci notears --formulations 1 2 3 --models gpt5 claude gemini deepseek llama qwen
 python check_progress.py --mark-complete "Day 3"
 ```
 

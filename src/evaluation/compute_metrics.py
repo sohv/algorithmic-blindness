@@ -182,7 +182,7 @@ def main():
     parser.add_argument('--output', type=str, default='results/evaluation',
                         help='Output directory for evaluation results')
     parser.add_argument('--llms', nargs='+', 
-                        default=['gpt4', 'claude', 'gemini', 'deepseek', 'llama'],
+                        default=['gpt5', 'claude', 'gemini', 'deepseek', 'llama', 'qwen'],
                         help='LLM names to evaluate')
     
     args = parser.parse_args()

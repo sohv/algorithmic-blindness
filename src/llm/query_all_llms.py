@@ -1,25 +1,34 @@
-#!/usr/bin/env python3
 """
 Query All LLMs on Causal Discovery Experiments
 ===============================================
-
-Queries 5 LLMs (GPT-4, DeepSeek, Claude, Gemini, Llama) on all variance experiments
+Queries 6 LLMs (GPT-5.2, Claude Opus 4.6, Gemini 2.5 Pro, DeepSeek R1, Llama 3.3, Qwen 3) on variance experiments
 and compares their predictions with algorithmic confidence intervals.
 
 Usage:
-    # Query all LLMs on all experiments
-    python query_all_llms.py --all
+    # Query all LLMs on all experiments with ALL formulations
+    python query_all_llms.py --all --formulation 1 2 3
+
+    # Query specific formulations
+    python query_all_llms.py --all --formulation 1 2       # Formulations 1 and 2
+    python query_all_llms.py --all --formulation 3         # Formulation 3 only
+    python query_all_llms.py --all                         # Default: Formulation 1 only
 
     # Query specific LLMs
     python query_all_llms.py --models claude gemini llama
 
     # Query specific datasets
-    python query_all_llms.py --datasets titanic sachs --models all
+    python query_all_llms.py --datasets titanic sachs cancer
 
-    # Use specific prompt formulation
-    python query_all_llms.py --formulation 1  # Direct (default)
-    python query_all_llms.py --formulation 2  # Step-by-step
-    python query_all_llms.py --formulation 3  # Meta-knowledge
+    # Query specific algorithms
+    python query_all_llms.py --algorithms pc fci
+
+    # Query specific combination with all formulations
+    python query_all_llms.py --models gpt5 claude --datasets asia sachs cancer --algorithms pc lingam fci --formulation 1 2 3
+
+Formulation Details:
+    1 = Direct Question - Straightforward question about algorithm performance
+    2 = Step-by-Step - Guides LLM through reasoning process
+    3 = Meta-Knowledge - Frames as confidence interval estimation task
 """
 
 import sys
@@ -29,14 +38,18 @@ from pathlib import Path
 from typing import Dict, List, Optional
 from tqdm import tqdm
 import time
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Add parent directories to path
 sys.path.append(str(Path(__file__).parent.parent.parent))
 
-from variance.llm_queries.llm_interface import LLMQueryInterface
-from variance.llm_queries.parse_llm_responses import parse_llm_response
+from src.llm.llm_interface import LLMQueryInterface
+from src.llm.parse_llm_responses import parse_llm_response
 from prompts.prompt_templates import generate_prompt, get_all_formulations, FORMULATION_1_DIRECT
-from variance.variance_analysis import VarianceAnalyzer
+from src.algorithms.variance_analysis import VarianceAnalyzer
 
 
 def load_variance_results(results_dir: Path) -> Dict:
@@ -193,28 +206,30 @@ def main():
         '--models',
         nargs='+',
         default=['claude', 'gemini', 'llama'],
-        choices=['gpt4', 'deepseek', 'claude', 'gemini', 'llama', 'all'],
+        choices=['gpt5', 'deepseek', 'claude', 'gemini', 'llama', 'qwen', 'all'],
         help='LLMs to query (default: claude gemini llama)'
     )
     parser.add_argument(
         '--datasets',
         nargs='+',
         default=None,
+        choices=['asia', 'sachs', 'cancer', 'child', 'synthetic_12', 'synthetic_30', 'titanic', 'survey', 'earthquake', 'wine_quality', 'credit_approval'],
         help='Datasets to query (default: all)'
     )
     parser.add_argument(
         '--algorithms',
         nargs='+',
         default=['pc', 'lingam'],
-        choices=['pc', 'lingam', 'all'],
+        choices=['pc', 'lingam', 'fci', 'notears', 'all'],
         help='Algorithms to query (default: pc lingam)'
     )
     parser.add_argument(
         '--formulation',
         type=int,
-        default=1,
+        nargs='+',
+        default=[1],
         choices=[1, 2, 3],
-        help='Prompt formulation to use (1=Direct, 2=Step-by-step, 3=Meta-knowledge)'
+        help='Prompt formulations to use (default: 1) - can specify multiple: 1 2 3'
     )
     parser.add_argument(
         '--results_dir',
@@ -238,9 +253,14 @@ def main():
 
     # Resolve 'all' flags
     if args.all or 'all' in args.models:
-        models = ['gpt4', 'deepseek', 'claude', 'gemini', 'llama']
+        models = ['gpt5', 'deepseek', 'claude', 'gemini', 'llama', 'qwen']
     else:
         models = args.models
+
+    if args.datasets is None or 'all' in args.datasets:
+        datasets = None  # Use all datasets
+    else:
+        datasets = args.datasets
 
     if 'all' in args.algorithms:
         algorithms = ['pc', 'lingam', 'fci', 'notears']
@@ -255,10 +275,10 @@ def main():
     variance_results = load_variance_results(results_dir)
 
     # Filter by dataset if specified
-    if args.datasets:
+    if datasets is not None:
         variance_results = {
             k: v for k, v in variance_results.items()
-            if k[0] in args.datasets
+            if k[0] in datasets
         }
 
     # Filter by algorithm
@@ -267,16 +287,18 @@ def main():
         if k[1] in algorithms
     }
 
-    # Get prompt formulation
-    formulations = get_all_formulations()
-    formulation = formulations[args.formulation - 1]
+    # Get prompt formulations
+    all_formulations = get_all_formulations()
+    formulations_to_run = [all_formulations[f - 1] for f in args.formulation]
 
     print("="*80)
     print("QUERYING LLMs ON CAUSAL DISCOVERY EXPERIMENTS")
     print("="*80)
     print(f"Models: {', '.join(models)}")
-    print(f"Experiments: {len(variance_results)}")
-    print(f"Formulation: {formulation.name}")
+    print(f"Datasets: {', '.join(datasets) if datasets else 'all'}")
+    print(f"Algorithms: {', '.join(algorithms)}")
+    print(f"Formulations: {', '.join([f.name for f in formulations_to_run])}")
+    print(f"Experiments per formulation: {len(variance_results)}")
     print(f"Output: {output_dir}")
     print()
 
@@ -291,62 +313,82 @@ def main():
 
     print()
 
-    # Query each LLM on each experiment
-    total_queries = len(llm_clients) * len(variance_results)
+    # Query each LLM on each experiment with each formulation
+    total_queries = len(llm_clients) * len(variance_results) * len(formulations_to_run)
     successful_queries = 0
     failed_queries = 0
 
     with tqdm(total=total_queries, desc="Querying LLMs") as pbar:
-        for (dataset, algorithm), variance_data in variance_results.items():
-            for llm_name, llm in llm_clients.items():
-                pbar.set_description(f"{llm_name.upper()} on {dataset}_{algorithm}")
+        for formulation in formulations_to_run:
+            print(f"\n{'='*80}")
+            print(f"FORMULATION: {formulation.name} (#{formulation.formulation_id})")
+            print(f"{'='*80}\n")
+            
+            for (dataset, algorithm), variance_data in variance_results.items():
+                for llm_name, llm in llm_clients.items():
+                    pbar.set_description(f"{llm_name.upper()} | F{formulation.formulation_id} | {dataset}_{algorithm}")
 
-                try:
-                    # Query LLM
-                    estimates = query_llm_for_experiment(
-                        llm=llm,
-                        dataset_name=dataset,
-                        algorithm_name=algorithm.upper(),
-                        formulation=formulation,
-                        n_samples=1000  # Default sample size
-                    )
-
-                    if estimates:
-                        # Create comparison
-                        comparison = create_llm_comparison(
-                            variance_result=variance_data,
-                            llm_estimates=estimates,
-                            llm_name=llm_name
+                    try:
+                        # Query LLM
+                        estimates = query_llm_for_experiment(
+                            llm=llm,
+                            dataset_name=dataset,
+                            algorithm_name=algorithm.upper(),
+                            formulation=formulation,
+                            n_samples=1000  # Default sample size
                         )
 
-                        # Save comparison
-                        save_llm_comparison(
-                            dataset=dataset,
-                            algorithm=algorithm,
-                            llm_name=llm_name,
-                            comparison=comparison,
-                            output_dir=output_dir
-                        )
+                        if estimates:
+                            # Create comparison
+                            comparison = create_llm_comparison(
+                                variance_result=variance_data,
+                                llm_estimates=estimates,
+                                llm_name=llm_name
+                            )
 
-                        successful_queries += 1
-                    else:
+                            # Save comparison with formulation suffix
+                            output_file = output_dir / f"{dataset}_{algorithm}_f{formulation.formulation_id}_llm_comparison.json"
+                            
+                            # Load existing comparisons if file exists
+                            if output_file.exists():
+                                with open(output_file, 'r') as f:
+                                    existing_data = json.load(f)
+                            else:
+                                existing_data = {
+                                    'dataset': dataset,
+                                    'algorithm': algorithm,
+                                    'formulation': formulation.formulation_id
+                                }
+
+                            # Add new LLM comparison
+                            existing_data.update(comparison)
+
+                            # Save updated file
+                            with open(output_file, 'w') as f:
+                                json.dump(existing_data, f, indent=2)
+
+                            successful_queries += 1
+                        else:
+                            failed_queries += 1
+
+                    except Exception as e:
+                        print(f"\n✗ Error querying {llm_name} on {dataset}_{algorithm}: {e}")
                         failed_queries += 1
 
-                except Exception as e:
-                    print(f"\n✗ Error querying {llm_name} on {dataset}_{algorithm}: {e}")
-                    failed_queries += 1
+                    pbar.update(1)
 
-                pbar.update(1)
-
-                # Rate limiting
-                time.sleep(1)
+                    # Rate limiting
+                    time.sleep(1)
 
     print("\n" + "="*80)
     print("QUERY RESULTS")
     print("="*80)
     print(f"Total queries: {total_queries}")
-    print(f"Successful: {successful_queries} ({100*successful_queries/total_queries:.1f}%)")
-    print(f"Failed: {failed_queries} ({100*failed_queries/total_queries:.1f}%)")
+    if total_queries > 0:
+        print(f"Successful: {successful_queries} ({100*successful_queries/total_queries:.1f}%)")
+        print(f"Failed: {failed_queries} ({100*failed_queries/total_queries:.1f}%)")
+    else:
+        print("No queries executed. Check that variance results exist in the results directory.")
     print(f"\nResults saved to: {output_dir}/")
 
 

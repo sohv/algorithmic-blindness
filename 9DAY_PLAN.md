@@ -113,7 +113,7 @@ python src/llm/query_all_llms.py \
        --datasets asia sachs cancer synthetic_12 synthetic_30 \
        --algorithms pc lingam fci notears \
        --formulations 1 2 3 \
-       --models gpt4 claude gemini deepseek llama
+       --models gpt5 claude gemini deepseek llama qwen
 ```
 
 **Time Estimate**: 300 queries × 1 min/query ≈ 5 hours (with retries: ~6-7 hours)
@@ -127,7 +127,7 @@ ls results/llm_comparisons/*.json | wc -l  # Should be ≥20
 python src/llm/parse_llm_responses.py  # Test parsing
 ```
 
-**Fallback**: If time runs short, use only 3 LLMs (GPT-4, Claude, Gemini) = 180 queries
+**Fallback**: If time runs short, use only 3 LLMs (GPT-5.2, Claude, Gemini) = 180 queries
 
 ---
 
@@ -153,7 +153,7 @@ python src/evaluation/compute_metrics.py \
 cat results/evaluation/main_results.csv
 # Should show:
 # LLM, Calibrated_Coverage, MAE, Mean_Width, N_predictions
-# gpt4, 0.72, 0.12, 0.20, 60
+# gpt5, 0.72, 0.12, 0.20, 60
 # claude, 0.68, 0.14, 0.22, 60
 # ...
 # random, 0.15, 0.28, 0.50, 60

@@ -3,12 +3,13 @@
 Unified LLM Query Interface for Causal Discovery Meta-Knowledge Testing
 ========================================================================
 
-Supports 5 LLMs:
-1. GPT-4 (OpenAI)
-2. DeepSeek R1 (DeepSeek API)
-3. Claude Sonnet 4 (Anthropic)
-4. Gemini 2.0 Flash (Google AI)
-5. Llama 3.3 70B (Together AI)
+Supports 6 LLMs:
+1. GPT 5.2 (OpenAI)
+2. Claude Opus 4.6 (Anthropic)
+3. Gemini 2.5 Pro (Google AI)
+4. Llama 3.3 70B (Together AI)
+5. Qwen 3 32B (Together AI)
+6. DeepSeek R1 0528 (Together AI)
 
 Usage:
     from llm_interface import LLMQueryInterface
@@ -46,11 +47,12 @@ class LLMQueryInterface:
     """
 
     SUPPORTED_MODELS = {
-        'gpt4': 'gpt-4-turbo-preview',
-        'deepseek': 'deepseek-reasoner',
-        'claude': 'claude-sonnet-4-20250514',
-        'gemini': 'gemini-2.0-flash-exp',
-        'llama': 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
+        'gpt5': 'gpt-5.2',
+        'deepseek': 'deepseek-ai/DeepSeek-R1',
+        'claude': 'claude-opus-4-6',
+        'gemini': 'gemini-2.5-pro',
+        'llama': 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
+        'qwen': 'Qwen/Qwen3-32B'
     }
 
     def __init__(self, model_name: str, max_retries: int = 3, retry_delay: int = 5):
@@ -58,7 +60,7 @@ class LLMQueryInterface:
         Initialize LLM query interface.
 
         Args:
-            model_name: Name of the model ('gpt4', 'deepseek', 'claude', 'gemini', 'llama')
+            model_name: Name of the model ('gpt5', 'deepseek', 'claude', 'gemini', 'llama', 'qwen')
             max_retries: Maximum number of retry attempts (default: 3)
             retry_delay: Delay in seconds between retries (default: 5)
         """
@@ -75,15 +77,15 @@ class LLMQueryInterface:
 
     def _initialize_client(self):
         """Initialize the appropriate API client based on model name."""
-        if self.model_name == 'gpt4':
+        if self.model_name == 'gpt5':
             return self._init_openai()
         elif self.model_name == 'deepseek':
-            return self._init_deepseek()
+            return self._init_together()
         elif self.model_name == 'claude':
             return self._init_anthropic()
         elif self.model_name == 'gemini':
             return self._init_google()
-        elif self.model_name == 'llama':
+        elif self.model_name in ['llama', 'qwen']:
             return self._init_together()
 
     def _init_openai(self):
@@ -98,19 +100,6 @@ class LLMQueryInterface:
             raise ValueError("OPENAI_API_KEY environment variable not set")
 
         return OpenAI(api_key=api_key)
-
-    def _init_deepseek(self):
-        """Initialize DeepSeek client."""
-        try:
-            from openai import OpenAI
-        except ImportError:
-            raise ImportError("OpenAI package not installed. Run: pip install openai")
-
-        api_key = os.environ.get("DEEPSEEK_API_KEY")
-        if not api_key:
-            raise ValueError("DEEPSEEK_API_KEY environment variable not set")
-
-        return OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
 
     def _init_anthropic(self):
         """Initialize Anthropic client."""
@@ -168,7 +157,7 @@ class LLMQueryInterface:
                 timestamp = time.time()
 
                 # Route to appropriate query method
-                if self.model_name == 'gpt4':
+                if self.model_name == 'gpt5':
                     content = self._query_openai(prompt, temperature)
                 elif self.model_name == 'deepseek':
                     content = self._query_deepseek(prompt, temperature)
@@ -178,6 +167,8 @@ class LLMQueryInterface:
                     content = self._query_gemini(prompt, temperature)
                 elif self.model_name == 'llama':
                     content = self._query_llama(prompt, temperature)
+                elif self.model_name == 'qwen':
+                    content = self._query_qwen(prompt, temperature)
 
                 return LLMResponse(
                     content=content,
@@ -203,7 +194,7 @@ class LLMQueryInterface:
                     )
 
     def _query_openai(self, prompt: str, temperature: float) -> str:
-        """Query GPT-4 via OpenAI API."""
+        """Query GPT 5.2 via OpenAI API."""
         response = self.client.chat.completions.create(
             model=self.model_id,
             messages=[{"role": "user", "content": prompt}],
@@ -213,7 +204,7 @@ class LLMQueryInterface:
         return response.choices[0].message.content
 
     def _query_deepseek(self, prompt: str, temperature: float) -> str:
-        """Query DeepSeek R1 via DeepSeek API."""
+        """Query DeepSeek R1 via Together AI."""
         response = self.client.chat.completions.create(
             model=self.model_id,
             messages=[{"role": "user", "content": prompt}],
@@ -223,7 +214,7 @@ class LLMQueryInterface:
         return response.choices[0].message.content
 
     def _query_claude(self, prompt: str, temperature: float) -> str:
-        """Query Claude Sonnet 4 via Anthropic API."""
+        """Query Claude Opus 4.6 via Anthropic API."""
         message = self.client.messages.create(
             model=self.model_id,
             max_tokens=1024,
@@ -233,7 +224,7 @@ class LLMQueryInterface:
         return message.content[0].text
 
     def _query_gemini(self, prompt: str, temperature: float) -> str:
-        """Query Gemini 2.0 Flash via Google AI."""
+        """Query Gemini 2.5 Pro via Google AI."""
         model = self.client.GenerativeModel(self.model_id)
 
         generation_config = {
@@ -249,6 +240,16 @@ class LLMQueryInterface:
 
     def _query_llama(self, prompt: str, temperature: float) -> str:
         """Query Llama 3.3 70B via Together AI."""
+        response = self.client.chat.completions.create(
+            model=self.model_id,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=temperature,
+            max_tokens=1024
+        )
+        return response.choices[0].message.content
+
+    def _query_qwen(self, prompt: str, temperature: float) -> str:
+        """Query Qwen 3 32B via Together AI."""
         response = self.client.chat.completions.create(
             model=self.model_id,
             messages=[{"role": "user", "content": prompt}],
@@ -282,7 +283,7 @@ if __name__ == "__main__":
     print("LLM INTERFACE CONNECTION TESTS")
     print("="*80)
 
-    models = ['gpt4', 'deepseek', 'claude', 'gemini', 'llama']
+    models = ['gpt5', 'deepseek', 'claude', 'gemini', 'llama', 'qwen']
 
     for model in models:
         print(f"\nTesting {model}...")
