@@ -50,7 +50,7 @@ def plot_metric_comparison(results: Dict, metric: str, output_dir: Path, results
     axes = axes.flatten()
     
     datasets = ['titanic_lingam_variance', 'asia_pc_variance', 'cancer_pc_variance',
-                'earthquake_pc_variance', 'sachs_pc_variance', 'child_pc_variance']
+                'asia_pc_variance', 'alarm_pc_variance', 'sachs_pc_variance', 'survey_pc_variance', 'child_pc_variance', 'hepar2_pc_variance']
     
     for idx, dataset_key in enumerate(datasets):
         ax = axes[idx]
@@ -111,7 +111,7 @@ def plot_metric_comparison(results: Dict, metric: str, output_dir: Path, results
         ax.grid(True, alpha=0.3)
     
     plt.tight_layout()
-    plt.savefig(output_dir / f'{metric}_comparison.png', dpi=300, bbox_inches='tight')
+    plt.savefig(output_dir / f'all_datasets_algorithms_{metric}_comparison.png', dpi=300, bbox_inches='tight')
     plt.close()
     
     print(f"Saved {metric} comparison plot")
@@ -185,7 +185,7 @@ def plot_overlap_heatmap(results_dir: Path, output_dir: Path):
     ax.set_ylabel('Dataset / Algorithm', fontsize=12)
     
     plt.tight_layout()
-    plt.savefig(output_dir / 'overlap_heatmap.png', dpi=300, bbox_inches='tight')
+    plt.savefig(output_dir / 'all_datasets_algorithms_overlap_heatmap.png', dpi=300, bbox_inches='tight')
     plt.close()
     
     print("Saved overlap heatmap")
@@ -212,16 +212,16 @@ def plot_shd_vs_complexity(results: Dict, output_dir: Path):
             n_nodes = int(dataset.split('_')[1])
         elif dataset == 'asia':
             n_nodes = 8
-        elif dataset == 'cancer':
-            n_nodes = 5
-        elif dataset == 'earthquake':
-            n_nodes = 5
+        elif dataset == 'alarm':
+            n_nodes = 37
         elif dataset == 'sachs':
             n_nodes = 11
         elif dataset == 'survey':
             n_nodes = 6
         elif dataset == 'child':
             n_nodes = 20
+        elif dataset == 'hepar2':
+            n_nodes = 70
         elif dataset == 'titanic':
             n_nodes = 7
         
@@ -265,7 +265,7 @@ def plot_shd_vs_complexity(results: Dict, output_dir: Path):
     ax.grid(True, alpha=0.3)
     
     plt.tight_layout()
-    plt.savefig(output_dir / 'shd_vs_complexity.png', dpi=300, bbox_inches='tight')
+    plt.savefig(output_dir / 'all_datasets_algorithms_shd_vs_complexity.png', dpi=300, bbox_inches='tight')
     plt.close()
     
     print("Saved complexity analysis plot")

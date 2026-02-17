@@ -6,8 +6,8 @@ This script reproduces all experiments but with 100 runs per algorithm
 to establish proper confidence intervals.
 
 Coverage:
-- 11 datasets: Titanic, Credit, Wine, Asia, Cancer, Earthquake, Sachs,
-  Survey, Child, Synthetic-12, Synthetic-30
+- 11 datasets: Titanic, Credit, Wine, Asia, Alarm, Sachs, Survey,
+  Child, Hepar2, Synthetic-12, Synthetic-30
 - 4 algorithms: PC, LiNGAM, FCI, NOTEARS
 - Total: 11 datasets x 4 algorithms x 100 runs = 4,400 algorithmic runs
 """
@@ -17,12 +17,15 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 import networkx as nx
-from variance_analysis import VarianceAnalyzer
 import json
+
+# Add parent directory to path so imports work when run as: python run_experiments.py
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from algorithms.variance_analysis import VarianceAnalyzer
 
 # Add datasets to path
 sys.path.append(str(Path(__file__).parent.parent / "datasets"))
-sys.path.append(str(Path(__file__).parent / "datasets"))
 
 # Import new real-world datasets
 try:
@@ -34,13 +37,13 @@ except ImportError:
     REALWORLD_DATASETS_AVAILABLE = False
 
 try:
-    from alarm_network import load_alarm
-    from stock_market import load_stock_market
-    from insurance_network import load_insurance
-    from barley_network import load_barley
+    from datasets.alarm_network import load_alarm
+    from datasets.stock_market import load_stock_market
+    from datasets.insurance_network import load_insurance
+    from datasets.barley_network import load_barley
     NEW_DATASETS_AVAILABLE = True
 except ImportError:
-    print("Warning: New datasets not available. Run from project root.")
+    print("Warning: New datasets not available (Alarm, Stock Market, Insurance, Barley).")
     NEW_DATASETS_AVAILABLE = False
 
 # ============================================================================
@@ -95,7 +98,7 @@ def load_titanic():
 
 
 def load_bnlearn_network(name: str):
-    """Load a benchmark network from bnlearn with real datasets only."""
+    """Load a benchmark network from local .bif files, no downloads."""
     try:
         import bnlearn as bn
     except ImportError:
@@ -109,11 +112,11 @@ def load_bnlearn_network(name: str):
     # Map network names to bnlearn dataset names
     network_map = {
         'asia': 'asia',
-        'cancer': 'cancer', 
-        'earthquake': 'earthquake',
+        'alarm': 'alarm', 
         'sachs': 'sachs',
         'survey': 'survey',
-        'child': 'child'
+        'child': 'child',
+        'hepar2': 'hepar2'
     }
 
     if name.lower() not in network_map:
@@ -121,55 +124,64 @@ def load_bnlearn_network(name: str):
 
     dataset_name = network_map[name.lower()]
     
-    # Load the actual dataset and DAG from bnlearn
-    print(f"Loading real {dataset_name} dataset from bnlearn...")
-    dag = bn.import_DAG(dataset_name)
+    # Load from local datasets folder
+    project_root = Path(__file__).parent.parent.parent
+    local_bif_file = project_root / 'datasets' / f'{dataset_name}.bif'
     
-    # Get the real data associated with this network
-    real_data = bn.import_example(dataset_name)
-    if real_data is not None and hasattr(real_data, 'keys') and 'df' in real_data:
-        data = real_data['df']
-        print(f"Using real {dataset_name} dataset with {len(data)} samples")
-    elif real_data is not None and isinstance(real_data, pd.DataFrame):
-        data = real_data
-        print(f"Using real {dataset_name} dataset with {len(data)} samples")
-    else:
-        raise ValueError(f"No real data available for {dataset_name} in bnlearn")
+    if not local_bif_file.exists():
+        raise FileNotFoundError(
+            f"Local BIF file not found: {local_bif_file}\n"
+            f"Please ensure {dataset_name}.bif exists in datasets/ folder"
+        )
     
-    # Extract true graph as adjacency matrix
+    print(f"Loading {dataset_name} from local BIF file: {local_bif_file}")
+    
+    # Import DAG from BIF file
+    dag = bn.import_DAG(str(local_bif_file))
+    
+    # Extract node names in sorted order
     nodes = sorted(dag['model'].nodes())
-    n = len(nodes)
-    true_graph = np.zeros((n, n))
-
-    node_to_idx = {node: i for i, node in enumerate(nodes)}
-
-    for edge in dag['model'].edges():
-        i = node_to_idx[edge[0]] 
-        j = node_to_idx[edge[1]]
-        true_graph[i, j] = 1
-
-    # Ensure data has the right column order
-    if isinstance(data, pd.DataFrame):
-        data = data[nodes]  # Reorder columns
-    else:
-        # Convert to DataFrame if it's not already
+    print(f"Loaded DAG: {len(nodes)} nodes")
+    
+    # Generate synthetic data directly from DAG (no downloads, no datazets)
+    print(f"Generating data from DAG...")
+    data = bn.sampling(dag, n=10000)
+    
+    # Handle different output formats from bn.sampling
+    if hasattr(data, '__getitem__') and 'df' in data:
+        data = data['df']
+    elif not isinstance(data, pd.DataFrame):
         data = pd.DataFrame(data, columns=nodes)
-
+    
+    print(f"Generated data: {data.shape[0]} samples, {data.shape[1]} variables")
+    
+    # Ensure columns match node names from DAG
+    if list(data.columns) != nodes:
+        # Reorder data columns to match DAG node order
+        data = data[nodes]
+    
     # Encode all categorical/string columns to numeric
     for col in data.columns:
         if data[col].dtype == 'object' or str(data[col].dtype) == 'category':
-            # Use a separate LabelEncoder for each column
-            le = LabelEncoder()  
+            le = LabelEncoder()
             data[col] = le.fit_transform(data[col].astype(str))
-
-    # Ensure all data is numeric and convert to float64
+    
+    # Ensure all data is numeric
     data = data.apply(pd.to_numeric, errors='coerce')
-
-    # Drop any rows that couldn't be converted (if any)
     data = data.dropna()
-
-    # Final conversion to float64 for numerical stability
     data = data.astype(np.float64)
+    
+    # Extract true graph as adjacency matrix
+    n = len(nodes)
+    true_graph = np.zeros((n, n))
+    node_to_idx = {node: i for i, node in enumerate(nodes)}
+    
+    for edge in dag['model'].edges():
+        i = node_to_idx[edge[0]]
+        j = node_to_idx[edge[1]]
+        true_graph[i, j] = 1
+    
+    print(f"Extracted graph: {int(np.sum(true_graph))} edges")
 
     return data, true_graph, nodes
 
@@ -295,13 +307,20 @@ def run_all_algorithms_on_dataset(analyzer: VarianceAnalyzer, data, true_graph, 
     return all_results
 
 
-def run_benchmark_experiments(analyzer: VarianceAnalyzer):
-    """Run PC and LiNGAM on bnlearn benchmark networks."""
-    benchmarks = ['asia', 'cancer', 'earthquake', 'sachs', 'survey', 'child']
+def run_benchmark_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None):
+    """Run benchmarks for specified datasets."""
+    benchmarks = ['asia', 'alarm', 'sachs', 'survey', 'child', 'hepar2']
+    
+    # If no specific datasets requested, run all benchmarks
+    if datasets_to_run is None:
+        datasets_to_run = set(benchmarks)
+    
+    # Filter to only requested benchmarks
+    benchmarks_to_run = [b for b in benchmarks if b in datasets_to_run]
 
     all_results = {}
 
-    for bench_name in benchmarks:
+    for bench_name in benchmarks_to_run:
         print("\n" + "="*80)
         print(f"BENCHMARK: {bench_name.upper()}")
         print("="*80)
@@ -319,9 +338,19 @@ def run_benchmark_experiments(analyzer: VarianceAnalyzer):
     return all_results
 
 
-def run_synthetic_experiments(analyzer: VarianceAnalyzer):
+def run_synthetic_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None):
     """Run ALL 6 algorithms on synthetic DAGs."""
-    node_counts = [12, 30]
+    synthetic_datasets = [('synthetic_12', 12), ('synthetic_30', 30)]
+    
+    if datasets_to_run:
+        synthetic_datasets = [(name, nodes) for name, nodes in synthetic_datasets 
+                             if name in datasets_to_run]
+    
+    if not synthetic_datasets:
+        print("\nNo synthetic datasets requested, skipping synthetic experiments")
+        return {}
+    
+    node_counts = [nodes for _, nodes in synthetic_datasets]
 
     all_results = {}
 
@@ -420,9 +449,9 @@ def main():
     parser.add_argument('--output', type=str, default='results',
                        help='Output directory')
     parser.add_argument('--experiments', nargs='+',
-                       choices=['titanic', 'realworld', 'benchmarks', 'synthetic', 'new_datasets', 'all'],
+                       choices=['asia', 'alarm', 'sachs', 'survey', 'child', 'hepar2', 'synthetic_12', 'synthetic_30', 'all'],
                        default=['all'],
-                       help='Which experiments to run')
+                       help='Individual datasets to run (or "all" for everything)')
 
     args = parser.parse_args()
 
@@ -442,20 +471,25 @@ def main():
 
     results = {}
 
-    if 'all' in args.experiments or 'titanic' in args.experiments:
-        results['titanic'] = run_titanic_experiments(analyzer)
-
-    if 'all' in args.experiments or 'realworld' in args.experiments:
-        results['realworld'] = run_realworld_experiments(analyzer)
-
-    if 'all' in args.experiments or 'benchmarks' in args.experiments:
-        results['benchmarks'] = run_benchmark_experiments(analyzer)
-
-    if 'all' in args.experiments or 'synthetic' in args.experiments:
-        results['synthetic'] = run_synthetic_experiments(analyzer)
-
-    if 'all' in args.experiments or 'new_datasets' in args.experiments:
-        results['new_datasets'] = run_new_datasets_experiments(analyzer)
+    # Map of individual datasets to their runner functions
+    benchmark_datasets = {'asia', 'alarm', 'sachs', 'survey', 'child', 'hepar2'}
+    synthetic_datasets = {'synthetic_12', 'synthetic_30'}
+    
+    # Determine which datasets to run
+    if 'all' in args.experiments:
+        datasets_to_run = benchmark_datasets | synthetic_datasets
+    else:
+        datasets_to_run = set(args.experiments)
+    
+    # Run benchmark datasets
+    if benchmark_datasets & datasets_to_run:
+        benchmark_results = run_benchmark_experiments(analyzer, datasets_to_run)
+        results.update(benchmark_results)
+    
+    # Run synthetic datasets
+    if synthetic_datasets & datasets_to_run:
+        synthetic_results = run_synthetic_experiments(analyzer, datasets_to_run)
+        results.update(synthetic_results)
 
     print("\n" + "="*80)
     print("ALL EXPERIMENTS COMPLETE")
@@ -463,15 +497,14 @@ def main():
     print(f"Results saved to: {args.output}/")
     print(f"\nTotal experiments run: {sum(len(v) if isinstance(v, dict) else 1 for v in results.values())}")
 
-    # CRITICAL: UAI 2026 Statistical Rigor Enhancement
+    # Statistical Rigor Enhancement
     print("\n" + "="*60)
-    print("RUNNING UAI 2026 STATISTICAL RIGOR ANALYSIS...")
+    print("RUNNING STATISTICAL RIGOR ANALYSIS...")
     print("="*60)
     
     try:
-        sys.path.append(str(Path(__file__).parent.parent / "uai_2026_enhancements"))
-        from statistical_testing import StatisticalTester
-        from explanatory_model import ExplanatoryAnalyzer
+        from statistical_analysis import StatisticalTester
+        from statistical_analysis import ExplanatoryAnalyzer
         
         # 1. Statistical Significance Testing
         tester = StatisticalTester()
@@ -521,7 +554,7 @@ def main():
                 print(f"  Multiple comparison correction applied (FDR): {sum(r.is_significant for r in corrected_results)}/{len(corrected_results)} significant")
             
             # Generate comprehensive statistical report
-            report_path = Path(args.output) / "uai_statistical_analysis_report.txt"
+            report_path = Path(args.output) / "statistical_analysis_report.txt"
             tester.generate_statistical_report(statistical_results, str(report_path))
             print(f"  Statistical report saved: {report_path}")
             
@@ -576,11 +609,11 @@ def main():
                 mock_llm_results, graph_structures, dataset_metadata
             )
             
-            theory_report_path = Path(args.output) / "uai_explanatory_theory_report.txt"
+            theory_report_path = Path(args.output) / "explanatory_theory_report.txt"
             explainer.generate_theory_report(insights, output_file=str(theory_report_path))
             print(f"  Explanatory report saved: {theory_report_path}")
             
-            plots_dir = Path(args.output) / "uai_explanatory_plots"
+            plots_dir = Path(args.output) / "explanatory_plots"
             plots_dir.mkdir(exist_ok=True)
             explainer.create_explanatory_plots(insights, output_dir=str(plots_dir))
             print(f"  Explanatory plots saved: {plots_dir}")
@@ -589,15 +622,14 @@ def main():
             print(f"  Explanatory analysis error: {e}")
         
         print("\n" + "="*60)
-        print("UAI 2026 ENHANCEMENT ANALYSIS COMPLETE")
-        print("Expected UAI acceptance boost: +30% (65% → 80%+)")
+        print("STATISTICAL RIGOR ANALYSIS COMPLETE")
         print("="*60)
         
     except ImportError as e:
-        print(f"  UAI enhancement modules not available: {e}")
-        print("  Run: cd uai_2026_enhancements && python -c 'from statistical_testing import StatisticalTester'")
+        print(f"  Statistical analysis modules not available: {e}")
+        print("  Available modules: statistical_testing.StatisticalTester, explanatory_model.ExplanatoryAnalyzer")
     except Exception as e:
-        print(f"  Error in UAI enhancement analysis: {e}")
+        print(f"  Error in statistical analysis: {e}")
 
     return results
 

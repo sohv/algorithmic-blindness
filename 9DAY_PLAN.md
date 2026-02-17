@@ -17,7 +17,7 @@ python src/evaluation/metrics.py
 python src/baselines/simple_baselines.py
 
 # Day 2: Run experiments (5 datasets only)
-python experiments/run_experiments.py --runs 100 --experiments asia sachs cancer synthetic_12 synthetic_30
+python src/experiments/run_experiments.py --runs 100 --experiments asia sachs cancer synthetic_12 synthetic_30
 
 # Day 3: Query LLMs
 python src/llm/query_all_llms.py --datasets asia sachs cancer synthetic_12 synthetic_30 --all
@@ -79,7 +79,7 @@ python src/baselines/simple_baselines.py  # Should show demo predictions
 ### Day 2: Run Experiments (8 hours)
 **Command**:
 ```bash
-python experiments/run_experiments.py --runs 100 \
+python src/experiments/run_experiments.py --runs 100 \
        --experiments asia sachs cancer synthetic_12 synthetic_30
 ```
 

@@ -34,7 +34,7 @@ python src/baselines/simple_baselines.py      # Test baseline predictors
 
 ### Day 2: Run Algorithm Experiments (~2-3 hours)
 ```bash
-python experiments/run_experiments.py --runs 100 --experiments asia sachs cancer child synthetic_12 synthetic_30
+python src/experiments/run_experiments.py --runs 100 --experiments asia sachs cancer child synthetic_12 synthetic_30
 # Output: 24 variance files (6 datasets × 4 algorithms)
 ```
 

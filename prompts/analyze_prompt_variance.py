@@ -188,7 +188,7 @@ def visualize_prompt_variance(variance_df: pd.DataFrame, output_dir: Path):
     ax.set_ylabel('LLM', fontsize=12)
 
     plt.tight_layout()
-    plt.savefig(output_dir / 'prompt_robustness_heatmap.png', dpi=300, bbox_inches='tight')
+    plt.savefig(output_dir / 'all_llms_prompt_robustness_heatmap.png', dpi=300, bbox_inches='tight')
     plt.close()
 
     # 2. Percent Difference Across Prompts
@@ -218,7 +218,7 @@ def visualize_prompt_variance(variance_df: pd.DataFrame, output_dir: Path):
     plt.xticks(rotation=0)
 
     plt.tight_layout()
-    plt.savefig(output_dir / 'prompt_percent_difference.png', dpi=300, bbox_inches='tight')
+    plt.savefig(output_dir / 'all_llms_prompt_percent_difference.png', dpi=300, bbox_inches='tight')
     plt.close()
 
     # 3. Overall Robustness by LLM
@@ -245,7 +245,7 @@ def visualize_prompt_variance(variance_df: pd.DataFrame, output_dir: Path):
     ax.grid(axis='x', alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig(output_dir / 'llm_overall_robustness.png', dpi=300, bbox_inches='tight')
+    plt.savefig(output_dir / 'all_llms_overall_robustness.png', dpi=300, bbox_inches='tight')
     plt.close()
 
     print(f"\nVisualizations saved to {output_dir}/")

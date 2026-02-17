@@ -248,19 +248,12 @@ DATASET_PROPERTIES = {
         'n_nodes': 8,
         'n_edges': 8
     },
-    'cancer': {
-        'domain': 'Medical',
+    'alarm': {
+        'domain': 'Medical (ICU Monitoring)',
         'data_type': 'Discrete',
-        'complexity': 'Low (5 variables)',
-        'n_nodes': 5,
-        'n_edges': 4
-    },
-    'earthquake': {
-        'domain': 'General (alarm system)',
-        'data_type': 'Discrete',
-        'complexity': 'Low (5 variables)',
-        'n_nodes': 5,
-        'n_edges': 4
+        'complexity': 'High (37 variables)',
+        'n_nodes': 37,
+        'n_edges': 46
     },
     'survey': {
         'domain': 'Social Science',
@@ -275,6 +268,13 @@ DATASET_PROPERTIES = {
         'complexity': 'Medium (20 variables)',
         'n_nodes': 20,
         'n_edges': 25
+    },
+    'hepar2': {
+        'domain': 'Medical (Hepatitis diagnosis)',
+        'data_type': 'Discrete',
+        'complexity': 'High (70 variables)',
+        'n_nodes': 70,
+        'n_edges': 120
     },
     'insurance': {
         'domain': 'Insurance (risk assessment)',

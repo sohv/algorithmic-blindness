@@ -185,8 +185,8 @@ Three types of overlap are tested:
 
 > **Note**: Original plan included 11 datasets. Reduced to 6 for UAI submission deadline.
 > 
-> **Dropped**: Titanic, Credit, Wine, Earthquake, Survey (5 datasets)  
-> **Kept**: Asia, Sachs, Cancer, Child, Synthetic-12, Synthetic-30 (6 datasets)  
+> **Dropped**: Titanic, Credit, Wine (3 datasets)  
+> **Kept**: Asia, Alarm, Sachs, Survey, Child, Hepar2, Synthetic-12, Synthetic-30 (8 datasets)  
 > **Rationale**: Focus on core testbed with mix of real and synthetic data; Child (20 vars) tests complex causal systems and fills gap between small (5-12 vars) and large (30 vars) networks.
 
 ### Benchmark Networks (from BNLearn)
@@ -516,7 +516,7 @@ Tests whether LLMs recognize that different algorithms have fundamentally differ
 ## UAI Submission Scope Reduction
 
 ### ❌ Dropped (Time Constraints):
-- **5 additional datasets**: Titanic, Credit, Wine, Earthquake, Survey
+- **3 additional datasets**: Titanic, Credit, Wine
 - **Expert baseline**: Human expert predictions (compare to heuristic baseline instead)
 - **Failure mode analysis**: Systematic testing of edge cases (mention in limitations only)
 - **Information ablation**: Test with/without dataset names (future work)
@@ -637,7 +637,7 @@ python src/evaluation/metrics.py
 python src/baselines/simple_baselines.py
 
 # Day 2: Run experiments (2-3 hours)
-python experiments/run_experiments.py --runs 100 --experiments asia sachs cancer child synthetic_12 synthetic_30
+python src/experiments/run_experiments.py --runs 100 --experiments asia sachs cancer child synthetic_12 synthetic_30
 
 # Day 3: Query LLMs (7 hours)
 python src/llm/query_all_llms.py --datasets asia sachs cancer child synthetic_12 synthetic_30 \
@@ -658,7 +658,7 @@ python src/evaluation/generate_tables.py
 
 ```bash
 # Step 1: Establish algorithmic ground truth (2-3 hours)
-python experiments/run_experiments.py --runs 100  # Entire pipeline
+python src/experiments/run_experiments.py --runs 100  # Entire pipeline
 
 # Step 2: Test LLM parsing (1 minute)
 python test_parsing.py
@@ -675,7 +675,7 @@ python src/visualization/visualize_results.py
 
 ```bash
 # Test with single dataset (Titanic)
-python experiments/run_experiments.py --runs 10 --experiments titanic
+python src/experiments/run_experiments.py --runs 10 --experiments titanic
 
 # Test LLM parsing
 python test_parsing.py

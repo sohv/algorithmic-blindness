@@ -331,7 +331,7 @@ class VarianceAnalyzer:
                 bootstrap_data = data.iloc[bootstrap_indices].values
 
                 # Run FCI with varying alpha on bootstrap sample
-                G, edges = fci(bootstrap_data, independence_test_method=fisherz, alpha=alphas[run])
+                G, edges = fci(bootstrap_data, independence_test_method=fisherz, alpha=float(alphas[run]))
                 learned_graph = G.graph
 
                 # Convert PAG to binary adjacency matrix (any edge type counts)
@@ -369,9 +369,9 @@ class VarianceAnalyzer:
         (via matrix exponential) and L1 regularization for sparsity.
         """
         try:
-            from notears import notears_linear
+            from notears_pytorch import notears_linear
         except ImportError:
-            print("NOTEARS not installed. Install with: pip install notears")
+            print("NOTEARS not installed. Install with: pip install notears-pytorch")
             raise
 
         precision_vals = []
@@ -392,7 +392,7 @@ class VarianceAnalyzer:
                 bootstrap_data = data.iloc[bootstrap_indices].values
 
                 # Run NOTEARS with varying lambda1 on bootstrap sample
-                W_est = notears_linear(bootstrap_data, lambda1=lambda1_values[run], loss_type='l2')
+                W_est = notears_linear(bootstrap_data, lambda1=lambda1_values[run])
 
                 # Convert to binary adjacency matrix (threshold small weights)
                 learned_graph = (np.abs(W_est) > 0.3).astype(int)

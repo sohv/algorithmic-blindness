@@ -19,7 +19,7 @@ python check_progress.py --mark-complete "Day 1"
 
 ### Day 2: Run Algorithm Experiments (~2-3 hours)
 ```bash
-python experiments/run_experiments.py --runs 100 --experiments asia sachs cancer child synthetic_12 synthetic_30
+python src/experiments/run_experiments.py --runs 100 --experiments asia sachs cancer child synthetic_12 synthetic_30
 python check_progress.py --mark-complete "Day 2"
 ```
 
