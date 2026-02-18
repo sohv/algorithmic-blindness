@@ -1,0 +1,8 @@
+Here is the high-level reasoning for the predicted performance ranges:
+
+The FCI algorithm is designed to handle latent confounders, making it theoretically robust, but it requires large sample sizes for reliable conditional independence testing, especially with continuous data. While the Sachs dataset has a reasonable sample size (1000) relative to its small variable count (11), the biological noise and non-linear relationships in flow cytometry data often violate the strict linearity or Gaussianity assumptions required by standard CI tests used with FCI. Consequently, FCI tends to be conservative, resulting in lower recall due to missing edges and moderate precision, with structural Hamming distances reflecting these inaccuracies.
+
+Precision: [0.35, 0.55]
+Recall: [0.25, 0.45]
+F1: [0.30, 0.50]
+SHD: [10, 20]

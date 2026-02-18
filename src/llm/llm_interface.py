@@ -3,14 +3,16 @@
 Unified LLM Query Interface for Causal Discovery Meta-Knowledge Testing
 ========================================================================
 
-Supports 7 LLMs:
+Supports 9 LLMs:
 1. GPT 5.2 (OpenAI)
 2. Claude Opus 4.6 (Anthropic)
-3. Gemini 2.5 Pro (Google AI)
+3. Gemini 3 Flash (Google AI)
 4. Gemini 3 Pro Preview (Google AI)
 5. Llama 3.3 70B (Together AI)
-6. Qwen 3 32B (Together AI)
-7. DeepSeek R1 0528 (Together AI)
+6. Qwen 2.5 7B (Together AI)
+7. Qwen 3 Next 80B (Together AI) - reasoning model
+8. DeepSeek R1 0528 (Together AI)
+9. DeepSeek V3.2 Reasoner (Official DeepSeek API) - thinking mode
 
 Usage:
     from llm_interface import LLMQueryInterface
@@ -50,11 +52,13 @@ class LLMQueryInterface:
     SUPPORTED_MODELS = {
         'gpt5': 'gpt-5.2',
         'deepseek': 'deepseek-ai/DeepSeek-R1',
+        'deepseekthink': 'deepseek-reasoner',
         'claude': 'claude-opus-4-6',
-        'gemini': 'gemini-2.5-pro',
+        'geminiflash': 'gemini-3-flash-preview',
         'gemini3': 'gemini-3-pro-preview',
         'llama': 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
-        'qwen': 'Qwen/Qwen3-32B'
+        'qwen': 'Qwen/Qwen2.5-7B-Instruct-Turbo',
+        'qwenthink': 'Qwen/Qwen3-Next-80B-A3B-Thinking'
     }
 
     def __init__(self, model_name: str, max_retries: int = 3, retry_delay: int = 5):
@@ -62,7 +66,7 @@ class LLMQueryInterface:
         Initialize LLM query interface.
 
         Args:
-            model_name: Name of the model ('gpt5', 'deepseek', 'claude', 'gemini', 'gemini3', 'llama', 'qwen')
+            model_name: Name of the model ('gpt5', 'deepseek', 'deepseekthink', 'claude', 'geminiflash', 'gemini3', 'llama', 'qwen', 'qwenthink')
             max_retries: Maximum number of retry attempts (default: 3)
             retry_delay: Delay in seconds between retries (default: 5)
         """
@@ -83,11 +87,13 @@ class LLMQueryInterface:
             return self._init_openai()
         elif self.model_name == 'deepseek':
             return self._init_together()
+        elif self.model_name == 'deepseekthink':
+            return self._init_deepseek_official()
         elif self.model_name == 'claude':
             return self._init_anthropic()
-        elif self.model_name in ['gemini', 'gemini3']:
+        elif self.model_name in ['geminiflash', 'gemini3']:
             return self._init_google()
-        elif self.model_name in ['llama', 'qwen']:
+        elif self.model_name in ['llama', 'qwen', 'qwenthink']:
             return self._init_together()
 
     def _init_openai(self):
@@ -116,19 +122,33 @@ class LLMQueryInterface:
 
         return Anthropic(api_key=api_key)
 
-    def _init_google(self):
-        """Initialize Google AI client."""
+    def _init_deepseek_official(self):
+        """Initialize official DeepSeek API client."""
         try:
-            import google.generativeai as genai
+            from openai import OpenAI
         except ImportError:
-            raise ImportError("Google AI package not installed. Run: pip install google-generativeai")
+            raise ImportError("OpenAI package not installed. Run: pip install openai")
+
+        api_key = os.environ.get("DEEPSEEK_API_KEY")
+        if not api_key:
+            raise ValueError("DEEPSEEK_API_KEY environment variable not set")
+
+        # DeepSeek uses OpenAI-compatible API
+        return OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
+
+    def _init_google(self):
+        """Initialize Google AI client (new google-genai SDK)."""
+        try:
+            from google import genai
+        except ImportError:
+            raise ImportError("Google AI package not installed. Run: pip install google-genai")
 
         api_key = os.environ.get("GOOGLE_API_KEY")
         if not api_key:
             raise ValueError("GOOGLE_API_KEY environment variable not set")
 
-        genai.configure(api_key=api_key)
-        return genai
+        # New SDK creates client directly instead of configuring global state
+        return genai.Client(api_key=api_key)
 
     def _init_together(self):
         """Initialize Together AI client."""
@@ -163,13 +183,15 @@ class LLMQueryInterface:
                     content = self._query_openai(prompt, temperature)
                 elif self.model_name == 'deepseek':
                     content = self._query_deepseek(prompt, temperature)
+                elif self.model_name == 'deepseekthink':
+                    content = self._query_deepseek_official(prompt, temperature)
                 elif self.model_name == 'claude':
                     content = self._query_claude(prompt, temperature)
-                elif self.model_name in ['gemini', 'gemini3']:
+                elif self.model_name in ['geminiflash', 'gemini3']:
                     content = self._query_gemini(prompt, temperature)
                 elif self.model_name == 'llama':
                     content = self._query_llama(prompt, temperature)
-                elif self.model_name == 'qwen':
+                elif self.model_name in ['qwen', 'qwenthink']:
                     content = self._query_qwen(prompt, temperature)
 
                 return LLMResponse(
@@ -201,7 +223,7 @@ class LLMQueryInterface:
             model=self.model_id,
             messages=[{"role": "user", "content": prompt}],
             temperature=temperature,
-            max_tokens=1024
+            max_completion_tokens=4096
         )
         return response.choices[0].message.content
 
@@ -211,34 +233,70 @@ class LLMQueryInterface:
             model=self.model_id,
             messages=[{"role": "user", "content": prompt}],
             temperature=temperature,
-            max_tokens=1024
+            max_tokens=4096  # Increased from 2048 - DeepSeek R1 needs more tokens for reasoning + output
         )
-        return response.choices[0].message.content
+        
+        content = response.choices[0].message.content
+        
+        # Remove <think> tags to extract just the final answer
+        # Handle both properly closed tags and unclosed tags (truncated responses)
+        import re
+        # Match both <think>...</think> and <think>...EOF
+        content = re.sub(r'<think>.*?(?:</think>|$)', '', content, flags=re.DOTALL).strip()
+        
+        return content
+
+    def _query_deepseek_official(self, prompt: str, temperature: float) -> str:
+        """Query DeepSeek V3.2 Reasoner via official DeepSeek API (thinking mode)."""
+        response = self.client.chat.completions.create(
+            model=self.model_id,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=temperature,
+            max_tokens=4096
+        )
+        
+        content = response.choices[0].message.content
+        
+        # Remove <think> tags to extract just the final answer
+        import re
+        content = re.sub(r'<think>.*?(?:</think>|$)', '', content, flags=re.DOTALL).strip()
+        
+        return content
 
     def _query_claude(self, prompt: str, temperature: float) -> str:
         """Query Claude Opus 4.6 via Anthropic API."""
         message = self.client.messages.create(
             model=self.model_id,
-            max_tokens=1024,
+            max_tokens=4096,
             temperature=temperature,
             messages=[{"role": "user", "content": prompt}]
         )
         return message.content[0].text
 
     def _query_gemini(self, prompt: str, temperature: float) -> str:
-        """Query Gemini 2.5 Pro via Google AI."""
-        model = self.client.GenerativeModel(self.model_id)
-
-        generation_config = {
-            'temperature': temperature,
-            'max_output_tokens': 1024,
-        }
-
-        response = model.generate_content(
-            prompt,
-            generation_config=generation_config
+        """Query Gemini 3 Pro / Flash via Google AI (new SDK)."""
+        from google.genai import types
+        
+        # Determine thinking level based on model
+        # Gemini 3 Pro only supports 'low' and 'high' (not 'minimal')
+        # Gemini 3 Flash supports 'minimal', 'low', 'medium', 'high'
+        thinking_level = "low" if self.model_name == 'gemini3' else "minimal"
+        
+        response = self.client.models.generate_content(
+            model=self.model_id,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=temperature,
+                max_output_tokens=4096,
+                thinking_config=types.ThinkingConfig(thinking_level=thinking_level),
+            ),
         )
-        return response.text
+        
+        # Extract text from response
+        if response.text:
+            return response.text
+        
+        raise RuntimeError(f"Invalid Gemini response: no valid text content")
 
     def _query_llama(self, prompt: str, temperature: float) -> str:
         """Query Llama 3.3 70B via Together AI."""
@@ -246,7 +304,7 @@ class LLMQueryInterface:
             model=self.model_id,
             messages=[{"role": "user", "content": prompt}],
             temperature=temperature,
-            max_tokens=1024
+            max_tokens=4096
         )
         return response.choices[0].message.content
 
@@ -256,7 +314,7 @@ class LLMQueryInterface:
             model=self.model_id,
             messages=[{"role": "user", "content": prompt}],
             temperature=temperature,
-            max_tokens=1024
+            max_tokens=4096
         )
         return response.choices[0].message.content
 
@@ -282,7 +340,7 @@ def test_llm_connection(model_name: str) -> bool:
 
 if __name__ == "__main__":
 
-    models = ['gpt5', 'deepseek', 'claude', 'gemini', 'gemini3', 'llama', 'qwen']
+    models = ['gpt5', 'deepseek', 'claude', 'geminiflash', 'gemini3', 'llama', 'qwen', 'qwenthink']
 
     for model in models:
         print(f"\nTesting {model}...")

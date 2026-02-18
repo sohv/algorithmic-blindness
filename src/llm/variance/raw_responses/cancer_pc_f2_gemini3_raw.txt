@@ -1,0 +1,6 @@
+Based on the analysis of the PC algorithm's performance on the Cancer dataset (5 variables, 1000 samples, discrete data), here are the predicted metrics:
+
+Precision: [0.40, 0.60]
+Recall: [0.40, 0.60]
+F1: [0.40, 0.60]
+SHD: [2, 4]

@@ -1,0 +1,6 @@
+Based on the analysis of the FCI algorithm's capabilities on small, discrete datasets like Earthquake with 1000 samples, here are the predicted performance ranges:
+
+Precision: [0.60, 0.85]
+Recall: [0.50, 0.75]
+F1: [0.55, 0.80]
+SHD: [1, 3]

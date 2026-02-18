@@ -1,0 +1,6 @@
+Based on the analysis of the FCI algorithm's capabilities on a medium-complexity discrete dataset like Insurance with 1000 samples, here are the predicted performance metrics:
+
+Precision: [0.35, 0.55]
+Recall: [0.25, 0.45]
+F1: [0.30, 0.50]
+SHD: [40, 60]

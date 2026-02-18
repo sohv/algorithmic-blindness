@@ -1,0 +1,6 @@
+Based on the analysis of LINGAM's assumptions (linearity, non-Gaussianity, acyclicity) against the "Synthetic_60" dataset characteristics (60 variables, 1000 samples, very high complexity), the algorithm will likely struggle. While the sample size is moderate, the high dimensionality relative to samples and the "very high complexity" suggests potential violations of linearity or the presence of noise that degrades the Independent Component Analysis (ICA) step crucial to LINGAM. Consequently, the performance is expected to be low to moderate.
+
+Precision: [0.35, 0.55]
+Recall: [0.30, 0.50]
+F1: [0.32, 0.52]
+SHD: [40, 70]

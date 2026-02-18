@@ -1,0 +1,11 @@
+Here is the reasoning summary:
+
+1.  **LINGAM Assumptions:** LINGAM (Linear Non-Gaussian Acyclic Model) fundamentally assumes that the data generating process is linear, the error terms are non-Gaussian, and the variables are continuous. It relies on Independent Component Analysis (ICA) or similar techniques to identify the causal order.
+2.  **Dataset Fit:** The Insurance dataset is entirely discrete (categorical). This is a fundamental violation of LINGAM's core assumption of continuous, linear relationships. While one can attempt to treat ordinal discrete data as continuous, the Insurance dataset contains many nominal variables, making LINGAM mathematically ill-suited. The sample size (1000) is moderate but cannot compensate for the wrong data type.
+3.  **Complexity Impact:** With 27 variables and 52 edges, the graph is moderately dense. LINGAM's inability to handle discrete distributions means it will likely produce a graph that is essentially random or heavily biased by the integer encoding of the categories, leading to very poor structural learning.
+4.  **Performance Estimation:** Because the algorithm is being applied to a data type it is not designed for (discrete vs. continuous), the performance will be extremely low. It will likely fail to identify the correct edges (low recall) and produce many false positives (low precision), resulting in a high Structural Hamming Distance (SHD).
+
+Precision: [0.00, 0.15]
+Recall: [0.00, 0.15]
+F1: [0.00, 0.15]
+SHD: [40, 60]

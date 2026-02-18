@@ -1,0 +1,11 @@
+Precision
+The expected precision range for FCI on Synthetic_30 (30 variables, 1000 samples) is based on typical benchmark performance. FCI tends to have moderate precision due to false positives from hidden confounders and conservative rule applications. With 1000 samples, precision typically falls between 0.55 and 0.75 for 95% of runs.
+
+Recall
+Recall is lower than precision because FCI often misses edges (false negatives) in dense graphs. For 30 variables, recall usually ranges from 0.45 to 0.65 across random seeds, capturing most true edges but leaving some undetected.
+
+F1
+F1 balances precision and recall. Given the above ranges, F1 scores concentrate between 0.50 and 0.70 for 95% of experiments, reflecting harmonic mean performance.
+
+SHD
+SHD (Structural Hamming Distance) measures graph-wide errors. For 30-node graphs, SHD typically spans 20 to 40 for 95% of runs, accounting for edge/orientation mistakes in moderately complex structures.

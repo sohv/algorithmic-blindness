@@ -16,8 +16,7 @@
       "cancer",
       "hepar2",
       "earthquake",
-      "insurance",
-      "win95pts"
+      "insurance"
     ],
     "synthetic_datasets": [
       "synthetic_12",
@@ -33,7 +32,6 @@
       "hepar2",
       "earthquake",
       "insurance",
-      "win95pts",
       "synthetic_12",
       "synthetic_30"
     ],

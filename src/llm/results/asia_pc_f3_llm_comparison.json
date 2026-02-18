@@ -1,0 +1,238 @@
+{
+  "dataset": "asia",
+  "algorithm": "pc",
+  "formulation": 3,
+  "claude_comparison": {
+    "precision": {
+      "algorithmic_mean": 0.4744345238095239,
+      "algorithmic_ci": [
+        0.46708333333333335,
+        0.48151785714285716
+      ],
+      "llm_range": [
+        0.4,
+        0.75
+      ],
+      "overlaps": true,
+      "llm_contains_ci": true,
+      "ci_contains_llm": false,
+      "overlap_percentage": 100.0
+    },
+    "recall": {
+      "algorithmic_mean": 0.7775,
+      "algorithmic_ci": [
+        0.76375,
+        0.79125
+      ],
+      "llm_range": [
+        0.25,
+        0.55
+      ],
+      "overlaps": false,
+      "llm_contains_ci": false,
+      "ci_contains_llm": false,
+      "overlap_percentage": 0.0
+    },
+    "f1": {
+      "algorithmic_mean": 0.587560606060606,
+      "algorithmic_ci": [
+        0.5798332070707071,
+        0.5948488636363636
+      ],
+      "llm_range": [
+        0.3,
+        0.6
+      ],
+      "overlaps": true,
+      "llm_contains_ci": true,
+      "ci_contains_llm": false,
+      "overlap_percentage": 100.0
+    },
+    "shd": {
+      "algorithmic_mean": 14.96,
+      "algorithmic_ci": [
+        14.74,
+        15.2
+      ],
+      "llm_range": [
+        6.0,
+        13.0
+      ],
+      "overlaps": false,
+      "llm_contains_ci": false,
+      "ci_contains_llm": false,
+      "overlap_percentage": 0.0
+    }
+  },
+  "llama_comparison": {
+    "precision": {
+      "algorithmic_mean": 0.4744345238095239,
+      "algorithmic_ci": [
+        0.46708333333333335,
+        0.48151785714285716
+      ],
+      "llm_range": [
+        0.8,
+        0.95
+      ],
+      "overlaps": false,
+      "llm_contains_ci": false,
+      "ci_contains_llm": false,
+      "overlap_percentage": 0.0
+    },
+    "recall": {
+      "algorithmic_mean": 0.7775,
+      "algorithmic_ci": [
+        0.76375,
+        0.79125
+      ],
+      "llm_range": [
+        0.7,
+        0.9
+      ],
+      "overlaps": true,
+      "llm_contains_ci": true,
+      "ci_contains_llm": false,
+      "overlap_percentage": 100.0
+    },
+    "f1": {
+      "algorithmic_mean": 0.587560606060606,
+      "algorithmic_ci": [
+        0.5798332070707071,
+        0.5948488636363636
+      ],
+      "llm_range": [
+        0.75,
+        0.92
+      ],
+      "overlaps": false,
+      "llm_contains_ci": false,
+      "ci_contains_llm": false,
+      "overlap_percentage": 0.0
+    }
+  },
+  "gpt5_comparison": {
+    "precision": {
+      "algorithmic_mean": 0.4744345238095239,
+      "algorithmic_ci": [
+        0.46708333333333335,
+        0.48151785714285716
+      ],
+      "llm_range": [
+        0.85,
+        1.0
+      ],
+      "overlaps": false,
+      "llm_contains_ci": false,
+      "ci_contains_llm": false,
+      "overlap_percentage": 0.0
+    },
+    "recall": {
+      "algorithmic_mean": 0.7775,
+      "algorithmic_ci": [
+        0.76375,
+        0.79125
+      ],
+      "llm_range": [
+        0.7,
+        0.95
+      ],
+      "overlaps": true,
+      "llm_contains_ci": true,
+      "ci_contains_llm": false,
+      "overlap_percentage": 100.0
+    },
+    "f1": {
+      "algorithmic_mean": 0.587560606060606,
+      "algorithmic_ci": [
+        0.5798332070707071,
+        0.5948488636363636
+      ],
+      "llm_range": [
+        0.78,
+        0.97
+      ],
+      "overlaps": false,
+      "llm_contains_ci": false,
+      "ci_contains_llm": false,
+      "overlap_percentage": 0.0
+    },
+    "shd": {
+      "algorithmic_mean": 14.96,
+      "algorithmic_ci": [
+        14.74,
+        15.2
+      ],
+      "llm_range": [
+        0.0,
+        3.0
+      ],
+      "overlaps": false,
+      "llm_contains_ci": false,
+      "ci_contains_llm": false,
+      "overlap_percentage": 0.0
+    }
+  },
+  "qwen_comparison": {
+    "precision": {
+      "algorithmic_mean": 0.4744345238095239,
+      "algorithmic_ci": [
+        0.46708333333333335,
+        0.48151785714285716
+      ],
+      "llm_range": [
+        0.6,
+        0.85
+      ],
+      "overlaps": false,
+      "llm_contains_ci": false,
+      "ci_contains_llm": false,
+      "overlap_percentage": 0.0
+    },
+    "recall": {
+      "algorithmic_mean": 0.7775,
+      "algorithmic_ci": [
+        0.76375,
+        0.79125
+      ],
+      "llm_range": [
+        0.3,
+        0.6
+      ],
+      "overlaps": false,
+      "llm_contains_ci": false,
+      "ci_contains_llm": false,
+      "overlap_percentage": 0.0
+    },
+    "f1": {
+      "algorithmic_mean": 0.587560606060606,
+      "algorithmic_ci": [
+        0.5798332070707071,
+        0.5948488636363636
+      ],
+      "llm_range": [
+        0.4,
+        0.7
+      ],
+      "overlaps": true,
+      "llm_contains_ci": true,
+      "ci_contains_llm": false,
+      "overlap_percentage": 100.0
+    },
+    "shd": {
+      "algorithmic_mean": 14.96,
+      "algorithmic_ci": [
+        14.74,
+        15.2
+      ],
+      "llm_range": [
+        5.0,
+        15.0
+      ],
+      "overlaps": true,
+      "llm_contains_ci": false,
+      "ci_contains_llm": false,
+      "overlap_percentage": 56.52173913043485
+    }
+  }
+}

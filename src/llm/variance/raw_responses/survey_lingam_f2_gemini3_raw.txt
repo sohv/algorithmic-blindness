@@ -1,0 +1,6 @@
+Based on the analysis of LINGAM's assumptions (linearity, non-Gaussianity, continuous data) against the Survey dataset's characteristics (discrete data, small sample size relative to discrete levels), the algorithm is expected to perform poorly because the fundamental assumption of continuous functional forms is violated by the discrete nature of the data.
+
+Precision: [0.20, 0.40]
+Recall: [0.20, 0.40]
+F1: [0.20, 0.40]
+SHD: [4, 8]

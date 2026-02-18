@@ -32,7 +32,7 @@ notears-pytorch
 anthropic
 
 # Gemini 1.5 Pro (Google)
-google-generativeai
+google-genai
 
 # For GPT-5, DeepSeek, Qwen (via Together.ai), and Llama (via Together.ai)
 # OpenAI-compatible client used by Qwen and Llama integrations

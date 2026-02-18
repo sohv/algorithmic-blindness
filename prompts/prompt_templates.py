@@ -57,7 +57,17 @@ Recall: [X.XX, X.XX]
 F1: [X.XX, X.XX]
 SHD: [X, X]
 
-YOU MUST USE EXACTLY THIS FORMAT. Provide only numerical ranges."""
+---CRITICAL INSTRUCTION---
+You MUST output ONLY these four lines of numerical ranges.
+Do NOT include any reasoning, explanations, context, labels, or additional text.
+Your entire response must be EXACTLY:
+
+Precision: [X.XX, X.XX]
+Recall: [X.XX, X.XX]
+F1: [X.XX, X.XX]
+SHD: [X, X]
+
+Nothing else. No preamble. No conclusions. Just these four lines."""
 )
 
 
@@ -85,12 +95,17 @@ Before predicting, reason through these questions:
 3. How does the dataset complexity affect {algorithm_name}'s reliability?
 4. What performance range is realistic given these factors?
 
-After reasoning, provide performance ranges in EXACTLY this format:
+---CRITICAL INSTRUCTION---
+After your internal reasoning, you MUST output ONLY these four lines of numerical ranges.
+DO NOT INCLUDE any reasoning, summary, explanations, context, labels, or additional text.
+Your response must contain EXACTLY these four lines and nothing else:
 
 Precision: [X.XX, X.XX]
 Recall: [X.XX, X.XX]
 F1: [X.XX, X.XX]
-SHD: [X, X]"""
+SHD: [X, X]
+
+No preamble. No conclusions. No summary. No reasoning. Just the four lines."""
 )
 
 
@@ -119,7 +134,19 @@ What ranges capture 95% of typical outcomes?
 Precision: [X.XX, X.XX]
 Recall: [X.XX, X.XX]
 F1: [X.XX, X.XX]
-SHD: [X, X]"""
+SHD: [X, X]
+
+---CRITICAL INSTRUCTION---
+You MUST output ONLY these four lines of numerical ranges.
+Do NOT include any reasoning, thoughts, context, labels, or additional text.
+Your entire response must be EXACTLY:
+
+Precision: [X.XX, X.XX]
+Recall: [X.XX, X.XX]
+F1: [X.XX, X.XX]
+SHD: [X, X]
+
+NOTHING ELSE. NOT A SINGLE ADDITIONAL WORD."""
 )
 
 
@@ -237,13 +264,6 @@ DATASET_PROPERTIES = {
         'n_nodes': 27,
         'n_edges': 52
     },
-    'win95pts': {
-        'domain': 'Expert system for Windows 95 printer troubleshooting',
-        'data_type': 'Discrete (Bayesian network)',
-        'complexity': 'Large (76 variables, 112 edges)',
-        'n_nodes': 76,
-        'n_edges': 112
-    },
 }
 
 
@@ -273,27 +293,43 @@ def generate_prompt(dataset_name: str,
     if 'synthetic' in dataset_key:
         if '12' in dataset_key:
             props = {
-                'domain': 'Synthetic (linear Gaussian)',
+                'domain': 'Synthetic linear Gaussian',
                 'data_type': 'Continuous',
-                'complexity': 'Medium',
+                'complexity': 'Small',
                 'n_nodes': 12,
-                'n_edges': 14
+                'n_edges': 13
             }
         elif '30' in dataset_key:
             props = {
-                'domain': 'Synthetic (linear Gaussian)',
+                'domain': 'Synthetic linear Gaussian',
+                'data_type': 'Continuous',
+                'complexity': 'Medium',
+                'n_nodes': 30,
+                'n_edges': 87
+            }
+        elif '50' in dataset_key:
+            props = {
+                'domain': 'Synthetic linear Gaussian',
                 'data_type': 'Continuous',
                 'complexity': 'High',
-                'n_nodes': 30,
-                'n_edges': 45
+                'n_nodes': 50,
+                'n_edges': 368
+            }
+        elif '60' in dataset_key:
+            props = {
+                'domain': 'Synthetic linear Gaussian',
+                'data_type': 'Continuous',
+                'complexity': 'Very High',
+                'n_nodes': 60,
+                'n_edges': 531
             }
         else:
             props = {
-                'domain': 'Synthetic (linear Gaussian)',
+                'domain': 'Synthetic linear Gaussian',
                 'data_type': 'Continuous',
-                'complexity': 'Medium',
+                'complexity': 'Small',
                 'n_nodes': 12,
-                'n_edges': 14
+                'n_edges': 13
             }
     else:
         props = DATASET_PROPERTIES.get(dataset_key, {

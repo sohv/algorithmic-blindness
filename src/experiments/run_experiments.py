@@ -6,10 +6,11 @@ This script reproduces all experiments but with 100 runs per algorithm
 to establish proper confidence intervals.
 
 Coverage:
-- 11 datasets: Titanic, Credit, Wine, Asia, Alarm, Sachs, Survey,
-  Child, Hepar2, Synthetic-12, Synthetic-30
+- 9 Benchmark datasets: Asia, Alarm, Sachs, Survey, Child, Cancer, Hepar2, 
+  Earthquake, Insurance
+- 4 Linear synthetic datasets: Synthetic-12, Synthetic-30, Synthetic-50, Synthetic-60 (held-out OOD)
 - 4 algorithms: PC, LiNGAM, FCI, NOTEARS
-- Total: 11 datasets x 4 algorithms x 100 runs = 4,400 algorithmic runs
+- Total: 14 datasets x 4 algorithms x 100 runs = 5,600 algorithmic runs
 """
 
 import sys
@@ -24,71 +25,12 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from algorithms.variance_analysis import VarianceAnalyzer
 
-# Add datasets to path
-sys.path.append(str(Path(__file__).parent.parent / "datasets"))
-
-# Import new real-world datasets
-try:
-    from datasets.credit_approval import load_credit_approval
-    from datasets.wine_quality import load_wine_quality
-    REALWORLD_DATASETS_AVAILABLE = True
-except ImportError:
-    print("Warning: Credit/Wine datasets not available.")
-    REALWORLD_DATASETS_AVAILABLE = False
-
-# Note: All benchmark datasets (Asia, Alarm, Sachs, Survey, Child, Hepar2, Earthquake, Insurance)
+# Note: All benchmark datasets (Asia, Alarm, Sachs, Survey, Child, Cancer, Hepar2, Earthquake, Insurance)
 # are loaded from local .bif files using bnlearn - no module imports needed
 
 # ============================================================================
 # Dataset Loaders
 # ============================================================================
-
-def load_titanic():
-    """Load and prepare Titanic dataset."""
-    from sklearn.datasets import fetch_openml
-    from sklearn.preprocessing import LabelEncoder
-
-    # Load Titanic from OpenML
-    titanic = fetch_openml('titanic', version=1, as_frame=True, parser='auto')
-    df = titanic.data.copy()
-    df['survived'] = titanic.target
-
-    # Clean and prepare
-    df = df[['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'survived']].dropna()
-
-    # Encode categorical variables
-    le = LabelEncoder()
-    df['sex'] = le.fit_transform(df['sex'])
-
-    # Convert survived to int (it's categorical)
-    df['survived'] = df['survived'].astype(str).astype(int)
-
-    # Ensure all columns are numeric (convert any remaining categorical)
-    for col in df.columns:
-        if df[col].dtype == 'object' or str(df[col].dtype) == 'category':
-            df[col] = pd.to_numeric(df[col], errors='coerce')
-
-    # Drop any rows with NaN after conversion
-    df = df.dropna()
-
-    # Convert to float64 for numerical stability in LiNGAM
-    df = df.astype(np.float64)
-
-    # Define true causal graph (based on domain knowledge)
-    # Variables: pclass, sex, age, sibsp, parch, fare, survived
-    # Order: 0=pclass, 1=sex, 2=age, 3=sibsp, 4=parch, 5=fare, 6=survived
-    n_vars = 7
-    true_graph = np.zeros((n_vars, n_vars))
-
-    # Known causal relationships
-    true_graph[0, 5] = 1  # pclass -> fare
-    true_graph[0, 6] = 1  # pclass -> survived
-    true_graph[1, 6] = 1  # sex -> survived
-    true_graph[2, 6] = 1  # age -> survived
-    true_graph[5, 6] = 1  # fare -> survived
-
-    return df, true_graph
-
 
 def load_bnlearn_network(name: str):
     """Load a benchmark network from local .bif files, no downloads."""
@@ -112,8 +54,7 @@ def load_bnlearn_network(name: str):
         'cancer': 'cancer',
         'hepar2': 'hepar2',
         'earthquake': 'earthquake',
-        'insurance': 'insurance',
-        'win95pts': 'win95pts'
+        'insurance': 'insurance'
     }
 
     if name.lower() not in network_map:
@@ -227,54 +168,6 @@ def generate_synthetic_dag(n_nodes: int, edge_prob: float = 0.2, seed: int = 42)
 # Experiment Runners
 # ============================================================================
 
-def run_titanic_experiments(analyzer: VarianceAnalyzer):
-    """Run PC and LiNGAM on Titanic dataset."""
-    print("\n" + "="*80)
-    print("TITANIC DATASET")
-    print("="*80)
-
-    data, true_graph = load_titanic()
-    print(f"Loaded Titanic: {data.shape[0]} samples, {data.shape[1]} variables")
-
-    all_results = {}
-    run_all_algorithms_on_dataset(analyzer, data, true_graph, 'titanic', all_results)
-
-    return all_results
-
-
-def run_realworld_experiments(analyzer: VarianceAnalyzer):
-    """Run PC and LiNGAM on real-world datasets (Credit, Wine)."""
-    if not REALWORLD_DATASETS_AVAILABLE:
-        print("Real-world datasets (Credit, Wine) not available. Skipping.")
-        return {}
-
-    all_results = {}
-
-    # Credit Approval
-    print("\n" + "="*80)
-    print("CREDIT APPROVAL DATASET")
-    print("="*80)
-    try:
-        data, true_graph = load_credit_approval()
-        print(f"Loaded Credit: {data.shape[0]} samples, {data.shape[1]} variables")
-        run_all_algorithms_on_dataset(analyzer, data, true_graph, 'credit', all_results)
-    except Exception as e:
-        print(f"Credit dataset failed: {e}")
-
-    # Wine Quality
-    print("\n" + "="*80)
-    print("WINE QUALITY DATASET")
-    print("="*80)
-    try:
-        data, true_graph = load_wine_quality()
-        print(f"Loaded Wine: {data.shape[0]} samples, {data.shape[1]} variables")
-        run_all_algorithms_on_dataset(analyzer, data, true_graph, 'wine', all_results)
-    except Exception as e:
-        print(f"Wine dataset failed: {e}")
-
-    return all_results
-
-
 def run_all_algorithms_on_dataset(analyzer: VarianceAnalyzer, data, true_graph, dataset_name: str, all_results: dict, algorithms_to_run=None):
     """Run PC, LiNGAM, FCI, and NOTEARS algorithms on a single dataset.
     
@@ -316,7 +209,7 @@ def run_all_algorithms_on_dataset(analyzer: VarianceAnalyzer, data, true_graph, 
 
 def run_benchmark_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None, algorithms_to_run=None):
     """Run benchmarks for specified datasets."""
-    benchmarks = ['asia', 'alarm', 'sachs', 'survey', 'child', 'cancer', 'hepar2', 'earthquake', 'insurance', 'win95pts']
+    benchmarks = ['asia', 'alarm', 'sachs', 'survey', 'child', 'cancer', 'hepar2', 'earthquake', 'insurance']
     
     # If no specific datasets requested, run all benchmarks
     if datasets_to_run is None:
@@ -347,7 +240,7 @@ def run_benchmark_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None, 
 
 def run_synthetic_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None, algorithms_to_run=None):
     """Run specified algorithms on synthetic DAGs."""
-    synthetic_datasets = [('synthetic_12', 12), ('synthetic_30', 30)]
+    synthetic_datasets = [('synthetic_12', 12), ('synthetic_30', 30), ('synthetic_50', 50), ('synthetic_60', 60)]
     
     if datasets_to_run:
         synthetic_datasets = [(name, nodes) for name, nodes in synthetic_datasets 
@@ -356,17 +249,18 @@ def run_synthetic_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None, 
     if not synthetic_datasets:
         print("\nNo synthetic datasets requested, skipping synthetic experiments")
         return {}
-    
-    node_counts = [nodes for _, nodes in synthetic_datasets]
 
     all_results = {}
 
-    for n_nodes in node_counts:
+    for dataset_name, n_nodes in synthetic_datasets:
+        # Use edge_prob=0.2 for small/medium (12, 30 nodes), 0.3 for large (50, 60 nodes)
+        edge_prob = 0.2 if n_nodes <= 30 else 0.3
+        
         print("\n" + "="*80)
-        print(f"SYNTHETIC DAG - {n_nodes} NODES")
+        print(f"LINEAR SYNTHETIC DAG - {n_nodes} NODES (held-out OOD test, edge_prob={edge_prob})")
         print("="*80)
 
-        data, true_graph = generate_synthetic_dag(n_nodes, edge_prob=0.2)
+        data, true_graph = generate_synthetic_dag(n_nodes, edge_prob=edge_prob)
         print(f"Generated DAG: {n_nodes} nodes, {np.sum(true_graph)} edges")
 
         dataset_name = f'synthetic_{n_nodes}'
@@ -376,7 +270,7 @@ def run_synthetic_experiments(analyzer: VarianceAnalyzer, datasets_to_run=None, 
 
 
 def run_new_datasets_experiments(analyzer: VarianceAnalyzer):
-    """Run ALL 6 algorithms on NEW datasets: Alarm, Stock Market, Insurance, Barley."""
+    """Run ALL algorithms on datasets: Alarm, Insurance (for benchmarking)."""
 
     if not NEW_DATASETS_AVAILABLE:
         print("\nSkipping new datasets (import failed)")
@@ -413,7 +307,7 @@ def run_new_datasets_experiments(analyzer: VarianceAnalyzer):
         print(f"Error with Stock Market dataset: {e}")
 
     # ========================================================================
-    # Insurance Network (Insurance, 27 nodes) - NEW
+    # Insurance Network (Insurance, 27 nodes)
     # ========================================================================
     print("\n" + "="*80)
     print("INSURANCE NETWORK - Risk Assessment (27 nodes)")
@@ -425,20 +319,6 @@ def run_new_datasets_experiments(analyzer: VarianceAnalyzer):
         run_all_algorithms_on_dataset(analyzer, data, true_graph, 'insurance', all_results)
     except Exception as e:
         print(f"Error with Insurance network: {e}")
-
-    # ========================================================================
-    # Barley Network (Agriculture, 48 nodes) - NEW
-    # ========================================================================
-    print("\n" + "="*80)
-    print("BARLEY NETWORK - Agricultural Crop Production (48 nodes)")
-    print("="*80)
-
-    try:
-        data, true_graph, node_names = load_barley(n_samples=3000)
-        print(f"Loaded Barley: {len(node_names)} nodes, {np.sum(true_graph)} edges")
-        run_all_algorithms_on_dataset(analyzer, data, true_graph, 'barley', all_results)
-    except Exception as e:
-        print(f"Error with Barley network: {e}")
 
     return all_results
 
@@ -456,7 +336,7 @@ def main():
     parser.add_argument('--output', type=str, default='results',
                        help='Output directory')
     parser.add_argument('--experiments', nargs='+',
-                       choices=['asia', 'alarm', 'sachs', 'survey', 'child', 'cancer', 'hepar2', 'earthquake', 'insurance', 'win95pts', 'synthetic_12', 'synthetic_30', 'all'],
+                       choices=['asia', 'alarm', 'sachs', 'survey', 'child', 'cancer', 'hepar2', 'earthquake', 'insurance', 'synthetic_12', 'synthetic_30', 'synthetic_50', 'synthetic_60', 'all'],
                        default=['all'],
                        help='Individual datasets to run (or "all" for everything)')
     parser.add_argument('--algorithms', nargs='+',
@@ -474,8 +354,8 @@ def main():
     results = {}
 
     # Map of individual datasets to their runner functions
-    benchmark_datasets = {'asia', 'alarm', 'sachs', 'survey', 'child', 'cancer', 'hepar2', 'earthquake', 'insurance', 'win95pts'}
-    synthetic_datasets = {'synthetic_12', 'synthetic_30'}
+    benchmark_datasets = {'asia', 'alarm', 'sachs', 'survey', 'child', 'cancer', 'hepar2', 'earthquake', 'insurance'}
+    synthetic_datasets = {'synthetic_12', 'synthetic_30', 'synthetic_50', 'synthetic_60'}
     
     # Determine which datasets to run
     if 'all' in args.experiments:

@@ -1,0 +1,6 @@
+Based on the analysis of the FCI algorithm's capabilities on a small, continuous dataset with 1000 samples, here are the predicted performance ranges:
+
+Precision: [0.65, 0.85]
+Recall: [0.60, 0.80]
+F1: [0.62, 0.82]
+SHD: [5, 15]

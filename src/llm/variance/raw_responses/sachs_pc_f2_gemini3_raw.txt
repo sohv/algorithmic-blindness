@@ -1,0 +1,8 @@
+Here is the reasoning summary:
+
+The PC algorithm relies on the Causal Markov and Faithfulness assumptions and requires a consistent conditional independence test (like Fisher's z-transform for Gaussian data). The Sachs dataset, consisting of continuous flow cytometry measurements, is often treated as approximately linear-Gaussian, though the underlying biological relationships are non-linear, which violates the strict assumptions of standard PC implementations. With 1000 samples for only 11 variables, the sample size is sufficient for statistical power in lower-order conditional independence tests, but the non-linearity and potential feedback loops in protein signaling networks often degrade PC's performance compared to synthetic benchmarks. Consequently, while PC can recover the skeleton reasonably well, it often struggles with edge orientation and misses weaker non-linear connections, leading to moderate precision and recall.
+
+Precision: [0.35, 0.55]
+Recall: [0.30, 0.50]
+F1: [0.35, 0.50]
+SHD: [10, 20]

@@ -292,7 +292,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
         dataset_labels = [f"{d}*" if d == 'hepar2' else d for d in datasets]
         
         # Plot heatmap (wider for heatmap readability)
-        fig, ax = plt.subplots(figsize=(4.8, max(2.5, len(datasets) * 0.28)))
+        fig, ax = plt.subplots(figsize=(6.5, max(3.5, len(datasets) * 0.38)))
         
         # Use blue-green colormap matching original visualization
         cmap = sns.color_palette("viridis_r", as_cmap=True)

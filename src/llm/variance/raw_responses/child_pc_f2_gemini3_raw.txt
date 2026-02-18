@@ -1,0 +1,6 @@
+Based on the analysis of the PC algorithm's performance on the Child dataset (20 variables, 1000 samples, discrete data), here are the predicted performance ranges:
+
+Precision: [0.75, 0.85]
+Recall: [0.65, 0.75]
+F1: [0.70, 0.80]
+SHD: [10, 20]
