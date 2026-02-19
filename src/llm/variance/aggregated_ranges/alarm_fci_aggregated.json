@@ -1,0 +1,599 @@
+{
+  "dataset": "alarm",
+  "algorithm": "fci",
+  "aggregation_method": "mean of f1, f2, f3",
+  "llm_estimates": {
+    "claude": {
+      "precision": {
+        "lower": 0.3,
+        "upper": 0.5333333333333333,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.4,
+            0.25,
+            0.25
+          ],
+          "uppers": [
+            0.6,
+            0.45,
+            0.55
+          ]
+        }
+      },
+      "recall": {
+        "lower": 0.2,
+        "upper": 0.43333333333333335,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.25,
+            0.2,
+            0.15
+          ],
+          "uppers": [
+            0.45,
+            0.4,
+            0.45
+          ]
+        }
+      },
+      "f1": {
+        "lower": 0.24,
+        "upper": 0.45,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.3,
+            0.22,
+            0.2
+          ],
+          "uppers": [
+            0.5,
+            0.4,
+            0.45
+          ]
+        }
+      },
+      "shd": {
+        "lower": 35.0,
+        "upper": 66.66666666666667,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            30.0,
+            45.0,
+            30.0
+          ],
+          "uppers": [
+            55.0,
+            80.0,
+            65.0
+          ]
+        }
+      }
+    },
+    "deepseek": {
+      "precision": {
+        "lower": 0.4766666666666667,
+        "upper": 0.61,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.48,
+            0.55,
+            0.4
+          ],
+          "uppers": [
+            0.58,
+            0.65,
+            0.6
+          ]
+        }
+      },
+      "recall": {
+        "lower": 0.5266666666666666,
+        "upper": 0.66,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.58,
+            0.5,
+            0.5
+          ],
+          "uppers": [
+            0.68,
+            0.6,
+            0.7
+          ]
+        }
+      },
+      "f1": {
+        "lower": 0.5,
+        "upper": 0.6333333333333333,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.53,
+            0.52,
+            0.45
+          ],
+          "uppers": [
+            0.63,
+            0.62,
+            0.65
+          ]
+        }
+      },
+      "shd": {
+        "lower": 55.333333333333336,
+        "upper": 80.66666666666667,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            56.0,
+            30.0,
+            80.0
+          ],
+          "uppers": [
+            72.0,
+            50.0,
+            120.0
+          ]
+        }
+      }
+    },
+    "deepseekthink": {
+      "precision": {
+        "lower": 0.6166666666666667,
+        "upper": 0.8166666666666667,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.7,
+            0.45,
+            0.7
+          ],
+          "uppers": [
+            0.9,
+            0.65,
+            0.9
+          ]
+        }
+      },
+      "recall": {
+        "lower": 0.43333333333333335,
+        "upper": 0.6333333333333333,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.4,
+            0.4,
+            0.5
+          ],
+          "uppers": [
+            0.6,
+            0.6,
+            0.7
+          ]
+        }
+      },
+      "f1": {
+        "lower": 0.5066666666666666,
+        "upper": 0.69,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.5,
+            0.42,
+            0.6
+          ],
+          "uppers": [
+            0.7,
+            0.62,
+            0.75
+          ]
+        }
+      },
+      "shd": {
+        "lower": 26.666666666666668,
+        "upper": 46.666666666666664,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            25.0,
+            35.0,
+            20.0
+          ],
+          "uppers": [
+            45.0,
+            55.0,
+            40.0
+          ]
+        }
+      }
+    },
+    "gemini3": {
+      "precision": {
+        "lower": 0.4666666666666667,
+        "upper": 0.6666666666666666,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.45,
+            0.4,
+            0.55
+          ],
+          "uppers": [
+            0.65,
+            0.6,
+            0.75
+          ]
+        }
+      },
+      "recall": {
+        "lower": 0.3333333333333333,
+        "upper": 0.5333333333333333,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.35,
+            0.3,
+            0.35
+          ],
+          "uppers": [
+            0.55,
+            0.5,
+            0.55
+          ]
+        }
+      },
+      "f1": {
+        "lower": 0.4,
+        "upper": 0.5833333333333334,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.4,
+            0.35,
+            0.45
+          ],
+          "uppers": [
+            0.6,
+            0.55,
+            0.6
+          ]
+        }
+      },
+      "shd": {
+        "lower": 31.666666666666668,
+        "upper": 61.666666666666664,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            30.0,
+            30.0,
+            35.0
+          ],
+          "uppers": [
+            60.0,
+            60.0,
+            65.0
+          ]
+        }
+      }
+    },
+    "gpt5": {
+      "precision": {
+        "lower": 0.6,
+        "upper": 0.8333333333333334,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.55,
+            0.55,
+            0.7
+          ],
+          "uppers": [
+            0.8,
+            0.8,
+            0.9
+          ]
+        }
+      },
+      "recall": {
+        "lower": 0.3833333333333333,
+        "upper": 0.6666666666666666,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.35,
+            0.35,
+            0.45
+          ],
+          "uppers": [
+            0.65,
+            0.65,
+            0.7
+          ]
+        }
+      },
+      "f1": {
+        "lower": 0.48333333333333334,
+        "upper": 0.7266666666666667,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.45,
+            0.45,
+            0.55
+          ],
+          "uppers": [
+            0.7,
+            0.7,
+            0.78
+          ]
+        }
+      },
+      "shd": {
+        "lower": 23.333333333333332,
+        "upper": 61.666666666666664,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            25.0,
+            20.0,
+            25.0
+          ],
+          "uppers": [
+            70.0,
+            55.0,
+            60.0
+          ]
+        }
+      }
+    },
+    "llama": {
+      "precision": {
+        "lower": 0.6233333333333333,
+        "upper": 0.84,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.62,
+            0.6,
+            0.65
+          ],
+          "uppers": [
+            0.82,
+            0.8,
+            0.9
+          ]
+        }
+      },
+      "recall": {
+        "lower": 0.55,
+        "upper": 0.7766666666666666,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.55,
+            0.5,
+            0.6
+          ],
+          "uppers": [
+            0.78,
+            0.7,
+            0.85
+          ]
+        }
+      },
+      "f1": {
+        "lower": 0.5766666666666667,
+        "upper": 0.8,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.58,
+            0.55,
+            0.6
+          ],
+          "uppers": [
+            0.8,
+            0.75,
+            0.85
+          ]
+        }
+      },
+      "shd": {
+        "lower": 10.666666666666666,
+        "upper": 23.333333333333332,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            12.0,
+            10.0,
+            10.0
+          ],
+          "uppers": [
+            25.0,
+            20.0,
+            25.0
+          ]
+        }
+      }
+    },
+    "qwen": {
+      "precision": {
+        "lower": 0.71,
+        "upper": 0.8233333333333334,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.78,
+            0.6,
+            0.75
+          ],
+          "uppers": [
+            0.82,
+            0.8,
+            0.85
+          ]
+        }
+      },
+      "recall": {
+        "lower": 0.6666666666666666,
+        "upper": 0.78,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.75,
+            0.6,
+            0.65
+          ],
+          "uppers": [
+            0.79,
+            0.8,
+            0.75
+          ]
+        }
+      },
+      "f1": {
+        "lower": 0.6866666666666666,
+        "upper": 0.7766666666666667,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.76,
+            0.6,
+            0.7
+          ],
+          "uppers": [
+            0.8,
+            0.75,
+            0.78
+          ]
+        }
+      },
+      "shd": {
+        "lower": 8.333333333333334,
+        "upper": 18.333333333333332,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            5.0,
+            10.0,
+            10.0
+          ],
+          "uppers": [
+            15.0,
+            20.0,
+            20.0
+          ]
+        }
+      }
+    },
+    "qwenthink": {
+      "precision": {
+        "lower": 0.6333333333333333,
+        "upper": 0.7666666666666667,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.65,
+            0.6,
+            0.65
+          ],
+          "uppers": [
+            0.8,
+            0.75,
+            0.75
+          ]
+        }
+      },
+      "recall": {
+        "lower": 0.48333333333333334,
+        "upper": 0.65,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.5,
+            0.45,
+            0.5
+          ],
+          "uppers": [
+            0.7,
+            0.6,
+            0.65
+          ]
+        }
+      },
+      "f1": {
+        "lower": 0.5333333333333333,
+        "upper": 0.7,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            0.55,
+            0.5,
+            0.55
+          ],
+          "uppers": [
+            0.75,
+            0.65,
+            0.7
+          ]
+        }
+      },
+      "shd": {
+        "lower": 15.0,
+        "upper": 25.0,
+        "confidence": "high",
+        "num_formulations": 3,
+        "formulation_values": {
+          "lowers": [
+            10.0,
+            15.0,
+            20.0
+          ],
+          "uppers": [
+            20.0,
+            25.0,
+            30.0
+          ]
+        }
+      }
+    }
+  }
+}

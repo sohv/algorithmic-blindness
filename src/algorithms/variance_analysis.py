@@ -459,10 +459,19 @@ class VarianceAnalyzer:
             
             llm_lower, llm_upper = llm_estimates[metric]
             
+            # PRIMARY: Calibrated Coverage (does true mean fall within LLM range?)
+            calibrated_coverage = bool(llm_lower <= stats.mean <= llm_upper)
+            
             comparison[metric] = {
+                # PRIMARY METRIC: Calibrated Coverage
+                'calibrated_coverage': calibrated_coverage,
+                
+                # Algorithm performance
                 'algorithmic_mean': float(stats.mean),
                 'algorithmic_ci': (float(stats.ci_lower), float(stats.ci_upper)),
                 'llm_range': (float(llm_lower), float(llm_upper)),
+                
+                # Secondary metrics
                 'overlaps': bool(stats.overlaps_with_range(llm_lower, llm_upper)),
                 'llm_contains_ci': bool(llm_lower <= stats.ci_lower and llm_upper >= stats.ci_upper),
                 'ci_contains_llm': bool(stats.ci_lower <= llm_lower and stats.ci_upper >= llm_upper),

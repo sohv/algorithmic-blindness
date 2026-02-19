@@ -1,0 +1,5331 @@
+{
+  "summary": {
+    "random": {
+      "count": 204,
+      "calibrated_coverage_pct": 39.705882352941174,
+      "mean_coverage_score": 0.4305323529411763,
+      "median_score": 0.5226500000000001,
+      "perfect_0_8_1_0": 51,
+      "terrible_0_0_0_2": 84
+    },
+    "heuristic": {
+      "count": 204,
+      "calibrated_coverage_pct": 32.84313725490196,
+      "mean_coverage_score": 0.35810686274509823,
+      "median_score": 0.2035,
+      "perfect_0_8_1_0": 43,
+      "terrible_0_0_0_2": 101
+    }
+  },
+  "details": {
+    "random": {
+      "alarm_fci_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6931,
+        "baseline_range": [
+          0.3745401188473625,
+          0.9507143064099162
+        ],
+        "algorithmic_mean": 0.2861139890654325,
+        "algorithmic_ci": [
+          0.28266461913205404,
+          0.2894308233460847
+        ]
+      },
+      "alarm_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.5986584841970366,
+          0.7319939418114051
+        ],
+        "algorithmic_mean": 0.8710869565217392,
+        "algorithmic_ci": [
+          0.8669510869565213,
+          0.8752173913043478
+        ]
+      },
+      "alarm_fci_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.15599452033620265,
+          0.15601864044243652
+        ],
+        "algorithmic_mean": 0.43037610232066265,
+        "algorithmic_ci": [
+          0.4266492214180404,
+          0.43410293112615456
+        ]
+      },
+      "alarm_fci_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7004,
+        "baseline_range": [
+          38.68368570402084,
+          576.8733130861068
+        ],
+        "algorithmic_mean": 146.51,
+        "algorithmic_ci": [
+          144.77975,
+          148.29
+        ]
+      },
+      "alarm_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.6011150117432088,
+          0.7080725777960455
+        ],
+        "algorithmic_mean": 0.06480417340553077,
+        "algorithmic_ci": [
+          0.06347747134866824,
+          0.0661758090004237
+        ]
+      },
+      "alarm_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6753,
+        "baseline_range": [
+          0.020584494295802447,
+          0.9699098521619943
+        ],
+        "algorithmic_mean": 0.18695652173913044,
+        "algorithmic_ci": [
+          0.18304347826086953,
+          0.1908695652173913
+        ]
+      },
+      "alarm_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6254,
+        "baseline_range": [
+          0.21233911067827616,
+          0.8324426408004217
+        ],
+        "algorithmic_mean": 0.09618810699073663,
+        "algorithmic_ci": [
+          0.09425180280893608,
+          0.09811918767545287
+        ]
+      },
+      "alarm_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          121.09542815992901,
+          122.14740356238693
+        ],
+        "algorithmic_mean": 161.69,
+        "algorithmic_ci": [
+          160.23,
+          163.12
+        ]
+      },
+      "alarm_notears_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6576,
+        "baseline_range": [
+          0.3042422429595377,
+          0.5247564316322378
+        ],
+        "algorithmic_mean": 0.4900101457004156,
+        "algorithmic_ci": [
+          0.47698631740994973,
+          0.5029297592911404
+        ]
+      },
+      "alarm_notears_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5701,
+        "baseline_range": [
+          0.2912291401980419,
+          0.43194501864211576
+        ],
+        "algorithmic_mean": 0.3010869565217391,
+        "algorithmic_ci": [
+          0.2810869565217391,
+          0.32130978260869564
+        ]
+      },
+      "alarm_notears_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9798,
+        "baseline_range": [
+          0.13949386065204183,
+          0.6118528947223795
+        ],
+        "algorithmic_mean": 0.3661296911785661,
+        "algorithmic_ci": [
+          0.3479764586408869,
+          0.3840185908916749
+        ]
+      },
+      "alarm_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          194.56833592445528,
+          243.99698763359868
+        ],
+        "algorithmic_mean": 46.24,
+        "algorithmic_ci": [
+          45.51,
+          46.97
+        ]
+      },
+      "alarm_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.45606998421703593,
+          0.7851759613930136
+        ],
+        "algorithmic_mean": 0.2770546234030437,
+        "algorithmic_ci": [
+          0.2736040057527208,
+          0.28051893500878805
+        ]
+      },
+      "alarm_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.19967378215835974,
+          0.5142344384136116
+        ],
+        "algorithmic_mean": 0.8741304347826088,
+        "algorithmic_ci": [
+          0.8699999999999999,
+          0.8782608695652172
+        ]
+      },
+      "alarm_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8151,
+        "baseline_range": [
+          0.046450412719997725,
+          0.5924145688620425
+        ],
+        "algorithmic_mean": 0.42036768735491725,
+        "algorithmic_ci": [
+          0.41653798029346417,
+          0.4241929294773758
+        ]
+      },
+      "alarm_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6304,
+        "baseline_range": [
+          113.56906637573616,
+          404.624871366358
+        ],
+        "algorithmic_mean": 151.53,
+        "algorithmic_ci": [
+          149.64,
+          153.49025
+        ]
+      },
+      "asia_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9632,
+        "baseline_range": [
+          0.06505159298527952,
+          0.9488855372533332
+        ],
+        "algorithmic_mean": 0.4744345238095239,
+        "algorithmic_ci": [
+          0.46708333333333335,
+          0.48151785714285716
+        ]
+      },
+      "asia_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.607,
+        "baseline_range": [
+          0.8083973481164611,
+          0.9656320330745594
+        ],
+        "algorithmic_mean": 0.7775,
+        "algorithmic_ci": [
+          0.76375,
+          0.79125
+        ]
+      },
+      "asia_fci_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.09767211400638387,
+          0.3046137691733707
+        ],
+        "algorithmic_mean": 0.587560606060606,
+        "algorithmic_ci": [
+          0.5798332070707071,
+          0.5948488636363636
+        ]
+      },
+      "asia_fci_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8857,
+        "baseline_range": [
+          12.324269824708836,
+          19.158524742340393
+        ],
+        "algorithmic_mean": 14.96,
+        "algorithmic_ci": [
+          14.74,
+          15.2
+        ]
+      },
+      "asia_lingam_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8801,
+        "baseline_range": [
+          0.12203823484477883,
+          0.4951769101112702
+        ],
+        "algorithmic_mean": 0.26386247086247083,
+        "algorithmic_ci": [
+          0.255059324009324,
+          0.27243948135198137
+        ]
+      },
+      "asia_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.875,
+        "baseline_range": [
+          0.034388521115218396,
+          0.9093204020787821
+        ],
+        "algorithmic_mean": 0.3625,
+        "algorithmic_ci": [
+          0.35125,
+          0.3725
+        ]
+      },
+      "asia_lingam_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6145,
+        "baseline_range": [
+          0.2587799816000169,
+          0.662522284353982
+        ],
+        "algorithmic_mean": 0.3049986731534719,
+        "algorithmic_ci": [
+          0.2956470182809966,
+          0.31421328320801994
+        ]
+      },
+      "asia_lingam_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7232,
+        "baseline_range": [
+          8.727910130503506,
+          14.561904592978703
+        ],
+        "algorithmic_mean": 13.26,
+        "algorithmic_ci": [
+          13.02,
+          13.5
+        ]
+      },
+      "asia_notears_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6702,
+        "baseline_range": [
+          0.18485445552552704,
+          0.5467102793432796
+        ],
+        "algorithmic_mean": 0.24643253968253964,
+        "algorithmic_ci": [
+          0.22371339285714284,
+          0.2682540674603174
+        ]
+      },
+      "asia_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.7751328233611146,
+          0.9695846277645586
+        ],
+        "algorithmic_mean": 0.25,
+        "algorithmic_ci": [
+          0.2275,
+          0.27125
+        ]
+      },
+      "asia_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.8948273504276488,
+          0.9394989415641891
+        ],
+        "algorithmic_mean": 0.2476454248366013,
+        "algorithmic_ci": [
+          0.22506474673202614,
+          0.26927622549019603
+        ]
+      },
+      "asia_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          16.741199406710383,
+          25.812478580647273
+        ],
+        "algorithmic_mean": 12.1,
+        "algorithmic_ci": [
+          11.75,
+          12.45
+        ]
+      },
+      "asia_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.0884925020519195,
+          0.1959828624191452
+        ],
+        "algorithmic_mean": 0.4744345238095239,
+        "algorithmic_ci": [
+          0.46708333333333335,
+          0.48151785714285716
+        ]
+      },
+      "asia_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.045227288910538066,
+          0.32533033076326434
+        ],
+        "algorithmic_mean": 0.7775,
+        "algorithmic_ci": [
+          0.76375,
+          0.79125
+        ]
+      },
+      "asia_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.2713490317738959,
+          0.388677289689482
+        ],
+        "algorithmic_mean": 0.587560606060606,
+        "algorithmic_ci": [
+          0.5798332070707071,
+          0.5948488636363636
+        ]
+      },
+      "asia_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8761,
+        "baseline_range": [
+          9.9890931474205,
+          23.20465025625402
+        ],
+        "algorithmic_mean": 14.96,
+        "algorithmic_ci": [
+          14.74,
+          15.2
+        ]
+      },
+      "cancer_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7529,
+        "baseline_range": [
+          0.28093450968738076,
+          0.5426960831582485
+        ],
+        "algorithmic_mean": 0.47650000000000003,
+        "algorithmic_ci": [
+          0.4669145833333333,
+          0.4853333333333334
+        ]
+      },
+      "cancer_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.4244,
+        "baseline_range": [
+          0.14092422497476265,
+          0.8021969807540397
+        ],
+        "algorithmic_mean": 0.9925,
+        "algorithmic_ci": [
+          0.9825,
+          1.0
+        ]
+      },
+      "cancer_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8776,
+        "baseline_range": [
+          0.07455064367977082,
+          0.9868869366005173
+        ],
+        "algorithmic_mean": 0.6424285714285713,
+        "algorithmic_ci": [
+          0.6326666666666667,
+          0.6514761904761905
+        ]
+      },
+      "cancer_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.7463,
+        "baseline_range": [
+          1.987156815341724,
+          7.722447692966574
+        ],
+        "algorithmic_mean": 8.45,
+        "algorithmic_ci": [
+          8.27,
+          8.65
+        ]
+      },
+      "cancer_lingam_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9304,
+        "baseline_range": [
+          0.005522117123602399,
+          0.8154614284548342
+        ],
+        "algorithmic_mean": 0.4668333333333334,
+        "algorithmic_ci": [
+          0.45516249999999997,
+          0.47783333333333333
+        ]
+      },
+      "cancer_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.7068573438476171,
+          0.7290071680409873
+        ],
+        "algorithmic_mean": 0.4825,
+        "algorithmic_ci": [
+          0.47,
+          0.495
+        ]
+      },
+      "cancer_lingam_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9277,
+        "baseline_range": [
+          0.07404465173409036,
+          0.7712703466859457
+        ],
+        "algorithmic_mean": 0.47308730158730156,
+        "algorithmic_ci": [
+          0.4610946428571428,
+          0.4836507936507936
+        ]
+      },
+      "cancer_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.4185,
+        "baseline_range": [
+          1.1586905952512971,
+          3.5846572854427263
+        ],
+        "algorithmic_mean": 4.29,
+        "algorithmic_ci": [
+          4.2,
+          4.39
+        ]
+      },
+      "cancer_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.6232981268275579,
+          0.8631034258755935
+        ],
+        "algorithmic_mean": 0.17766666666666658,
+        "algorithmic_ci": [
+          0.1406666666666667,
+          0.214
+        ]
+      },
+      "cancer_notears_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8607,
+        "baseline_range": [
+          0.06355835028602363,
+          0.3308980248526492
+        ],
+        "algorithmic_mean": 0.16,
+        "algorithmic_ci": [
+          0.125,
+          0.1975
+        ]
+      },
+      "cancer_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3109823217156622,
+          0.32518332202674705
+        ],
+        "algorithmic_mean": 0.16642857142857143,
+        "algorithmic_ci": [
+          0.1311904761904762,
+          0.2027003968253968
+        ]
+      },
+      "cancer_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.901,
+        "baseline_range": [
+          6.3755747135521315,
+          7.29606178338064
+        ],
+        "algorithmic_mean": 6.33,
+        "algorithmic_ci": [
+          6.02,
+          6.64
+        ]
+      },
+      "cancer_pc_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5103,
+        "baseline_range": [
+          0.4722149251619493,
+          0.8872127425763265
+        ],
+        "algorithmic_mean": 0.47650000000000003,
+        "algorithmic_ci": [
+          0.4669145833333333,
+          0.4853333333333334
+        ]
+      },
+      "cancer_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0592,
+        "baseline_range": [
+          0.1195942459383017,
+          0.713244787222995
+        ],
+        "algorithmic_mean": 0.9925,
+        "algorithmic_ci": [
+          0.9825,
+          1.0
+        ]
+      },
+      "cancer_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9068,
+        "baseline_range": [
+          0.5612771975694962,
+          0.7607850486168974
+        ],
+        "algorithmic_mean": 0.6424285714285713,
+        "algorithmic_ci": [
+          0.6326666666666667,
+          0.6514761904761905
+        ]
+      },
+      "cancer_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.4658,
+        "baseline_range": [
+          4.937955963643907,
+          7.70967179954561
+        ],
+        "algorithmic_mean": 8.45,
+        "algorithmic_ci": [
+          8.27,
+          8.65
+        ]
+      },
+      "child_fci_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.42754101835854963,
+          0.5227328293819941
+        ],
+        "algorithmic_mean": 0.28864079249008684,
+        "algorithmic_ci": [
+          0.2853299133903163,
+          0.2921026592680305
+        ]
+      },
+      "child_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.02541912674409519,
+          0.10789142699330445
+        ],
+        "algorithmic_mean": 0.9200000000000002,
+        "algorithmic_ci": [
+          0.9200000000000002,
+          0.9200000000000002
+        ]
+      },
+      "child_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8261,
+        "baseline_range": [
+          0.03142918568673425,
+          0.6364104112637804
+        ],
+        "algorithmic_mean": 0.43912245181207055,
+        "algorithmic_ci": [
+          0.4352135100216936,
+          0.4430624975066025
+        ]
+      },
+      "child_fci_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.897,
+        "baseline_range": [
+          59.72763640450207,
+          96.62843132129353
+        ],
+        "algorithmic_mean": 81.98,
+        "algorithmic_ci": [
+          81.04,
+          82.94
+        ]
+      },
+      "child_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.7563,
+        "baseline_range": [
+          0.24929222914887494,
+          0.907566473926093
+        ],
+        "algorithmic_mean": 0.16907036135378672,
+        "algorithmic_ci": [
+          0.16747015624757045,
+          0.17064948140849195
+        ]
+      },
+      "child_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8153,
+        "baseline_range": [
+          0.41038292303562973,
+          0.7555511385430487
+        ],
+        "algorithmic_mean": 0.5192000000000001,
+        "algorithmic_ci": [
+          0.5132,
+          0.5252000000000001
+        ]
+      },
+      "child_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6561,
+        "baseline_range": [
+          0.07697990982879299,
+          0.22879816549162246
+        ],
+        "algorithmic_mean": 0.254902948972296,
+        "algorithmic_ci": [
+          0.25270190040916596,
+          0.25704937643322656
+        ]
+      },
+      "child_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          30.63204457826084,
+          55.05277605361592
+        ],
+        "algorithmic_mean": 75.9,
+        "algorithmic_ci": [
+          75.18,
+          76.64
+        ]
+      },
+      "child_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.808120379564417,
+          0.9296976523425731
+        ],
+        "algorithmic_mean": 0.42553464570980387,
+        "algorithmic_ci": [
+          0.4122510550723319,
+          0.43908920930211515
+        ]
+      },
+      "child_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.6334037565104235,
+          0.8714605901877177
+        ],
+        "algorithmic_mean": 0.2696,
+        "algorithmic_ci": [
+          0.26200000000000007,
+          0.2772
+        ]
+      },
+      "child_notears_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.725,
+        "baseline_range": [
+          0.18657005888603584,
+          0.8036720768991145
+        ],
+        "algorithmic_mean": 0.3253905183260543,
+        "algorithmic_ci": [
+          0.3198085344662948,
+          0.33067206798312776
+        ]
+      },
+      "child_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          102.47502596397364,
+          169.58620971309577
+        ],
+        "algorithmic_mean": 27.88,
+        "algorithmic_ci": [
+          27.36,
+          28.4
+        ]
+      },
+      "child_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.8074401551640625,
+          0.8960912999234932
+        ],
+        "algorithmic_mean": 0.28503690407315996,
+        "algorithmic_ci": [
+          0.2814832894493032,
+          0.28868990265728084
+        ]
+      },
+      "child_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.11005192452767676,
+          0.3180034749718639
+        ],
+        "algorithmic_mean": 0.9200000000000002,
+        "algorithmic_ci": [
+          0.9200000000000002,
+          0.9200000000000002
+        ]
+      },
+      "child_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.9218,
+        "baseline_range": [
+          0.22793516254194168,
+          0.4271077886262563
+        ],
+        "algorithmic_mean": 0.43489076498194107,
+        "algorithmic_ci": [
+          0.43064763675795426,
+          0.43912984468049543
+        ]
+      },
+      "child_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          155.4228055252737,
+          163.53881081870526
+        ],
+        "algorithmic_mean": 83.04,
+        "algorithmic_ci": [
+          82.02,
+          84.08
+        ]
+      },
+      "earthquake_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8117,
+        "baseline_range": [
+          0.006952130531190703,
+          0.5107473025775657
+        ],
+        "algorithmic_mean": 0.35371428571428576,
+        "algorithmic_ci": [
+          0.34321369047619044,
+          0.36478571428571427
+        ]
+      },
+      "earthquake_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.22210781047073025,
+          0.417411003148779
+        ],
+        "algorithmic_mean": 1.0,
+        "algorithmic_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "earthquake_fci_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.1198653673336828,
+          0.33761517140362796
+        ],
+        "algorithmic_mean": 0.5202063492063492,
+        "algorithmic_ci": [
+          0.508602380952381,
+          0.5317460317460317
+        ]
+      },
+      "earthquake_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.3058,
+        "baseline_range": [
+          3.2320293202075523,
+          9.429097039125192
+        ],
+        "algorithmic_mean": 11.58,
+        "algorithmic_ci": [
+          11.24,
+          11.94
+        ]
+      },
+      "earthquake_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.5187906217433661,
+          0.7030189588951778
+        ],
+        "algorithmic_mean": 0.16780952380952377,
+        "algorithmic_ci": [
+          0.16395238095238096,
+          0.17180952380952383
+        ]
+      },
+      "earthquake_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6263,
+        "baseline_range": [
+          0.363629602379294,
+          0.9717820827209607
+        ],
+        "algorithmic_mean": 0.25,
+        "algorithmic_ci": [
+          0.25,
+          0.25
+        ]
+      },
+      "earthquake_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.8547,
+        "baseline_range": [
+          0.25178229582536416,
+          0.9624472949421112
+        ],
+        "algorithmic_mean": 0.20016161616161618,
+        "algorithmic_ci": [
+          0.19739343434343432,
+          0.202949494949495
+        ]
+      },
+      "earthquake_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          3.0087830981676964,
+          4.972485058923855
+        ],
+        "algorithmic_mean": 8.04,
+        "algorithmic_ci": [
+          7.91,
+          8.18
+        ]
+      },
+      "earthquake_notears_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7292,
+        "baseline_range": [
+          0.036886947354532795,
+          0.2848404943774676
+        ],
+        "algorithmic_mean": 0.22799999999999998,
+        "algorithmic_ci": [
+          0.19399999999999998,
+          0.25999999999999995
+        ]
+      },
+      "earthquake_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.5026790232288615,
+          0.6095643339798968
+        ],
+        "algorithmic_mean": 0.285,
+        "algorithmic_ci": [
+          0.2425,
+          0.325
+        ]
+      },
+      "earthquake_notears_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6114,
+        "baseline_range": [
+          0.05147875124998935,
+          0.27864646423661144
+        ],
+        "algorithmic_mean": 0.25333333333333335,
+        "algorithmic_ci": [
+          0.2177777777777778,
+          0.2888888888888889
+        ]
+      },
+      "earthquake_notears_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8533,
+        "baseline_range": [
+          2.395618906669724,
+          9.082658859666537
+        ],
+        "algorithmic_mean": 6.72,
+        "algorithmic_ci": [
+          6.4,
+          7.04
+        ]
+      },
+      "earthquake_pc_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8959,
+        "baseline_range": [
+          0.1448948720912231,
+          0.489452760277563
+        ],
+        "algorithmic_mean": 0.3530476190476191,
+        "algorithmic_ci": [
+          0.3426904761904762,
+          0.36397619047619045
+        ]
+      },
+      "earthquake_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.9614,
+        "baseline_range": [
+          0.2420552715115004,
+          0.9856504541106007
+        ],
+        "algorithmic_mean": 1.0,
+        "algorithmic_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "earthquake_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.6721355474058786,
+          0.7616196153287176
+        ],
+        "algorithmic_mean": 0.5194920634920634,
+        "algorithmic_ci": [
+          0.507920238095238,
+          0.5310321428571427
+        ]
+      },
+      "earthquake_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          2.3763754399239967,
+          7.282163486118596
+        ],
+        "algorithmic_mean": 11.6,
+        "algorithmic_ci": [
+          11.26,
+          11.96
+        ]
+      },
+      "hepar2_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3677831327192532,
+          0.6323058305935795
+        ],
+        "algorithmic_mean": 0.20585138657689733,
+        "algorithmic_ci": [
+          0.202525447290993,
+          0.20914218115106933
+        ]
+      },
+      "hepar2_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.5357746840747585,
+          0.6335297107608947
+        ],
+        "algorithmic_mean": 0.32325203252032525,
+        "algorithmic_ci": [
+          0.31983739837398373,
+          0.32666666666666666
+        ]
+      },
+      "hepar2_lingam_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7161,
+        "baseline_range": [
+          0.0902897700544083,
+          0.835302495589238
+        ],
+        "algorithmic_mean": 0.2512942018596276,
+        "algorithmic_ci": [
+          0.24840750676949702,
+          0.2541318226101503
+        ]
+      },
+      "hepar2_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          450.44220261564794,
+          774.683856906742
+        ],
+        "algorithmic_mean": 237.18,
+        "algorithmic_ci": [
+          234.1,
+          240.34
+        ]
+      },
+      "hepar2_notears_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8464,
+        "baseline_range": [
+          0.040775141554763916,
+          0.5908929431882418
+        ],
+        "algorithmic_mean": 0.2313232957059044,
+        "algorithmic_ci": [
+          0.2120238827681569,
+          0.24993177245472303
+        ]
+      },
+      "hepar2_notears_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5271,
+        "baseline_range": [
+          0.016587828927856152,
+          0.6775643618422824
+        ],
+        "algorithmic_mean": 0.03447154471544715,
+        "algorithmic_ci": [
+          0.029268292682926834,
+          0.03967479674796748
+        ]
+      },
+      "hepar2_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.22649577519793795,
+          0.512093058299281
+        ],
+        "algorithmic_mean": 0.05933466337239365,
+        "algorithmic_ci": [
+          0.05087861590450503,
+          0.06767159939142986
+        ]
+      },
+      "hepar2_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.4907,
+        "baseline_range": [
+          421.09492604705434,
+          1558.0922888388213
+        ],
+        "algorithmic_mean": 131.58,
+        "algorithmic_ci": [
+          130.98,
+          132.24
+        ]
+      },
+      "hepar2_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3867353463005374,
+          0.690937738102466
+        ],
+        "algorithmic_mean": 0.1745708760701763,
+        "algorithmic_ci": [
+          0.16461785512234234,
+          0.18512210817045394
+        ]
+      },
+      "hepar2_pc_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.785,
+        "baseline_range": [
+          0.13752094414599325,
+          0.9367299887367345
+        ],
+        "algorithmic_mean": 0.7089430894308945,
+        "algorithmic_ci": [
+          0.7027642276422764,
+          0.7149593495934959
+        ]
+      },
+      "hepar2_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7779,
+        "baseline_range": [
+          0.11347352124058907,
+          0.3410663510502585
+        ],
+        "algorithmic_mean": 0.2778202497997377,
+        "algorithmic_ci": [
+          0.26549238546391696,
+          0.29060571069194746
+        ]
+      },
+      "hepar2_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          2118.774538415069,
+          2233.1350881427293
+        ],
+        "algorithmic_mean": 558.04,
+        "algorithmic_ci": [
+          528.36,
+          588.461
+        ]
+      },
+      "insurance_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6372,
+        "baseline_range": [
+          0.2579416277151556,
+          0.659984046034179
+        ],
+        "algorithmic_mean": 0.3131077094140299,
+        "algorithmic_ci": [
+          0.3096693574634901,
+          0.3166351197164559
+        ]
+      },
+      "insurance_fci_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8633,
+        "baseline_range": [
+          0.5552008115994623,
+          0.8172222002012158
+        ],
+        "algorithmic_mean": 0.6503846153846154,
+        "algorithmic_ci": [
+          0.6457692307692308,
+          0.6550000000000001
+        ]
+      },
+      "insurance_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8727,
+        "baseline_range": [
+          0.24185229090045168,
+          0.5296505783560065
+        ],
+        "algorithmic_mean": 0.4223861657203244,
+        "algorithmic_ci": [
+          0.4190117491003065,
+          0.4259077760543969
+        ]
+      },
+      "insurance_fci_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8323,
+        "baseline_range": [
+          32.67907149987062,
+          314.9227310416177
+        ],
+        "algorithmic_mean": 126.48,
+        "algorithmic_ci": [
+          125.29,
+          127.66
+        ]
+      },
+      "insurance_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.6331014572732679,
+          0.9004180571633305
+        ],
+        "algorithmic_mean": 0.17247965711039334,
+        "algorithmic_ci": [
+          0.17095592653282188,
+          0.1740016573490699
+        ]
+      },
+      "insurance_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3390297910487007,
+          0.3492095746126609
+        ],
+        "algorithmic_mean": 0.49749999999999994,
+        "algorithmic_ci": [
+          0.4948076923076923,
+          0.5001923076923077
+        ]
+      },
+      "insurance_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.7259556788702394,
+          0.8971102599525771
+        ],
+        "algorithmic_mean": 0.25606921376872765,
+        "algorithmic_ci": [
+          0.2542334284273094,
+          0.25799125443338095
+        ]
+      },
+      "insurance_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          273.736316596026,
+          311.36733491705616
+        ],
+        "algorithmic_mean": 150.47,
+        "algorithmic_ci": [
+          149.25975,
+          151.66
+        ]
+      },
+      "insurance_notears_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8129,
+        "baseline_range": [
+          0.08413996499504883,
+          0.6420316461542878
+        ],
+        "algorithmic_mean": 0.25870401831456336,
+        "algorithmic_ci": [
+          0.2526236013926746,
+          0.2644673408921014
+        ]
+      },
+      "insurance_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.8855,
+        "baseline_range": [
+          0.16162871409461377,
+          0.8985541885270792
+        ],
+        "algorithmic_mean": 0.11942307692307694,
+        "algorithmic_ci": [
+          0.11442307692307693,
+          0.12403846153846157
+        ]
+      },
+      "insurance_notears_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7572,
+        "baseline_range": [
+          0.009197051616629648,
+          0.6064290596595899
+        ],
+        "algorithmic_mean": 0.1628001893870804,
+        "algorithmic_ci": [
+          0.15706590393995437,
+          0.16822608612835277
+        ]
+      },
+      "insurance_notears_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6409,
+        "baseline_range": [
+          35.61651154597727,
+          232.8891209569276
+        ],
+        "algorithmic_mean": 63.42,
+        "algorithmic_ci": [
+          63.11,
+          63.74
+        ]
+      },
+      "insurance_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.005061583846218687,
+          0.16080805141749865
+        ],
+        "algorithmic_mean": 0.30415035819853264,
+        "algorithmic_ci": [
+          0.30081106811669367,
+          0.3075604911114422
+        ]
+      },
+      "insurance_pc_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7577,
+        "baseline_range": [
+          0.5487337893665861,
+          0.6918951976926933
+        ],
+        "algorithmic_mean": 0.6550000000000001,
+        "algorithmic_ci": [
+          0.6503846153846154,
+          0.6594230769230772
+        ]
+      },
+      "insurance_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.946,
+        "baseline_range": [
+          0.22426930946055978,
+          0.6519612595026005
+        ],
+        "algorithmic_mean": 0.41503809516711987,
+        "algorithmic_ci": [
+          0.4117695322047399,
+          0.41843525505459256
+        ]
+      },
+      "insurance_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7819,
+        "baseline_range": [
+          83.27442971137683,
+          249.9749066929851
+        ],
+        "algorithmic_mean": 130.26,
+        "algorithmic_ci": [
+          128.94,
+          131.59
+        ]
+      },
+      "sachs_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5057,
+        "baseline_range": [
+          0.3253996981592677,
+          0.7464914051180241
+        ],
+        "algorithmic_mean": 0.3278089977337689,
+        "algorithmic_ci": [
+          0.32405143931202285,
+          0.33154738077759394
+        ]
+      },
+      "sachs_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.9804,
+        "baseline_range": [
+          0.6496328990472147,
+          0.8492234104941779
+        ],
+        "algorithmic_mean": 0.8511764705882353,
+        "algorithmic_ci": [
+          0.8435294117647057,
+          0.8588235294117647
+        ]
+      },
+      "sachs_fci_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.5683086033354716,
+          0.6576128923003434
+        ],
+        "algorithmic_mean": 0.4729449114021936,
+        "algorithmic_ci": [
+          0.46850914553081835,
+          0.47715727395522123
+        ]
+      },
+      "sachs_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          5.152112230545086,
+          20.224369168268844
+        ],
+        "algorithmic_mean": 46.79,
+        "algorithmic_ci": [
+          46.299749999999996,
+          47.3
+        ]
+      },
+      "sachs_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.24398964337908358,
+          0.26520236768172545
+        ],
+        "algorithmic_mean": 0.3428386284084954,
+        "algorithmic_ci": [
+          0.3367467453103809,
+          0.3487751211735907
+        ]
+      },
+      "sachs_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8071,
+        "baseline_range": [
+          0.3930977246667604,
+          0.9730105547524456
+        ],
+        "algorithmic_mean": 0.5711764705882353,
+        "algorithmic_ci": [
+          0.558235294117647,
+          0.5847058823529412
+        ]
+      },
+      "sachs_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.6311386259972629,
+          0.8920465551771133
+        ],
+        "algorithmic_mean": 0.42797136860760504,
+        "algorithmic_ci": [
+          0.4199312796288103,
+          0.4360206092142658
+        ]
+      },
+      "sachs_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.7816,
+        "baseline_range": [
+          27.645040120785566,
+          43.714621694790665
+        ],
+        "algorithmic_mean": 25.89,
+        "algorithmic_ci": [
+          25.53,
+          26.25
+        ]
+      },
+      "sachs_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.4925176938188639,
+          0.5769038846263591
+        ],
+        "algorithmic_mean": 0.138015873015873,
+        "algorithmic_ci": [
+          0.11599156746031745,
+          0.1598809523809524
+        ]
+      },
+      "sachs_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.5182,
+        "baseline_range": [
+          0.1952429877980445,
+          0.7224521152615053
+        ],
+        "algorithmic_mean": 0.06823529411764705,
+        "algorithmic_ci": [
+          0.057058823529411766,
+          0.0788235294117647
+        ]
+      },
+      "sachs_notears_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7607,
+        "baseline_range": [
+          0.02431596643145384,
+          0.2807723624408558
+        ],
+        "algorithmic_mean": 0.09116989966555183,
+        "algorithmic_ci": [
+          0.07687428093645485,
+          0.10552930602006685
+        ]
+      },
+      "sachs_notears_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9884,
+        "baseline_range": [
+          9.741087367387692,
+          35.50097627489423
+        ],
+        "algorithmic_mean": 22.92,
+        "algorithmic_ci": [
+          22.58,
+          23.26
+        ]
+      },
+      "sachs_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.9404585843529143,
+          0.9539285770025874
+        ],
+        "algorithmic_mean": 0.3273749209409964,
+        "algorithmic_ci": [
+          0.3236133912521498,
+          0.33110376512551143
+        ]
+      },
+      "sachs_pc_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6169,
+        "baseline_range": [
+          0.3701587002554444,
+          0.9148643902204485
+        ],
+        "algorithmic_mean": 0.8511764705882353,
+        "algorithmic_ci": [
+          0.8435294117647057,
+          0.8588235294117647
+        ]
+      },
+      "sachs_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9993,
+        "baseline_range": [
+          0.015456616528867428,
+          0.9283185625877254
+        ],
+        "algorithmic_mean": 0.47248515813332664,
+        "algorithmic_ci": [
+          0.468140020233768,
+          0.4766932192165209
+        ]
+      },
+      "sachs_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7133,
+        "baseline_range": [
+          23.55012815745229,
+          53.16601504740183
+        ],
+        "algorithmic_mean": 46.85,
+        "algorithmic_ci": [
+          46.35,
+          47.36
+        ]
+      },
+      "survey_fci_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.8530094554673601,
+          0.9636199770892528
+        ],
+        "algorithmic_mean": 0.45711309523809524,
+        "algorithmic_ci": [
+          0.44577380952380957,
+          0.4678571428571429
+        ]
+      },
+      "survey_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.2944488920695857,
+          0.38509772860192526
+        ],
+        "algorithmic_mean": 0.8849999999999999,
+        "algorithmic_ci": [
+          0.8699999999999999,
+          0.9016666666666664
+        ]
+      },
+      "survey_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9709,
+        "baseline_range": [
+          0.31692200515627766,
+          0.8511366715168569
+        ],
+        "algorithmic_mean": 0.5995501443001443,
+        "algorithmic_ci": [
+          0.5889265782828282,
+          0.609775027056277
+        ]
+      },
+      "survey_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.1963,
+        "baseline_range": [
+          153.0519502575415,
+          502.7915399998902
+        ],
+        "algorithmic_mean": 12.51,
+        "algorithmic_ci": [
+          12.16975,
+          12.86
+        ]
+      },
+      "survey_lingam_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9223,
+        "baseline_range": [
+          0.696029796674973,
+          0.936154774160781
+        ],
+        "algorithmic_mean": 0.7974285714285714,
+        "algorithmic_ci": [
+          0.7788571428571427,
+          0.8167619047619046
+        ]
+      },
+      "survey_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.5914,
+        "baseline_range": [
+          0.09717649377076854,
+          0.570061170089365
+        ],
+        "algorithmic_mean": 0.6666666666666669,
+        "algorithmic_ci": [
+          0.6666666666666669,
+          0.6666666666666669
+        ]
+      },
+      "survey_lingam_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7895,
+        "baseline_range": [
+          0.6150072266991697,
+          0.9900538501042633
+        ],
+        "algorithmic_mean": 0.7235804195804199,
+        "algorithmic_ci": [
+          0.7157016317016318,
+          0.731516083916084
+        ]
+      },
+      "survey_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.2774,
+        "baseline_range": [
+          126.4958657585812,
+          468.0516760844543
+        ],
+        "algorithmic_mean": 3.09,
+        "algorithmic_ci": [
+          2.97,
+          3.21
+        ]
+      },
+      "survey_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.7407686177542044,
+          0.8773730719279554
+        ],
+        "algorithmic_mean": 0.23483333333333334,
+        "algorithmic_ci": [
+          0.19866666666666663,
+          0.27067083333333325
+        ]
+      },
+      "survey_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.697015740995268,
+          0.7024840839871093
+        ],
+        "algorithmic_mean": 0.14666666666666667,
+        "algorithmic_ci": [
+          0.12166666666666666,
+          0.17166666666666663
+        ]
+      },
+      "survey_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.29359184426449336,
+          0.35949115121975517
+        ],
+        "algorithmic_mean": 0.17840404040404045,
+        "algorithmic_ci": [
+          0.14908989898989897,
+          0.20684999999999998
+        ]
+      },
+      "survey_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          730.8531233970978,
+          731.5323953953002
+        ],
+        "algorithmic_mean": 7.31,
+        "algorithmic_ci": [
+          7.19,
+          7.43
+        ]
+      },
+      "survey_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.8670723185801037,
+          0.9132405525564713
+        ],
+        "algorithmic_mean": 0.45711309523809524,
+        "algorithmic_ci": [
+          0.44577380952380957,
+          0.4678571428571429
+        ]
+      },
+      "survey_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.5015162946871996,
+          0.5113423988609378
+        ],
+        "algorithmic_mean": 0.8849999999999999,
+        "algorithmic_ci": [
+          0.8699999999999999,
+          0.9016666666666664
+        ]
+      },
+      "survey_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.3203,
+        "baseline_range": [
+          0.6499639307777652,
+          0.7982951789667752
+        ],
+        "algorithmic_mean": 0.5995501443001443,
+        "algorithmic_ci": [
+          0.5889265782828282,
+          0.609775027056277
+        ]
+      },
+      "survey_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          633.8760901637061,
+          718.6007805007993
+        ],
+        "algorithmic_mean": 12.51,
+        "algorithmic_ci": [
+          12.16975,
+          12.86
+        ]
+      },
+      "synthetic_12_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7434,
+        "baseline_range": [
+          0.3379951568515358,
+          0.8900053418175663
+        ],
+        "algorithmic_mean": 0.4723393261150614,
+        "algorithmic_ci": [
+          0.4667041326626805,
+          0.4778372559119802
+        ]
+      },
+      "synthetic_12_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.093981939840869,
+          0.375582952639944
+        ],
+        "algorithmic_mean": 0.7222222222222225,
+        "algorithmic_ci": [
+          0.7166666666666669,
+          0.727777777777778
+        ]
+      },
+      "synthetic_12_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5143,
+        "baseline_range": [
+          0.035942273796742086,
+          0.578280140996174
+        ],
+        "algorithmic_mean": 0.5705029079616036,
+        "algorithmic_ci": [
+          0.5657813735177866,
+          0.5749877112742331
+        ]
+      },
+      "synthetic_12_fci_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8718,
+        "baseline_range": [
+          30.72946919674237,
+          35.81454589070006
+        ],
+        "algorithmic_mean": 32.62,
+        "algorithmic_ci": [
+          32.28,
+          32.97
+        ]
+      },
+      "synthetic_12_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.7985,
+        "baseline_range": [
+          0.2865412521282844,
+          0.5908332605690108
+        ],
+        "algorithmic_mean": 0.2558764480914386,
+        "algorithmic_ci": [
+          0.2438669819258938,
+          0.2680428644767642
+        ]
+      },
+      "synthetic_12_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.03050024993904943,
+          0.03734818874921442
+        ],
+        "algorithmic_mean": 0.455,
+        "algorithmic_ci": [
+          0.4272222222222222,
+          0.48166666666666663
+        ]
+      },
+      "synthetic_12_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.8515,
+        "baseline_range": [
+          0.3601906414112629,
+          0.8226005606596583
+        ],
+        "algorithmic_mean": 0.3258487055090668,
+        "algorithmic_ci": [
+          0.3089411654418697,
+          0.3424359954426241
+        ]
+      },
+      "synthetic_12_lingam_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5498,
+        "baseline_range": [
+          8.385993835024395,
+          34.46805516361709
+        ],
+        "algorithmic_mean": 33.17,
+        "algorithmic_ci": [
+          32.47,
+          33.85
+        ]
+      },
+      "synthetic_12_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.3403,
+        "baseline_range": [
+          0.21582102749684318,
+          0.7699935530986108
+        ],
+        "algorithmic_mean": 0.9527929292929292,
+        "algorithmic_ci": [
+          0.9422727272727274,
+          0.9634244318181818
+        ]
+      },
+      "synthetic_12_notears_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8103,
+        "baseline_range": [
+          0.085347464993768,
+          0.6228904758190003
+        ],
+        "algorithmic_mean": 0.456111111111111,
+        "algorithmic_ci": [
+          0.4472222222222222,
+          0.465
+        ]
+      },
+      "synthetic_12_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6513,
+        "baseline_range": [
+          0.0516817211686077,
+          0.531354631568148
+        ],
+        "algorithmic_mean": 0.6149749961405134,
+        "algorithmic_ci": [
+          0.6067247823951274,
+          0.623225510504821
+        ]
+      },
+      "synthetic_12_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          35.68191802626703,
+          42.07037349888163
+        ],
+        "algorithmic_mean": 10.23,
+        "algorithmic_ci": [
+          10.06,
+          10.4
+        ]
+      },
+      "synthetic_12_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.7260913337226615,
+          0.9758520794625346
+        ],
+        "algorithmic_mean": 0.4698690880198233,
+        "algorithmic_ci": [
+          0.46399693223443234,
+          0.47561272893772905
+        ]
+      },
+      "synthetic_12_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.32295647294124596,
+          0.5163003483011953
+        ],
+        "algorithmic_mean": 0.7233333333333337,
+        "algorithmic_ci": [
+          0.717777777777778,
+          0.7294444444444446
+        ]
+      },
+      "synthetic_12_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9314,
+        "baseline_range": [
+          0.2708322512620742,
+          0.7951861947687037
+        ],
+        "algorithmic_mean": 0.5689579145492188,
+        "algorithmic_ci": [
+          0.564051397044984,
+          0.573641130717109
+        ]
+      },
+      "synthetic_12_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6782,
+        "baseline_range": [
+          5.178121168589553,
+          28.972113766571983
+        ],
+        "algorithmic_mean": 32.8,
+        "algorithmic_ci": [
+          32.43,
+          33.17
+        ]
+      },
+      "synthetic_30_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8914,
+        "baseline_range": [
+          0.02535074341545751,
+          0.9626484146779251
+        ],
+        "algorithmic_mean": 0.39217490483573597,
+        "algorithmic_ci": [
+          0.38788665147453877,
+          0.39645184284641305
+        ]
+      },
+      "synthetic_30_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.695974206093698,
+          0.8359801205122058
+        ],
+        "algorithmic_mean": 0.30565656565656574,
+        "algorithmic_ci": [
+          0.3023232323232324,
+          0.3090909090909091
+        ]
+      },
+      "synthetic_30_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7788,
+        "baseline_range": [
+          0.17329432007084578,
+          0.4089529444142699
+        ],
+        "algorithmic_mean": 0.34324561375911394,
+        "algorithmic_ci": [
+          0.339993823222725,
+          0.3464571485920543
+        ]
+      },
+      "synthetic_30_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          68.05011356192243,
+          108.85566070159896
+        ],
+        "algorithmic_mean": 146.04,
+        "algorithmic_ci": [
+          145.26,
+          146.85
+        ]
+      },
+      "synthetic_30_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.5492266647061205,
+          0.7145959227000623
+        ],
+        "algorithmic_mean": 0.1505148753404874,
+        "algorithmic_ci": [
+          0.1460586494059002,
+          0.1549371460763954
+        ]
+      },
+      "synthetic_30_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7754,
+        "baseline_range": [
+          0.27993389694594284,
+          0.6601973767177313
+        ],
+        "algorithmic_mean": 0.3846464646464646,
+        "algorithmic_ci": [
+          0.37111111111111117,
+          0.3981818181818182
+        ]
+      },
+      "synthetic_30_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.7378969166957685,
+          0.9548652806631941
+        ],
+        "algorithmic_mean": 0.21613212074402058,
+        "algorithmic_ci": [
+          0.20947231092918955,
+          0.2228114322101323
+        ]
+      },
+      "synthetic_30_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.2722,
+        "baseline_range": [
+          241.1440128424593,
+          266.0985246119432
+        ],
+        "algorithmic_mean": 275.18,
+        "algorithmic_ci": [
+          272.26,
+          278.18025
+        ]
+      },
+      "synthetic_30_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.24773098950115746,
+          0.4196000624277899
+        ],
+        "algorithmic_mean": 0.9903667309436347,
+        "algorithmic_ci": [
+          0.9867852450159119,
+          0.9934467256831923
+        ]
+      },
+      "synthetic_30_notears_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9072,
+        "baseline_range": [
+          0.3559726786512616,
+          0.7578461104643691
+        ],
+        "algorithmic_mean": 0.5195959595959596,
+        "algorithmic_ci": [
+          0.5135353535353535,
+          0.5254545454545455
+        ]
+      },
+      "synthetic_30_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.014393488629755868,
+          0.11607264050691624
+        ],
+        "algorithmic_mean": 0.6809322308728329,
+        "algorithmic_ci": [
+          0.6759298976081326,
+          0.6859311935925155
+        ]
+      },
+      "synthetic_30_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          17.71702900875201,
+          20.011149279462444
+        ],
+        "algorithmic_mean": 48.09,
+        "algorithmic_ci": [
+          47.5,
+          48.66
+        ]
+      },
+      "synthetic_30_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.7036578593800237,
+          0.8554605840110072
+        ],
+        "algorithmic_mean": 0.38931876571612084,
+        "algorithmic_ci": [
+          0.3852674074973296,
+          0.39340103592713627
+        ]
+      },
+      "synthetic_30_pc_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9303,
+        "baseline_range": [
+          0.09783416065100148,
+          0.4741738290873252
+        ],
+        "algorithmic_mean": 0.31222222222222223,
+        "algorithmic_ci": [
+          0.3087878787878788,
+          0.3157575757575758
+        ]
+      },
+      "synthetic_30_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.4734717707805657,
+          0.49161587511683236
+        ],
+        "algorithmic_mean": 0.34622619223346773,
+        "algorithmic_ci": [
+          0.3430836323170112,
+          0.349358257945697
+        ]
+      },
+      "synthetic_30_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8626,
+        "baseline_range": [
+          75.3428134108566,
+          188.72546741851826
+        ],
+        "algorithmic_mean": 147.61,
+        "algorithmic_ci": [
+          146.83,
+          148.44
+        ]
+      },
+      "synthetic_50_fci_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.651,
+        "baseline_range": [
+          0.39850473439737344,
+          0.6158500980522165
+        ],
+        "algorithmic_mean": 0.36057279672214904,
+        "algorithmic_ci": [
+          0.35702806486378574,
+          0.3641958684265448
+        ]
+      },
+      "synthetic_50_fci_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5761,
+        "baseline_range": [
+          0.04530400977204452,
+          0.6350936508676438
+        ],
+        "algorithmic_mean": 0.09018229166666666,
+        "algorithmic_ci": [
+          0.08901041666666668,
+          0.09135416666666668
+        ]
+      },
+      "synthetic_50_fci_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3746126146264712,
+          0.6258599157142364
+        ],
+        "algorithmic_mean": 0.1441790828114848,
+        "algorithmic_ci": [
+          0.14259742227152403,
+          0.14583957183409232
+        ]
+      },
+      "synthetic_50_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.2108,
+        "baseline_range": [
+          616.3419167606074,
+          1049.2000554556948
+        ],
+        "algorithmic_mean": 445.53,
+        "algorithmic_ci": [
+          444.58,
+          446.48025
+        ]
+      },
+      "synthetic_50_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.957,
+        "baseline_range": [
+          0.1629344270814297,
+          0.658693631618945
+        ],
+        "algorithmic_mean": 0.15227436395241148,
+        "algorithmic_ci": [
+          0.1488770815409188,
+          0.15571608326259978
+        ]
+      },
+      "synthetic_50_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9908,
+        "baseline_range": [
+          0.07056874740042984,
+          0.6424192782063156
+        ],
+        "algorithmic_mean": 0.3617708333333334,
+        "algorithmic_ci": [
+          0.3528125000000001,
+          0.3707552083333333
+        ]
+      },
+      "synthetic_50_lingam_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8358,
+        "baseline_range": [
+          0.026511310541621813,
+          0.5857755812734633
+        ],
+        "algorithmic_mean": 0.21429258269428333,
+        "algorithmic_ci": [
+          0.20914673859349278,
+          0.21937307899691436
+        ]
+      },
+      "synthetic_50_lingam_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8009,
+        "baseline_range": [
+          704.9558678979517,
+          1151.782045745573
+        ],
+        "algorithmic_mean": 1017.33,
+        "algorithmic_ci": [
+          1011.2797499999999,
+          1023.36
+        ]
+      },
+      "synthetic_50_notears_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9502,
+        "baseline_range": [
+          0.3881699262065219,
+          0.6432882184423532
+        ],
+        "algorithmic_mean": 0.5030291503894861,
+        "algorithmic_ci": [
+          0.4983701881537819,
+          0.507609430210161
+        ]
+      },
+      "synthetic_50_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.45825289049151663,
+          0.5456167893159349
+        ],
+        "algorithmic_mean": 0.3721093749999999,
+        "algorithmic_ci": [
+          0.365625,
+          0.378490234375
+        ]
+      },
+      "synthetic_50_notears_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5722,
+        "baseline_range": [
+          0.38610263780077425,
+          0.9414648087765252
+        ],
+        "algorithmic_mean": 0.4262224639980474,
+        "algorithmic_ci": [
+          0.4225998872930975,
+          0.42986032260238505
+        ]
+      },
+      "synthetic_50_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1109.054536396178,
+          1177.4584406842948
+        ],
+        "algorithmic_mean": 383.61,
+        "algorithmic_ci": [
+          380.85,
+          386.44
+        ]
+      },
+      "synthetic_50_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.06936130087516545,
+          0.19579113478929644
+        ],
+        "algorithmic_mean": 0.36011710891029297,
+        "algorithmic_ci": [
+          0.3565370072766138,
+          0.3637955055981134
+        ]
+      },
+      "synthetic_50_pc_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6258,
+        "baseline_range": [
+          0.018221825651549728,
+          0.10077800137742665
+        ],
+        "algorithmic_mean": 0.090390625,
+        "algorithmic_ci": [
+          0.08919270833333336,
+          0.09158854166666668
+        ]
+      },
+      "synthetic_50_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5849,
+        "baseline_range": [
+          0.0944429607559284,
+          0.6830067734163568
+        ],
+        "algorithmic_mean": 0.14439857246597088,
+        "algorithmic_ci": [
+          0.14280413936389272,
+          0.14608913569557044
+        ]
+      },
+      "synthetic_50_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6372,
+        "baseline_range": [
+          87.20609436378051,
+          390.7451471098576
+        ],
+        "algorithmic_mean": 445.81,
+        "algorithmic_ci": [
+          444.8,
+          446.82
+        ]
+      },
+      "synthetic_60_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9271,
+        "baseline_range": [
+          0.023271935735825866,
+          0.8448753109694546
+        ],
+        "algorithmic_mean": 0.37417102388128964,
+        "algorithmic_ci": [
+          0.3712510004211149,
+          0.37708585224590546
+        ]
+      },
+      "synthetic_60_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.224,
+        "baseline_range": [
+          0.28185477477339993,
+          0.8144684825889358
+        ],
+        "algorithmic_mean": 0.07519195612431444,
+        "algorithmic_ci": [
+          0.07433272394881171,
+          0.07605118829981718
+        ]
+      },
+      "synthetic_60_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5121,
+        "baseline_range": [
+          0.11816482762165625,
+          0.6967371653641506
+        ],
+        "algorithmic_mean": 0.12516501881792513,
+        "algorithmic_ci": [
+          0.12389185851119916,
+          0.12640157440368524
+        ]
+      },
+      "synthetic_60_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1113.2288388003947,
+          1553.1254639428837
+        ],
+        "algorithmic_mean": 615.87,
+        "algorithmic_ci": [
+          614.96,
+          616.77
+        ]
+      },
+      "synthetic_60_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.7350710438038858,
+          0.8034809303848486
+        ],
+        "algorithmic_mean": 0.12335126980093337,
+        "algorithmic_ci": [
+          0.11977782371732375,
+          0.12693548235289623
+        ]
+      },
+      "synthetic_60_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.7834,
+        "baseline_range": [
+          0.17743954377972282,
+          0.2820345725713065
+        ],
+        "algorithmic_mean": 0.29336380255941497,
+        "algorithmic_ci": [
+          0.2842957038391224,
+          0.30259643510054846
+        ]
+      },
+      "synthetic_60_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.7506147516408583,
+          0.806834739267264
+        ],
+        "algorithmic_mean": 0.17365161306191382,
+        "algorithmic_ci": [
+          0.16860418542699945,
+          0.17899178724290912
+        ]
+      },
+      "synthetic_60_lingam_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7231,
+        "baseline_range": [
+          730.3332881332249,
+          1753.1941013411918
+        ],
+        "algorithmic_mean": 1525.04,
+        "algorithmic_ci": [
+          1515.97925,
+          1533.50025
+        ]
+      },
+      "synthetic_60_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.9587,
+        "baseline_range": [
+          0.37201808579278317,
+          0.7764129607419968
+        ],
+        "algorithmic_mean": 0.3636588088406367,
+        "algorithmic_ci": [
+          0.3615180283310326,
+          0.3658325472240436
+        ]
+      },
+      "synthetic_60_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.776,
+        "baseline_range": [
+          0.34080354025301784,
+          0.9307573256035647
+        ],
+        "algorithmic_mean": 0.2747166361974406,
+        "algorithmic_ci": [
+          0.2724131627056673,
+          0.2770932358318099
+        ]
+      },
+      "synthetic_60_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.4592,
+        "baseline_range": [
+          0.42899402737501835,
+          0.8584127518430118
+        ],
+        "algorithmic_mean": 0.3128759115368593,
+        "algorithmic_ci": [
+          0.3108049928694755,
+          0.31493467800954694
+        ]
+      },
+      "synthetic_60_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1329.0417899909503,
+          1335.5408871298878
+        ],
+        "algorithmic_mean": 659.78,
+        "algorithmic_ci": [
+          657.61,
+          661.92025
+        ]
+      },
+      "synthetic_60_pc_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8381,
+        "baseline_range": [
+          0.10312386883593261,
+          0.9025529066795667
+        ],
+        "algorithmic_mean": 0.3734253545906763,
+        "algorithmic_ci": [
+          0.37051559431425646,
+          0.3762935621619477
+        ]
+      },
+      "synthetic_60_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.5052523724478571,
+          0.8264574661077416
+        ],
+        "algorithmic_mean": 0.0759597806215722,
+        "algorithmic_ci": [
+          0.07510054844606948,
+          0.07681901279707494
+        ]
+      },
+      "synthetic_60_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.3262,
+        "baseline_range": [
+          0.32004960103061175,
+          0.8955232284962005
+        ],
+        "algorithmic_mean": 0.12618519478473778,
+        "algorithmic_ci": [
+          0.12487433720583994,
+          0.12743187683333163
+        ]
+      },
+      "synthetic_60_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6077,
+        "baseline_range": [
+          19.1826431201281,
+          688.8869713594687
+        ],
+        "algorithmic_mean": 616.79,
+        "algorithmic_ci": [
+          615.87,
+          617.69
+        ]
+      }
+    },
+    "heuristic": {
+      "alarm_fci_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.3611,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.2861139890654325,
+        "algorithmic_ci": [
+          0.28266461913205404,
+          0.2894308233460847
+        ]
+      },
+      "alarm_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.8710869565217392,
+        "algorithmic_ci": [
+          0.8669510869565213,
+          0.8752173913043478
+        ]
+      },
+      "alarm_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9019,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.43037610232066265,
+        "algorithmic_ci": [
+          0.4266492214180404,
+          0.43410293112615456
+        ]
+      },
+      "alarm_fci_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7249,
+        "baseline_range": [
+          116.55,
+          249.75
+        ],
+        "algorithmic_mean": 146.51,
+        "algorithmic_ci": [
+          144.77975,
+          148.29
+        ]
+      },
+      "alarm_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.06480417340553077,
+        "algorithmic_ci": [
+          0.06347747134866824,
+          0.0661758090004237
+        ]
+      },
+      "alarm_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.18695652173913044,
+        "algorithmic_ci": [
+          0.18304347826086953,
+          0.1908695652173913
+        ]
+      },
+      "alarm_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.09618810699073663,
+        "algorithmic_ci": [
+          0.09425180280893608,
+          0.09811918767545287
+        ]
+      },
+      "alarm_lingam_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8389,
+        "baseline_range": [
+          116.55,
+          249.75
+        ],
+        "algorithmic_mean": 161.69,
+        "algorithmic_ci": [
+          160.23,
+          163.12
+        ]
+      },
+      "alarm_notears_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7999,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.4900101457004156,
+        "algorithmic_ci": [
+          0.47698631740994973,
+          0.5029297592911404
+        ]
+      },
+      "alarm_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.5109,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.3010869565217391,
+        "algorithmic_ci": [
+          0.2810869565217391,
+          0.32130978260869564
+        ]
+      },
+      "alarm_notears_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5806,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.3661296911785661,
+        "algorithmic_ci": [
+          0.3479764586408869,
+          0.3840185908916749
+        ]
+      },
+      "alarm_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          116.55,
+          249.75
+        ],
+        "algorithmic_mean": 46.24,
+        "algorithmic_ci": [
+          45.51,
+          46.97
+        ]
+      },
+      "alarm_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.2705,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.2770546234030437,
+        "algorithmic_ci": [
+          0.2736040057527208,
+          0.28051893500878805
+        ]
+      },
+      "alarm_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.8741304347826088,
+        "algorithmic_ci": [
+          0.8699999999999999,
+          0.8782608695652172
+        ]
+      },
+      "alarm_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8518,
+        "baseline_range": [
+          0.35,
+          0.55
+        ],
+        "algorithmic_mean": 0.42036768735491725,
+        "algorithmic_ci": [
+          0.41653798029346417,
+          0.4241929294773758
+        ]
+      },
+      "alarm_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7626,
+        "baseline_range": [
+          116.55,
+          249.75
+        ],
+        "algorithmic_mean": 151.53,
+        "algorithmic_ci": [
+          149.64,
+          153.49025
+        ]
+      },
+      "asia_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7222,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.4744345238095239,
+        "algorithmic_ci": [
+          0.46708333333333335,
+          0.48151785714285716
+        ]
+      },
+      "asia_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.7775,
+        "algorithmic_ci": [
+          0.76375,
+          0.79125
+        ]
+      },
+      "asia_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7122,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.587560606060606,
+        "algorithmic_ci": [
+          0.5798332070707071,
+          0.5948488636363636
+        ]
+      },
+      "asia_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          3.78,
+          9.38
+        ],
+        "algorithmic_mean": 14.96,
+        "algorithmic_ci": [
+          14.74,
+          15.2
+        ]
+      },
+      "asia_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.26386247086247083,
+        "algorithmic_ci": [
+          0.255059324009324,
+          0.27243948135198137
+        ]
+      },
+      "asia_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.325,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.3625,
+        "algorithmic_ci": [
+          0.35125,
+          0.3725
+        ]
+      },
+      "asia_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.3049986731534719,
+        "algorithmic_ci": [
+          0.2956470182809966,
+          0.31421328320801994
+        ]
+      },
+      "asia_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          3.78,
+          9.38
+        ],
+        "algorithmic_mean": 13.26,
+        "algorithmic_ci": [
+          13.02,
+          13.5
+        ]
+      },
+      "asia_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.24643253968253964,
+        "algorithmic_ci": [
+          0.22371339285714284,
+          0.2682540674603174
+        ]
+      },
+      "asia_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.25,
+        "algorithmic_ci": [
+          0.2275,
+          0.27125
+        ]
+      },
+      "asia_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.2476454248366013,
+        "algorithmic_ci": [
+          0.22506474673202614,
+          0.26927622549019603
+        ]
+      },
+      "asia_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0286,
+        "baseline_range": [
+          3.78,
+          9.38
+        ],
+        "algorithmic_mean": 12.1,
+        "algorithmic_ci": [
+          11.75,
+          12.45
+        ]
+      },
+      "asia_pc_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7222,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.4744345238095239,
+        "algorithmic_ci": [
+          0.46708333333333335,
+          0.48151785714285716
+        ]
+      },
+      "asia_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.7775,
+        "algorithmic_ci": [
+          0.76375,
+          0.79125
+        ]
+      },
+      "asia_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7122,
+        "baseline_range": [
+          0.43000000000000005,
+          0.63
+        ],
+        "algorithmic_mean": 0.587560606060606,
+        "algorithmic_ci": [
+          0.5798332070707071,
+          0.5948488636363636
+        ]
+      },
+      "asia_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          3.78,
+          9.38
+        ],
+        "algorithmic_mean": 14.96,
+        "algorithmic_ci": [
+          14.74,
+          15.2
+        ]
+      },
+      "cancer_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.658,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.47650000000000003,
+        "algorithmic_ci": [
+          0.4669145833333333,
+          0.4853333333333334
+        ]
+      },
+      "cancer_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.9925,
+        "algorithmic_ci": [
+          0.9825,
+          1.0
+        ]
+      },
+      "cancer_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5123,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.6424285714285713,
+        "algorithmic_ci": [
+          0.6326666666666667,
+          0.6514761904761905
+        ]
+      },
+      "cancer_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1.2755149978319897,
+          3.2755149978319897
+        ],
+        "algorithmic_mean": 8.45,
+        "algorithmic_ci": [
+          8.27,
+          8.65
+        ]
+      },
+      "cancer_lingam_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6097,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.4668333333333334,
+        "algorithmic_ci": [
+          0.45516249999999997,
+          0.47783333333333333
+        ]
+      },
+      "cancer_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.688,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.4825,
+        "algorithmic_ci": [
+          0.47,
+          0.495
+        ]
+      },
+      "cancer_lingam_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.641,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.47308730158730156,
+        "algorithmic_ci": [
+          0.4610946428571428,
+          0.4836507936507936
+        ]
+      },
+      "cancer_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1.2755149978319897,
+          3.2755149978319897
+        ],
+        "algorithmic_mean": 4.29,
+        "algorithmic_ci": [
+          4.2,
+          4.39
+        ]
+      },
+      "cancer_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.17766666666666658,
+        "algorithmic_ci": [
+          0.1406666666666667,
+          0.214
+        ]
+      },
+      "cancer_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.16,
+        "algorithmic_ci": [
+          0.125,
+          0.1975
+        ]
+      },
+      "cancer_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.16642857142857143,
+        "algorithmic_ci": [
+          0.1311904761904762,
+          0.2027003968253968
+        ]
+      },
+      "cancer_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1.2755149978319897,
+          3.2755149978319897
+        ],
+        "algorithmic_mean": 6.33,
+        "algorithmic_ci": [
+          6.02,
+          6.64
+        ]
+      },
+      "cancer_pc_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.658,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.47650000000000003,
+        "algorithmic_ci": [
+          0.4669145833333333,
+          0.4853333333333334
+        ]
+      },
+      "cancer_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.9925,
+        "algorithmic_ci": [
+          0.9825,
+          1.0
+        ]
+      },
+      "cancer_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5123,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.6424285714285713,
+        "algorithmic_ci": [
+          0.6326666666666667,
+          0.6514761904761905
+        ]
+      },
+      "cancer_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1.2755149978319897,
+          3.2755149978319897
+        ],
+        "algorithmic_mean": 8.45,
+        "algorithmic_ci": [
+          8.27,
+          8.65
+        ]
+      },
+      "child_fci_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6874,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.28864079249008684,
+        "algorithmic_ci": [
+          0.2853299133903163,
+          0.2921026592680305
+        ]
+      },
+      "child_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.9200000000000002,
+        "algorithmic_ci": [
+          0.9200000000000002,
+          0.9200000000000002
+        ]
+      },
+      "child_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9039,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.43912245181207055,
+        "algorithmic_ci": [
+          0.4352135100216936,
+          0.4430624975066025
+        ]
+      },
+      "child_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.5858,
+        "baseline_range": [
+          36.10978495880781,
+          74.10978495880781
+        ],
+        "algorithmic_mean": 81.98,
+        "algorithmic_ci": [
+          81.04,
+          82.94
+        ]
+      },
+      "child_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.16907036135378672,
+        "algorithmic_ci": [
+          0.16747015624757045,
+          0.17064948140849195
+        ]
+      },
+      "child_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5035,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.5192000000000001,
+        "algorithmic_ci": [
+          0.5132,
+          0.5252000000000001
+        ]
+      },
+      "child_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.3501,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.254902948972296,
+        "algorithmic_ci": [
+          0.25270190040916596,
+          0.25704937643322656
+        ]
+      },
+      "child_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.9058,
+        "baseline_range": [
+          36.10978495880781,
+          74.10978495880781
+        ],
+        "algorithmic_mean": 75.9,
+        "algorithmic_ci": [
+          75.18,
+          76.64
+        ]
+      },
+      "child_notears_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9718,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.42553464570980387,
+        "algorithmic_ci": [
+          0.4122510550723319,
+          0.43908920930211515
+        ]
+      },
+      "child_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.497,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.2696,
+        "algorithmic_ci": [
+          0.26200000000000007,
+          0.2772
+        ]
+      },
+      "child_notears_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5275,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.3253905183260543,
+        "algorithmic_ci": [
+          0.3198085344662948,
+          0.33067206798312776
+        ]
+      },
+      "child_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.5669,
+        "baseline_range": [
+          36.10978495880781,
+          74.10978495880781
+        ],
+        "algorithmic_mean": 27.88,
+        "algorithmic_ci": [
+          27.36,
+          28.4
+        ]
+      },
+      "child_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6514,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.28503690407315996,
+        "algorithmic_ci": [
+          0.2814832894493032,
+          0.28868990265728084
+        ]
+      },
+      "child_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.9200000000000002,
+        "algorithmic_ci": [
+          0.9200000000000002,
+          0.9200000000000002
+        ]
+      },
+      "child_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.925,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.43489076498194107,
+        "algorithmic_ci": [
+          0.43064763675795426,
+          0.43912984468049543
+        ]
+      },
+      "child_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.53,
+        "baseline_range": [
+          36.10978495880781,
+          74.10978495880781
+        ],
+        "algorithmic_mean": 83.04,
+        "algorithmic_ci": [
+          82.02,
+          84.08
+        ]
+      },
+      "earthquake_fci_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0882,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.35371428571428576,
+        "algorithmic_ci": [
+          0.34321369047619044,
+          0.36478571428571427
+        ]
+      },
+      "earthquake_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 1.0,
+        "algorithmic_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "earthquake_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8765,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.5202063492063492,
+        "algorithmic_ci": [
+          0.508602380952381,
+          0.5317460317460317
+        ]
+      },
+      "earthquake_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1.2755149978319897,
+          3.2755149978319897
+        ],
+        "algorithmic_mean": 11.58,
+        "algorithmic_ci": [
+          11.24,
+          11.94
+        ]
+      },
+      "earthquake_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.16780952380952377,
+        "algorithmic_ci": [
+          0.16395238095238096,
+          0.17180952380952383
+        ]
+      },
+      "earthquake_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.25,
+        "algorithmic_ci": [
+          0.25,
+          0.25
+        ]
+      },
+      "earthquake_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.20016161616161618,
+        "algorithmic_ci": [
+          0.19739343434343432,
+          0.202949494949495
+        ]
+      },
+      "earthquake_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1.2755149978319897,
+          3.2755149978319897
+        ],
+        "algorithmic_mean": 8.04,
+        "algorithmic_ci": [
+          7.91,
+          8.18
+        ]
+      },
+      "earthquake_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.22799999999999998,
+        "algorithmic_ci": [
+          0.19399999999999998,
+          0.25999999999999995
+        ]
+      },
+      "earthquake_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.285,
+        "algorithmic_ci": [
+          0.2425,
+          0.325
+        ]
+      },
+      "earthquake_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.25333333333333335,
+        "algorithmic_ci": [
+          0.2177777777777778,
+          0.2888888888888889
+        ]
+      },
+      "earthquake_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1.2755149978319897,
+          3.2755149978319897
+        ],
+        "algorithmic_mean": 6.72,
+        "algorithmic_ci": [
+          6.4,
+          7.04
+        ]
+      },
+      "earthquake_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0815,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.3530476190476191,
+        "algorithmic_ci": [
+          0.3426904761904762,
+          0.36397619047619045
+        ]
+      },
+      "earthquake_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 1.0,
+        "algorithmic_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "earthquake_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.873,
+        "baseline_range": [
+          0.44489700043360203,
+          0.644897000433602
+        ],
+        "algorithmic_mean": 0.5194920634920634,
+        "algorithmic_ci": [
+          0.507920238095238,
+          0.5310321428571427
+        ]
+      },
+      "earthquake_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          1.2755149978319897,
+          3.2755149978319897
+        ],
+        "algorithmic_mean": 11.6,
+        "algorithmic_ci": [
+          11.26,
+          11.96
+        ]
+      },
+      "hepar2_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.20585138657689733,
+        "algorithmic_ci": [
+          0.202525447290993,
+          0.20914218115106933
+        ]
+      },
+      "hepar2_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5168,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.32325203252032525,
+        "algorithmic_ci": [
+          0.31983739837398373,
+          0.32666666666666666
+        ]
+      },
+      "hepar2_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.314,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.2512942018596276,
+        "algorithmic_ci": [
+          0.24840750676949702,
+          0.2541318226101503
+        ]
+      },
+      "hepar2_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0816,
+        "baseline_range": [
+          458.9743719764256,
+          941.9743719764256
+        ],
+        "algorithmic_mean": 237.18,
+        "algorithmic_ci": [
+          234.1,
+          240.34
+        ]
+      },
+      "hepar2_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.1143,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.2313232957059044,
+        "algorithmic_ci": [
+          0.2120238827681569,
+          0.24993177245472303
+        ]
+      },
+      "hepar2_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.03447154471544715,
+        "algorithmic_ci": [
+          0.029268292682926834,
+          0.03967479674796748
+        ]
+      },
+      "hepar2_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.05933466337239365,
+        "algorithmic_ci": [
+          0.05087861590450503,
+          0.06767159939142986
+        ]
+      },
+      "hepar2_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          458.9743719764256,
+          941.9743719764256
+        ],
+        "algorithmic_mean": 131.58,
+        "algorithmic_ci": [
+          130.98,
+          132.24
+        ]
+      },
+      "hepar2_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.1745708760701763,
+        "algorithmic_ci": [
+          0.16461785512234234,
+          0.18512210817045394
+        ]
+      },
+      "hepar2_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.7089430894308945,
+        "algorithmic_ci": [
+          0.7027642276422764,
+          0.7149593495934959
+        ]
+      },
+      "hepar2_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.5792,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.2778202497997377,
+        "algorithmic_ci": [
+          0.26549238546391696,
+          0.29060571069194746
+        ]
+      },
+      "hepar2_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7051,
+        "baseline_range": [
+          458.9743719764256,
+          941.9743719764256
+        ],
+        "algorithmic_mean": 558.04,
+        "algorithmic_ci": [
+          528.36,
+          588.461
+        ]
+      },
+      "insurance_fci_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.9321,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.3131077094140299,
+        "algorithmic_ci": [
+          0.3096693574634901,
+          0.3166351197164559
+        ]
+      },
+      "insurance_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.6503846153846154,
+        "algorithmic_ci": [
+          0.6457692307692308,
+          0.6550000000000001
+        ]
+      },
+      "insurance_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9876,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.4223861657203244,
+        "algorithmic_ci": [
+          0.4190117491003065,
+          0.4259077760543969
+        ]
+      },
+      "insurance_fci_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6485,
+        "baseline_range": [
+          66.70807642390284,
+          136.90807642390286
+        ],
+        "algorithmic_mean": 126.48,
+        "algorithmic_ci": [
+          125.29,
+          127.66
+        ]
+      },
+      "insurance_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.17247965711039334,
+        "algorithmic_ci": [
+          0.17095592653282188,
+          0.1740016573490699
+        ]
+      },
+      "insurance_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.612,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.49749999999999994,
+        "algorithmic_ci": [
+          0.4948076923076923,
+          0.5001923076923077
+        ]
+      },
+      "insurance_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.3617,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.25606921376872765,
+        "algorithmic_ci": [
+          0.2542334284273094,
+          0.25799125443338095
+        ]
+      },
+      "insurance_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6136,
+        "baseline_range": [
+          66.70807642390284,
+          136.90807642390286
+        ],
+        "algorithmic_mean": 150.47,
+        "algorithmic_ci": [
+          149.25975,
+          151.66
+        ]
+      },
+      "insurance_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.3881,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.25870401831456336,
+        "algorithmic_ci": [
+          0.2526236013926746,
+          0.2644673408921014
+        ]
+      },
+      "insurance_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.11942307692307694,
+        "algorithmic_ci": [
+          0.11442307692307693,
+          0.12403846153846157
+        ]
+      },
+      "insurance_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.1628001893870804,
+        "algorithmic_ci": [
+          0.15706590393995437,
+          0.16822608612835277
+        ]
+      },
+      "insurance_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.9063,
+        "baseline_range": [
+          66.70807642390284,
+          136.90807642390286
+        ],
+        "algorithmic_mean": 63.42,
+        "algorithmic_ci": [
+          63.11,
+          63.74
+        ]
+      },
+      "insurance_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.8425,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.30415035819853264,
+        "algorithmic_ci": [
+          0.30081106811669367,
+          0.3075604911114422
+        ]
+      },
+      "insurance_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.6550000000000001,
+        "algorithmic_ci": [
+          0.6503846153846154,
+          0.6594230769230772
+        ]
+      },
+      "insurance_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9757,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.41503809516711987,
+        "algorithmic_ci": [
+          0.4117695322047399,
+          0.41843525505459256
+        ]
+      },
+      "insurance_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5947,
+        "baseline_range": [
+          66.70807642390284,
+          136.90807642390286
+        ],
+        "algorithmic_mean": 130.26,
+        "algorithmic_ci": [
+          128.94,
+          131.59
+        ]
+      },
+      "sachs_fci_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.7291,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.3278089977337689,
+        "algorithmic_ci": [
+          0.32405143931202285,
+          0.33154738077759394
+        ]
+      },
+      "sachs_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.8511764705882353,
+        "algorithmic_ci": [
+          0.8435294117647057,
+          0.8588235294117647
+        ]
+      },
+      "sachs_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9098,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.4729449114021936,
+        "algorithmic_ci": [
+          0.46850914553081835,
+          0.47715727395522123
+        ]
+      },
+      "sachs_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          9.490332488075946,
+          20.490332488075946
+        ],
+        "algorithmic_mean": 46.79,
+        "algorithmic_ci": [
+          46.299749999999996,
+          47.3
+        ]
+      },
+      "sachs_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.8794,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.3428386284084954,
+        "algorithmic_ci": [
+          0.3367467453103809,
+          0.3487751211735907
+        ]
+      },
+      "sachs_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.8372,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.5711764705882353,
+        "algorithmic_ci": [
+          0.558235294117647,
+          0.5847058823529412
+        ]
+      },
+      "sachs_lingam_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8654,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.42797136860760504,
+        "algorithmic_ci": [
+          0.4199312796288103,
+          0.4360206092142658
+        ]
+      },
+      "sachs_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0182,
+        "baseline_range": [
+          9.490332488075946,
+          20.490332488075946
+        ],
+        "algorithmic_mean": 25.89,
+        "algorithmic_ci": [
+          25.53,
+          26.25
+        ]
+      },
+      "sachs_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.138015873015873,
+        "algorithmic_ci": [
+          0.11599156746031745,
+          0.1598809523809524
+        ]
+      },
+      "sachs_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.06823529411764705,
+        "algorithmic_ci": [
+          0.057058823529411766,
+          0.0788235294117647
+        ]
+      },
+      "sachs_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.09116989966555183,
+        "algorithmic_ci": [
+          0.07687428093645485,
+          0.10552930602006685
+        ]
+      },
+      "sachs_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.5582,
+        "baseline_range": [
+          9.490332488075946,
+          20.490332488075946
+        ],
+        "algorithmic_mean": 22.92,
+        "algorithmic_ci": [
+          22.58,
+          23.26
+        ]
+      },
+      "sachs_pc_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.7248,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.3273749209409964,
+        "algorithmic_ci": [
+          0.3236133912521498,
+          0.33110376512551143
+        ]
+      },
+      "sachs_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.8511764705882353,
+        "algorithmic_ci": [
+          0.8435294117647057,
+          0.8588235294117647
+        ]
+      },
+      "sachs_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9121,
+        "baseline_range": [
+          0.35489700043360195,
+          0.554897000433602
+        ],
+        "algorithmic_mean": 0.47248515813332664,
+        "algorithmic_ci": [
+          0.468140020233768,
+          0.4766932192165209
+        ]
+      },
+      "sachs_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          9.490332488075946,
+          20.490332488075946
+        ],
+        "algorithmic_mean": 46.85,
+        "algorithmic_ci": [
+          46.35,
+          47.36
+        ]
+      },
+      "survey_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8139,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.45711309523809524,
+        "algorithmic_ci": [
+          0.44577380952380957,
+          0.4678571428571429
+        ]
+      },
+      "survey_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.8849999999999999,
+        "algorithmic_ci": [
+          0.8699999999999999,
+          0.9016666666666664
+        ]
+      },
+      "survey_fci_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.2035,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.5995501443001443,
+        "algorithmic_ci": [
+          0.5889265782828282,
+          0.609775027056277
+        ]
+      },
+      "survey_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          171.61650430422867,
+          352.2165043042287
+        ],
+        "algorithmic_mean": 12.51,
+        "algorithmic_ci": [
+          12.16975,
+          12.86
+        ]
+      },
+      "survey_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.7974285714285714,
+        "algorithmic_ci": [
+          0.7788571428571427,
+          0.8167619047619046
+        ]
+      },
+      "survey_lingam_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.6666666666666669,
+        "algorithmic_ci": [
+          0.6666666666666669,
+          0.6666666666666669
+        ]
+      },
+      "survey_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.7235804195804199,
+        "algorithmic_ci": [
+          0.7157016317016318,
+          0.731516083916084
+        ]
+      },
+      "survey_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          171.61650430422867,
+          352.2165043042287
+        ],
+        "algorithmic_mean": 3.09,
+        "algorithmic_ci": [
+          2.97,
+          3.21
+        ]
+      },
+      "survey_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.1494,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.23483333333333334,
+        "algorithmic_ci": [
+          0.19866666666666663,
+          0.27067083333333325
+        ]
+      },
+      "survey_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.14666666666666667,
+        "algorithmic_ci": [
+          0.12166666666666666,
+          0.17166666666666663
+        ]
+      },
+      "survey_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.17840404040404045,
+        "algorithmic_ci": [
+          0.14908989898989897,
+          0.20684999999999998
+        ]
+      },
+      "survey_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          171.61650430422867,
+          352.2165043042287
+        ],
+        "algorithmic_mean": 7.31,
+        "algorithmic_ci": [
+          7.19,
+          7.43
+        ]
+      },
+      "survey_pc_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8139,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.45711309523809524,
+        "algorithmic_ci": [
+          0.44577380952380957,
+          0.4678571428571429
+        ]
+      },
+      "survey_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.8849999999999999,
+        "algorithmic_ci": [
+          0.8699999999999999,
+          0.9016666666666664
+        ]
+      },
+      "survey_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.2035,
+        "baseline_range": [
+          0.3198970004336019,
+          0.519897000433602
+        ],
+        "algorithmic_mean": 0.5995501443001443,
+        "algorithmic_ci": [
+          0.5889265782828282,
+          0.609775027056277
+        ]
+      },
+      "survey_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          171.61650430422867,
+          352.2165043042287
+        ],
+        "algorithmic_mean": 12.51,
+        "algorithmic_ci": [
+          12.16975,
+          12.86
+        ]
+      },
+      "synthetic_12_fci_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.9766,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.4723393261150614,
+        "algorithmic_ci": [
+          0.4667041326626805,
+          0.4778372559119802
+        ]
+      },
+      "synthetic_12_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.7222222222222225,
+        "algorithmic_ci": [
+          0.7166666666666669,
+          0.727777777777778
+        ]
+      },
+      "synthetic_12_fci_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.5705029079616036,
+        "algorithmic_ci": [
+          0.5657813735177866,
+          0.5749877112742331
+        ]
+      },
+      "synthetic_12_fci_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.2076,
+        "baseline_range": [
+          14.189999999999994,
+          27.389999999999997
+        ],
+        "algorithmic_mean": 32.62,
+        "algorithmic_ci": [
+          32.28,
+          32.97
+        ]
+      },
+      "synthetic_12_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.8588,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.2558764480914386,
+        "algorithmic_ci": [
+          0.2438669819258938,
+          0.2680428644767642
+        ]
+      },
+      "synthetic_12_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.575,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.455,
+        "algorithmic_ci": [
+          0.4272222222222222,
+          0.48166666666666663
+        ]
+      },
+      "synthetic_12_lingam_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7792,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.3258487055090668,
+        "algorithmic_ci": [
+          0.3089411654418697,
+          0.3424359954426241
+        ]
+      },
+      "synthetic_12_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.1242,
+        "baseline_range": [
+          14.189999999999994,
+          27.389999999999997
+        ],
+        "algorithmic_mean": 33.17,
+        "algorithmic_ci": [
+          32.47,
+          33.85
+        ]
+      },
+      "synthetic_12_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.9527929292929292,
+        "algorithmic_ci": [
+          0.9422727272727274,
+          0.9634244318181818
+        ]
+      },
+      "synthetic_12_notears_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5694,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.456111111111111,
+        "algorithmic_ci": [
+          0.4472222222222222,
+          0.465
+        ]
+      },
+      "synthetic_12_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.6149749961405134,
+        "algorithmic_ci": [
+          0.6067247823951274,
+          0.623225510504821
+        ]
+      },
+      "synthetic_12_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.4,
+        "baseline_range": [
+          14.189999999999994,
+          27.389999999999997
+        ],
+        "algorithmic_mean": 10.23,
+        "algorithmic_ci": [
+          10.06,
+          10.4
+        ]
+      },
+      "synthetic_12_pc_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.5007,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.4698690880198233,
+        "algorithmic_ci": [
+          0.46399693223443234,
+          0.47561272893772905
+        ]
+      },
+      "synthetic_12_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.7233333333333337,
+        "algorithmic_ci": [
+          0.717777777777778,
+          0.7294444444444446
+        ]
+      },
+      "synthetic_12_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0104,
+        "baseline_range": [
+          0.27,
+          0.4700000000000001
+        ],
+        "algorithmic_mean": 0.5689579145492188,
+        "algorithmic_ci": [
+          0.564051397044984,
+          0.573641130717109
+        ]
+      },
+      "synthetic_12_pc_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.1803,
+        "baseline_range": [
+          14.189999999999994,
+          27.389999999999997
+        ],
+        "algorithmic_mean": 32.8,
+        "algorithmic_ci": [
+          32.43,
+          33.17
+        ]
+      },
+      "synthetic_30_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7891,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.39217490483573597,
+        "algorithmic_ci": [
+          0.38788665147453877,
+          0.39645184284641305
+        ]
+      },
+      "synthetic_30_fci_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7783,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.30565656565656574,
+        "algorithmic_ci": [
+          0.3023232323232324,
+          0.3090909090909091
+        ]
+      },
+      "synthetic_30_fci_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9662,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.34324561375911394,
+        "algorithmic_ci": [
+          0.339993823222725,
+          0.3464571485920543
+        ]
+      },
+      "synthetic_30_fci_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9464,
+        "baseline_range": [
+          97.87499999999997,
+          184.87499999999997
+        ],
+        "algorithmic_mean": 146.04,
+        "algorithmic_ci": [
+          145.26,
+          146.85
+        ]
+      },
+      "synthetic_30_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0051,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.1505148753404874,
+        "algorithmic_ci": [
+          0.1460586494059002,
+          0.1549371460763954
+        ]
+      },
+      "synthetic_30_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8268,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.3846464646464646,
+        "algorithmic_ci": [
+          0.37111111111111117,
+          0.3981818181818182
+        ]
+      },
+      "synthetic_30_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6613,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.21613212074402058,
+        "algorithmic_ci": [
+          0.20947231092918955,
+          0.2228114322101323
+        ]
+      },
+      "synthetic_30_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          97.87499999999997,
+          184.87499999999997
+        ],
+        "algorithmic_mean": 275.18,
+        "algorithmic_ci": [
+          272.26,
+          278.18025
+        ]
+      },
+      "synthetic_30_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.9903667309436347,
+        "algorithmic_ci": [
+          0.9867852450159119,
+          0.9934467256831923
+        ]
+      },
+      "synthetic_30_notears_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.304,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.5195959595959596,
+        "algorithmic_ci": [
+          0.5135353535353535,
+          0.5254545454545455
+        ]
+      },
+      "synthetic_30_notears_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.6809322308728329,
+        "algorithmic_ci": [
+          0.6759298976081326,
+          0.6859311935925155
+        ]
+      },
+      "synthetic_30_notears_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          97.87499999999997,
+          184.87499999999997
+        ],
+        "algorithmic_mean": 48.09,
+        "algorithmic_ci": [
+          47.5,
+          48.66
+        ]
+      },
+      "synthetic_30_pc_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8034,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.38931876571612084,
+        "algorithmic_ci": [
+          0.3852674074973296,
+          0.39340103592713627
+        ]
+      },
+      "synthetic_30_pc_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8111,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.31222222222222223,
+        "algorithmic_ci": [
+          0.3087878787878788,
+          0.3157575757575758
+        ]
+      },
+      "synthetic_30_pc_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9811,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.34622619223346773,
+        "algorithmic_ci": [
+          0.3430836323170112,
+          0.349358257945697
+        ]
+      },
+      "synthetic_30_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9283,
+        "baseline_range": [
+          97.87499999999997,
+          184.87499999999997
+        ],
+        "algorithmic_mean": 147.61,
+        "algorithmic_ci": [
+          146.83,
+          148.44
+        ]
+      },
+      "synthetic_50_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9471,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.36057279672214904,
+        "algorithmic_ci": [
+          0.35702806486378574,
+          0.3641958684265448
+        ]
+      },
+      "synthetic_50_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.09018229166666666,
+        "algorithmic_ci": [
+          0.08901041666666668,
+          0.09135416666666668
+        ]
+      },
+      "synthetic_50_fci_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.1441790828114848,
+        "algorithmic_ci": [
+          0.14259742227152403,
+          0.14583957183409232
+        ]
+      },
+      "synthetic_50_fci_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8065,
+        "baseline_range": [
+          275.62499999999994,
+          520.625
+        ],
+        "algorithmic_mean": 445.53,
+        "algorithmic_ci": [
+          444.58,
+          446.48025
+        ]
+      },
+      "synthetic_50_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0227,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.15227436395241148,
+        "algorithmic_ci": [
+          0.1488770815409188,
+          0.15571608326259978
+        ]
+      },
+      "synthetic_50_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9411,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.3617708333333334,
+        "algorithmic_ci": [
+          0.3528125000000001,
+          0.3707552083333333
+        ]
+      },
+      "synthetic_50_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.6429,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.21429258269428333,
+        "algorithmic_ci": [
+          0.20914673859349278,
+          0.21937307899691436
+        ]
+      },
+      "synthetic_50_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          275.62499999999994,
+          520.625
+        ],
+        "algorithmic_mean": 1017.33,
+        "algorithmic_ci": [
+          1011.2797499999999,
+          1023.36
+        ]
+      },
+      "synthetic_50_notears_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.4697,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.5030291503894861,
+        "algorithmic_ci": [
+          0.4983701881537819,
+          0.507609430210161
+        ]
+      },
+      "synthetic_50_notears_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8895,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.3721093749999999,
+        "algorithmic_ci": [
+          0.365625,
+          0.378490234375
+        ]
+      },
+      "synthetic_50_notears_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6189,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.4262224639980474,
+        "algorithmic_ci": [
+          0.4225998872930975,
+          0.42986032260238505
+        ]
+      },
+      "synthetic_50_notears_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9408,
+        "baseline_range": [
+          275.62499999999994,
+          520.625
+        ],
+        "algorithmic_mean": 383.61,
+        "algorithmic_ci": [
+          380.85,
+          386.44
+        ]
+      },
+      "synthetic_50_pc_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9494,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.36011710891029297,
+        "algorithmic_ci": [
+          0.3565370072766138,
+          0.3637955055981134
+        ]
+      },
+      "synthetic_50_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.090390625,
+        "algorithmic_ci": [
+          0.08919270833333336,
+          0.09158854166666668
+        ]
+      },
+      "synthetic_50_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.14439857246597088,
+        "algorithmic_ci": [
+          0.14280413936389272,
+          0.14608913569557044
+        ]
+      },
+      "synthetic_50_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8054,
+        "baseline_range": [
+          275.62499999999994,
+          520.625
+        ],
+        "algorithmic_mean": 445.81,
+        "algorithmic_ci": [
+          444.8,
+          446.82
+        ]
+      },
+      "synthetic_60_fci_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8791,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.37417102388128964,
+        "algorithmic_ci": [
+          0.3712510004211149,
+          0.37708585224590546
+        ]
+      },
+      "synthetic_60_fci_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.07519195612431444,
+        "algorithmic_ci": [
+          0.07433272394881171,
+          0.07605118829981718
+        ]
+      },
+      "synthetic_60_fci_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.12516501881792513,
+        "algorithmic_ci": [
+          0.12389185851119916,
+          0.12640157440368524
+        ]
+      },
+      "synthetic_60_fci_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8853,
+        "baseline_range": [
+          398.2499999999999,
+          752.2499999999999
+        ],
+        "algorithmic_mean": 615.87,
+        "algorithmic_ci": [
+          614.96,
+          616.77
+        ]
+      },
+      "synthetic_60_lingam_precision": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.12335126980093337,
+        "algorithmic_ci": [
+          0.11977782371732375,
+          0.12693548235289623
+        ]
+      },
+      "synthetic_60_lingam_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7168,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.29336380255941497,
+        "algorithmic_ci": [
+          0.2842957038391224,
+          0.30259643510054846
+        ]
+      },
+      "synthetic_60_lingam_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.2365,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.17365161306191382,
+        "algorithmic_ci": [
+          0.16860418542699945,
+          0.17899178724290912
+        ]
+      },
+      "synthetic_60_lingam_shd": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          398.2499999999999,
+          752.2499999999999
+        ],
+        "algorithmic_mean": 1525.04,
+        "algorithmic_ci": [
+          1515.97925,
+          1533.50025
+        ]
+      },
+      "synthetic_60_notears_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.9317,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.3636588088406367,
+        "algorithmic_ci": [
+          0.3615180283310326,
+          0.3658325472240436
+        ]
+      },
+      "synthetic_60_notears_recall": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.6236,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.2747166361974406,
+        "algorithmic_ci": [
+          0.2724131627056673,
+          0.2770932358318099
+        ]
+      },
+      "synthetic_60_notears_f1": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8144,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.3128759115368593,
+        "algorithmic_ci": [
+          0.3108049928694755,
+          0.31493467800954694
+        ]
+      },
+      "synthetic_60_notears_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.7612,
+        "baseline_range": [
+          398.2499999999999,
+          752.2499999999999
+        ],
+        "algorithmic_mean": 659.78,
+        "algorithmic_ci": [
+          657.61,
+          661.92025
+        ]
+      },
+      "synthetic_60_pc_precision": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8829,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.3734253545906763,
+        "algorithmic_ci": [
+          0.37051559431425646,
+          0.3762935621619477
+        ]
+      },
+      "synthetic_60_pc_recall": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.0759597806215722,
+        "algorithmic_ci": [
+          0.07510054844606948,
+          0.07681901279707494
+        ]
+      },
+      "synthetic_60_pc_f1": {
+        "calibrated_coverage": false,
+        "calibrated_coverage_score": 0.0,
+        "baseline_range": [
+          0.25,
+          0.45000000000000007
+        ],
+        "algorithmic_mean": 0.12618519478473778,
+        "algorithmic_ci": [
+          0.12487433720583994,
+          0.12743187683333163
+        ]
+      },
+      "synthetic_60_pc_shd": {
+        "calibrated_coverage": true,
+        "calibrated_coverage_score": 0.8827,
+        "baseline_range": [
+          398.2499999999999,
+          752.2499999999999
+        ],
+        "algorithmic_mean": 616.79,
+        "algorithmic_ci": [
+          615.87,
+          617.69
+        ]
+      }
+    },
+    "llm_claude": {}
+  }
+}

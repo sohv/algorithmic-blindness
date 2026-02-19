@@ -1,0 +1,214 @@
+{
+  "experiment": "cancer_fci",
+  "formulation": "f3",
+  "llm_estimates": {
+    "claude": {
+      "precision": {
+        "lower": 0.4,
+        "upper": 0.8,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.3,
+        "upper": 0.75,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.35,
+        "upper": 0.7,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 2.0,
+        "upper": 6.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "deepseek": {
+      "precision": {
+        "lower": 0.7,
+        "upper": 0.9,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.6,
+        "upper": 0.8,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.65,
+        "upper": 0.85,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 2.0,
+        "upper": 6.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "deepseekthink": {
+      "precision": {
+        "lower": 0.8,
+        "upper": 1.0,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.75,
+        "upper": 1.0,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.78,
+        "upper": 1.0,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 0.0,
+        "upper": 3.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "gemini3": {
+      "precision": {
+        "lower": 0.3,
+        "upper": 0.6,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.4,
+        "upper": 0.7,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.35,
+        "upper": 0.65,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 2.0,
+        "upper": 6.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "gpt5": {
+      "precision": {
+        "lower": 0.7,
+        "upper": 1.0,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.55,
+        "upper": 0.95,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.65,
+        "upper": 0.95,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 0.0,
+        "upper": 4.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "llama": {
+      "precision": {
+        "lower": 0.7,
+        "upper": 0.9,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.6,
+        "upper": 0.85,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.65,
+        "upper": 0.85,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 5.0,
+        "upper": 15.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "qwen": {
+      "precision": {
+        "lower": 0.7,
+        "upper": 0.9,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.6,
+        "upper": 0.8,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.63,
+        "upper": 0.83,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 2.0,
+        "upper": 6.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "qwenthink": {
+      "precision": {
+        "lower": 0.8,
+        "upper": 0.95,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.7,
+        "upper": 0.85,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.75,
+        "upper": 0.85,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 0.0,
+        "upper": 2.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    }
+  }
+}

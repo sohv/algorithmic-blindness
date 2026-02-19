@@ -182,15 +182,24 @@ def main():
     
     for raw_file in raw_files:
         # Parse filename: {dataset}_{algorithm}_f{formulation}_{model}_raw.txt
-        parts = raw_file.stem.replace('_raw', '').split('_')
+        # Note: dataset can have underscores (e.g., synthetic_12) so we need to find formulation pattern
+        stem = raw_file.stem.replace('_raw', '')
+        parts = stem.split('_')
         
         if len(parts) < 4:
             print(f"⚠ Skipping {raw_file.name} - unexpected filename format")
             continue
         
-        formulation = parts[2]  # f1, f2, f3
-        model = parts[3]
-        dataset_algo = '_'.join(parts[:2])  # dataset_algorithm
+        # Find formulation by looking for f1/f2/f3 pattern from the end
+        # Format is: ..._{algorithm}_f{N}_{model}
+        model = parts[-1]  # Last part is model
+        formulation = parts[-2]  # Second to last should be f1/f2/f3
+        
+        # Everything before algorithm_formulation is dataset_algorithm
+        # The part before formulation is algorithm
+        algorithm = parts[-3]  # Third from last is algorithm
+        dataset = '_'.join(parts[:-3])  # Everything before algorithm is dataset
+        dataset_algo = f"{dataset}_{algorithm}"  # Reconstruct dataset_algorithm
         
         exp_key = (dataset_algo, formulation)
         if exp_key not in responses_by_exp:

@@ -22,8 +22,13 @@ class ComparisonResult:
     metric: str
     llm_range: Tuple[float, float]
     algorithmic_ci: Tuple[float, float]
+    algorithmic_mean: float  # True value from algorithms
     
-    # Metrics
+    # PRIMARY: Calibrated Coverage
+    calibrated_coverage: bool  # Does LLM range contain algorithmic mean?
+    calibrated_coverage_score: float  # 0-1 score: how well LLM range brackets the truth
+    
+    # Secondary metrics
     overlap: bool
     containment: str  # 'llm_contains_algo', 'algo_contains_llm', 'partial', 'none'
     overlap_fraction: float  # Jaccard similarity
@@ -80,8 +85,16 @@ def compute_containment(llm_range: Tuple[float, float], algo_range: Tuple[float,
             return 'none'
 
 
-def compare_ranges(metric: str, llm_range: Dict, algo_ci: Tuple[float, float]) -> Optional[ComparisonResult]:
-    """Compare a single LLM range estimate with algorithmic CI."""
+def compare_ranges(metric: str, llm_range: Dict, algo_ci: Tuple[float, float], 
+                   algo_mean: float) -> Optional[ComparisonResult]:
+    """Compare a single LLM range estimate with algorithmic CI.
+    
+    Args:
+        metric: Metric name (e.g., 'precision')
+        llm_range: LLM predicted range {'lower': X, 'upper': Y, ...}
+        algo_ci: Algorithmic 95% CI as (lower, upper)
+        algo_mean: True algorithmic mean value
+    """
     
     if not llm_range or 'lower' not in llm_range:
         return None
@@ -90,7 +103,33 @@ def compare_ranges(metric: str, llm_range: Dict, algo_ci: Tuple[float, float]) -
     llm_high = llm_range['upper']
     algo_low, algo_high = algo_ci
     
-    # Compute metrics
+    # PRIMARY: Calibrated Coverage (does true mean fall in LLM range?)
+    calibrated_coverage = bool(llm_low <= algo_mean <= llm_high)
+    
+    # CONTINUOUS COVERAGE SCORE (0-1): How well does LLM range bracket the truth?
+    # - 1.0: algo_mean at center of LLM range (perfect)
+    # - 0.5: algo_mean at edge of LLM range (acceptable)
+    # - 0.0: algo_mean far outside LLM range (terrible)
+    llm_center = (llm_low + llm_high) / 2
+    llm_half_width = (llm_high - llm_low) / 2
+    
+    if llm_half_width == 0:
+        # Zero-width range: score based on exact match
+        calibrated_coverage_score = 1.0 if algo_mean == llm_center else 0.0
+    else:
+        distance_from_center = abs(algo_mean - llm_center)
+        if distance_from_center <= llm_half_width:
+            # Inside range: score = 1 - (fraction of half-width to edge)
+            calibrated_coverage_score = 1.0 - (distance_from_center / llm_half_width) * 0.5
+        else:
+            # Outside range: penalty based on how far outside
+            distance_outside = distance_from_center - llm_half_width
+            calibrated_coverage_score = max(0.0, 1.0 - (distance_outside / llm_half_width))
+    
+    calibrated_coverage_score = float(round(calibrated_coverage_score, 4))
+    
+    
+    # Compute secondary metrics
     overlap, jaccard = compute_overlap((llm_low, llm_high), (algo_low, algo_high))
     
     containment = compute_containment((llm_low, llm_high), (algo_low, algo_high))
@@ -118,6 +157,9 @@ def compare_ranges(metric: str, llm_range: Dict, algo_ci: Tuple[float, float]) -
         metric=metric,
         llm_range=(llm_low, llm_high),
         algorithmic_ci=(algo_low, algo_high),
+        algorithmic_mean=algo_mean,
+        calibrated_coverage=calibrated_coverage,
+        calibrated_coverage_score=calibrated_coverage_score,
         overlap=overlap,
         containment=containment,
         overlap_fraction=jaccard,
@@ -142,19 +184,37 @@ def load_algorithmic_ci(algo_results_dir: Path, dataset: str, algorithm: str,
     with open(variance_file, 'r') as f:
         data = json.load(f)
     
-    # Extract CI for this formulation
-    formulation_str = f"f{formulation}" if isinstance(formulation, int) else formulation
+    # Algorithmic results have direct metrics at top level (not formulation-specific)
+    # Since LLM aggregates across formulations, we use the overall algorithmic results
+    if 'results' in data:
+        metrics_data = data['results']
+    elif 'formulations' in data:
+        # Fallback for legacy format with formulations
+        formulation_str = f"f{formulation}" if isinstance(formulation, int) else formulation
+        if formulation_str in data['formulations']:
+            metrics_data = data['formulations'][formulation_str].get('metrics', {})
+        else:
+            return None
+    else:
+        return None
     
-    if 'formulations' in data and formulation_str in data['formulations']:
-        return data['formulations'][formulation_str].get('metrics', {})
+    # Extract CI bounds for each metric
+    extracted_metrics = {}
+    for metric in ['precision', 'recall', 'f1', 'shd']:
+        if metric in metrics_data:
+            metric_data = metrics_data[metric]
+            extracted_metrics[metric] = {
+                'ci': (metric_data.get('ci_95_lower'), metric_data.get('ci_95_upper')),
+                'mean': metric_data.get('mean')
+            }
     
-    return None
+    return extracted_metrics if extracted_metrics else None
 
 
 def main():
     parser = argparse.ArgumentParser(description="Compare LLM estimates with algorithmic CIs")
-    parser.add_argument('--llm_dir', type=str, default='variance/extracted_ranges',
-        help='Directory with extracted LLM ranges')
+    parser.add_argument('--llm_dir', type=str, default='variance/aggregated_ranges',
+        help='Directory with aggregated LLM ranges (averaged across formulations)')
     parser.add_argument('--algorithmic_dir', type=str, default='../experiments/results',
         help='Directory with algorithmic variance results')
     parser.add_argument('--output_dir', type=str, default='variance/comparisons',
@@ -171,17 +231,17 @@ def main():
     print("="*80)
     print("COMPARING LLM ESTIMATES VS ALGORITHMIC CONFIDENCE INTERVALS")
     print("="*80)
-    print(f"LLM ranges:       {llm_dir}")
+    print(f"LLM ranges:       {llm_dir} (aggregated across formulations)")
     print(f"Algorithmic CIs:  {algo_dir}")
     print(f"Output:           {output_dir}")
     print()
     
-    # Load all LLM extracted ranges
-    llm_files = sorted(llm_dir.glob("*_ranges.json"))
-    print(f"Found {len(llm_files)} LLM extraction files\n")
+    # Load all LLM aggregated ranges
+    llm_files = sorted(llm_dir.glob("*_aggregated.json"))
+    print(f"Found {len(llm_files)} LLM aggregation files\n")
     
     if not llm_files:
-        print("❌ No LLM extraction files found. Run extract_llm_ranges.py first.")
+        print("❌ No LLM aggregation files found. Run aggregate_formulations.py first.")
         return
     
     # Comparison results
@@ -189,16 +249,23 @@ def main():
     all_models_seen = set()
     
     for llm_file in llm_files:
-        # Parse: {dataset}_{algorithm}_{formulation}_ranges.json
-        parts = llm_file.stem.split('_')
-        
-        if len(parts) < 4:
-            print(f"⚠ Skipping {llm_file.name} - unexpected format")
+        # Parse: {dataset}_{algorithm}_aggregated.json
+        # Handle datasets with underscores (e.g., synthetic_12_fci_aggregated.json)
+        stem = llm_file.stem
+        if not stem.endswith('_aggregated'):
+            print(f" Skipping {llm_file.name} - unexpected format")
             continue
         
-        dataset = parts[0]
-        algorithm = parts[1]
-        formulation = parts[2].replace('f', '')  # Remove 'f' prefix
+        stem_without_suffix = stem[:-len('_aggregated')]  # Remove "_aggregated"
+        parts = stem_without_suffix.split('_')
+        
+        if len(parts) < 2:
+            print(f" Skipping {llm_file.name} - unexpected format")
+            continue
+        
+        # Last part is always algorithm, everything before it is dataset
+        algorithm = parts[-1]
+        dataset = '_'.join(parts[:-1])
         
         # Load data
         with open(llm_file, 'r') as f:
@@ -208,20 +275,20 @@ def main():
         for model_name in llm_data['llm_estimates'].keys():
             all_models_seen.add(model_name)
         
-        # Load algorithmic CI
-        algo_metrics = load_algorithmic_ci(algo_dir, dataset, algorithm, formulation)
+        # Load algorithmic CI (use any formulation, they all have same algorithmic results)
+        algo_metrics = load_algorithmic_ci(algo_dir, dataset, algorithm, '1')
         
         if not algo_metrics:
             if args.verbose:
-                print(f"⚠ No algorithmic data for {dataset} {algorithm} f{formulation}")
+                print(f" Skipping {dataset} {algorithm} - no algorithmic data found")
             continue
         
         # Compare each LLM model
-        exp_key = f"{dataset}_{algorithm}_f{formulation}"
+        exp_key = f"{dataset}_{algorithm}"
         all_comparisons[exp_key] = {
             'dataset': dataset,
             'algorithm': algorithm,
-            'formulation': formulation,
+            'aggregation_source': 'mean of f1, f2, f3',
             'models': {}
         }
         
@@ -233,9 +300,11 @@ def main():
                     continue
                 
                 llm_estimate = model_estimates[metric]
-                algo_ci = tuple(algo_metrics[metric])
+                algo_data = algo_metrics[metric]
+                algo_ci = algo_data['ci']
+                algo_mean = algo_data['mean']
                 
-                comparison = compare_ranges(metric, llm_estimate, algo_ci)
+                comparison = compare_ranges(metric, llm_estimate, algo_ci, algo_mean)
                 
                 if comparison:
                     model_comparisons[metric] = asdict(comparison)
@@ -270,7 +339,7 @@ def main():
     # Generate summary
     print()
     print("="*80)
-    print("COMPARISON SUMMARY")
+    print("COMPARISON SUMMARY (Aggregated across 3 formulations)")
     print("="*80)
     
     total_comparisons = 0

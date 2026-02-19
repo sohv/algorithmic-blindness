@@ -1,0 +1,214 @@
+{
+  "experiment": "synthetic_30_lingam",
+  "formulation": "f3",
+  "llm_estimates": {
+    "claude": {
+      "precision": {
+        "lower": 0.25,
+        "upper": 0.55,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.15,
+        "upper": 0.45,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.2,
+        "upper": 0.45,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 40.0,
+        "upper": 120.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "deepseek": {
+      "precision": {
+        "lower": 0.75,
+        "upper": 0.9,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.65,
+        "upper": 0.85,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.7,
+        "upper": 0.87,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 15.0,
+        "upper": 35.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "deepseekthink": {
+      "precision": {
+        "lower": 0.78,
+        "upper": 0.96,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.68,
+        "upper": 0.88,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.73,
+        "upper": 0.91,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 10.0,
+        "upper": 30.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "gemini3": {
+      "precision": {
+        "lower": 0.85,
+        "upper": 0.95,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.8,
+        "upper": 0.92,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.82,
+        "upper": 0.93,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 2.0,
+        "upper": 8.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "gpt5": {
+      "precision": {
+        "lower": 0.7,
+        "upper": 0.92,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.55,
+        "upper": 0.82,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.62,
+        "upper": 0.86,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 25.0,
+        "upper": 70.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "llama": {
+      "precision": {
+        "lower": 0.6,
+        "upper": 0.9,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.5,
+        "upper": 0.85,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.55,
+        "upper": 0.85,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 10.0,
+        "upper": 30.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "qwen": {
+      "precision": {
+        "lower": 0.85,
+        "upper": 0.95,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.85,
+        "upper": 0.95,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.85,
+        "upper": 0.95,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 5.0,
+        "upper": 15.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    },
+    "qwenthink": {
+      "precision": {
+        "lower": 0.75,
+        "upper": 0.85,
+        "confidence": "high",
+        "source": "\\*?precision\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*(["
+      },
+      "recall": {
+        "lower": 0.7,
+        "upper": 0.8,
+        "confidence": "high",
+        "source": "\\*?recall\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)\\s*,\\s*([0-9"
+      },
+      "f1": {
+        "lower": 0.72,
+        "upper": 0.82,
+        "confidence": "high",
+        "source": "\\*?f[1-]\\s*(?:score)?\\*?\\s*[:\\*\\.]+\\s*\\[?([0-9.]+)"
+      },
+      "shd": {
+        "lower": 10.0,
+        "upper": 20.0,
+        "confidence": "high",
+        "source": "(?:\\*?shd\\*?|structural\\s+hamming\\s+distance)\\s*[:"
+      }
+    }
+  }
+}
