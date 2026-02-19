@@ -8,7 +8,7 @@ For each LLM and metric, computes CV across formulations:
     CV% = (std_dev / mean) * 100
 
 Usage:
-    python compute_prompt_robustness.py --input_dir variance/raw_responses --output_dir variance/robustness_analysis
+    python compute_prompt_robustness.py --input_dir results/raw_responses --output_dir results/robustness_analysis
 
 Output:
     - robustness_summary.json: CV for each LLM per metric
@@ -106,9 +106,9 @@ def compute_cv(values: List[float]) -> Tuple[float, float]:
 
 def main():
     parser = argparse.ArgumentParser(description="Compute prompt robustness via coefficient of variation")
-    parser.add_argument('--input_dir', type=str, default='variance/raw_responses',
+    parser.add_argument('--input_dir', type=str, default='results/raw_responses',
         help='Directory with raw LLM responses')
-    parser.add_argument('--output_dir', type=str, default='variance/robustness_analysis',
+    parser.add_argument('--output_dir', type=str, default='results/robustness_analysis',
         help='Output directory for robustness analysis')
     
     args = parser.parse_args()

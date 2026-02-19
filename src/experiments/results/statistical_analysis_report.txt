@@ -6,37 +6,37 @@ Significance Level (α): 0.05
 PAIRWISE COMPARISON RESULTS
 
 Test: FCI vs LINGAM
-  Group 1 Mean: 0.4415
-  Group 2 Mean: 0.3120
-  P-value: 0.0198
-  Corrected P-value: 0.0198
-  Effect Size (Cohen's d): 0.8211
-  95% CI: (0.0248, 0.2340)
+  Group 1 Mean: 0.4258
+  Group 2 Mean: 0.3014
+  P-value: 0.0129
+  Corrected P-value: 0.0129
+  Effect Size (Cohen's d): 0.8420
+  95% CI: (0.0315, 0.2174)
   Significant: YES
 
 Test: FCI vs NOTEARS
-  Group 1 Mean: 0.4415
-  Group 2 Mean: 0.2977
-  P-value: 0.1716
-  Corrected P-value: 0.1716
-  Effect Size (Cohen's d): 0.4409
-  95% CI: (-0.0726, 0.3601)
+  Group 1 Mean: 0.4258
+  Group 2 Mean: 0.2989
+  P-value: 0.1158
+  Corrected P-value: 1.0000
+  Effect Size (Cohen's d): 0.4894
+  95% CI: (-0.0362, 0.2900)
   Significant: NO
 
 Test: FCI vs PC
-  Group 1 Mean: 0.4415
-  Group 2 Mean: 0.4524
-  P-value: 0.7354
-  Corrected P-value: 0.7354
-  Effect Size (Cohen's d): -0.1045
-  95% CI: (-0.0806, 0.0587)
+  Group 1 Mean: 0.4258
+  Group 2 Mean: 0.4273
+  P-value: 0.6568
+  Corrected P-value: 1.0000
+  Effect Size (Cohen's d): -0.1315
+  95% CI: (-0.0088, 0.0058)
   Significant: NO
 
 Test: LINGAM vs NOTEARS
   Group 1 Mean: 0.3014
   Group 2 Mean: 0.2989
   P-value: 0.9756
-  Corrected P-value: 0.9756
+  Corrected P-value: 1.0000
   Effect Size (Cohen's d): 0.0090
   95% CI: (-0.1718, 0.1768)
   Significant: NO
@@ -54,7 +54,7 @@ Test: NOTEARS vs PC
   Group 1 Mean: 0.2989
   Group 2 Mean: 0.4273
   P-value: 0.1122
-  Corrected P-value: 0.1122
+  Corrected P-value: 1.0000
   Effect Size (Cohen's d): -0.4948
   95% CI: (-0.2917, 0.0348)
   Significant: NO

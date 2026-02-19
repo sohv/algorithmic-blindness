@@ -5,7 +5,7 @@ Compare LLM Estimates vs Algorithmic Confidence Intervals
 Compares LLM-extracted metric ranges with algorithmic confidence intervals.
 
 Usage:
-    python compare_llm_vs_algorithmic.py --llm_dir variance/extracted_ranges --algorithmic_dir ../experiments/results
+    python compare_llm_vs_algorithmic.py --llm_dir results/extracted_ranges --algorithmic_dir ../experiments/results
 """
 
 import json
@@ -213,11 +213,11 @@ def load_algorithmic_ci(algo_results_dir: Path, dataset: str, algorithm: str,
 
 def main():
     parser = argparse.ArgumentParser(description="Compare LLM estimates with algorithmic CIs")
-    parser.add_argument('--llm_dir', type=str, default='variance/aggregated_ranges',
+    parser.add_argument('--llm_dir', type=str, default='results/aggregated_ranges',
         help='Directory with aggregated LLM ranges (averaged across formulations)')
     parser.add_argument('--algorithmic_dir', type=str, default='../experiments/results',
         help='Directory with algorithmic variance results')
-    parser.add_argument('--output_dir', type=str, default='variance/comparisons',
+    parser.add_argument('--output_dir', type=str, default='results/comparisons',
         help='Output directory for comparison results')
     parser.add_argument('--verbose', action='store_true', help='Show detailed comparison')
     
@@ -319,23 +319,6 @@ def main():
     with open(output_file, 'w') as f:
         json.dump(all_comparisons, f, indent=2)
     
-    # Format LLM names for filename
-    expected_all_models = {'gpt5', 'claude', 'geminiflash', 'gemini3', 'deepseek', 'llama', 'qwen', 'qwenthink'}
-    all_models_normalized = {m.lower() for m in all_models_seen}
-    
-    # Check if we have "all" common models (at least 5-6 of them)
-    if len(all_models_normalized) >= 5:
-        llm_suffix = "all"
-    else:
-        # Format specific models with underscore separation, sorted for consistency
-        sorted_models = sorted(all_models_seen)
-        llm_suffix = "_".join(sorted_models)
-    
-    # Save detailed result with LLM names in filename
-    detailed_output_file = output_dir / f"comparison_results_{llm_suffix}.json"
-    with open(detailed_output_file, 'w') as f:
-        json.dump(all_comparisons, f, indent=2)
-    
     # Generate summary
     print()
     print("="*80)
@@ -365,7 +348,7 @@ def main():
     
     print()
     print("="*80)
-    print(f"Results saved to: {detailed_output_file}")
+    print(f"Results saved to: {output_file}")
 
 
 if __name__ == "__main__":

@@ -9,46 +9,46 @@ KEY FINDINGS
 --------------------------------------------------------------------------------
 
 1. Graph Complexity (Sparsity/Density)
-   Impact Score: 44.3%
-   Correlation: -0.443
-   Graph density negatively correlates with performance
+   Impact Score: 42.1%
+   Correlation: 0.421
+   Graph density positively correlates with performance
 
    Evidence:
-     • Graph sparsity range: 0.089 - 0.256
+     • Graph sparsity range: 0.111 - 0.250
      • Performance range: 0.184 - 0.525
-     • Correlation: -0.443
-     • Sparser graphs perform better
+     • Correlation: 0.421
+     • Sparser graphs perform worse
 
 2. Sample Size Effect
-   Impact Score: 12.9%
-   Correlation: 0.129
+   Impact Score: 12.7%
+   Correlation: 0.127
    Larger samples improve performance
 
    Evidence:
      • Sample size log-scale range: 3.00 - 3.87
      • Performance range: 0.184 - 0.525
-     • Correlation: 0.129
+     • Correlation: 0.127
      • Effect: Weak
 
 3. Problem Dimensionality
-   Impact Score: 11.4%
-   Correlation: 0.114
+   Impact Score: 11.3%
+   Correlation: 0.113
    Higher dimensionality helps learning
 
    Evidence:
      • Dimension range: 8 - 30 variables
-     • Performance on low-D: 0.360
+     • Performance on low-D: 0.361
      • Performance on high-D: 0.397
-     • Correlation: 0.114
+     • Correlation: 0.113
 
 4. Algorithm-Dataset Interaction
-   Impact Score: 0.6%
+   Impact Score: 0.5%
    Correlation: 0.000
    Different algorithms have different sensitivity to dataset properties
 
    Evidence:
      • Number of algorithms: 4
-     • Mean performance variance across datasets: 0.0270
+     • Mean performance variance across datasets: 0.0273
      • Max single-algorithm variance: 0.0326
      • Interaction effect: 1 algorithms show high sensitivity
 
@@ -68,5 +68,5 @@ THEORETICAL IMPLICATIONS
 --------------------------------------------------------------------------------
 
 Primary Explanatory Factor: Graph Complexity (Sparsity/Density)
-  This factor explains ~44% of performance variation,
+  This factor explains ~42% of performance variation,
   suggesting it is the primary driver of algorithm behavior in this domain.

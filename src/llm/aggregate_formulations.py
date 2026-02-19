@@ -5,7 +5,7 @@ Aggregate LLM Predictions Across Formulations
 Takes extracted ranges from f1, f2, f3 and averages them.
 
 Usage:
-    python aggregate_formulations.py --input_dir variance/extracted_ranges --output_dir variance/aggregated_ranges
+    python aggregate_formulations.py --input_dir results/extracted_ranges --output_dir results/aggregated_ranges
 
 This ensures:
 1. All 3 formulations are weighted equally
@@ -121,9 +121,9 @@ def aggregate_formulation_ranges(extracted_ranges_dir: Path) -> Dict:
 
 def main():
     parser = argparse.ArgumentParser(description="Aggregate LLM predictions across formulations")
-    parser.add_argument('--input_dir', type=str, default='variance/extracted_ranges',
+    parser.add_argument('--input_dir', type=str, default='results/extracted_ranges',
         help='Directory with extracted LLM ranges (per formulation)')
-    parser.add_argument('--output_dir', type=str, default='variance/aggregated_ranges',
+    parser.add_argument('--output_dir', type=str, default='results/aggregated_ranges',
         help='Output directory for aggregated ranges')
     parser.add_argument('--verbose', action='store_true', help='Show aggregation details')
     

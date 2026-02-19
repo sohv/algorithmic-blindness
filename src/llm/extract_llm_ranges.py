@@ -6,7 +6,7 @@ Reads raw LLM responses and extracts metric ranges (precision, recall, f1, shd).
 Much easier to debug and iterate than parsing during querying.
 
 Usage:
-    python extract_llm_ranges.py --input_dir variance/raw_responses --output_dir variance/extracted_ranges
+    python extract_llm_ranges.py --input_dir results/raw_responses --output_dir results/extracted_ranges
 """
 
 import re
@@ -154,9 +154,9 @@ def extract_ranges_from_text(text: str) -> Dict[str, MetricRange]:
 
 def main():
     parser = argparse.ArgumentParser(description="Extract metric ranges from raw LLM responses")
-    parser.add_argument('--input_dir', type=str, default='variance/raw_responses',
+    parser.add_argument('--input_dir', type=str, default='results/raw_responses',
         help='Directory containing raw response files')
-    parser.add_argument('--output_dir', type=str, default='variance/extracted_ranges',
+    parser.add_argument('--output_dir', type=str, default='results/extracted_ranges',
         help='Output directory for extracted ranges')
     parser.add_argument('--verbose', action='store_true', help='Show extraction details')
     

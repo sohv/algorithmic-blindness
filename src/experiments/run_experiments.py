@@ -23,8 +23,6 @@ import json
 # Add parent directory to path so imports work when run as: python run_experiments.py
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from algorithms.variance_analysis import VarianceAnalyzer
-
 # Note: All benchmark datasets (Asia, Alarm, Sachs, Survey, Child, Cancer, Hepar2, Earthquake, Insurance)
 # are loaded from local .bif files using bnlearn - no module imports needed
 

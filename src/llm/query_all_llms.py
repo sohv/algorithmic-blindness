@@ -61,7 +61,7 @@ def main():
         help='Algorithms to query (default: pc lingam)')
     parser.add_argument('--formulation', type=int, nargs='+', default=[1], choices=[1, 2, 3],
         help='Prompt formulations to use (default: 1)')
-    parser.add_argument('--output_dir', type=str, default='variance/raw_responses',
+    parser.add_argument('--output_dir', type=str, default='results/raw_responses',
         help='Output directory for raw responses')
     parser.add_argument('--all', action='store_true', help='Query all LLMs on all experiments')
 
@@ -165,7 +165,7 @@ def main():
     print(f"Successful: {successful_queries} ({100*successful_queries/total_queries:.1f}%)")
     print(f"Failed: {failed_queries} ({100*failed_queries/total_queries:.1f}%)")
     print(f"\nRaw responses saved to: {output_dir}/")
-    print(f"Next step: python extract_llm_ranges.py --input_dir {output_dir} --output_dir variance/extracted_ranges")
+    print(f"Next step: python extract_llm_ranges.py --input_dir {output_dir} --output_dir results/extracted_ranges")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,22 @@
+================================================================================
+CLAUDE CALIBRATED COVERAGE - CROSS-ALGORITHM BREAKDOWN
+================================================================================
+
+Algorithm       Real %       Synthetic %  Difference   Pattern Match?
+--------------------------------------------------------------------------------
+fci               25.0%       43.8%       +18.8%     YES
+lingam            47.2%       31.2%       -16.0%     No
+notears           44.4%       68.8%       +24.3%     YES
+pc                27.8%       43.8%       +16.0%     YES
+--------------------------------------------------------------------------------
+
+SUMMARY:
+  Average synthetic boost across algorithms: +10.8%
+  Max boost (algorithm-specific): +24.3%
+  Min boost (algorithm-specific): -16.0%
+  Range of variation: 40.3%
+
+KEY FINDING:
+The algorithm-specific nature of Claude's synthetic boost (ranging from -16.0% to +24.3%)
+rules out a general synthetic-data simplicity effect and instead demonstrates
+exploitation of algorithm-specific patterns—the hallmark of pattern matching.

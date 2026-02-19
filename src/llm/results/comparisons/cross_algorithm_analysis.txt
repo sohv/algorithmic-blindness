@@ -1,0 +1,29 @@
+====================================================================================================
+CROSS-ALGORITHM ANALYSIS: Algorithm Understanding Test
+====================================================================================================
+
+FCI:
+  Average synthetic boost: -0.5%
+  Range variation: 34.7%
+  Most exploitable algorithm: NOTEARS
+
+LINGAM:
+  Average synthetic boost: -23.2%
+  Range variation: 44.4%
+  Most exploitable algorithm: NOTEARS
+
+NOTEARS:
+  Average synthetic boost: +1.7%
+  Range variation: 56.9%
+  Most exploitable algorithm: NOTEARS
+
+PC:
+  Average synthetic boost: -2.0%
+  Range variation: 24.3%
+  Most exploitable algorithm: NOTEARS
+
+====================================================================================================
+KEY FINDING:
+====================================================================================================
+The different synthetic boosts per algorithm prove Claude learned
+algorithm-specific patterns, not general algorithmic principles.
