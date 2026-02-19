@@ -6,63 +6,63 @@ Significance Level (α): 0.05
 PAIRWISE COMPARISON RESULTS
 
 Test: FCI vs LINGAM
-  Group 1 Mean: 0.5028
-  Group 2 Mean: 0.3314
-  P-value: 0.0048
-  Corrected P-value: 0.0048
-  Effect Size (Cohen's d): 1.2365
-  95% CI: (0.0669, 0.2760)
+  Group 1 Mean: 0.4415
+  Group 2 Mean: 0.3120
+  P-value: 0.0198
+  Corrected P-value: 0.0198
+  Effect Size (Cohen's d): 0.8211
+  95% CI: (0.0248, 0.2340)
   Significant: YES
 
 Test: FCI vs NOTEARS
-  Group 1 Mean: 0.5028
-  Group 2 Mean: 0.2466
-  P-value: 0.0069
-  Corrected P-value: 0.0069
-  Effect Size (Cohen's d): 1.1605
-  95% CI: (0.0898, 0.4228)
-  Significant: YES
+  Group 1 Mean: 0.4415
+  Group 2 Mean: 0.2977
+  P-value: 0.1716
+  Corrected P-value: 0.1716
+  Effect Size (Cohen's d): 0.4409
+  95% CI: (-0.0726, 0.3601)
+  Significant: NO
 
 Test: FCI vs PC
-  Group 1 Mean: 0.5028
-  Group 2 Mean: 0.4939
-  P-value: 0.7848
-  Corrected P-value: 1.0000
-  Effect Size (Cohen's d): 0.0938
-  95% CI: (-0.0632, 0.0811)
+  Group 1 Mean: 0.4415
+  Group 2 Mean: 0.4524
+  P-value: 0.7354
+  Corrected P-value: 0.7354
+  Effect Size (Cohen's d): -0.1045
+  95% CI: (-0.0806, 0.0587)
   Significant: NO
 
 Test: LINGAM vs NOTEARS
-  Group 1 Mean: 0.3209
-  Group 2 Mean: 0.2860
-  P-value: 0.7109
-  Corrected P-value: 1.0000
-  Effect Size (Cohen's d): 0.1206
-  95% CI: (-0.1689, 0.2387)
+  Group 1 Mean: 0.3014
+  Group 2 Mean: 0.2989
+  P-value: 0.9756
+  Corrected P-value: 0.9756
+  Effect Size (Cohen's d): 0.0090
+  95% CI: (-0.1718, 0.1768)
   Significant: NO
 
 Test: LINGAM vs PC
-  Group 1 Mean: 0.3209
-  Group 2 Mean: 0.4804
-  P-value: 0.0031
-  Corrected P-value: 0.0031
-  Effect Size (Cohen's d): -1.2218
-  95% CI: (-0.2515, -0.0675)
+  Group 1 Mean: 0.3014
+  Group 2 Mean: 0.4273
+  P-value: 0.0103
+  Corrected P-value: 0.0103
+  Effect Size (Cohen's d): -0.8767
+  95% CI: (-0.2163, -0.0356)
   Significant: YES
 
 Test: NOTEARS vs PC
-  Group 1 Mean: 0.2860
-  Group 2 Mean: 0.4804
-  P-value: 0.0214
-  Corrected P-value: 0.0214
-  Effect Size (Cohen's d): -0.8611
-  95% CI: (-0.3534, -0.0353)
-  Significant: YES
+  Group 1 Mean: 0.2989
+  Group 2 Mean: 0.4273
+  P-value: 0.1122
+  Corrected P-value: 0.1122
+  Effect Size (Cohen's d): -0.4948
+  95% CI: (-0.2917, 0.0348)
+  Significant: NO
 
 --------------------------------------------------------------------------------
 SUMMARY
 --------------------------------------------------------------------------------
-Significant Results: 4/6
-Significance Rate: 66.7%
+Significant Results: 2/6
+Significance Rate: 33.3%
 
 ================================================================================

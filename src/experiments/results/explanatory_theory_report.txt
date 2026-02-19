@@ -9,58 +9,58 @@ KEY FINDINGS
 --------------------------------------------------------------------------------
 
 1. Graph Complexity (Sparsity/Density)
-   Impact Score: 22.2%
-   Correlation: 0.222
-   Graph density positively correlates with performance
+   Impact Score: 44.3%
+   Correlation: -0.443
+   Graph density negatively correlates with performance
 
    Evidence:
-     • Graph sparsity range: 0.148 - 0.211
-     • Performance range: 0.196 - 0.525
-     • Correlation: 0.222
-     • Sparser graphs perform worse
+     • Graph sparsity range: 0.089 - 0.256
+     • Performance range: 0.184 - 0.525
+     • Correlation: -0.443
+     • Sparser graphs perform better
 
-2. Problem Dimensionality
-   Impact Score: 4.6%
-   Correlation: 0.046
-   Higher dimensionality helps learning
-
-   Evidence:
-     • Dimension range: 8 - 30 variables
-     • Performance on low-D: 0.390
-     • Performance on high-D: 0.397
-     • Correlation: 0.046
-
-3. Sample Size Effect
-   Impact Score: 2.4%
-   Correlation: 0.024
+2. Sample Size Effect
+   Impact Score: 12.9%
+   Correlation: 0.129
    Larger samples improve performance
 
    Evidence:
      • Sample size log-scale range: 3.00 - 3.87
-     • Performance range: 0.196 - 0.525
-     • Correlation: 0.024
+     • Performance range: 0.184 - 0.525
+     • Correlation: 0.129
      • Effect: Weak
 
+3. Problem Dimensionality
+   Impact Score: 11.4%
+   Correlation: 0.114
+   Higher dimensionality helps learning
+
+   Evidence:
+     • Dimension range: 8 - 30 variables
+     • Performance on low-D: 0.360
+     • Performance on high-D: 0.397
+     • Correlation: 0.114
+
 4. Algorithm-Dataset Interaction
-   Impact Score: 1.6%
+   Impact Score: 0.6%
    Correlation: 0.000
    Different algorithms have different sensitivity to dataset properties
 
    Evidence:
      • Number of algorithms: 4
-     • Mean performance variance across datasets: 0.0208
-     • Max single-algorithm variance: 0.0368
-     • Interaction effect: 2 algorithms show high sensitivity
+     • Mean performance variance across datasets: 0.0270
+     • Max single-algorithm variance: 0.0326
+     • Interaction effect: 1 algorithms show high sensitivity
 
 5. Noise Sensitivity
-   Impact Score: nan%
-   Correlation: nan
+   Impact Score: 0.0%
+   Correlation: -0.000
    Algorithms Show low noise sensitivity
 
    Evidence:
      • Noise level range: 0.050 - 0.050
-     • Performance std range: 0.078 - 0.207
-     • Correlation: nan
+     • Performance std range: 0.077 - 0.207
+     • Correlation: -0.000
      • Insight: Noisy environments mildly degrade performance
 
 --------------------------------------------------------------------------------
@@ -68,5 +68,5 @@ THEORETICAL IMPLICATIONS
 --------------------------------------------------------------------------------
 
 Primary Explanatory Factor: Graph Complexity (Sparsity/Density)
-  This factor explains ~22% of performance variation,
+  This factor explains ~44% of performance variation,
   suggesting it is the primary driver of algorithm behavior in this domain.

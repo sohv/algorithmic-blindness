@@ -1,0 +1,6 @@
+Based on the analysis of the PC algorithm's assumptions (faithfulness, causal sufficiency) against the Hepar2 dataset characteristics (discrete data, 70 nodes, 1000 samples), the sample size is relatively small for the high dimensionality and density of the graph. This often leads to lower recall due to Type II errors in conditional independence testing, though precision remains moderate.
+
+Precision: [0.40, 0.50]
+Recall: [0.20, 0.30]
+F1: [0.25, 0.35]
+SHD: [100, 130]
