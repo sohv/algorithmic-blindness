@@ -8,7 +8,7 @@
     "random": {
       "count": 1664,
       "calibrated_coverage_pct": 36.53846153846154,
-      "mean_score": 0.4094120192307689,
+      "mean_score": 0.40941201923076925,
       "median_score": 0.5214,
       "perfect_0_8_1_0": 416,
       "terrible_0_0_0_2": 744
@@ -16,7 +16,7 @@
     "heuristic": {
       "count": 1664,
       "calibrated_coverage_pct": 32.69230769230769,
-      "mean_score": 0.3560216346153839,
+      "mean_score": 0.3560216346153846,
       "median_score": 0.1919,
       "perfect_0_8_1_0": 352,
       "terrible_0_0_0_2": 832
@@ -33,7 +33,7 @@
       "deepseek": {
         "count": 208,
         "calibrated_coverage_pct": 14.423076923076923,
-        "mean_score": 0.19819230769230764,
+        "mean_score": 0.19819230769230767,
         "median_score": 0.0,
         "perfect_0_8_1_0": 19,
         "terrible_0_0_0_2": 148
@@ -41,7 +41,7 @@
       "deepseekthink": {
         "count": 208,
         "calibrated_coverage_pct": 14.903846153846153,
-        "mean_score": 0.17392548076923078,
+        "mean_score": 0.17392548076923076,
         "median_score": 0.0,
         "perfect_0_8_1_0": 16,
         "terrible_0_0_0_2": 158
@@ -49,7 +49,7 @@
       "gemini3": {
         "count": 208,
         "calibrated_coverage_pct": 12.98076923076923,
-        "mean_score": 0.18155865384615383,
+        "mean_score": 0.18155865384615386,
         "median_score": 0.0,
         "perfect_0_8_1_0": 15,
         "terrible_0_0_0_2": 153
@@ -57,7 +57,7 @@
       "gpt5": {
         "count": 208,
         "calibrated_coverage_pct": 15.384615384615385,
-        "mean_score": 0.21658028846153837,
+        "mean_score": 0.21658028846153846,
         "median_score": 0.0,
         "perfect_0_8_1_0": 18,
         "terrible_0_0_0_2": 137
@@ -65,7 +65,7 @@
       "llama": {
         "count": 208,
         "calibrated_coverage_pct": 10.096153846153847,
-        "mean_score": 0.15188173076923075,
+        "mean_score": 0.15188173076923078,
         "median_score": 0.0,
         "perfect_0_8_1_0": 19,
         "terrible_0_0_0_2": 163
@@ -81,7 +81,7 @@
       "qwenthink": {
         "count": 208,
         "calibrated_coverage_pct": 13.942307692307692,
-        "mean_score": 0.19086586538461547,
+        "mean_score": 0.1908658653846154,
         "median_score": 0.0,
         "perfect_0_8_1_0": 21,
         "terrible_0_0_0_2": 153
