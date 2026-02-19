@@ -14539,6 +14539,733 @@
       }
     }
   },
+  "hepar2_fci": {
+    "dataset": "hepar2",
+    "algorithm": "fci",
+    "aggregation_source": "mean of f1, f2, f3",
+    "models": {
+      "claude": {
+        "precision": {
+          "metric": "precision",
+          "llm_range": [
+            0.2,
+            0.4166666666666667
+          ],
+          "algorithmic_ci": [
+            0.13364211840521947,
+            0.1519047362184026
+          ],
+          "algorithmic_mean": 0.14238194751260472,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.4681,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.16555990602152232,
+          "llm_width": 0.21666666666666667,
+          "algo_width": 0.018262617813183113,
+          "accuracy_score": 0.8344400939784777,
+          "confidence_score": "high"
+        },
+        "recall": {
+          "metric": "recall",
+          "llm_range": [
+            0.11,
+            0.31666666666666665
+          ],
+          "algorithmic_ci": [
+            0.7346113821138212,
+            0.7498373983739837
+          ],
+          "algorithmic_mean": 0.7422764227642277,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.5288910569105691,
+          "llm_width": 0.20666666666666667,
+          "algo_width": 0.015226016260162512,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "f1": {
+          "metric": "f1",
+          "llm_range": [
+            0.14666666666666667,
+            0.3466666666666667
+          ],
+          "algorithmic_ci": [
+            0.22746191584712644,
+            0.2487741183629548
+          ],
+          "algorithmic_mean": 0.23790488211450914,
+          "calibrated_coverage": true,
+          "calibrated_coverage_score": 0.9562,
+          "overlap": true,
+          "containment": "llm_contains_algo",
+          "overlap_fraction": 0.10656101257914177,
+          "center_distance": 0.00854864956162607,
+          "llm_width": 0.2,
+          "algo_width": 0.021312202515828355,
+          "accuracy_score": 1.0,
+          "confidence_score": "high"
+        },
+        "shd": {
+          "metric": "shd",
+          "llm_range": [
+            85.0,
+            160.0
+          ],
+          "algorithmic_ci": [
+            580.114,
+            645.337
+          ],
+          "algorithmic_mean": 612.84,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 490.2255,
+          "llm_width": 75.0,
+          "algo_width": 65.22299999999996,
+          "accuracy_score": 0.49999999999999994,
+          "confidence_score": "high"
+        }
+      },
+      "deepseek": {
+        "precision": {
+          "metric": "precision",
+          "llm_range": [
+            0.3666666666666667,
+            0.5666666666666667
+          ],
+          "algorithmic_ci": [
+            0.13364211840521947,
+            0.1519047362184026
+          ],
+          "algorithmic_mean": 0.14238194751260472,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.32389323935485564,
+          "llm_width": 0.19999999999999996,
+          "algo_width": 0.018262617813183113,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "recall": {
+          "metric": "recall",
+          "llm_range": [
+            0.4,
+            0.5666666666666667
+          ],
+          "algorithmic_ci": [
+            0.7346113821138212,
+            0.7498373983739837
+          ],
+          "algorithmic_mean": 0.7422764227642277,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.2588910569105691,
+          "llm_width": 0.16666666666666663,
+          "algo_width": 0.015226016260162512,
+          "accuracy_score": 0.7411089430894309,
+          "confidence_score": "high"
+        },
+        "f1": {
+          "metric": "f1",
+          "llm_range": [
+            0.37333333333333335,
+            0.5566666666666666
+          ],
+          "algorithmic_ci": [
+            0.22746191584712644,
+            0.2487741183629548
+          ],
+          "algorithmic_mean": 0.23790488211450914,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.22688198289495937,
+          "llm_width": 0.1833333333333333,
+          "algo_width": 0.021312202515828355,
+          "accuracy_score": 0.7731180171050407,
+          "confidence_score": "high"
+        },
+        "shd": {
+          "metric": "shd",
+          "llm_range": [
+            81.66666666666667,
+            126.66666666666667
+          ],
+          "algorithmic_ci": [
+            580.114,
+            645.337
+          ],
+          "algorithmic_mean": 612.84,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 508.5588333333333,
+          "llm_width": 45.0,
+          "algo_width": 65.22299999999996,
+          "accuracy_score": 0.49999999999999994,
+          "confidence_score": "high"
+        }
+      },
+      "deepseekthink": {
+        "precision": {
+          "metric": "precision",
+          "llm_range": [
+            0.55,
+            0.72
+          ],
+          "algorithmic_ci": [
+            0.13364211840521947,
+            0.1519047362184026
+          ],
+          "algorithmic_mean": 0.14238194751260472,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.492226572688189,
+          "llm_width": 0.16999999999999993,
+          "algo_width": 0.018262617813183113,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "recall": {
+          "metric": "recall",
+          "llm_range": [
+            0.5,
+            0.67
+          ],
+          "algorithmic_ci": [
+            0.7346113821138212,
+            0.7498373983739837
+          ],
+          "algorithmic_mean": 0.7422764227642277,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.1497,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.15722439024390245,
+          "llm_width": 0.17000000000000004,
+          "algo_width": 0.015226016260162512,
+          "accuracy_score": 0.8427756097560976,
+          "confidence_score": "high"
+        },
+        "f1": {
+          "metric": "f1",
+          "llm_range": [
+            0.5233333333333333,
+            0.6933333333333334
+          ],
+          "algorithmic_ci": [
+            0.22746191584712644,
+            0.2487741183629548
+          ],
+          "algorithmic_mean": 0.23790488211450914,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.3702153162282928,
+          "llm_width": 0.17000000000000004,
+          "algo_width": 0.021312202515828355,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "shd": {
+          "metric": "shd",
+          "llm_range": [
+            78.33333333333333,
+            118.33333333333333
+          ],
+          "algorithmic_ci": [
+            580.114,
+            645.337
+          ],
+          "algorithmic_mean": 612.84,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 514.3921666666666,
+          "llm_width": 40.0,
+          "algo_width": 65.22299999999996,
+          "accuracy_score": 0.49999999999999994,
+          "confidence_score": "high"
+        }
+      },
+      "gemini3": {
+        "precision": {
+          "metric": "precision",
+          "llm_range": [
+            0.35,
+            0.55
+          ],
+          "algorithmic_ci": [
+            0.13364211840521947,
+            0.1519047362184026
+          ],
+          "algorithmic_mean": 0.14238194751260472,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.307226572688189,
+          "llm_width": 0.20000000000000007,
+          "algo_width": 0.018262617813183113,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "recall": {
+          "metric": "recall",
+          "llm_range": [
+            0.18333333333333335,
+            0.38333333333333336
+          ],
+          "algorithmic_ci": [
+            0.7346113821138212,
+            0.7498373983739837
+          ],
+          "algorithmic_mean": 0.7422764227642277,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.4588910569105691,
+          "llm_width": 0.2,
+          "algo_width": 0.015226016260162512,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "f1": {
+          "metric": "f1",
+          "llm_range": [
+            0.23333333333333334,
+            0.43333333333333335
+          ],
+          "algorithmic_ci": [
+            0.22746191584712644,
+            0.2487741183629548
+          ],
+          "algorithmic_mean": 0.23790488211450914,
+          "calibrated_coverage": true,
+          "calibrated_coverage_score": 0.5229,
+          "overlap": true,
+          "containment": "partial",
+          "overlap_fraction": 0.07500208245593863,
+          "center_distance": 0.09521531622829277,
+          "llm_width": 0.2,
+          "algo_width": 0.021312202515828355,
+          "accuracy_score": 1.0,
+          "confidence_score": "high"
+        },
+        "shd": {
+          "metric": "shd",
+          "llm_range": [
+            100.0,
+            143.33333333333334
+          ],
+          "algorithmic_ci": [
+            580.114,
+            645.337
+          ],
+          "algorithmic_mean": 612.84,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 491.0588333333333,
+          "llm_width": 43.33333333333334,
+          "algo_width": 65.22299999999996,
+          "accuracy_score": 0.49999999999999994,
+          "confidence_score": "high"
+        }
+      },
+      "gpt5": {
+        "precision": {
+          "metric": "precision",
+          "llm_range": [
+            0.48333333333333334,
+            0.7166666666666667
+          ],
+          "algorithmic_ci": [
+            0.13364211840521947,
+            0.1519047362184026
+          ],
+          "algorithmic_mean": 0.14238194751260472,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.45722657268818895,
+          "llm_width": 0.23333333333333334,
+          "algo_width": 0.018262617813183113,
+          "accuracy_score": 0.49999999999999994,
+          "confidence_score": "high"
+        },
+        "recall": {
+          "metric": "recall",
+          "llm_range": [
+            0.25,
+            0.5
+          ],
+          "algorithmic_ci": [
+            0.7346113821138212,
+            0.7498373983739837
+          ],
+          "algorithmic_mean": 0.7422764227642277,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.3672243902439024,
+          "llm_width": 0.25,
+          "algo_width": 0.015226016260162512,
+          "accuracy_score": 0.49999999999999994,
+          "confidence_score": "high"
+        },
+        "f1": {
+          "metric": "f1",
+          "llm_range": [
+            0.3333333333333333,
+            0.5666666666666667
+          ],
+          "algorithmic_ci": [
+            0.22746191584712644,
+            0.2487741183629548
+          ],
+          "algorithmic_mean": 0.23790488211450914,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.182,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.21188198289495935,
+          "llm_width": 0.23333333333333334,
+          "algo_width": 0.021312202515828355,
+          "accuracy_score": 0.5881180171050406,
+          "confidence_score": "high"
+        },
+        "shd": {
+          "metric": "shd",
+          "llm_range": [
+            106.66666666666667,
+            200.0
+          ],
+          "algorithmic_ci": [
+            580.114,
+            645.337
+          ],
+          "algorithmic_mean": 612.84,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 459.39216666666664,
+          "llm_width": 93.33333333333333,
+          "algo_width": 65.22299999999996,
+          "accuracy_score": 0.49999999999999994,
+          "confidence_score": "high"
+        }
+      },
+      "llama": {
+        "precision": {
+          "metric": "precision",
+          "llm_range": [
+            0.6233333333333333,
+            0.8233333333333334
+          ],
+          "algorithmic_ci": [
+            0.13364211840521947,
+            0.1519047362184026
+          ],
+          "algorithmic_mean": 0.14238194751260472,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.5805599060215223,
+          "llm_width": 0.20000000000000007,
+          "algo_width": 0.018262617813183113,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "recall": {
+          "metric": "recall",
+          "llm_range": [
+            0.51,
+            0.7333333333333333
+          ],
+          "algorithmic_ci": [
+            0.7346113821138212,
+            0.7498373983739837
+          ],
+          "algorithmic_mean": 0.7422764227642277,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.9199,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.12055772357723582,
+          "llm_width": 0.22333333333333327,
+          "algo_width": 0.015226016260162512,
+          "accuracy_score": 0.6794422764227641,
+          "confidence_score": "high"
+        },
+        "f1": {
+          "metric": "f1",
+          "llm_range": [
+            0.5566666666666666,
+            0.7766666666666667
+          ],
+          "algorithmic_ci": [
+            0.22746191584712644,
+            0.2487741183629548
+          ],
+          "algorithmic_mean": 0.23790488211450914,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.42854864956162614,
+          "llm_width": 0.22000000000000008,
+          "algo_width": 0.021312202515828355,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "shd": {
+          "metric": "shd",
+          "llm_range": [
+            15.0,
+            35.0
+          ],
+          "algorithmic_ci": [
+            580.114,
+            645.337
+          ],
+          "algorithmic_mean": 612.84,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 587.7255,
+          "llm_width": 20.0,
+          "algo_width": 65.22299999999996,
+          "accuracy_score": 0.49999999999999994,
+          "confidence_score": "high"
+        }
+      },
+      "qwen": {
+        "precision": {
+          "metric": "precision",
+          "llm_range": [
+            0.6933333333333334,
+            0.8066666666666666
+          ],
+          "algorithmic_ci": [
+            0.13364211840521947,
+            0.1519047362184026
+          ],
+          "algorithmic_mean": 0.14238194751260472,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.6072265726881889,
+          "llm_width": 0.11333333333333329,
+          "algo_width": 0.018262617813183113,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "recall": {
+          "metric": "recall",
+          "llm_range": [
+            0.5833333333333334,
+            0.7033333333333334
+          ],
+          "algorithmic_ci": [
+            0.7346113821138212,
+            0.7498373983739837
+          ],
+          "algorithmic_mean": 0.7422764227642277,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.3509,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.0988910569105691,
+          "llm_width": 0.12,
+          "algo_width": 0.015226016260162512,
+          "accuracy_score": 1.0,
+          "confidence_score": "high"
+        },
+        "f1": {
+          "metric": "f1",
+          "llm_range": [
+            0.63,
+            0.73
+          ],
+          "algorithmic_ci": [
+            0.22746191584712644,
+            0.2487741183629548
+          ],
+          "algorithmic_mean": 0.23790488211450914,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.44188198289495934,
+          "llm_width": 0.09999999999999998,
+          "algo_width": 0.021312202515828355,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "shd": {
+          "metric": "shd",
+          "llm_range": [
+            13.333333333333334,
+            26.666666666666668
+          ],
+          "algorithmic_ci": [
+            580.114,
+            645.337
+          ],
+          "algorithmic_mean": 612.84,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 592.7255,
+          "llm_width": 13.333333333333334,
+          "algo_width": 65.22299999999996,
+          "accuracy_score": 0.49999999999999994,
+          "confidence_score": "high"
+        }
+      },
+      "qwenthink": {
+        "precision": {
+          "metric": "precision",
+          "llm_range": [
+            0.45,
+            0.6166666666666667
+          ],
+          "algorithmic_ci": [
+            0.13364211840521947,
+            0.1519047362184026
+          ],
+          "algorithmic_mean": 0.14238194751260472,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.3905599060215223,
+          "llm_width": 0.16666666666666669,
+          "algo_width": 0.018262617813183113,
+          "accuracy_score": 0.7,
+          "confidence_score": "high"
+        },
+        "recall": {
+          "metric": "recall",
+          "llm_range": [
+            0.4166666666666667,
+            0.5833333333333334
+          ],
+          "algorithmic_ci": [
+            0.7346113821138212,
+            0.7498373983739837
+          ],
+          "algorithmic_mean": 0.7422764227642277,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.2422243902439024,
+          "llm_width": 0.16666666666666669,
+          "algo_width": 0.015226016260162512,
+          "accuracy_score": 0.7577756097560976,
+          "confidence_score": "high"
+        },
+        "f1": {
+          "metric": "f1",
+          "llm_range": [
+            0.43333333333333335,
+            0.5666666666666667
+          ],
+          "algorithmic_ci": [
+            0.22746191584712644,
+            0.2487741183629548
+          ],
+          "algorithmic_mean": 0.23790488211450914,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 0.2618819828949594,
+          "llm_width": 0.1333333333333333,
+          "algo_width": 0.021312202515828355,
+          "accuracy_score": 0.7381180171050405,
+          "confidence_score": "high"
+        },
+        "shd": {
+          "metric": "shd",
+          "llm_range": [
+            61.666666666666664,
+            91.66666666666667
+          ],
+          "algorithmic_ci": [
+            580.114,
+            645.337
+          ],
+          "algorithmic_mean": 612.84,
+          "calibrated_coverage": false,
+          "calibrated_coverage_score": 0.0,
+          "overlap": false,
+          "containment": "none",
+          "overlap_fraction": 0.0,
+          "center_distance": 536.0588333333334,
+          "llm_width": 30.000000000000007,
+          "algo_width": 65.22299999999996,
+          "accuracy_score": 0.49999999999999994,
+          "confidence_score": "high"
+        }
+      }
+    }
+  },
   "hepar2_lingam": {
     "dataset": "hepar2",
     "algorithm": "lingam",
