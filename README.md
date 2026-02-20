@@ -10,14 +10,14 @@ LLMs are asked to predict metric ranges (precision, recall, F1, SHD) for causal 
 
 | Model | Model ID | Calibrated Coverage | Comparisons |
 |-------|----------|-------------------:|------------:|
-| Claude | `claude-opus-4-6` | 39.4% | 82/208 |
-| GPT-5 | `gpt-5.2` | 15.4% | 32/208 |
-| DeepSeek-Reasoner | `deepseek-reasoner` | 14.9% | 31/208 |
-| DeepSeek-R1 | `deepseek-ai/DeepSeek-R1` | 14.4% | 30/208 |
-| Qwen-Next (Thinking) | `Qwen/Qwen3-Next-80B-A3B-Thinking` | 13.9% | 29/208 |
-| Gemini 3 Pro | `gemini-3-pro-preview` | 13.0% | 27/208 |
-| Llama 3.3 | `meta-llama/Llama-3.3-70B-Instruct-Turbo` | 10.1% | 21/208 |
-| Qwen 2.5 | `Qwen/Qwen2.5-7B-Instruct-Turbo` | 5.8% | 12/208 |
+| Claude | `Claude-Opus-4.6` | 39.4% | 82/208 |
+| GPT-5 | `GPT-5.2` | 15.4% | 32/208 |
+| DeepSeek-Think | `DeepSeek-V3.2-Reasoner` | 14.9% | 31/208 |
+| DeepSeek | `DeepSeek-R1-0528` | 14.4% | 30/208 |
+| Qwen-Think | `Qwen3-Next-80B-A3B-Thinking` | 13.9% | 29/208 |
+| Gemini 3 | `Gemini3-Pro-Preview` | 13.0% | 27/208 |
+| LLaMA | `LLaMA-3.3-70B` | 10.1% | 21/208 |
+| Qwen | `Qwen2.5-7B` | 5.8% | 12/208 |
 
 ## Evidence for Memorization over Reasoning
 

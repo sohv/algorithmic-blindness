@@ -51,12 +51,14 @@ def format_main_table(results_df: pd.DataFrame) -> str:
         
         # Format model name
         model_display = {
-            'gpt5': 'GPT-5.2',
-            'claude': 'Claude Opus 4.6',
-            'gemini': 'Gemini 2.5 Pro',
-            'deepseek': 'DeepSeek R1',
-            'llama': 'Llama 3.3 70B',
-            'qwen': 'Qwen 3 32B',
+            'gpt5': 'GPT-5',
+            'claude': 'Claude',
+            'deepseek': 'DeepSeek',
+            'deepseekthink': 'DeepSeek-Think',
+            'gemini3': 'Gemini 3',
+            'llama': 'LLaMA',
+            'qwen': 'Qwen',
+            'qwenthink': 'Qwen-Think',
             'heuristic': r'\textit{Heuristic}',
             'random': r'\textit{Random}'
         }.get(llm, llm)
@@ -106,11 +108,13 @@ def format_per_dataset_table(detailed_results: dict, datasets: list) -> str:
             continue  # Skip baselines in this table
         
         model_display = {
-            'gpt5': 'GPT-5.2',
-            'claude': 'Claude Opus 4.6',
-            'gemini': 'Gemini 2.5 Pro',
-            'deepseek': 'DeepSeek R1',
-            'llama': 'Llama 3.3 70B'
+            'gpt5': 'GPT-5',
+            'claude': 'Claude',
+            'deepseek': 'DeepSeek',
+            'deepseekthink': 'DeepSeek-Think',
+            'gemini3': 'Gemini 3',
+            'llama': 'LLaMA',
+            'qwen': 'Qwen'
         }.get(llm_name, llm_name)
         for ds in datasets:
             coverage = by_dataset.get(ds, 0.0)
@@ -153,11 +157,13 @@ def format_per_algorithm_table(detailed_results: dict) -> str:
             continue
         
         model_display = {
-            'gpt5': 'GPT-5.2',
-            'claude': 'Claude Opus 4.6',
-            'gemini': 'Gemini 2.5 Pro',
-            'deepseek': 'DeepSeek R1',
-            'llama': 'Llama 3.3 70B'
+            'gpt5': 'GPT-5',
+            'claude': 'Claude',
+            'deepseek': 'DeepSeek',
+            'deepseekthink': 'DeepSeek-Think',
+            'gemini3': 'Gemini 3',
+            'llama': 'LLaMA',
+            'qwen': 'Qwen'
         }.get(llm_name, llm_name)
         
         latex += model_display

@@ -52,7 +52,7 @@ Phase 9: Pattern Matching Analysis
 ### Phase 1: Algorithmic Baseline Computation
 **Script**: `src/experiments/run_experiments.py`
 **Analysis**: `src/experiments/analyze_results.py`
-**Output**: `src/experiments/results/*_variance.json` (48 files)
+**Output**: `src/experiments/results/*_variance.json` (52 files)
 
 **What it does**:
 - Run causal discovery algorithm 100 times per (dataset, algorithm) pair
@@ -83,7 +83,7 @@ Phase 9: Pattern Matching Analysis
 }
 ```
 
-**Datasets** (13 total):
+**Datasets** (13 total: 9 benchmark + 4 synthetic):
 - **Benchmark** (9): alarm, asia, cancer, child, earthquake, hepar2, insurance, sachs, survey
 - **Synthetic** (4): synthetic_12, synthetic_30, synthetic_50, synthetic_60
 
@@ -114,17 +114,18 @@ Phase 9: Pattern Matching Analysis
 - Provides basis for robustness scoring in Phase 8
 
 **Models** (8):
-- claude: `claude-opus-4-6`
-- gpt5: `gpt-5.2`
-- deepseekthink: `deepseek-reasoner`
-- deepseek: `deepseek-ai/DeepSeek-R1`
-- gemini3: `gemini-3-pro-preview`
-- qwenthink: `Qwen/Qwen3-Next-80B-A3B-Thinking`
-- llama: `meta-llama/Llama-3.3-70B-Instruct-Turbo`
-- qwen: `Qwen/Qwen2.5-7B-Instruct-Turbo`
+- Claude: `Claude-Opus-4.6`
+- GPT-5: `GPT-5.2`
+- DeepSeek-Think: `DeepSeek-V3.2-Reasoner`
+- DeepSeek: `DeepSeek-R1-0528`
+- Gemini 3: `Gemini3-Pro-Preview`
+- Qwen-Think: `Qwen3-Next-80B-A3B-Thinking`
+- LLaMA: `LLaMA-3.3-70B`
+- Qwen: `Qwen2.5-7B`
 
 **LLM Coverage**:
 - 8 models × 13 datasets × 4 algorithms × 3 formulations = 1,248 API calls
+- Footnote: Model abbreviations: Claude = Claude-Opus-4.6, GPT-5 = GPT-5.2, DeepSeek = DeepSeek-R1-0528, DeepSeek-Think = DeepSeek-V3.2-Reasoner, Qwen-Think = Qwen3-Next-80B-A3B-Thinking, Gemini 3 = Gemini3-Pro-Preview, LLaMA = LLaMA-3.3-70B, Qwen = Qwen2.5-7B
 
 ---
 
@@ -374,8 +375,8 @@ Tests generalization to unseen data distributions. Benchmark networks are in lit
 
 | Phase | Input | Processing | Output | Size |
 |-------|-------|-----------|--------|------|
-| 1 | 13 datasets | Run 100x each algorithm | Variance CIs | 48 variance files |
-| 2 | Variance + prompts | Query 8 LLMs | Raw responses | 1,248 files |
+| 1 | 13 datasets | Run 100x each algorithm | Variance CIs | 52 variance files (13 × 4) |
+| 2 | Variance + prompts | Query 8 LLMs | Raw responses | 1,248 responses (13 × 4 × 3 × 8) |
 | 3 | 1,248 raw files | Regex extract ranges | f1/f2/f3 ranges | 156 files |
 | 4 | 156 formulation files | Average f1/f2/f3 | Aggregated ranges | 52 files |
 | 5 | 52 aggregated + 48 variance | Compare LLM vs algo | Comparisons | 1,664 metrics |

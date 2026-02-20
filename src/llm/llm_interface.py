@@ -3,16 +3,15 @@
 Unified LLM Query Interface for Causal Discovery Meta-Knowledge Testing
 ========================================================================
 
-Supports 9 LLMs:
-1. GPT 5.2 (OpenAI)
-2. Claude Opus 4.6 (Anthropic)
-3. Gemini 3 Flash (Google AI)
-4. Gemini 3 Pro Preview (Google AI)
-5. Llama 3.3 70B (Together AI)
-6. Qwen 2.5 7B (Together AI)
-7. Qwen 3 Next 80B (Together AI) - reasoning model
-8. DeepSeek R1 0528 (Together AI)
-9. DeepSeek V3.2 Reasoner (Official DeepSeek API) - thinking mode
+Supports 8 LLMs:
+1. Claude = Claude-Opus-4.6 (Anthropic)
+2. GPT-5 = GPT-5.2 (OpenAI)
+3. DeepSeek = DeepSeek-R1-0528 (Together AI)
+4. DeepSeek-Think = DeepSeek-V3.2-Reasoner (Official DeepSeek API)
+5. Qwen-Think = Qwen3-Next-80B-A3B-Thinking (Together AI)
+6. Gemini 3 = Gemini3-Pro-Preview (Google AI)
+7. LLaMA = LLaMA-3.3-70B (Together AI)
+8. Qwen = Qwen2.5-7B (Together AI)
 
 Usage:
     from llm_interface import LLMQueryInterface
@@ -50,15 +49,14 @@ class LLMQueryInterface:
     """
 
     SUPPORTED_MODELS = {
-        'gpt5': 'gpt-5.2',
-        'deepseek': 'deepseek-ai/DeepSeek-R1',
-        'deepseekthink': 'deepseek-reasoner',
-        'claude': 'claude-opus-4-6',
-        'geminiflash': 'gemini-3-flash-preview',
-        'gemini3': 'gemini-3-pro-preview',
-        'llama': 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
-        'qwen': 'Qwen/Qwen2.5-7B-Instruct-Turbo',
-        'qwenthink': 'Qwen/Qwen3-Next-80B-A3B-Thinking'
+        'gpt5': 'GPT-5.2',
+        'deepseek': 'DeepSeek-R1-0528',
+        'deepseekthink': 'DeepSeek-V3.2-Reasoner',
+        'claude': 'Claude-Opus-4.6',
+        'gemini3': 'Gemini3-Pro-Preview',
+        'llama': 'LLaMA-3.3-70B',
+        'qwen': 'Qwen2.5-7B',
+        'qwenthink': 'Qwen3-Next-80B-A3B-Thinking'
     }
 
     def __init__(self, model_name: str, max_retries: int = 3, retry_delay: int = 5):
@@ -66,7 +64,7 @@ class LLMQueryInterface:
         Initialize LLM query interface.
 
         Args:
-            model_name: Name of the model ('gpt5', 'deepseek', 'deepseekthink', 'claude', 'geminiflash', 'gemini3', 'llama', 'qwen', 'qwenthink')
+            model_name: Name of the model ('gpt5', 'claude', 'deepseek', 'deepseekthink', 'gemini3', 'qwen', 'qwenthink', 'llama')
             max_retries: Maximum number of retry attempts (default: 3)
             retry_delay: Delay in seconds between retries (default: 5)
         """
@@ -91,8 +89,6 @@ class LLMQueryInterface:
             return self._init_deepseek_official()
         elif self.model_name == 'claude':
             return self._init_anthropic()
-        elif self.model_name in ['geminiflash', 'gemini3']:
-            return self._init_google()
         elif self.model_name in ['llama', 'qwen', 'qwenthink']:
             return self._init_together()
 
@@ -299,7 +295,7 @@ class LLMQueryInterface:
         raise RuntimeError(f"Invalid Gemini response: no valid text content")
 
     def _query_llama(self, prompt: str, temperature: float) -> str:
-        """Query Llama 3.3 70B via Together AI."""
+        """Query LLaMA-3.3-70B via Together AI."""
         response = self.client.chat.completions.create(
             model=self.model_id,
             messages=[{"role": "user", "content": prompt}],
@@ -309,7 +305,7 @@ class LLMQueryInterface:
         return response.choices[0].message.content
 
     def _query_qwen(self, prompt: str, temperature: float) -> str:
-        """Query Qwen 3 32B via Together AI."""
+        """Query Qwen models (Qwen2.5-7B or Qwen3-Next-80B-A3B-Thinking) via Together AI."""
         response = self.client.chat.completions.create(
             model=self.model_id,
             messages=[{"role": "user", "content": prompt}],
