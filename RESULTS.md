@@ -10,16 +10,16 @@ All results from the LLM algorithmic blindness study. 8 LLMs tested across 13 da
 
 ### Coverage by Model
 
-| Model | Calibrated Coverage | Comparisons | Mean Score | Median Score |
-|-------|-------------------:|------------:|----------:|-------------:|
-| Claude | 39.4% | 82/208 | 0.442 | 0.531 |
-| GPT-5 | 15.4% | 32/208 | 0.217 | 0.000 |
-| DeepSeek-Think | 14.9% | 31/208 | 0.174 | 0.000 |
-| DeepSeek | 14.4% | 30/208 | 0.198 | 0.000 |
-| Qwen-Think | 13.9% | 29/208 | 0.191 | 0.000 |
-| Gemini 3 | 13.0% | 27/208 | 0.182 | 0.000 |
-| Llama | 10.1% | 21/208 | 0.152 | 0.000 |
-| Qwen | 5.8% | 12/208 | 0.068 | 0.000 |
+| Model | Model ID | Calibrated Coverage | Comparisons | Mean Score | Median Score |
+|-------|----------|-------------------:|------------:|----------:|-------------:|
+| Claude | `claude-opus-4-6` | 39.4% | 82/208 | 0.442 | 0.531 |
+| GPT-5 | `gpt-5.2` | 15.4% | 32/208 | 0.217 | 0.000 |
+| DeepSeek-Reasoner | `deepseek-reasoner` | 14.9% | 31/208 | 0.174 | 0.000 |
+| DeepSeek-R1 | `deepseek-ai/DeepSeek-R1` | 14.4% | 30/208 | 0.198 | 0.000 |
+| Qwen-Next (Thinking) | `Qwen/Qwen3-Next-80B-A3B-Thinking` | 13.9% | 29/208 | 0.191 | 0.000 |
+| Gemini 3 Pro | `gemini-3-pro-preview` | 13.0% | 27/208 | 0.182 | 0.000 |
+| Llama 3.3 | `meta-llama/Llama-3.3-70B-Instruct-Turbo` | 10.1% | 21/208 | 0.152 | 0.000 |
+| Qwen 2.5 | `Qwen/Qwen2.5-7B-Instruct-Turbo` | 5.8% | 12/208 | 0.068 | 0.000 |
 
 ![Calibrated Coverage by Model](src/llm/results/plots/01_calibrated_coverage_primary.png)
 
@@ -135,22 +135,217 @@ The large variation in synthetic boosts per algorithm proves LLMs learned algori
 
 ---
 
+---
+
+## 9. Memorization Variance Analysis
+
+### Overall Finding
+
+**Benchmark datasets (memorized) show 2.26x tighter prediction ranges than synthetic datasets (novel).**
+
+This is the strongest direct evidence of memorization over reasoning in the dataset.
+
+| Metric | Benchmark | Synthetic | Ratio | Signal |
+|--------|--------:|----------:|------:|--------|
+| Mean range width | 4.34 | 9.83 | 0.44× | Strong memorization |
+| Sample count | 1,152 | 512 | — | — |
+
+### Per-Model Memorization Signal
+
+All 8 models show tight benchmarks relative to synthetic, confirming this is systematic, not model-specific:
+
+| Model | Benchmark Width | Synthetic Width | Ratio | Signal |
+|-------|--------:|----------:|------:|-------|
+| Claude | 6.12 | 23.77 | 0.26× | **Strongest** |
+| GPT-5 | 7.65 | 19.20 | 0.40× | Strong |
+| Qwen | 2.02 | 4.58 | 0.44× | Strong |
+| DeepSeek-R1 | 3.75 | 8.48 | 0.44× | Strong |
+| DeepSeek-Reasoner | 5.56 | 10.34 | 0.54× | Strong |
+| Llama 3.3 | 2.85 | 3.78 | 0.75× | Moderate |
+| Qwen-Next | 3.20 | 4.02 | 0.80× | Moderate |
+| Gemini 3 Pro | 3.60 | 4.46 | 0.81× | Moderate |
+
+### Per-Metric Breakdown
+
+**SHD (Structural Hamming Distance) shows strongest memorization signal** (0.43× ratio), suggesting LLMs have memorized specific edge configurations for benchmark networks. Precision and recall show weaker signals (1.05× to 1.09×), indicating less memorization of balancing metrics.
+
+| Metric | Benchmark Width | Synthetic Width | Ratio |
+|--------|--------:|----------:|------:|
+| SHD | 16.79 | 38.69 | 0.43× |
+| Recall | 0.20 | 0.27 | 0.76× |
+| F1 | 0.18 | 0.17 | 1.05× |
+| Precision | 0.19 | 0.18 | 1.09× |
+
+### Network Scalability Effect
+
+**Confidence collapses dramatically with network size**, even within synthetic data where memorization is impossible. This shows how LLMs struggle with larger structures:
+
+| Network Size | Mean Range Width |
+|------:|--------:|
+| 12 nodes | 2.55 |
+| 30 nodes | 6.20 |
+| 50 nodes | 12.48 |
+| 60 nodes | 18.08 |
+
+Width increases 7.1× from 12 to 60 nodes, showing exponential confidence decay.
+
+![Memorization Variance Analysis](src/experiments/results/plots/01_variance_benchmark_vs_synthetic.png)
+
+### Data Files
+
+- `src/experiments/results/memorization_variance_analysis_results.json` — Full analysis results
+- `src/experiments/results/plots/01_variance_benchmark_vs_synthetic.png` — Overall comparison
+- `src/experiments/results/plots/02_variance_per_model.png` — Per-model signal
+- `src/experiments/results/plots/03_variance_network_size_effect.png` — Scalability effect
+
+---
+
+## 10. Memorization Consistency Check (Cross-Model Agreement)
+
+### Overall Finding
+
+**Models show 44.2% high agreement on benchmark datasets but only variable agreement on synthetic datasets**, with dramatically higher disagreement on SHD metric.
+
+The presence of consensus on known datasets (memorization) vs divergence on novel data (forced reasoning) is a hallmark of pattern matching rather than understanding.
+
+### Agreement Rates
+
+| Dataset Type | Mean Distance | High Agreement % | Interpretation |
+|--------------|------:|----:|-----------|
+| Benchmark | 12.88 | 44.2% | Models agree frequently (recalling similar patterns) |
+| Synthetic | 33.03 | 52.3%* | *Higher agreement % but with massive outliers — misleading stat* |
+
+*Note: The high-agreement percentage for synthetic reflects the distribution of distances across model pairs, but the mean is 2.6× higher, indicating severe disagreement outliers.*
+
+### Per-Dataset Agreement
+
+**Smallest/simplest benchmarks show strongest consensus**:
+
+| Dataset | Type | Mean Distance | Agreement % |
+|---------|------|------:|------:|
+| Cancer | Benchmark | 1.88 | 34.8% |
+| Earthquake | Benchmark | 2.01 | 43.5% |
+| Survey | Benchmark | 2.13 | 43.3% |
+| Asia | Benchmark | 2.20 | 44.2% |
+| Sachs | Benchmark | 4.55 | 47.8% |
+| Child | Benchmark | 8.62 | 46.2% |
+| Alarm | Benchmark | 17.39 | 50.7% |
+| Insurance | Benchmark | 17.97 | 44.9% |
+| **Hepar2** | Benchmark | **59.14** | **42.6%** | *Complex: models diverge* |
+| Synthetic-12 | Synthetic | 4.53 | 57.8% |
+| Synthetic-30 | Synthetic | 16.77 | 54.0% |
+| Synthetic-50 | Synthetic | 42.56 | 52.2% |
+| Synthetic-60 | Synthetic | 68.25 | 45.1% |
+
+**Key observation**: Simple benchmarks (Asia, Cancer) show tight agreement (distance ~2), while complex benchmarks (Hepar2) and large synthetics (Synthetic-60) show massive divergence (distance 60+).
+
+### Per-Metric Disagreement
+
+**SHD shows catastrophic divergence** between models on synthetic data (130.66 vs 50.00 on benchmarks):
+
+| Metric | Benchmark Distance | Synthetic Distance | Difference |
+|--------|--------:|----------:|------:|
+| SHD | 49.99 | 130.66 | +80.66 |
+| Recall | 0.51 | 0.71 | +0.20 |
+| F1 | 0.50 | 0.39 | -0.12 |
+| Precision | 0.49 | 0.37 | -0.12 |
+
+Models predict wildly different SHD ranges on synthetic networks, suggesting they have no principled basis for these predictions.
+
+### Network Scalability Effect
+
+**Agreement collapses with network size even on synthetic data**:
+
+| Network Size | Mean Distance |
+|------:|-------:|
+| 12 nodes | 4.53 |
+| 30 nodes | 16.77 |
+| 50 nodes | 42.56 |
+| 60 nodes | 68.25 |
+
+Disagreement scales as 15× from smallest to largest networks, indicating models lack structured reasoning about algorithm behavior at scale.
+
+![Memorization Consistency Analysis](src/experiments/results/plots/01_consistency_benchmark_vs_synthetic.png)
+
+### Data Files
+
+- `src/experiments/results/memorization_consistency_analysis_results.json` — Full analysis results
+- `src/experiments/results/plots/01_consistency_benchmark_vs_synthetic.png` — Overall agreement comparison
+- `src/experiments/results/plots/02_consistency_per_dataset.png` — Per-dataset agreement
+- `src/experiments/results/plots/03_consistency_network_size_effect.png` — Scalability effect
+
+---
+
+## 11. Algorithm vs LLM Comprehensive Comparison Table
+
+### Overview
+
+Creates unified comparison table showing algorithmic ground truth vs LLM aggregated predictions for all 208 dataset-algorithm-metric combinations (13 datasets × 4 algorithms × 4 metrics).
+
+### Aggregation Method
+
+For each combination:
+- **Algorithmic ground truth**: Mean (consistent across all models' estimates)
+- **LLM prediction lower bound**: Mean of 8 models' lower bounds
+- **LLM prediction upper bound**: Mean of 8 models' upper bounds
+- **Coverage %**: Percentage of the 8 models whose ranges contain the true value
+
+### Summary Statistics
+
+| Category | Metric | Value |
+|----------|--------|-------|
+| **Overall Coverage** | Recall | 18.8% |
+| | F1 | 16.3% |
+| | SHD | 14.9% |
+| | Precision | 13.5% |
+| **By Algorithm** | NOTEARS | 20.7% |
+| | LiNGAM | 20.0% |
+| | PC | 11.5% |
+| | FCI | 11.3% |
+| **By Dataset Type** | Benchmark | 17.7% |
+| | Synthetic | 11.7% |
+
+### Worst-Performing Combinations
+
+Most systematic failures (coverage 0%):
+- `alarm_fci_precision`: All 8 models failed
+- `alarm_fci_recall`: All 8 models failed
+- `alarm_fci_shd`: All 8 models failed
+- `cancer_fci_precision`: All 8 models failed
+- Multiple FCI + benchmark combinations show catastrophic failure patterns
+
+### Output Files
+
+**CSV Format** (208 rows):
+```
+Dataset,Dataset_Type,Algorithm,Metric,Algo_Mean,LLM_Lower_Avg,LLM_Upper_Avg,Num_Models,Coverage_Pct
+alarm,Benchmark,fci,precision,0.286,0.553,0.736,8,0.0
+alarm,Benchmark,fci,recall,0.871,0.447,0.642,8,0.0
+...
+```
+
+**Files**:
+- `src/experiments/results/comparisons/algo_vs_llm_comparison.csv` (17 KB)
+- `src/experiments/results/comparisons/algo_vs_llm_comparison.json` (55 KB)
+
+**Usage**: Import CSV into Excel/pandas for sorting by coverage%, filtering by algorithm/metric, or analyzing failure patterns.
+
+---
+
 ## 6. Baseline Comparison
 
-LLMs compared against random and heuristic baselines on the full 1,664-comparison dataset:
-
-| Predictor | Calibrated Coverage | Mean Score |
-|-----------|-------------------:|----------:|
-| Random Baseline | 36.5% | 0.409 |
-| Claude | 39.4% | 0.442 |
-| Heuristic Baseline | 32.7% | 0.356 |
-| GPT-5 | 15.4% | 0.217 |
-| DeepSeek-Think | 14.9% | 0.174 |
-| DeepSeek | 14.4% | 0.198 |
-| Qwen-Think | 13.9% | 0.191 |
-| Gemini 3 | 13.0% | 0.182 |
-| Llama | 10.1% | 0.152 |
-| Qwen | 5.8% | 0.068 |
+| Predictor | Model ID | Calibrated Coverage | Mean Score |
+|-----------|----------|-------------------:|----------:|
+| Random Baseline | — | 36.5% | 0.409 |
+| Claude | `claude-opus-4-6` | 39.4% | 0.442 |
+| Heuristic Baseline | — | 32.7% | 0.356 |
+| GPT-5 | `gpt-5.2` | 15.4% | 0.217 |
+| DeepSeek-Reasoner | `deepseek-reasoner` | 14.9% | 0.174 |
+| DeepSeek-R1 | `deepseek-ai/DeepSeek-R1` | 14.4% | 0.198 |
+| Qwen-Next (Thinking) | `Qwen/Qwen3-Next-80B-A3B-Thinking` | 13.9% | 0.191 |
+| Gemini 3 Pro | `gemini-3-pro-preview` | 13.0% | 0.182 |
+| Llama 3.3 | `meta-llama/Llama-3.3-70B-Instruct-Turbo` | 10.1% | 0.152 |
+| Qwen 2.5 | `Qwen/Qwen2.5-7B-Instruct-Turbo` | 5.8% | 0.068 |
 
 **Key finding**: Only Claude exceeds the random baseline. All other LLMs perform worse than uniformly random range predictions, meaning 7 of 8 frontier LLMs provide predictions less useful than random guessing.
 
@@ -169,6 +364,8 @@ Full robustness data: `src/llm/results/robustness_analysis/robustness_summary.js
 ---
 
 ## 8. Algorithmic Ground Truth
+
+
 
 ### Algorithm Performance (Mean F1 across all datasets)
 
@@ -206,7 +403,7 @@ Graph complexity is the primary driver of algorithm performance, explaining ~42%
 
 ---
 
-## 9. Experimental Scale
+## 12. Experimental Scale
 
 | Component | Count |
 |-----------|------:|
@@ -237,6 +434,7 @@ Graph complexity is the primary driver of algorithm performance, explaining ~42%
 
 ![Metrics by Dataset](src/experiments/results/plots/05b_metrics_by_dataset.png)
 
+
 ### LLM Algorithmic Blindness
 
 | | |
@@ -246,21 +444,67 @@ Graph complexity is the primary driver of algorithm performance, explaining ~42%
 | ![LiNGAM Failure](src/llm/results/plots/03_lingam_failure_mode.png) | ![Scalability](src/llm/results/plots/04_scalability_analysis.png) |
 | LiNGAM Failure Mode Analysis | Coverage vs Network Size |
 
+### Memorization & Comparison Plots
+
+| | |
+|:---:|:---:|
+| ![Memorization Variance](src/experiments/results/plots/01_variance_benchmark_vs_synthetic.png) | ![Memorization Per-Model](src/experiments/results/plots/02_variance_per_model.png) |
+| Memorization Variance: Benchmark vs Synthetic | Memorization Signal per Model |
+| ![Memorization Network Size](src/experiments/results/plots/03_variance_network_size_effect.png) | ![Consistency Benchmark vs Synthetic](src/experiments/results/plots/01_consistency_benchmark_vs_synthetic.png) |
+| Memorization: Network Size Effect | Consistency: Benchmark vs Synthetic |
+| ![Consistency Per-Dataset](src/experiments/results/plots/02_consistency_per_dataset.png) | ![Consistency Network Size](src/experiments/results/plots/03_consistency_network_size_effect.png) |
+| Consistency: Per-Dataset Agreement | Consistency: Network Size Effect |
+
 ---
 
-## Data Files
+## Data Files Reference
 
-| File | Description |
-|------|-------------|
-| `src/experiments/results/*_variance.json` | Algorithmic ground truth (48 files) |
-| `src/llm/results/extracted_ranges/*_f{1,2,3}_ranges.json` | Per-formulation extracted ranges (156 files) |
-| `src/llm/results/aggregated_ranges/*_aggregated.json` | Aggregated LLM predictions (52 files) |
-| `src/llm/results/comparisons/comparison_results.json` | Full comparison results |
-| `src/llm/results/comparisons/comparison_results_all.json` | All comparison results (alternate format) |
-| `src/baselines/baseline_comparison_full_results.json` | Baseline comparison data |
-| `src/llm/results/robustness_analysis/robustness_summary.json` | Prompt robustness CV% data |
-| `src/llm/results/robustness_analysis/robustness_report.txt` | Robustness report |
-| `src/llm/results/comparisons/claude_pattern_matching_analysis.txt` | Claude pattern matching report |
-| `src/llm/results/comparisons/cross_algorithm_analysis.txt` | Cross-algorithm analysis report |
-| `src/experiments/results/statistical_analysis_report.txt` | Pairwise significance tests |
-| `src/experiments/results/explanatory_theory_report.txt` | Explanatory factor analysis |
+All results, plots, and analysis outputs organized by analysis phase:
+
+### Phase 1-5: Core Algorithmic & LLM Pipeline
+- `src/experiments/results/` — 48 variance JSON files (algorithmic ground truth)
+- `src/llm/results/comparisons/comparison_results.json` (1.1 MB) — Main dataset: 1,664 LLM vs algorithm comparisons
+
+### Phase 6-9: Statistical & Pattern Analysis
+- `src/llm/results/robustness_analysis/robustness_summary.json` — Prompt variation analysis
+- `src/llm/results/comparisons/claude_pattern_matching_analysis.txt` — Claude pattern matching breakdown
+- `src/llm/results/comparisons/cross_algorithm_analysis.txt` — Algorithm-specific synthetic boost analysis
+
+### Phase 10-11: Memorization Analysis
+- `src/experiments/results/memorization_variance_analysis_results.json` — Full variance analysis
+- `src/experiments/results/memorization_consistency_analysis_results.json` — Cross-model agreement analysis
+
+### Phase 12: Algorithm vs LLM Comparison Table
+- `src/experiments/results/comparisons/algo_vs_llm_comparison.csv` (17 KB) — Easy import to Excel/pandas
+- `src/experiments/results/comparisons/algo_vs_llm_comparison.json` (55 KB) — Structured format
+
+### All Plots (300 DPI PNG + PDF)
+
+**Algorithmic Performance** (7 plots):
+- `src/experiments/results/plots/01_f1_comparison.{png,pdf}`
+- `src/experiments/results/plots/02_precision_recall_f1.{png,pdf}`
+- `src/experiments/results/plots/03_shd_comparison.{png,pdf}`
+- `src/experiments/results/plots/04_f1_confidence_intervals.{png,pdf}`
+- `src/experiments/results/plots/05_dataset_heatmap.{png,pdf}`
+- `src/experiments/results/plots/05b_metrics_by_dataset.{png,pdf}` — Multi-metric view
+- `src/experiments/results/plots/06_f1_distribution.{png,pdf}`
+
+**Memorization Variance** (3 plots):
+- `src/experiments/results/plots/01_variance_benchmark_vs_synthetic.{png,pdf}`
+- `src/experiments/results/plots/02_variance_per_model.{png,pdf}` — Normalized 0-1 scale
+- `src/experiments/results/plots/03_variance_network_size_effect.{png,pdf}`
+
+**Memorization Consistency** (3 plots):
+- `src/experiments/results/plots/01_consistency_benchmark_vs_synthetic.{png,pdf}`
+- `src/experiments/results/plots/02_consistency_per_dataset.{png,pdf}` — Normalized 0-1 scale
+- `src/experiments/results/plots/03_consistency_network_size_effect.{png,pdf}`
+
+**LLM Results** (4 plots, in llm/results/plots/):
+- `01_calibrated_coverage_primary.{png,pdf}`
+- `02_real_vs_synthetic_ablation.{png,pdf}`
+- `03_lingam_failure_mode.{png,pdf}`
+- `04_scalability_analysis.{png,pdf}`
+
+**Total**: 26 plots (13 unique designs × 2 formats: PNG + PDF)
+
+---

@@ -1,0 +1,114 @@
+{
+  "analysis": "memorization_variance_analysis",
+  "hypothesis": "LLMs have tighter prediction ranges on benchmark (memorized) datasets vs synthetic (novel) datasets",
+  "overall": {
+    "benchmark": {
+      "mean": 4.341945891203704,
+      "median": 0.21666666666666667,
+      "stdev": 14.25020822242042,
+      "min": 0.05999999999999994,
+      "max": 249.99999999999997,
+      "count": 1152
+    },
+    "synthetic": {
+      "mean": 9.82693359375,
+      "median": 0.20666666666666667,
+      "stdev": 28.49005210859012,
+      "min": 0.06333333333333335,
+      "max": 233.33333333333334,
+      "count": 512
+    },
+    "ratio_benchmark_to_synthetic": 0.44184137908138627,
+    "memorization_signal": true
+  },
+  "per_model": {
+    "claude": {
+      "benchmark_mean_width": 6.118171296296296,
+      "synthetic_mean_width": 23.765572916666667,
+      "ratio_bench_synth": 0.25743840965877396,
+      "memorization_signal": true
+    },
+    "deepseek": {
+      "benchmark_mean_width": 5.555486111111112,
+      "synthetic_mean_width": 10.342239583333333,
+      "ratio_bench_synth": 0.5371647085089633,
+      "memorization_signal": true
+    },
+    "deepseekthink": {
+      "benchmark_mean_width": 3.7464120370370373,
+      "synthetic_mean_width": 8.47671875,
+      "ratio_bench_synth": 0.44196488612259754,
+      "memorization_signal": true
+    },
+    "gemini3": {
+      "benchmark_mean_width": 3.5963194444444446,
+      "synthetic_mean_width": 4.4553125,
+      "ratio_bench_synth": 0.8071980235829573,
+      "memorization_signal": true
+    },
+    "gpt5": {
+      "benchmark_mean_width": 7.6508564814814815,
+      "synthetic_mean_width": 19.204166666666666,
+      "ratio_bench_synth": 0.39839565102094937,
+      "memorization_signal": true
+    },
+    "llama": {
+      "benchmark_mean_width": 2.848634259259259,
+      "synthetic_mean_width": 3.7803645833333333,
+      "ratio_bench_synth": 0.753534268048686,
+      "memorization_signal": true
+    },
+    "qwen": {
+      "benchmark_mean_width": 2.0161574074074076,
+      "synthetic_mean_width": 4.575677083333334,
+      "ratio_bench_synth": 0.44062493281074316,
+      "memorization_signal": true
+    },
+    "qwenthink": {
+      "benchmark_mean_width": 3.2035300925925925,
+      "synthetic_mean_width": 4.015416666666667,
+      "ratio_bench_synth": 0.797807639537431,
+      "memorization_signal": true
+    }
+  },
+  "per_metric": {
+    "precision": {
+      "benchmark_mean_width": 0.19253472222222223,
+      "synthetic_mean_width": 0.1765625,
+      "ratio_bench_synth": 1.0904621435594888
+    },
+    "recall": {
+      "benchmark_mean_width": 0.20326388888888888,
+      "synthetic_mean_width": 0.2660546875,
+      "ratio_bench_synth": 0.7639928873227948
+    },
+    "f1": {
+      "benchmark_mean_width": 0.18263310185185186,
+      "synthetic_mean_width": 0.1737109375,
+      "ratio_bench_synth": 1.0513621334399388
+    },
+    "shd": {
+      "benchmark_mean_width": 16.78935185185185,
+      "synthetic_mean_width": 38.69140625,
+      "ratio_bench_synth": 0.43392973993680706
+    }
+  },
+  "network_size_effect": {
+    "12": {
+      "mean_width": 2.5480078125,
+      "count": 128
+    },
+    "30": {
+      "mean_width": 6.196536458333333,
+      "count": 128
+    },
+    "50": {
+      "mean_width": 12.479973958333332,
+      "count": 128
+    },
+    "60": {
+      "mean_width": 18.083216145833333,
+      "count": 128
+    }
+  }
+}

@@ -8,16 +8,16 @@ Can LLMs predict how causal discovery algorithms actually perform? We test 8 fro
 
 LLMs are asked to predict metric ranges (precision, recall, F1, SHD) for causal discovery algorithms on specific datasets. The LLM's predicted range contains the true algorithmic mean only 15.9% of the time.
 
-| Model | Calibrated Coverage | Comparisons |
-|-------|-------------------:|------------:|
-| Claude | 39.4% | 82/208 |
-| GPT-5 | 15.4% | 32/208 |
-| DeepSeek-Think | 14.9% | 31/208 |
-| DeepSeek | 14.4% | 30/208 |
-| Qwen-Think | 13.9% | 29/208 |
-| Gemini 3 | 13.0% | 27/208 |
-| Llama | 10.1% | 21/208 |
-| Qwen | 5.8% | 12/208 |
+| Model | Model ID | Calibrated Coverage | Comparisons |
+|-------|----------|-------------------:|------------:|
+| Claude | `claude-opus-4-6` | 39.4% | 82/208 |
+| GPT-5 | `gpt-5.2` | 15.4% | 32/208 |
+| DeepSeek-Reasoner | `deepseek-reasoner` | 14.9% | 31/208 |
+| DeepSeek-R1 | `deepseek-ai/DeepSeek-R1` | 14.4% | 30/208 |
+| Qwen-Next (Thinking) | `Qwen/Qwen3-Next-80B-A3B-Thinking` | 13.9% | 29/208 |
+| Gemini 3 Pro | `gemini-3-pro-preview` | 13.0% | 27/208 |
+| Llama 3.3 | `meta-llama/Llama-3.3-70B-Instruct-Turbo` | 10.1% | 21/208 |
+| Qwen 2.5 | `Qwen/Qwen2.5-7B-Instruct-Turbo` | 5.8% | 12/208 |
 
 ## Evidence for Memorization over Reasoning
 

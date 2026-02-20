@@ -1,0 +1,145 @@
+{
+  "analysis": "memorization_consistency_check",
+  "hypothesis": "LLMs show high cross-model agreement on memorized (benchmark) datasets vs low agreement on novel (synthetic) datasets",
+  "overall": {
+    "benchmark": {
+      "mean": 12.875001653439153,
+      "median": 0.6,
+      "stdev": 56.289037140431354,
+      "min": 0.0,
+      "max": 996.6666666666667,
+      "count": 4032
+    },
+    "synthetic": {
+      "mean": 33.029940476190475,
+      "median": 0.46666666666666634,
+      "stdev": 95.87502481102146,
+      "min": 0.0,
+      "max": 700.0,
+      "count": 1792
+    },
+    "benchmark_high_agreement_pct": 44.22123015873016,
+    "synthetic_high_agreement_pct": 52.28794642857143,
+    "memorization_signal": true
+  },
+  "per_dataset": {
+    "alarm": {
+      "type": "benchmark",
+      "mean_distance": 17.387619047619047,
+      "high_agreement_pct": 50.66964285714286,
+      "sample_count": 448
+    },
+    "asia": {
+      "type": "benchmark",
+      "mean_distance": 2.201934523809524,
+      "high_agreement_pct": 44.19642857142857,
+      "sample_count": 448
+    },
+    "cancer": {
+      "type": "benchmark",
+      "mean_distance": 1.8799032738095238,
+      "high_agreement_pct": 34.82142857142857,
+      "sample_count": 448
+    },
+    "child": {
+      "type": "benchmark",
+      "mean_distance": 8.619464285714287,
+      "high_agreement_pct": 46.205357142857146,
+      "sample_count": 448
+    },
+    "earthquake": {
+      "type": "benchmark",
+      "mean_distance": 2.00577380952381,
+      "high_agreement_pct": 43.526785714285715,
+      "sample_count": 448
+    },
+    "hepar2": {
+      "type": "benchmark",
+      "mean_distance": 59.136830357142856,
+      "high_agreement_pct": 42.63392857142857,
+      "sample_count": 448
+    },
+    "insurance": {
+      "type": "benchmark",
+      "mean_distance": 17.968191964285715,
+      "high_agreement_pct": 44.86607142857143,
+      "sample_count": 448
+    },
+    "sachs": {
+      "type": "benchmark",
+      "mean_distance": 4.550178571428572,
+      "high_agreement_pct": 47.767857142857146,
+      "sample_count": 448
+    },
+    "survey": {
+      "type": "benchmark",
+      "mean_distance": 2.1251190476190476,
+      "high_agreement_pct": 43.30357142857143,
+      "sample_count": 448
+    },
+    "synthetic_12": {
+      "type": "synthetic",
+      "mean_distance": 4.531458333333333,
+      "high_agreement_pct": 57.8125,
+      "sample_count": 448
+    },
+    "synthetic_30": {
+      "type": "synthetic",
+      "mean_distance": 16.77401785714286,
+      "high_agreement_pct": 54.01785714285714,
+      "sample_count": 448
+    },
+    "synthetic_50": {
+      "type": "synthetic",
+      "mean_distance": 42.561190476190475,
+      "high_agreement_pct": 52.23214285714286,
+      "sample_count": 448
+    },
+    "synthetic_60": {
+      "type": "synthetic",
+      "mean_distance": 68.25309523809524,
+      "high_agreement_pct": 45.089285714285715,
+      "sample_count": 448
+    }
+  },
+  "per_metric": {
+    "precision": {
+      "benchmark_mean_distance": 0.49226851851851855,
+      "synthetic_mean_distance": 0.3688392857142857,
+      "difference": -0.12342923280423285
+    },
+    "recall": {
+      "benchmark_mean_distance": 0.5068154761904762,
+      "synthetic_mean_distance": 0.7072767857142856,
+      "difference": 0.20046130952380947
+    },
+    "f1": {
+      "benchmark_mean_distance": 0.5035681216931217,
+      "synthetic_mean_distance": 0.38739583333333333,
+      "difference": -0.11617228835978838
+    },
+    "shd": {
+      "benchmark_mean_distance": 49.9973544973545,
+      "synthetic_mean_distance": 130.65625,
+      "difference": 80.65889550264549
+    }
+  },
+  "network_size_effect": {
+    "12": {
+      "mean_distance": 4.531458333333333,
+      "sample_count": 448
+    },
+    "30": {
+      "mean_distance": 16.77401785714286,
+      "sample_count": 448
+    },
+    "50": {
+      "mean_distance": 42.561190476190475,
+      "sample_count": 448
+    },
+    "60": {
+      "mean_distance": 68.25309523809524,
+      "sample_count": 448
+    }
+  }
+}

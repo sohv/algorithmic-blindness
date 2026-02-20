@@ -19,12 +19,12 @@ import seaborn as sns
 
 # ACL one-column format with LARGER, more readable fonts
 plt.rcParams.update({
-    "font.size": 11,
-    "axes.titlesize": 13,
-    "axes.labelsize": 11,
-    "xtick.labelsize": 10,
-    "ytick.labelsize": 10,
-    "legend.fontsize": 10,
+    "font.size": 9,
+    "axes.titlesize": 11,
+    "axes.labelsize": 9,
+    "xtick.labelsize": 8,
+    "ytick.labelsize": 8,
+    "legend.fontsize": 8,
     "lines.linewidth": 1.5,
     "axes.grid": True,
     "grid.alpha": 0.3,
@@ -121,13 +121,13 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     algo_shd = extract_metric_by_algorithm(results, 'shd')
     
     algorithms = sorted(algo_f1.keys())
-    # Use darker, more saturated colors
-    colors_dark = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728'][:len(algorithms)]
+    # Okabe-Ito colorblind-safe palette
+    colors_dark = ['#E69F00', '#56B4E9', '#009E73', '#D55E00'][:len(algorithms)]
     
     # ====================================================================
     # Plot 1: Algorithm F1 Comparison
     # ====================================================================
-    fig, ax = plt.subplots(figsize=(4.5, 2.8))
+    fig, ax = plt.subplots(figsize=(4.1, 2.5))
     
     algo_means = []
     algo_stds = []
@@ -146,8 +146,8 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     # Add value labels on bars (smaller) - positioned above error bars
     for bar, mean, std in zip(bars, algo_means, algo_stds):
         height = bar.get_height()
-        # Position text above the error bar (mean + std + small offset)
-        ax.text(bar.get_x() + bar.get_width()/2., height + std + 0.03,
+        # Position text above the box (mean + std - small offset, slightly left)
+        ax.text(bar.get_x() + bar.get_width()/2. - 0.04, height + std + 0.02,
                 f'{mean:.2f}', ha='center', va='bottom', fontsize=9)
     
     plt.xticks(rotation=45, ha='right')
@@ -159,7 +159,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     # ====================================================================
     # Plot 2: Precision, Recall, F1 by Algorithm
     # ====================================================================
-    fig, ax = plt.subplots(figsize=(4.5, 2.8))
+    fig, ax = plt.subplots(figsize=(4.1, 2.5))
     
     x = np.arange(len(algorithms))
     width = 0.25
@@ -168,9 +168,9 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     recall_means = [np.mean(algo_recall[a]) for a in algorithms]
     f1_means = [np.mean(algo_f1[a]) for a in algorithms]
     
-    ax.bar(x - width, precision_means, width, label='Precision', alpha=0.85, edgecolor='#333333', linewidth=0.8, color='#1f77b4')
-    ax.bar(x, recall_means, width, label='Recall', alpha=0.85, edgecolor='#333333', linewidth=0.8, color='#ff7f0e')
-    ax.bar(x + width, f1_means, width, label='F1', alpha=0.85, edgecolor='#333333', linewidth=0.8, color='#2ca02c')
+    ax.bar(x - width, precision_means, width, label='Precision', alpha=0.85, edgecolor='#333333', linewidth=0.8, color='#0072B2')
+    ax.bar(x, recall_means, width, label='Recall', alpha=0.85, edgecolor='#333333', linewidth=0.8, color='#E69F00')
+    ax.bar(x + width, f1_means, width, label='F1', alpha=0.85, edgecolor='#333333', linewidth=0.8, color='#009E73')
     
     ax.set_ylabel('Score')
     ax.set_title('Precision, Recall, F1', fontweight='bold')
@@ -190,7 +190,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     # ====================================================================
     # Plot 3: SHD (Structural Hamming Distance) Comparison
     # ====================================================================
-    fig, ax = plt.subplots(figsize=(4.5, 2.8))
+    fig, ax = plt.subplots(figsize=(4.1, 2.5))
     
     shd_means = []
     shd_stds = []
@@ -209,7 +209,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     for bar, mean in zip(bars, shd_means):
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2. - 0.2, height,
-                f'{mean:.0f}', ha='center', va='bottom', fontsize=9)
+                f'{mean:.0f}', ha='center', va='bottom', fontsize=8)
     
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
@@ -220,7 +220,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     # ====================================================================
     # Plot 4: F1 Confidence Intervals
     # ====================================================================
-    fig, ax = plt.subplots(figsize=(4.5, 2.8))
+    fig, ax = plt.subplots(figsize=(4.1, 2.5))
     
     # Plot CI bands with professional styling
     for alg_idx, algo in enumerate(algorithms):
@@ -250,7 +250,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     
     # Create legend for mean marker
     mean_patch = mpatches.Patch(label='Mean', color='gray', alpha=0.7)
-    ax.legend(handles=[mean_patch], loc='upper left', framealpha=0.95, edgecolor='#333333')
+    ax.legend(handles=[mean_patch], loc='upper right', framealpha=0.95, edgecolor='#333333')
     
     plt.tight_layout()
     save_plots_hq(fig, plots_dir, "04_f1_confidence_intervals")
@@ -285,7 +285,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
         dataset_labels = [f"{d}*" if d == 'hepar2' else d for d in datasets]
         
         # Plot heatmap (wider for heatmap readability)
-        fig, ax = plt.subplots(figsize=(6.5, max(3.5, len(datasets) * 0.38)))
+        fig, ax = plt.subplots(figsize=(5.9, max(3.0, len(datasets) * 0.38)))
         
         # Use blue-green colormap matching original visualization
         cmap = sns.color_palette("viridis_r", as_cmap=True)
@@ -331,7 +331,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     
     if len(datasets) > 0:
         # Create three subplots (one per metric)
-        fig, axes = plt.subplots(3, 1, figsize=(15, 11))
+        fig, axes = plt.subplots(3, 1, figsize=(13.5, 10))
         
         # Store handles and labels for common legend
         handles_list, labels_list = [], []
@@ -362,18 +362,18 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
             
             dataset_labels_x = datasets
             
-            ax.set_ylabel(metric_label, fontweight='bold', fontsize=14)
-            ax.set_title(f'({chr(97 + metric_idx)}) {metric_label} by Dataset and Algorithm', 
-                        fontweight='bold', fontsize=13, loc='left')
+            ax.set_ylabel(metric_label, fontweight='bold', fontsize=10)
+            ax.set_title(f'({chr(97 + metric_idx)}) {metric_label} by Dataset and Algorithm',
+                        fontweight='bold', fontsize=11, loc='left')
             ax.set_xticks(x + width * 1.5)
-            ax.set_xticklabels(dataset_labels_x, rotation=45, ha='right', fontsize=11)
-            ax.tick_params(axis='y', labelsize=12)
+            ax.set_xticklabels(dataset_labels_x, rotation=45, ha='right', fontsize=9)
+            ax.tick_params(axis='y', labelsize=10)
             ax.set_ylim([0, 1.05])
             ax.grid(axis='y', alpha=0.3, linestyle='--')
         
         # Add common legend at bottom in one horizontal line
-        fig.legend(handles_list, labels_list, loc='lower center', ncol=4, 
-                  fontsize=11, framealpha=0.95, edgecolor='#333333', 
+        fig.legend(handles_list, labels_list, loc='lower center', ncol=4,
+                  fontsize=9, framealpha=0.95, edgecolor='#333333',
                   bbox_to_anchor=(0.5, 0.0), frameon=True)
         
         plt.subplots_adjust(hspace=0.55, bottom=0.12)
@@ -384,7 +384,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     # ====================================================================
     # Plot 6: Distribution of F1 Scores (Box Plot)
     # ====================================================================
-    fig, ax = plt.subplots(figsize=(4.5, 2.8))
+    fig, ax = plt.subplots(figsize=(4.1, 2.5))
     
     f1_by_algo = [algo_f1[algo] for algo in algorithms]
     
@@ -392,7 +392,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
                      boxprops=dict(linewidth=1.2, edgecolor='#333333'),
                      whiskerprops=dict(linewidth=1.2, color='#333333'),
                      capprops=dict(linewidth=1.2, color='#333333'),
-                     medianprops=dict(linewidth=1.5, color='#d62728'))
+                     medianprops=dict(linewidth=1.5, color='#D55E00'))
     
     for patch, color in zip(bp['boxes'], colors_dark):
         patch.set_facecolor(color)
@@ -406,10 +406,10 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     
     # Add legend with colored median line indicator
     from matplotlib.lines import Line2D
-    legend_elements = [Line2D([0], [0], color='#d62728', lw=2, label='Median'),
+    legend_elements = [Line2D([0], [0], color='#D55E00', lw=2, label='Median'),
                        Line2D([0], [0], marker='o', color='w', markerfacecolor='white', 
                               markeredgecolor='black', markersize=4, label='Outliers', linestyle='None')]
-    ax.legend(handles=legend_elements, loc='upper right', fontsize=7, framealpha=0.8, 
+    ax.legend(handles=legend_elements, loc='upper right', fontsize=6, framealpha=0.8,
               edgecolor='#333333', fancybox=False)
     
     plt.xticks(rotation=45, ha='right')

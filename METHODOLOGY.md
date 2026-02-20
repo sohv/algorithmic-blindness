@@ -113,7 +113,15 @@ Phase 9: Pattern Matching Analysis
 - Captures LLM sensitivity to wording
 - Provides basis for robustness scoring in Phase 8
 
-**Models** (8): claude, deepseek, deepseekthink, gemini3, gpt5, llama, qwen, qwenthink
+**Models** (8):
+- claude: `claude-opus-4-6`
+- gpt5: `gpt-5.2`
+- deepseekthink: `deepseek-reasoner`
+- deepseek: `deepseek-ai/DeepSeek-R1`
+- gemini3: `gemini-3-pro-preview`
+- qwenthink: `Qwen/Qwen3-Next-80B-A3B-Thinking`
+- llama: `meta-llama/Llama-3.3-70B-Instruct-Turbo`
+- qwen: `Qwen/Qwen2.5-7B-Instruct-Turbo`
 
 **LLM Coverage**:
 - 8 models × 13 datasets × 4 algorithms × 3 formulations = 1,248 API calls
@@ -247,6 +255,87 @@ For each (dataset, algorithm, model) triple:
 
 ---
 
+### Phase 10: Memorization Variance Analysis
+**Script**: `src/experiments/memorization_variance_analysis.py`
+**Output**:
+- `src/experiments/results/plots/01_variance_benchmark_vs_synthetic.{png,pdf}`
+- `src/experiments/results/plots/02_variance_per_model.{png,pdf}`
+- `src/experiments/results/plots/03_variance_network_size_effect.{png,pdf}`
+- `src/experiments/results/memorization_variance_analysis_results.json`
+
+**Hypothesis**: LLMs should have tighter, more confident prediction ranges on benchmark datasets they've memorized vs synthetic datasets never in training data.
+
+**Analysis**:
+- Computes mean range widths for each LLM's predictions across all metrics
+- Compares benchmark (9 known datasets) vs synthetic (4 novel procedurally-generated networks)
+- Network size scaling: analyzes how prediction confidence degrades with network complexity
+- Per-model signal: which models show strongest memorization vs generalization
+
+**Key Metric**: Ratio of benchmark width to synthetic width
+- **< 0.85**: Strong memorization signal (tighter ranges on memorized data)
+- **≈ 1.0**: No signal (equal uncertainty on both)
+- **> 1.15**: Inverse signal (wider on memorized data)
+
+---
+
+### Phase 11: Memorization Consistency Check
+**Script**: `src/experiments/memorization_consistency_check.py`
+**Output**:
+- `src/experiments/results/plots/01_consistency_benchmark_vs_synthetic.{png,pdf}`
+- `src/experiments/results/plots/02_consistency_per_dataset.{png,pdf}` — Normalized to 0-1 distance scale
+- `src/experiments/results/plots/03_consistency_network_size_effect.{png,pdf}`
+- `src/experiments/results/memorization_consistency_analysis_results.json`
+
+**Hypothesis**: LLMs should exhibit high cross-model agreement (consensus) on memorized benchmark datasets but diverge on synthetic datasets.
+
+**Analysis**:
+- Computes pairwise distances between all model predictions for each dataset-algorithm-metric combination
+- Lower distance = higher agreement = likely memorization (recalling similar patterns)
+- Higher distance = divergent predictions = genuine reasoning vs uncertainty
+- Per-dataset breakdown: which benchmarks show strongest agreement?
+- Per-metric analysis: are certain metrics (F1, SHD, recall) more prone to agreement?
+
+**Distance Metric**: Hausdorff distance between predicted ranges
+- Combines center difference and width difference
+- **0.0**: Perfect agreement (identical ranges)
+- **0.5**: Moderate disagreement
+- **1.0+**: Completely disjoint predictions
+
+**Key Finding**: If models memorized patterns, they should predict similar ranges (low distance). Novel synthetic data forces genuine reasoning, causing higher variance in predictions.
+
+---
+
+### Phase 12: Algorithm vs LLM Comprehensive Comparison
+**Script**: `src/experiments/compare_algo_vs_llm.py`
+**Input**: `src/llm/results/comparisons/comparison_results.json` (pre-computed comparisons)
+**Output**:
+- `src/experiments/results/comparisons/algo_vs_llm_comparison.csv` (208 rows × 9 columns)
+- `src/experiments/results/comparisons/algo_vs_llm_comparison.json`
+
+**What it does**:
+- Loads all comparisons from comparison_results.json
+- For each dataset-algorithm-metric combination:
+  - Aggregates LLM predictions across all 8 models (takes mean of lower bounds, mean of upper bounds)
+  - Computes algorithmic ground truth mean (averaged across all models)
+  - Computes coverage percentage (% of models whose ranges contain the true value)
+- Creates clean comparison table for publication-ready analysis
+
+**Output Table Structure**:
+```
+Dataset, Dataset_Type, Algorithm, Metric,
+Algo_Mean, LLM_Lower_Avg, LLM_Upper_Avg,
+Num_Models (8), Coverage_Pct
+```
+
+**Coverage Summary Statistics**:
+- By metric: recall 18.8%, F1 16.3%, SHD 14.9%, precision 13.5%
+- By algorithm: NOTEARS 20.7%, LiNGAM 20.0%, PC 11.5%, FCI 11.3%
+- By dataset type: Benchmark 17.7%, Synthetic 11.7%
+
+**Key Insight**: Enables rapid filtering/sorting to identify worst-performing algorithm-metric combinations and analyze systematic failure modes across the entire dataset.
+
+---
+
 ## Metric Selection Justification: Precision, Recall, F1, SHD
 
 These 4 metrics are the **standard evaluation suite in causal discovery literature** (UAI, ICML, JMLR):
@@ -294,6 +383,7 @@ Tests generalization to unseen data distributions. Benchmark networks are in lit
 | 7 | Comparison + variance | Random & heuristic baselines | Baseline comparison | JSON |
 | 8 | Raw responses | CV across formulations | Robustness analysis | JSON + report |
 | 9 | Comparison results | Pattern matching tests | Cross-algo analysis | Reports |
+| 10 | Comparison + metadata | Corpus proxy & expertise correlations | Mechanism evidence | Plots + report |
 
 ---
 
@@ -328,6 +418,15 @@ python src/llm/compute_prompt_robustness.py
 python src/llm/analyze_pattern_matching.py
 python src/llm/cross_algorithm_analysis.py
 
+# Phase 10: Memorization mechanism analysis
+python src/experiments/memorization_variance_analysis.py
+
+# Phase 11: Memorization consistency analysis
+python src/experiments/memorization_consistency_check.py
+
+# Phase 12: Algorithm vs LLM comprehensive comparison table
+python src/experiments/compare_algo_vs_llm.py
+
 # Generate all plots
 python src/experiments/analyze_results.py       # Algorithmic performance plots
 python src/llm/plot_llm_results.py              # LLM analysis plots
@@ -338,6 +437,7 @@ python src/llm/plot_llm_results.py              # LLM analysis plots
 ---
 
 ## Limitations & Caveats
+
 
 1. **LLM Coverage**: 8 models tested; newer models not included
 2. **Prompt Design**: Formulations are handcrafted; different prompts might yield different results
