@@ -13,6 +13,7 @@ Usage:
 
 import sys
 import json
+import re
 from pathlib import Path
 from typing import Dict, List, Tuple
 import numpy as np
@@ -192,18 +193,37 @@ def load_llm_comparison_data(comparisons_dir: Path) -> Tuple[Dict, Dict, Dict]:
     return llm_stats, rs_data, lingam_data
 
 
-def analyze_scalability(comparison_data: Dict) -> Dict:
+def analyze_scalability(comparison_data: Dict) -> Tuple[Dict, Dict]:
     """Analyze LLM vs algorithmic performance degradation by dataset complexity.
     
-    Compares simple synthetic (12 nodes) vs complex synthetic (30 nodes).
-    Returns both LLM and algorithmic degradation metrics.
+    Dynamically compares smallest synthetic dataset vs largest synthetic dataset.
+    Returns both LLM and algorithmic degradation metrics, plus node counts.
     """
+    # First pass: collect all synthetic node counts
+    node_counts = set()
+    for dataset_algo, exp_data in comparison_data.items():
+        if "models" not in exp_data:
+            continue
+        dataset = exp_data.get("dataset", "")
+        match = re.search(r'synthetic_(\d+)', dataset)
+        if match:
+            node_counts.add(int(match.group(1)))
+    
+    if len(node_counts) < 2:
+        return {}, {}
+    
+    min_nodes = min(node_counts)
+    max_nodes = max(node_counts)
+    simple_pattern = f"synthetic_{min_nodes}"
+    complex_pattern = f"synthetic_{max_nodes}"
+    
     llm_simple_flags = {}  # {llm: [0/1 list]}
     llm_complex_flags = {}
     
     algo_simple_scores = {}  # {llm: [algorithmic_mean values]}
     algo_complex_scores = {}
     
+    # Second pass: categorize by min/max nodes
     for dataset_algo, exp_data in comparison_data.items():
         if "models" not in exp_data:
             continue
@@ -211,8 +231,8 @@ def analyze_scalability(comparison_data: Dict) -> Dict:
         dataset = exp_data.get("dataset", "")
         
         # Categorize by complexity
-        is_simple = "synthetic_12" in dataset
-        is_complex = "synthetic_30" in dataset
+        is_simple = simple_pattern in dataset
+        is_complex = complex_pattern in dataset
         
         if not (is_simple or is_complex):
             continue
@@ -263,7 +283,8 @@ def analyze_scalability(comparison_data: Dict) -> Dict:
             "algo_degradation": algo_degradation
         }
     
-    return result
+    node_info = {"min_nodes": min_nodes, "max_nodes": max_nodes}
+    return result, node_info
 
 
 def generate_plots(output_dir: Path, llm_stats: Dict, rs_data: Dict, lingam_data: Dict, comparison_data: Dict):
@@ -421,7 +442,7 @@ def generate_plots(output_dir: Path, llm_stats: Dict, rs_data: Dict, lingam_data
     # ====================================================================
     # Plot 4: Scalability Analysis (Simple vs Complex Synthetic)
     # ====================================================================
-    scalability_data = analyze_scalability(comparison_data)
+    scalability_data, node_info = analyze_scalability(comparison_data)
     
 
     
@@ -438,9 +459,12 @@ def generate_plots(output_dir: Path, llm_stats: Dict, rs_data: Dict, lingam_data
         x = np.arange(len(scale_llms))
         width = 0.35
         
-        bars1 = ax.bar(x - width/2, simple_coverage, width, label='Simple (12-node)',
+        min_nodes = node_info.get("min_nodes", 12)
+        max_nodes = node_info.get("max_nodes", 30)
+        
+        bars1 = ax.bar(x - width/2, simple_coverage, width, label=f'Simple ({min_nodes}-node)',
                         color='#009E73', edgecolor='#000000', linewidth=1.0, alpha=0.85)
-        bars2 = ax.bar(x + width/2, complex_coverage, width, label='Complex (30-node)',
+        bars2 = ax.bar(x + width/2, complex_coverage, width, label=f'Complex ({max_nodes}-node)',
                         color='#D55E00', edgecolor='#000000', linewidth=1.0, alpha=0.85)
         
         ax.set_ylabel('Calibrated Coverage (%)', fontweight='bold', fontsize=10, color='#000000')
