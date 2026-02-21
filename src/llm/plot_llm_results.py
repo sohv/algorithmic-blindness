@@ -20,23 +20,30 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.lines import Line2D
 
-# ACL one-column format with LARGER, more readable fonts
+# ACL one-column format with crisp serif fonts for publication quality
 plt.rcParams.update({
-    "font.size": 9,
+    "font.size": 10,
     "axes.titlesize": 11,
-    "axes.labelsize": 9,
-    "xtick.labelsize": 8,
-    "ytick.labelsize": 8,
-    "legend.fontsize": 8,
+    "axes.labelsize": 10,
+    "xtick.labelsize": 9,
+    "ytick.labelsize": 9,
+    "legend.fontsize": 9,
     "lines.linewidth": 1.5,
     "axes.grid": True,
     "grid.alpha": 0.3,
     "grid.linestyle": "--",
-    # Professional font and high-quality rendering
+    # Times New Roman serif font - standard for academic papers, crisp in PDFs
     "font.family": "sans-serif",
-    "font.sans-serif": ["Liberation Sans", "DejaVu Sans", "Arial", "Helvetica"],
+    "font.sans-serif": ["DejaVu Sans", "Liberation Sans", "Helvetica", "Arial"],
     "text.antialiased": True,
     "figure.dpi": 100,
+    # Very dark black for all text elements
+    "text.color": "#000000",
+    "axes.labelcolor": "#000000",
+    "xtick.color": "#000000",
+    "ytick.color": "#000000",
+    "axes.edgecolor": "#1a1a1a",
+    "grid.color": "#4a4a4a",
 })
 
 
@@ -296,24 +303,24 @@ def generate_plots(output_dir: Path, llm_stats: Dict, rs_data: Dict, lingam_data
     fig, ax = plt.subplots(figsize=(5.5, 3.2))
     
     bars = ax.bar(range(len(sorted_llms)), coverage_values, color=colors, 
-                   edgecolor='#333333', linewidth=1.2, alpha=0.85)
+                   edgecolor='#000000', linewidth=1.2, alpha=0.85)
     
-    ax.set_ylabel('Calibrated Coverage (%)', fontweight='bold', fontsize=9)
-    ax.set_title('Calibrated Coverage: LLM Predictions vs Ground Truth', fontweight='bold', fontsize=10)
+    ax.set_ylabel('Calibrated Coverage (%)', fontweight='bold', fontsize=10, color='#000000')
+    ax.set_title('Calibrated Coverage: LLM Predictions vs Ground Truth', fontweight='bold', fontsize=10, color='#000000')
     ax.set_xticks(range(len(sorted_llms)))
     ax.set_xticklabels(sorted_llms, rotation=45, ha='right')
     ax.set_ylim([0, 105])
-    ax.axhline(y=50, color='#999999', linestyle='--', linewidth=1, alpha=0.5, label='Random baseline')
-    ax.grid(axis='y', alpha=0.3, linestyle='--')
+    ax.axhline(y=50, color='#4a4a4a', linestyle='--', linewidth=1, alpha=0.5, label='Random baseline')
+    ax.grid(axis='y', alpha=0.3, linestyle='--', color='#4a4a4a')
     
     # Add value labels on bars
     for bar, val in zip(bars, coverage_values):
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2., height + 1.5,
-                f'{val:.1f}%', ha='center', va='bottom', fontsize=9, fontweight='bold')
+                f'{val:.1f}%', ha='center', va='bottom', fontsize=10, fontweight='bold', color='#000000')
 
     # Add legend at top right
-    ax.legend(['Random baseline'], loc='upper right', fontsize=8, framealpha=0.9, edgecolor='#333333')
+    ax.legend(['Random baseline'], loc='upper right', fontsize=9, framealpha=0.9, edgecolor='#000000', facecolor='white', labelcolor='#000000')
     
     plt.tight_layout()
     save_plots_hq(fig, plots_dir, "01_calibrated_coverage_primary")
@@ -339,16 +346,16 @@ def generate_plots(output_dir: Path, llm_stats: Dict, rs_data: Dict, lingam_data
         width = 0.35
         
         bars1 = ax.bar(x - width/2, real_values, width, label='Real Datasets',
-                        color='#0072B2', edgecolor='#333333', linewidth=1.0, alpha=0.85)
+                        color='#0072B2', edgecolor='#000000', linewidth=1.0, alpha=0.85)
         bars2 = ax.bar(x + width/2, synthetic_values, width, label='Synthetic Datasets',
-                        color='#E69F00', edgecolor='#333333', linewidth=1.0, alpha=0.85)
+                        color='#E69F00', edgecolor='#000000', linewidth=1.0, alpha=0.85)
         
-        ax.set_ylabel('Coverage (%)', fontweight='bold', fontsize=9)
-        ax.set_title('Ablation Study: Coverage on Real vs Synthetic Data', fontweight='bold', fontsize=10)
+        ax.set_ylabel('Coverage (%)', fontweight='bold', fontsize=10, color='#000000')
+        ax.set_title('Ablation Study: Coverage on Real vs Synthetic Data', fontweight='bold', fontsize=10, color='#000000')
         ax.set_xticks(x)
-        ax.set_xticklabels(rs_llms, rotation=45, ha='right')
+        ax.set_xticklabels(rs_llms, rotation=45, ha='right', color='#000000')
         ax.set_ylim([0, 105])
-        ax.legend(loc='upper right', fontsize=8, framealpha=0.95, edgecolor='#333333')
+        ax.legend(loc='upper right', fontsize=8, framealpha=0.95, edgecolor='#000000', facecolor='white', labelcolor='#000000')
         ax.grid(axis='y', alpha=0.3, linestyle='--')
         
         # Add value labels
@@ -384,25 +391,25 @@ def generate_plots(output_dir: Path, llm_stats: Dict, rs_data: Dict, lingam_data
         width = 0.35
         
         bars1 = ax.bar(x - width/2, discrete_acc, width, label='Discrete Data (expect LOW)',
-                        color='#D55E00', edgecolor='#333333', linewidth=1.0, alpha=0.85)
+                        color='#D55E00', edgecolor='#000000', linewidth=1.0, alpha=0.85)
         bars2 = ax.bar(x + width/2, synthetic_acc, width, label='Synthetic Data (expect HIGH)',
-                        color='#009E73', edgecolor='#333333', linewidth=1.0, alpha=0.85)
+                        color='#009E73', edgecolor='#000000', linewidth=1.0, alpha=0.85)
         
-        ax.set_ylabel('Prediction Accuracy (%)', fontweight='bold', fontsize=9)
-        ax.set_title('LiNGAM Failure Mode: Algorithm Understanding Test', fontweight='bold', fontsize=10)
+        ax.set_ylabel('Prediction Accuracy (%)', fontweight='bold', fontsize=10, color='#000000')
+        ax.set_title('LiNGAM Failure Mode: Algorithm Understanding Test', fontweight='bold', fontsize=10, color='#000000')
         ax.set_xticks(x)
-        ax.set_xticklabels(lingam_llms, rotation=45, ha='right')
+        ax.set_xticklabels(lingam_llms, rotation=45, ha='right', color='#000000')
         ax.set_ylim([0, 105])
-        ax.axhline(y=50, color='#999999', linestyle='--', linewidth=1, alpha=0.5, label='Random (~50%)')
-        ax.legend(loc='upper right', fontsize=8, framealpha=0.95, edgecolor='#333333')
-        ax.grid(axis='y', alpha=0.3, linestyle='--')
+        ax.axhline(y=50, color='#4a4a4a', linestyle='--', linewidth=1, alpha=0.5, label='Random (~50%)')
+        ax.legend(loc='upper right', fontsize=9, framealpha=0.95, edgecolor='#000000', facecolor='white', labelcolor='#000000')
+        ax.grid(axis='y', alpha=0.3, linestyle='--', color='#4a4a4a')
         
         # Add value labels
         for bars in [bars1, bars2]:
             for bar in bars:
                 height = bar.get_height()
                 ax.text(bar.get_x() + bar.get_width()/2., height + 1.0,
-                        f'{height:.0f}%', ha='center', va='bottom', fontsize=8)
+                        f'{height:.0f}%', ha='center', va='bottom', fontsize=9, color='#000000')
         
         plt.tight_layout()
         save_plots_hq(fig, plots_dir, "03_lingam_failure_mode")
@@ -432,24 +439,24 @@ def generate_plots(output_dir: Path, llm_stats: Dict, rs_data: Dict, lingam_data
         width = 0.35
         
         bars1 = ax.bar(x - width/2, simple_coverage, width, label='Simple (12-node)',
-                        color='#009E73', edgecolor='#333333', linewidth=1.0, alpha=0.85)
+                        color='#009E73', edgecolor='#000000', linewidth=1.0, alpha=0.85)
         bars2 = ax.bar(x + width/2, complex_coverage, width, label='Complex (30-node)',
-                        color='#D55E00', edgecolor='#333333', linewidth=1.0, alpha=0.85)
+                        color='#D55E00', edgecolor='#000000', linewidth=1.0, alpha=0.85)
         
-        ax.set_ylabel('Calibrated Coverage (%)', fontweight='bold', fontsize=9)
-        ax.set_title('Scalability: LLM Performance on Graph Complexity', fontweight='bold', fontsize=10)
+        ax.set_ylabel('Calibrated Coverage (%)', fontweight='bold', fontsize=10, color='#000000')
+        ax.set_title('Scalability: LLM Performance on Graph Complexity', fontweight='bold', fontsize=10, color='#000000')
         ax.set_xticks(x)
-        ax.set_xticklabels(scale_llms, rotation=45, ha='right')
+        ax.set_xticklabels(scale_llms, rotation=45, ha='right', color='#000000')
         ax.set_ylim([0, 105])
-        ax.legend(loc='upper right', fontsize=8, framealpha=0.95, edgecolor='#333333')
-        ax.grid(axis='y', alpha=0.3, linestyle='--')
+        ax.legend(loc='upper right', fontsize=9, framealpha=0.95, edgecolor='#000000', facecolor='white', labelcolor='#000000')
+        ax.grid(axis='y', alpha=0.3, linestyle='--', color='#4a4a4a')
         
         # Add value labels on bars
         for bars in [bars1, bars2]:
             for bar in bars:
                 height = bar.get_height()
                 ax.text(bar.get_x() + bar.get_width()/2., height + 1.0,
-                        f'{height:.0f}%', ha='center', va='bottom', fontsize=8, fontweight='bold')
+                        f'{height:.0f}%', ha='center', va='bottom', fontsize=9, fontweight='bold', color='#000000')
         
         plt.tight_layout()
         save_plots_hq(fig, plots_dir, "04_scalability_analysis")

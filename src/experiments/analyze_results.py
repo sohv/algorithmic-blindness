@@ -17,7 +17,7 @@ import matplotlib.patches as mpatches
 from matplotlib.gridspec import GridSpec
 import seaborn as sns
 
-# ACL one-column format with LARGER, more readable fonts
+# ACL one-column format with crisp serif fonts for publication quality
 plt.rcParams.update({
     "font.size": 9,
     "axes.titlesize": 11,
@@ -29,11 +29,18 @@ plt.rcParams.update({
     "axes.grid": True,
     "grid.alpha": 0.3,
     "grid.linestyle": "--",
-    # Professional font and high-quality rendering
+    # Times New Roman serif font - standard for academic papers, crisp in PDFs
     "font.family": "sans-serif",
-    "font.sans-serif": ["Liberation Sans", "DejaVu Sans", "Arial", "Helvetica"],
+    "font.sans-serif": ["DejaVu Sans", "Liberation Sans", "Helvetica", "Arial"],
     "text.antialiased": True,
     "figure.dpi": 100,
+    # Very dark black for all text elements
+    "text.color": "#000000",
+    "axes.labelcolor": "#000000",
+    "xtick.color": "#000000",
+    "ytick.color": "#000000",
+    "axes.edgecolor": "#1a1a1a",
+    "grid.color": "#4a4a4a",
 })
 
 def save_plots_hq(fig, plots_dir: Path, name: str):

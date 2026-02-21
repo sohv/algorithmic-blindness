@@ -26,6 +26,32 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 import json
 
+# ACL one-column format with crisp serif fonts for publication quality
+plt.rcParams.update({
+    "font.size": 9,
+    "axes.titlesize": 11,
+    "axes.labelsize": 9,
+    "xtick.labelsize": 8,
+    "ytick.labelsize": 8,
+    "legend.fontsize": 8,
+    "lines.linewidth": 1.5,
+    "axes.grid": True,
+    "grid.alpha": 0.3,
+    "grid.linestyle": "--",
+    # Times New Roman serif font - standard for academic papers, crisp in PDFs
+    "font.family": "sans-serif",
+    "font.sans-serif": ["DejaVu Sans", "Liberation Sans", "Helvetica", "Arial"],
+    "text.antialiased": True,
+    "figure.dpi": 100,
+    # Very dark black for all text elements
+    "text.color": "#000000",
+    "axes.labelcolor": "#000000",
+    "xtick.color": "#000000",
+    "ytick.color": "#000000",
+    "axes.edgecolor": "#1a1a1a",
+    "grid.color": "#4a4a4a",
+})
+
 
 def analyze_prompt_variance(llm_results: Dict[str, Dict[str, Tuple[float, float]]]) -> Dict:
     """
@@ -183,9 +209,9 @@ def visualize_prompt_variance(variance_df: pd.DataFrame, output_dir: Path):
                 vmin=0, vmax=1, ax=ax, cbar_kws={'label': 'Robustness Score'})
     ax.set_title('Prompt Robustness Scores Across LLMs and Metrics\n'
                  '(1.0 = Perfectly consistent, 0.0 = Highly variable)',
-                 fontsize=14, fontweight='bold')
-    ax.set_xlabel('Metric', fontsize=12)
-    ax.set_ylabel('LLM', fontsize=12)
+                 fontsize=14, fontweight='bold', color='#000000')
+    ax.set_xlabel('Metric', fontsize=12, color='#000000')
+    ax.set_ylabel('LLM', fontsize=12, color='#000000')
 
     plt.tight_layout()
     plt.savefig(output_dir / 'all_llms_prompt_robustness_heatmap.png', dpi=300, bbox_inches='tight')
@@ -205,16 +231,16 @@ def visualize_prompt_variance(variance_df: pd.DataFrame, output_dir: Path):
     pivot_pct.plot(kind='bar', ax=ax, width=0.8)
 
     # Add horizontal line at 20% threshold
-    ax.axhline(y=20, color='red', linestyle='--', linewidth=2,
+    ax.axhline(y=20, color='#d72f2f', linestyle='--', linewidth=2,
                label='20% threshold (robust/sensitive boundary)')
 
     ax.set_title('Percent Difference Across Prompt Formulations\n'
                  '(<20% = Robust, >20% = Sensitive)',
-                 fontsize=14, fontweight='bold')
-    ax.set_xlabel('Metric', fontsize=12)
-    ax.set_ylabel('Percent Difference (%)', fontsize=12)
-    ax.legend(title='LLM', bbox_to_anchor=(1.05, 1), loc='upper left')
-    ax.grid(axis='y', alpha=0.3)
+                 fontsize=14, fontweight='bold', color='#000000')
+    ax.set_xlabel('Metric', fontsize=12, color='#000000')
+    ax.set_ylabel('Percent Difference (%)', fontsize=12, color='#000000')
+    ax.legend(title='LLM', bbox_to_anchor=(1.05, 1), loc='upper left', labelcolor='#000000')
+    ax.grid(axis='y', alpha=0.3, color='#4a4a4a')
     plt.xticks(rotation=0)
 
     plt.tight_layout()
@@ -235,14 +261,14 @@ def visualize_prompt_variance(variance_df: pd.DataFrame, output_dir: Path):
     # Add value labels
     for i, (llm, score) in enumerate(zip(llms, scores)):
         ax.text(score + 0.02, i, f'{score:.3f}',
-                va='center', fontsize=10, fontweight='bold')
+                va='center', fontsize=10, fontweight='bold', color='#000000')
 
     ax.set_xlim(0, 1.1)
-    ax.set_xlabel('Overall Robustness Score', fontsize=12)
+    ax.set_xlabel('Overall Robustness Score', fontsize=12, color='#000000')
     ax.set_title('Overall Prompt Robustness by LLM\n'
                  '(Average across all metrics)',
-                 fontsize=14, fontweight='bold')
-    ax.grid(axis='x', alpha=0.3)
+                 fontsize=14, fontweight='bold', color='#000000')
+    ax.grid(axis='x', alpha=0.3, color='#4a4a4a')
 
     plt.tight_layout()
     plt.savefig(output_dir / 'all_llms_overall_robustness.png', dpi=300, bbox_inches='tight')
