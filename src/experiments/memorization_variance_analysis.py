@@ -25,12 +25,12 @@ except ImportError:
 # Consistent formatting with analyze_results.py
 if PLOTTING_AVAILABLE:
     plt.rcParams.update({
-        "font.size": 9,
+        "font.size": 10,
         "axes.titlesize": 11,
-        "axes.labelsize": 9,
-        "xtick.labelsize": 8,
-        "ytick.labelsize": 8,
-        "legend.fontsize": 8,
+        "axes.labelsize": 10,
+        "xtick.labelsize": 9,
+        "ytick.labelsize": 9,
+        "legend.fontsize": 9,
         "lines.linewidth": 1.5,
         "axes.grid": True,
         "grid.alpha": 0.3,
@@ -133,6 +133,12 @@ def save_plots_hq(fig, plots_dir: Path, name: str):
 
 def print_results(results: Dict):
     """Print variance analysis results."""
+    benchmark_stats = compute_statistics(results["benchmark"]["widths"])
+    synthetic_stats = compute_statistics(results["synthetic"]["widths"])
+
+    if not benchmark_stats or not synthetic_stats:
+        print("\n⚠ No data available for analysis. Check that data has been generated.")
+        return
 
     print("\n" + "="*70)
     print("MEMORIZATION VARIANCE ANALYSIS")
@@ -143,8 +149,6 @@ def print_results(results: Dict):
     # Overall comparison
     print("OVERALL COMPARISON")
     print("-" * 70)
-    benchmark_stats = compute_statistics(results["benchmark"]["widths"])
-    synthetic_stats = compute_statistics(results["synthetic"]["widths"])
 
     print(f"\nBenchmark Datasets (n={benchmark_stats['count']}):")
     print(f"  Mean range width:    {benchmark_stats['mean']:.4f}")
@@ -257,6 +261,10 @@ def generate_plots(results: Dict, aggregated: Dict, output_dir: Path):
         print("Warning: matplotlib not available, skipping plots")
         return
 
+    if not results["benchmark"]["widths"] or not results["synthetic"]["widths"]:
+        print("⚠ No data available for plotting. Skipping plot generation.")
+        return
+
     output_dir.mkdir(parents=True, exist_ok=True)
     print(f"\nGenerating plots in {output_dir}...")
 
@@ -285,8 +293,8 @@ def generate_plots(results: Dict, aggregated: Dict, output_dir: Path):
     # Add value labels on bars
     for bar, mean, std in zip(bars, means, stdevs):
         height = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width()/2 - 0.06, height + 0.02,
-                f'{mean:.2f}', ha='center', va='bottom', fontsize=9)
+        ax.text(bar.get_x() + bar.get_width()/2 - 0.08, height + 0.02,
+                f'{mean:.2f}', ha='center', va='bottom', fontsize=10)
 
     plt.tight_layout()
     save_plots_hq(fig, output_dir, "01_variance_benchmark_vs_synthetic")
@@ -325,7 +333,7 @@ def generate_plots(results: Dict, aggregated: Dict, output_dir: Path):
     for bar, norm_ratio, real_ratio in zip(bars, normalized_ratios, ratios):
         width = bar.get_width()
         ax.text(width + 0.02, bar.get_y() + bar.get_height()/2.,
-                f'{norm_ratio:.2f}', ha='left', va='center', fontsize=9)
+                f'{norm_ratio:.2f}', ha='left', va='center', fontsize=10)
 
     plt.tight_layout()
     save_plots_hq(fig, output_dir, "02_variance_per_model")
@@ -452,8 +460,8 @@ def save_results_json(results: Dict, aggregated: Dict, output_dir: Path):
 
 
 if __name__ == "__main__":
-    results_dir = Path("src/llm/results")
-    output_dir = Path("src/experiments/results")
+    results_dir = Path("../llm/results")
+    output_dir = Path("results")
 
     print("Loading aggregated LLM predictions...")
     aggregated = load_aggregated_ranges(results_dir)

@@ -19,12 +19,12 @@ import seaborn as sns
 
 # ACL one-column format with crisp serif fonts for publication quality
 plt.rcParams.update({
-    "font.size": 9,
+    "font.size": 10,
     "axes.titlesize": 11,
-    "axes.labelsize": 9,
-    "xtick.labelsize": 8,
-    "ytick.labelsize": 8,
-    "legend.fontsize": 8,
+    "axes.labelsize": 10,
+    "xtick.labelsize": 9,
+    "ytick.labelsize": 9,
+    "legend.fontsize": 9,
     "lines.linewidth": 1.5,
     "axes.grid": True,
     "grid.alpha": 0.3,
@@ -155,7 +155,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
         height = bar.get_height()
         # Position text above the box (mean + std - small offset, slightly left)
         ax.text(bar.get_x() + bar.get_width()/2. - 0.04, height + std + 0.02,
-                f'{mean:.2f}', ha='center', va='bottom', fontsize=9)
+                f'{mean:.2f}', ha='center', va='bottom', fontsize=10)
     
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
@@ -186,7 +186,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     # Position legend horizontally at top with no title
     ax.set_ylim([0, 1.15])
     ax.legend(loc='upper center', bbox_to_anchor=(0.5, 0.98), ncol=3, framealpha=0.9,
-              edgecolor='#333333', fontsize=8, frameon=True, title=None)
+              edgecolor='#333333', fontsize=9, frameon=True, title=None)
     ax.grid(axis='y', alpha=0.3, linestyle='--')
     
     plt.tight_layout()
@@ -216,7 +216,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     for bar, mean in zip(bars, shd_means):
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2. - 0.2, height,
-                f'{mean:.0f}', ha='center', va='bottom', fontsize=8)
+                f'{mean:.0f}', ha='center', va='bottom', fontsize=9)
     
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
@@ -369,18 +369,18 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
             
             dataset_labels_x = datasets
             
-            ax.set_ylabel(metric_label, fontweight='bold', fontsize=10)
+            ax.set_ylabel(metric_label, fontweight='bold', fontsize=11)
             ax.set_title(f'({chr(97 + metric_idx)}) {metric_label} by Dataset and Algorithm',
-                        fontweight='bold', fontsize=11, loc='left')
+                        fontweight='bold', fontsize=12, loc='left')
             ax.set_xticks(x + width * 1.5)
-            ax.set_xticklabels(dataset_labels_x, rotation=45, ha='right', fontsize=9)
+            ax.set_xticklabels(dataset_labels_x, rotation=45, ha='right', fontsize=10)
             ax.tick_params(axis='y', labelsize=10)
             ax.set_ylim([0, 1.05])
             ax.grid(axis='y', alpha=0.3, linestyle='--')
         
         # Add common legend at bottom in one horizontal line
         fig.legend(handles_list, labels_list, loc='lower center', ncol=4,
-                  fontsize=9, framealpha=0.95, edgecolor='#333333',
+                  fontsize=10, framealpha=0.95, edgecolor='#333333',
                   bbox_to_anchor=(0.5, 0.0), frameon=True)
         
         plt.subplots_adjust(hspace=0.55, bottom=0.12)
@@ -416,7 +416,7 @@ def generate_plots(results: Dict[str, Dict], output_dir: Path):
     legend_elements = [Line2D([0], [0], color='#D55E00', lw=2, label='Median'),
                        Line2D([0], [0], marker='o', color='w', markerfacecolor='white', 
                               markeredgecolor='black', markersize=4, label='Outliers', linestyle='None')]
-    ax.legend(handles=legend_elements, loc='upper right', fontsize=6, framealpha=0.8,
+    ax.legend(handles=legend_elements, loc='upper right', fontsize=7, framealpha=0.8,
               edgecolor='#333333', fancybox=False)
     
     plt.xticks(rotation=45, ha='right')

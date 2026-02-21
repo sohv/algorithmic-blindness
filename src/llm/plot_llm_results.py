@@ -32,7 +32,7 @@ plt.rcParams.update({
     "axes.grid": True,
     "grid.alpha": 0.3,
     "grid.linestyle": "--",
-    # Times New Roman serif font - standard for academic papers, crisp in PDFs
+    # DejaVu Sans - crisp sans-serif for excellent PDF clarity
     "font.family": "sans-serif",
     "font.sans-serif": ["DejaVu Sans", "Liberation Sans", "Helvetica", "Arial"],
     "text.antialiased": True,

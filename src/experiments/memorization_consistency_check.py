@@ -28,12 +28,12 @@ except ImportError:
 # Consistent formatting with analyze_results.py
 if PLOTTING_AVAILABLE:
     plt.rcParams.update({
-        "font.size": 9,
+        "font.size": 10,
         "axes.titlesize": 11,
-        "axes.labelsize": 9,
-        "xtick.labelsize": 8,
-        "ytick.labelsize": 8,
-        "legend.fontsize": 8,
+        "axes.labelsize": 10,
+        "xtick.labelsize": 9,
+        "ytick.labelsize": 9,
+        "legend.fontsize": 9,
         "lines.linewidth": 1.5,
         "axes.grid": True,
         "grid.alpha": 0.3,
@@ -190,6 +190,10 @@ def print_results(results: Dict, aggregated: Dict):
     bench_stats = compute_statistics(results["benchmark"]["distances"])
     synth_stats = compute_statistics(results["synthetic"]["distances"])
 
+    if not bench_stats or not synth_stats:
+        print("\n⚠ No data available for analysis. Check that data has been generated.")
+        return
+
     print(f"\nBenchmark Datasets (n={bench_stats['count']} pairwise distances):")
     print(f"  Mean distance:  {bench_stats['mean']:.4f}  (0=identical, 1=disjoint)")
     print(f"  Median distance: {bench_stats['median']:.4f}")
@@ -309,6 +313,10 @@ def generate_plots(results: Dict, aggregated: Dict, output_dir: Path):
         print("Warning: matplotlib not available, skipping plots")
         return
 
+    if not results["benchmark"]["distances"] or not results["synthetic"]["distances"]:
+        print("⚠ No data available for plotting. Skipping plot generation.")
+        return
+
     output_dir.mkdir(parents=True, exist_ok=True)
     print(f"\nGenerating plots in {output_dir}...")
 
@@ -337,8 +345,8 @@ def generate_plots(results: Dict, aggregated: Dict, output_dir: Path):
     # Add value labels on bars
     for bar, mean, std in zip(bars, means, stdevs):
         height = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width()/2 - 0.06, height + 0.5,
-                f'{mean:.1f}', ha='center', va='bottom', fontsize=9)
+        ax.text(bar.get_x() + bar.get_width()/2 - 0.08, height + 0.5,
+                f'{mean:.1f}', ha='center', va='bottom', fontsize=10)
 
     plt.tight_layout()
     save_plots_hq(fig, output_dir, "01_consistency_benchmark_vs_synthetic")
@@ -380,7 +388,7 @@ def generate_plots(results: Dict, aggregated: Dict, output_dir: Path):
     for bar, norm_dist, real_dist in zip(bars, normalized_distances, distances):
         width = bar.get_width()
         ax.text(width + 0.02, bar.get_y() + bar.get_height()/2.,
-                f'{norm_dist:.2f}', ha='left', va='center', fontsize=9)
+                f'{norm_dist:.2f}', ha='left', va='center', fontsize=10)
 
     plt.tight_layout()
     save_plots_hq(fig, output_dir, "02_consistency_per_dataset")
@@ -527,8 +535,8 @@ def save_results_json(results: Dict, aggregated: Dict, output_dir: Path):
 
 
 if __name__ == "__main__":
-    results_dir = Path("src/llm/results")
-    output_dir = Path("src/experiments/results")
+    results_dir = Path("../llm/results")
+    output_dir = Path("results")
 
     print("Loading aggregated LLM predictions...")
     aggregated = load_aggregated_ranges(results_dir)

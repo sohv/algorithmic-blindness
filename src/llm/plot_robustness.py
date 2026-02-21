@@ -19,12 +19,12 @@ from matplotlib.lines import Line2D
 
 # ACL one-column format with crisp serif fonts for publication quality
 plt.rcParams.update({
-    "font.size": 9,
+    "font.size": 10,
     "axes.titlesize": 11,
-    "axes.labelsize": 9,
-    "xtick.labelsize": 8,
-    "ytick.labelsize": 8,
-    "legend.fontsize": 8,
+    "axes.labelsize": 10,
+    "xtick.labelsize": 9,
+    "ytick.labelsize": 9,
+    "legend.fontsize": 9,
     "lines.linewidth": 1.5,
     "axes.grid": True,
     "grid.alpha": 0.3,
@@ -138,9 +138,9 @@ def main():
     ax.set_xticklabels(models_sorted, rotation=45, ha='right')
     ax.set_ylim(bottom=0)
     ax.grid(axis='y', alpha=0.3, linestyle='--')
-    ax.legend(loc='upper left', fontsize=7, framealpha=0.95, edgecolor='#333333', ncol=3)
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.45), fontsize=8, framealpha=0.95, edgecolor='#333333', ncol=5, frameon=True)
 
-    plt.tight_layout()
+    plt.subplots_adjust(bottom=0.3)
     save_plots_hq(fig, robustness_dir, "prompt_robustness_cv")
     plt.close()
 
