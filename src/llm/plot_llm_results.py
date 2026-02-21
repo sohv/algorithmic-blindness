@@ -416,7 +416,7 @@ def generate_plots(output_dir: Path, llm_stats: Dict, rs_data: Dict, lingam_data
         bars2 = ax.bar(x + width/2, synthetic_acc, width, label='Synthetic Data (expect HIGH)',
                         color='#009E73', edgecolor='#000000', linewidth=1.0, alpha=0.85)
         
-        ax.set_ylabel('Prediction Accuracy (%)', fontweight='bold', fontsize=10, color='#000000')
+        ax.set_ylabel('Calibrated Coverage (%)', fontweight='bold', fontsize=10, color='#000000')
         ax.set_title('LiNGAM Failure Mode: Algorithm Understanding Test', fontweight='bold', fontsize=10, color='#000000')
         ax.set_xticks(x)
         ax.set_xticklabels(lingam_llms, rotation=45, ha='right', color='#000000')
