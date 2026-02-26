@@ -1,0 +1,554 @@
+[
+  {
+    "model": "qwenthink",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.8\nRecall: 0.6\nF1: 0.7\nSHD: 2",
+    "original_extracted_numbers": [
+      0.8,
+      0.6,
+      1.0,
+      0.7,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.00\nRecall: 0.00\nF1: 0.00\nSHD: 0",
+    "perturbed_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2026-02-26T10:14:42.796536"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 2",
+    "original_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 5",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      5.0
+    ],
+    "timestamp": "2026-02-26T10:15:00.257293"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 2.0",
+    "original_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.0\nRecall: 0.0\nF1: 0.0\nSHD: 0.0",
+    "perturbed_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2026-02-26T10:15:27.694307"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.8\nRecall: 0.8\nF1: 0.8\nSHD: 1",
+    "original_extracted_numbers": [
+      0.8,
+      0.8,
+      1.0,
+      0.8,
+      1.0
+    ],
+    "perturbed_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 2.0",
+    "perturbed_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      2.0
+    ],
+    "timestamp": "2026-02-26T10:15:51.187363"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.0\nRecall: 0.0\nF1: 0.0\nSHD: 0.0",
+    "original_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "perturbed_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.8\nSHD: 2",
+    "perturbed_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.8,
+      2.0
+    ],
+    "timestamp": "2026-02-26T10:16:09.135921"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.0\nRecall: 0.0\nF1: 0.0\nSHD: 0",
+    "original_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.80\nF1: 0.82\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.8,
+      1.0,
+      0.82,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:16:28.636593"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.7\nRecall: 0.6\nF1: 0.6\nSHD: 2",
+    "original_extracted_numbers": [
+      0.7,
+      0.6,
+      1.0,
+      0.6,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.0\nRecall: 0.0\nF1: 0.0\nSHD: 0",
+    "perturbed_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2026-02-26T10:16:47.002074"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 5",
+    "original_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      5.0
+    ],
+    "perturbed_response": "Precision: 0.0\nRecall: 0.0\nF1: 0.0\nSHD: 0.0",
+    "perturbed_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2026-02-26T10:17:04.762381"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.8\nSHD: 2",
+    "original_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.8,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 2",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      2.0
+    ],
+    "timestamp": "2026-02-26T10:17:20.569474"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 5.0",
+    "original_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      5.0
+    ],
+    "perturbed_response": "Precision: 0.5\nRecall: 0.5\nF1: 0.5\nSHD: 0",
+    "perturbed_extracted_numbers": [
+      0.5,
+      0.5,
+      1.0,
+      0.5,
+      0.0
+    ],
+    "timestamp": "2026-02-26T10:17:42.651687"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 5",
+    "original_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      5.0
+    ],
+    "perturbed_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.8\nSHD: 2",
+    "perturbed_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.8,
+      2.0
+    ],
+    "timestamp": "2026-02-26T10:18:02.591827"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 10.0",
+    "original_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      10.0
+    ],
+    "perturbed_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 5",
+    "perturbed_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      5.0
+    ],
+    "timestamp": "2026-02-26T10:18:23.862559"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.0\nRecall: 0.0\nF1: 0.0\nSHD: 0.0",
+    "original_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "perturbed_response": "Precision: 0.5\nRecall: 0.5\nF1: 0.5\nSHD: 5",
+    "perturbed_extracted_numbers": [
+      0.5,
+      0.5,
+      1.0,
+      0.5,
+      5.0
+    ],
+    "timestamp": "2026-02-26T10:18:42.478861"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 2",
+    "original_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 2.0",
+    "perturbed_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      2.0
+    ],
+    "timestamp": "2026-02-26T10:19:02.112577"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 5.0",
+    "original_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      5.0
+    ],
+    "perturbed_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:19:24.438778"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.80\nRecall: 0.80\nF1: 0.80\nSHD: 2",
+    "original_extracted_numbers": [
+      0.8,
+      0.8,
+      1.0,
+      0.8,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.00\nRecall: 0.00\nF1: 0.00\nSHD: 0",
+    "perturbed_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2026-02-26T10:19:42.964120"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.00\nRecall: 0.00\nF1: 0.00\nSHD: 0.0",
+    "original_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "perturbed_response": "Precision: 0.0\nRecall: 0.0\nF1: 0.0\nSHD: 0",
+    "perturbed_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2026-02-26T10:20:03.147915"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.8\nSHD: 5",
+    "original_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.8,
+      5.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 2",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      2.0
+    ],
+    "timestamp": "2026-02-26T10:20:28.500287"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.70\nRecall: 0.60\nF1: 0.65\nSHD: 10",
+    "original_extracted_numbers": [
+      0.7,
+      0.6,
+      1.0,
+      0.65,
+      10.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.7\nF1: 0.8\nSHD: 5",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.7,
+      1.0,
+      0.8,
+      5.0
+    ],
+    "timestamp": "2026-02-26T10:20:46.408241"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 12",
+    "original_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 4",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      4.0
+    ],
+    "timestamp": "2026-02-26T10:20:58.405286"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.7\nRecall: 0.6\nF1: 0.6\nSHD: 10",
+    "original_extracted_numbers": [
+      0.7,
+      0.6,
+      1.0,
+      0.6,
+      10.0
+    ],
+    "perturbed_response": "Precision: 0.00\nRecall: 0.00\nF1: 0.00\nSHD: 0",
+    "perturbed_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2026-02-26T10:21:13.345707"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.70\nRecall: 0.60\nF1: 0.65\nSHD: 5",
+    "original_extracted_numbers": [
+      0.7,
+      0.6,
+      1.0,
+      0.65,
+      5.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 2",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      2.0
+    ],
+    "timestamp": "2026-02-26T10:21:34.087306"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.50\nRecall: 0.40\nF1: 0.44\nSHD: 10",
+    "original_extracted_numbers": [
+      0.5,
+      0.4,
+      1.0,
+      0.44,
+      10.0
+    ],
+    "perturbed_response": "Precision: 0.0\nRecall: 0.0\nF1: 0.0\nSHD: 0",
+    "perturbed_extracted_numbers": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2026-02-26T10:21:52.545948"
+  },
+  {
+    "model": "qwenthink",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.6\nRecall: 0.5\nF1: 0.6\nSHD: 10.0",
+    "original_extracted_numbers": [
+      0.6,
+      0.5,
+      1.0,
+      0.6,
+      10.0
+    ],
+    "perturbed_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 2",
+    "perturbed_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      2.0
+    ],
+    "timestamp": "2026-02-26T10:22:13.014632"
+  }
+]

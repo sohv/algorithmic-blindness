@@ -1,0 +1,1538 @@
+[
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "pc",
+    "metric": "precision",
+    "llm_response": "0.86",
+    "extracted_numbers": [
+      0.86
+    ],
+    "ground_truth_range": [
+      0.4,
+      0.549
+    ],
+    "actual_mean": 0.4744,
+    "timestamp": "2026-02-26T04:31:52.592883"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "pc",
+    "metric": "recall",
+    "llm_response": "0.80",
+    "extracted_numbers": [
+      0.8
+    ],
+    "ground_truth_range": [
+      0.633,
+      0.922
+    ],
+    "actual_mean": 0.7775,
+    "timestamp": "2026-02-26T04:31:53.441742"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "pc",
+    "metric": "f1",
+    "llm_response": "0.86",
+    "extracted_numbers": [
+      0.86
+    ],
+    "ground_truth_range": [
+      0.511,
+      0.664
+    ],
+    "actual_mean": 0.5876,
+    "timestamp": "2026-02-26T04:31:54.213822"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "pc",
+    "metric": "shd",
+    "llm_response": "4",
+    "extracted_numbers": [
+      4.0
+    ],
+    "ground_truth_range": [
+      12,
+      18
+    ],
+    "actual_mean": 14.96,
+    "timestamp": "2026-02-26T04:31:55.172130"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "lingam",
+    "metric": "precision",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.174,
+      0.354
+    ],
+    "actual_mean": 0.2639,
+    "timestamp": "2026-02-26T04:31:55.947481"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "lingam",
+    "metric": "recall",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.253,
+      0.472
+    ],
+    "actual_mean": 0.3625,
+    "timestamp": "2026-02-26T04:31:56.901170"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "lingam",
+    "metric": "f1",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.209,
+      0.401
+    ],
+    "actual_mean": 0.305,
+    "timestamp": "2026-02-26T04:31:57.904379"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "lingam",
+    "metric": "shd",
+    "llm_response": "18",
+    "extracted_numbers": [
+      18.0
+    ],
+    "ground_truth_range": [
+      10,
+      16
+    ],
+    "actual_mean": 13.26,
+    "timestamp": "2026-02-26T04:31:58.958301"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "fci",
+    "metric": "precision",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.4,
+      0.549
+    ],
+    "actual_mean": 0.4744,
+    "timestamp": "2026-02-26T04:31:59.801830"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "fci",
+    "metric": "recall",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.633,
+      0.922
+    ],
+    "actual_mean": 0.7775,
+    "timestamp": "2026-02-26T04:32:00.491045"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "fci",
+    "metric": "f1",
+    "llm_response": "0.86",
+    "extracted_numbers": [
+      0.86
+    ],
+    "ground_truth_range": [
+      0.511,
+      0.664
+    ],
+    "actual_mean": 0.5876,
+    "timestamp": "2026-02-26T04:32:01.166434"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "fci",
+    "metric": "shd",
+    "llm_response": "4",
+    "extracted_numbers": [
+      4.0
+    ],
+    "ground_truth_range": [
+      12,
+      18
+    ],
+    "actual_mean": 14.96,
+    "timestamp": "2026-02-26T04:32:01.984427"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "notears",
+    "metric": "precision",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.019,
+      0.474
+    ],
+    "actual_mean": 0.2464,
+    "timestamp": "2026-02-26T04:32:02.767201"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "notears",
+    "metric": "recall",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.02,
+      0.48
+    ],
+    "actual_mean": 0.25,
+    "timestamp": "2026-02-26T04:32:04.036026"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "notears",
+    "metric": "f1",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.021,
+      0.474
+    ],
+    "actual_mean": 0.2476,
+    "timestamp": "2026-02-26T04:32:04.991499"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "asia",
+    "algorithm": "notears",
+    "metric": "shd",
+    "llm_response": "3.0",
+    "extracted_numbers": [
+      3.0
+    ],
+    "ground_truth_range": [
+      8,
+      16
+    ],
+    "actual_mean": 12.1,
+    "timestamp": "2026-02-26T04:32:05.664897"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "pc",
+    "metric": "precision",
+    "llm_response": "0.93",
+    "extracted_numbers": [
+      0.93
+    ],
+    "ground_truth_range": [
+      0.382,
+      0.571
+    ],
+    "actual_mean": 0.4765,
+    "timestamp": "2026-02-26T04:32:06.275654"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "pc",
+    "metric": "recall",
+    "llm_response": "0.90",
+    "extracted_numbers": [
+      0.9
+    ],
+    "ground_truth_range": [
+      0.907,
+      1
+    ],
+    "actual_mean": 0.9925,
+    "timestamp": "2026-02-26T04:32:07.032514"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "pc",
+    "metric": "f1",
+    "llm_response": "0.86",
+    "extracted_numbers": [
+      0.86
+    ],
+    "ground_truth_range": [
+      0.546,
+      0.739
+    ],
+    "actual_mean": 0.6424,
+    "timestamp": "2026-02-26T04:32:07.855995"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "pc",
+    "metric": "shd",
+    "llm_response": "2",
+    "extracted_numbers": [
+      2.0
+    ],
+    "ground_truth_range": [
+      6,
+      11
+    ],
+    "actual_mean": 8.45,
+    "timestamp": "2026-02-26T04:32:08.618666"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "lingam",
+    "metric": "precision",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.35,
+      0.584
+    ],
+    "actual_mean": 0.4668,
+    "timestamp": "2026-02-26T04:32:09.629434"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "lingam",
+    "metric": "recall",
+    "llm_response": "0.50",
+    "extracted_numbers": [
+      0.5
+    ],
+    "ground_truth_range": [
+      0.354,
+      0.611
+    ],
+    "actual_mean": 0.4825,
+    "timestamp": "2026-02-26T04:32:10.483798"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "lingam",
+    "metric": "f1",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.357,
+      0.589
+    ],
+    "actual_mean": 0.4731,
+    "timestamp": "2026-02-26T04:32:11.200672"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "lingam",
+    "metric": "shd",
+    "llm_response": "3",
+    "extracted_numbers": [
+      3.0
+    ],
+    "ground_truth_range": [
+      3,
+      6
+    ],
+    "actual_mean": 4.29,
+    "timestamp": "2026-02-26T04:32:12.015833"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "fci",
+    "metric": "precision",
+    "llm_response": "0.93",
+    "extracted_numbers": [
+      0.93
+    ],
+    "ground_truth_range": [
+      0.382,
+      0.571
+    ],
+    "actual_mean": 0.4765,
+    "timestamp": "2026-02-26T04:32:12.965057"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "fci",
+    "metric": "recall",
+    "llm_response": "0.79",
+    "extracted_numbers": [
+      0.79
+    ],
+    "ground_truth_range": [
+      0.907,
+      1
+    ],
+    "actual_mean": 0.9925,
+    "timestamp": "2026-02-26T04:32:13.761970"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "fci",
+    "metric": "f1",
+    "llm_response": "0.93",
+    "extracted_numbers": [
+      0.93
+    ],
+    "ground_truth_range": [
+      0.546,
+      0.739
+    ],
+    "actual_mean": 0.6424,
+    "timestamp": "2026-02-26T04:32:14.774103"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "fci",
+    "metric": "shd",
+    "llm_response": "9",
+    "extracted_numbers": [
+      9.0
+    ],
+    "ground_truth_range": [
+      6,
+      11
+    ],
+    "actual_mean": 8.45,
+    "timestamp": "2026-02-26T04:32:15.606380"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "notears",
+    "metric": "precision",
+    "llm_response": "0.33",
+    "extracted_numbers": [
+      0.33
+    ],
+    "ground_truth_range": [
+      0,
+      0.558
+    ],
+    "actual_mean": 0.1777,
+    "timestamp": "2026-02-26T04:32:16.434726"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "notears",
+    "metric": "recall",
+    "llm_response": "0.71",
+    "extracted_numbers": [
+      0.71
+    ],
+    "ground_truth_range": [
+      0,
+      0.533
+    ],
+    "actual_mean": 0.16,
+    "timestamp": "2026-02-26T04:32:17.356595"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "notears",
+    "metric": "f1",
+    "llm_response": "0.62",
+    "extracted_numbers": [
+      0.62
+    ],
+    "ground_truth_range": [
+      0,
+      0.535
+    ],
+    "actual_mean": 0.1664,
+    "timestamp": "2026-02-26T04:32:18.154044"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "cancer",
+    "algorithm": "notears",
+    "metric": "shd",
+    "llm_response": "3.0",
+    "extracted_numbers": [
+      3.0
+    ],
+    "ground_truth_range": [
+      3,
+      10
+    ],
+    "actual_mean": 6.33,
+    "timestamp": "2026-02-26T04:32:18.964287"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "pc",
+    "metric": "precision",
+    "llm_response": "0.83",
+    "extracted_numbers": [
+      0.83
+    ],
+    "ground_truth_range": [
+      0.247,
+      0.323
+    ],
+    "actual_mean": 0.285,
+    "timestamp": "2026-02-26T04:32:20.055349"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "pc",
+    "metric": "recall",
+    "llm_response": "0.00",
+    "extracted_numbers": [
+      0.0
+    ],
+    "ground_truth_range": [
+      0.92,
+      0.92
+    ],
+    "actual_mean": 0.92,
+    "timestamp": "2026-02-26T04:32:20.834764"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "pc",
+    "metric": "f1",
+    "llm_response": "0.71",
+    "extracted_numbers": [
+      0.71
+    ],
+    "ground_truth_range": [
+      0.391,
+      0.479
+    ],
+    "actual_mean": 0.4349,
+    "timestamp": "2026-02-26T04:32:21.542022"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "pc",
+    "metric": "shd",
+    "llm_response": "5.6",
+    "extracted_numbers": [
+      5.6
+    ],
+    "ground_truth_range": [
+      72,
+      94
+    ],
+    "actual_mean": 83.04,
+    "timestamp": "2026-02-26T04:32:22.432352"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "lingam",
+    "metric": "precision",
+    "llm_response": "0.50",
+    "extracted_numbers": [
+      0.5
+    ],
+    "ground_truth_range": [
+      0.153,
+      0.185
+    ],
+    "actual_mean": 0.1691,
+    "timestamp": "2026-02-26T04:32:23.277066"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "lingam",
+    "metric": "recall",
+    "llm_response": "0.00",
+    "extracted_numbers": [
+      0.0
+    ],
+    "ground_truth_range": [
+      0.456,
+      0.582
+    ],
+    "actual_mean": 0.5192,
+    "timestamp": "2026-02-26T04:32:24.076434"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "lingam",
+    "metric": "f1",
+    "llm_response": "0.23",
+    "extracted_numbers": [
+      0.23
+    ],
+    "ground_truth_range": [
+      0.232,
+      0.277
+    ],
+    "actual_mean": 0.2549,
+    "timestamp": "2026-02-26T04:32:24.929382"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "lingam",
+    "metric": "shd",
+    "llm_response": "12",
+    "extracted_numbers": [
+      12.0
+    ],
+    "ground_truth_range": [
+      68,
+      84
+    ],
+    "actual_mean": 75.9,
+    "timestamp": "2026-02-26T04:32:25.589851"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "fci",
+    "metric": "precision",
+    "llm_response": "0.70",
+    "extracted_numbers": [
+      0.7
+    ],
+    "ground_truth_range": [
+      0.253,
+      0.324
+    ],
+    "actual_mean": 0.2886,
+    "timestamp": "2026-02-26T04:32:26.543053"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "fci",
+    "metric": "recall",
+    "llm_response": "0.88",
+    "extracted_numbers": [
+      0.88
+    ],
+    "ground_truth_range": [
+      0.92,
+      0.92
+    ],
+    "actual_mean": 0.92,
+    "timestamp": "2026-02-26T04:32:27.275840"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "fci",
+    "metric": "f1",
+    "llm_response": "0.79",
+    "extracted_numbers": [
+      0.79
+    ],
+    "ground_truth_range": [
+      0.398,
+      0.48
+    ],
+    "actual_mean": 0.4391,
+    "timestamp": "2026-02-26T04:32:28.109168"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "fci",
+    "metric": "shd",
+    "llm_response": "46",
+    "extracted_numbers": [
+      46.0
+    ],
+    "ground_truth_range": [
+      72,
+      92
+    ],
+    "actual_mean": 81.98,
+    "timestamp": "2026-02-26T04:32:28.842412"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "notears",
+    "metric": "precision",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.287,
+      0.564
+    ],
+    "actual_mean": 0.4255,
+    "timestamp": "2026-02-26T04:32:29.732918"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "notears",
+    "metric": "recall",
+    "llm_response": "0.63",
+    "extracted_numbers": [
+      0.63
+    ],
+    "ground_truth_range": [
+      0.193,
+      0.346
+    ],
+    "actual_mean": 0.2696,
+    "timestamp": "2026-02-26T04:32:30.597408"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "notears",
+    "metric": "f1",
+    "llm_response": "0.43",
+    "extracted_numbers": [
+      0.43
+    ],
+    "ground_truth_range": [
+      0.269,
+      0.382
+    ],
+    "actual_mean": 0.3254,
+    "timestamp": "2026-02-26T04:32:31.398198"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "child",
+    "algorithm": "notears",
+    "metric": "shd",
+    "llm_response": "6.2",
+    "extracted_numbers": [
+      6.2
+    ],
+    "ground_truth_range": [
+      22,
+      34
+    ],
+    "actual_mean": 27.88,
+    "timestamp": "2026-02-26T04:32:32.386469"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "pc",
+    "metric": "precision",
+    "llm_response": "0.86",
+    "extracted_numbers": [
+      0.86
+    ],
+    "ground_truth_range": [
+      0.244,
+      0.462
+    ],
+    "actual_mean": 0.353,
+    "timestamp": "2026-02-26T04:32:33.025863"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "pc",
+    "metric": "recall",
+    "llm_response": "0.86",
+    "extracted_numbers": [
+      0.86
+    ],
+    "ground_truth_range": [
+      1.0,
+      1
+    ],
+    "actual_mean": 1.0,
+    "timestamp": "2026-02-26T04:32:33.835765"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "pc",
+    "metric": "f1",
+    "llm_response": "0.86",
+    "extracted_numbers": [
+      0.86
+    ],
+    "ground_truth_range": [
+      0.401,
+      0.638
+    ],
+    "actual_mean": 0.5195,
+    "timestamp": "2026-02-26T04:32:34.762308"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "pc",
+    "metric": "shd",
+    "llm_response": "8",
+    "extracted_numbers": [
+      8.0
+    ],
+    "ground_truth_range": [
+      8,
+      16
+    ],
+    "actual_mean": 11.6,
+    "timestamp": "2026-02-26T04:32:35.579113"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "lingam",
+    "metric": "precision",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.128,
+      0.208
+    ],
+    "actual_mean": 0.1678,
+    "timestamp": "2026-02-26T04:32:36.411136"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "lingam",
+    "metric": "recall",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.25,
+      0.25
+    ],
+    "actual_mean": 0.25,
+    "timestamp": "2026-02-26T04:32:37.105433"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "lingam",
+    "metric": "f1",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.172,
+      0.228
+    ],
+    "actual_mean": 0.2002,
+    "timestamp": "2026-02-26T04:32:37.836409"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "lingam",
+    "metric": "shd",
+    "llm_response": "7",
+    "extracted_numbers": [
+      7.0
+    ],
+    "ground_truth_range": [
+      6,
+      10
+    ],
+    "actual_mean": 8.04,
+    "timestamp": "2026-02-26T04:32:38.654736"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "fci",
+    "metric": "precision",
+    "llm_response": "0.93",
+    "extracted_numbers": [
+      0.93
+    ],
+    "ground_truth_range": [
+      0.244,
+      0.463
+    ],
+    "actual_mean": 0.3537,
+    "timestamp": "2026-02-26T04:32:39.308699"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "fci",
+    "metric": "recall",
+    "llm_response": "0.74",
+    "extracted_numbers": [
+      0.74
+    ],
+    "ground_truth_range": [
+      1.0,
+      1
+    ],
+    "actual_mean": 1.0,
+    "timestamp": "2026-02-26T04:32:40.058231"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "fci",
+    "metric": "f1",
+    "llm_response": "0.74",
+    "extracted_numbers": [
+      0.74
+    ],
+    "ground_truth_range": [
+      0.402,
+      0.639
+    ],
+    "actual_mean": 0.5202,
+    "timestamp": "2026-02-26T04:32:40.903778"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "fci",
+    "metric": "shd",
+    "llm_response": "8",
+    "extracted_numbers": [
+      8.0
+    ],
+    "ground_truth_range": [
+      7,
+      16
+    ],
+    "actual_mean": 11.58,
+    "timestamp": "2026-02-26T04:32:41.662897"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "notears",
+    "metric": "precision",
+    "llm_response": "0.00",
+    "extracted_numbers": [
+      0.0
+    ],
+    "ground_truth_range": [
+      0,
+      0.564
+    ],
+    "actual_mean": 0.228,
+    "timestamp": "2026-02-26T04:32:42.428892"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "notears",
+    "metric": "recall",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0,
+      0.706
+    ],
+    "actual_mean": 0.285,
+    "timestamp": "2026-02-26T04:32:43.380324"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "notears",
+    "metric": "f1",
+    "llm_response": "0.00",
+    "extracted_numbers": [
+      0.0
+    ],
+    "ground_truth_range": [
+      0,
+      0.627
+    ],
+    "actual_mean": 0.2533,
+    "timestamp": "2026-02-26T04:32:44.137635"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "earthquake",
+    "algorithm": "notears",
+    "metric": "shd",
+    "llm_response": "7",
+    "extracted_numbers": [
+      7.0
+    ],
+    "ground_truth_range": [
+      3,
+      11
+    ],
+    "actual_mean": 6.72,
+    "timestamp": "2026-02-26T04:32:44.935511"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "pc",
+    "metric": "precision",
+    "llm_response": "0.83",
+    "extracted_numbers": [
+      0.83
+    ],
+    "ground_truth_range": [
+      0.41,
+      0.529
+    ],
+    "actual_mean": 0.4699,
+    "timestamp": "2026-02-26T04:32:45.685548"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "pc",
+    "metric": "recall",
+    "llm_response": "0.83",
+    "extracted_numbers": [
+      0.83
+    ],
+    "ground_truth_range": [
+      0.664,
+      0.782
+    ],
+    "actual_mean": 0.7233,
+    "timestamp": "2026-02-26T04:32:46.483011"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "pc",
+    "metric": "f1",
+    "llm_response": "0.97",
+    "extracted_numbers": [
+      0.97
+    ],
+    "ground_truth_range": [
+      0.52,
+      0.618
+    ],
+    "actual_mean": 0.569,
+    "timestamp": "2026-02-26T04:32:47.619063"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "pc",
+    "metric": "shd",
+    "llm_response": "6",
+    "extracted_numbers": [
+      6.0
+    ],
+    "ground_truth_range": [
+      29,
+      37
+    ],
+    "actual_mean": 32.8,
+    "timestamp": "2026-02-26T04:32:48.289398"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "lingam",
+    "metric": "precision",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.132,
+      0.379
+    ],
+    "actual_mean": 0.2559,
+    "timestamp": "2026-02-26T04:32:48.985569"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "lingam",
+    "metric": "recall",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.172,
+      0.738
+    ],
+    "actual_mean": 0.455,
+    "timestamp": "2026-02-26T04:32:49.640525"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "lingam",
+    "metric": "f1",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.155,
+      0.496
+    ],
+    "actual_mean": 0.3258,
+    "timestamp": "2026-02-26T04:32:50.445820"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "lingam",
+    "metric": "shd",
+    "llm_response": "3",
+    "extracted_numbers": [
+      3.0
+    ],
+    "ground_truth_range": [
+      26,
+      41
+    ],
+    "actual_mean": 33.17,
+    "timestamp": "2026-02-26T04:32:51.350803"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "fci",
+    "metric": "precision",
+    "llm_response": "0.50",
+    "extracted_numbers": [
+      0.5
+    ],
+    "ground_truth_range": [
+      0.415,
+      0.529
+    ],
+    "actual_mean": 0.4723,
+    "timestamp": "2026-02-26T04:32:52.332970"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "fci",
+    "metric": "recall",
+    "llm_response": "0.83",
+    "extracted_numbers": [
+      0.83
+    ],
+    "ground_truth_range": [
+      0.665,
+      0.779
+    ],
+    "actual_mean": 0.7222,
+    "timestamp": "2026-02-26T04:32:53.257507"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "fci",
+    "metric": "f1",
+    "llm_response": "0.97",
+    "extracted_numbers": [
+      0.97
+    ],
+    "ground_truth_range": [
+      0.523,
+      0.618
+    ],
+    "actual_mean": 0.5705,
+    "timestamp": "2026-02-26T04:32:53.951458"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "fci",
+    "metric": "shd",
+    "llm_response": "3.00",
+    "extracted_numbers": [
+      3.0
+    ],
+    "ground_truth_range": [
+      29,
+      37
+    ],
+    "actual_mean": 32.62,
+    "timestamp": "2026-02-26T04:32:54.771978"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "notears",
+    "metric": "precision",
+    "llm_response": "0.74",
+    "extracted_numbers": [
+      0.74
+    ],
+    "ground_truth_range": [
+      0.845,
+      1
+    ],
+    "actual_mean": 0.9528,
+    "timestamp": "2026-02-26T04:32:55.679247"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "notears",
+    "metric": "recall",
+    "llm_response": "0.86",
+    "extracted_numbers": [
+      0.86
+    ],
+    "ground_truth_range": [
+      0.365,
+      0.547
+    ],
+    "actual_mean": 0.4561,
+    "timestamp": "2026-02-26T04:32:56.478860"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "notears",
+    "metric": "f1",
+    "llm_response": "0.74",
+    "extracted_numbers": [
+      0.74
+    ],
+    "ground_truth_range": [
+      0.532,
+      0.698
+    ],
+    "actual_mean": 0.615,
+    "timestamp": "2026-02-26T04:32:57.154068"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_12",
+    "algorithm": "notears",
+    "metric": "shd",
+    "llm_response": "3.0",
+    "extracted_numbers": [
+      3.0
+    ],
+    "ground_truth_range": [
+      8,
+      12
+    ],
+    "actual_mean": 10.23,
+    "timestamp": "2026-02-26T04:32:57.906028"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "pc",
+    "metric": "precision",
+    "llm_response": "0.83",
+    "extracted_numbers": [
+      0.83
+    ],
+    "ground_truth_range": [
+      0.344,
+      0.403
+    ],
+    "actual_mean": 0.3734,
+    "timestamp": "2026-02-26T04:32:58.732362"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "pc",
+    "metric": "recall",
+    "llm_response": "0.83",
+    "extracted_numbers": [
+      0.83
+    ],
+    "ground_truth_range": [
+      0.067,
+      0.085
+    ],
+    "actual_mean": 0.076,
+    "timestamp": "2026-02-26T04:32:59.555684"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "pc",
+    "metric": "f1",
+    "llm_response": "0.93",
+    "extracted_numbers": [
+      0.93
+    ],
+    "ground_truth_range": [
+      0.113,
+      0.139
+    ],
+    "actual_mean": 0.1262,
+    "timestamp": "2026-02-26T04:33:00.209397"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "pc",
+    "metric": "shd",
+    "llm_response": "12.0",
+    "extracted_numbers": [
+      12.0
+    ],
+    "ground_truth_range": [
+      607,
+      627
+    ],
+    "actual_mean": 616.79,
+    "timestamp": "2026-02-26T04:33:00.962344"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "lingam",
+    "metric": "precision",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.087,
+      0.16
+    ],
+    "actual_mean": 0.1234,
+    "timestamp": "2026-02-26T04:33:01.661579"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "lingam",
+    "metric": "recall",
+    "llm_response": "0.00",
+    "extracted_numbers": [
+      0.0
+    ],
+    "ground_truth_range": [
+      0.199,
+      0.388
+    ],
+    "actual_mean": 0.2934,
+    "timestamp": "2026-02-26T04:33:03.022865"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "lingam",
+    "metric": "f1",
+    "llm_response": "0.00",
+    "extracted_numbers": [
+      0.0
+    ],
+    "ground_truth_range": [
+      0.121,
+      0.227
+    ],
+    "actual_mean": 0.1737,
+    "timestamp": "2026-02-26T04:33:03.817580"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "lingam",
+    "metric": "shd",
+    "llm_response": "12",
+    "extracted_numbers": [
+      12.0
+    ],
+    "ground_truth_range": [
+      1435,
+      1616
+    ],
+    "actual_mean": 1525.04,
+    "timestamp": "2026-02-26T04:33:07.871397"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "fci",
+    "metric": "precision",
+    "llm_response": "0.98",
+    "extracted_numbers": [
+      0.98
+    ],
+    "ground_truth_range": [
+      0.345,
+      0.404
+    ],
+    "actual_mean": 0.3742,
+    "timestamp": "2026-02-26T04:33:08.628579"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "fci",
+    "metric": "recall",
+    "llm_response": "0.98",
+    "extracted_numbers": [
+      0.98
+    ],
+    "ground_truth_range": [
+      0.067,
+      0.084
+    ],
+    "actual_mean": 0.0752,
+    "timestamp": "2026-02-26T04:33:09.455426"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "fci",
+    "metric": "f1",
+    "llm_response": "0.93",
+    "extracted_numbers": [
+      0.93
+    ],
+    "ground_truth_range": [
+      0.112,
+      0.138
+    ],
+    "actual_mean": 0.1252,
+    "timestamp": "2026-02-26T04:33:10.266703"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "fci",
+    "metric": "shd",
+    "llm_response": "14",
+    "extracted_numbers": [
+      14.0
+    ],
+    "ground_truth_range": [
+      606,
+      626
+    ],
+    "actual_mean": 615.87,
+    "timestamp": "2026-02-26T04:33:11.066105"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "notears",
+    "metric": "precision",
+    "llm_response": "0.62",
+    "extracted_numbers": [
+      0.62
+    ],
+    "ground_truth_range": [
+      0.341,
+      0.386
+    ],
+    "actual_mean": 0.3637,
+    "timestamp": "2026-02-26T04:33:12.015215"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "notears",
+    "metric": "recall",
+    "llm_response": "0.62",
+    "extracted_numbers": [
+      0.62
+    ],
+    "ground_truth_range": [
+      0.25,
+      0.299
+    ],
+    "actual_mean": 0.2747,
+    "timestamp": "2026-02-26T04:33:12.923197"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "notears",
+    "metric": "f1",
+    "llm_response": "0.67",
+    "extracted_numbers": [
+      0.67
+    ],
+    "ground_truth_range": [
+      0.292,
+      0.334
+    ],
+    "actual_mean": 0.3129,
+    "timestamp": "2026-02-26T04:33:13.708488"
+  },
+  {
+    "model": "gpt5",
+    "dataset": "synthetic_60",
+    "algorithm": "notears",
+    "metric": "shd",
+    "llm_response": "12.0",
+    "extracted_numbers": [
+      12.0
+    ],
+    "ground_truth_range": [
+      637,
+      682
+    ],
+    "actual_mean": 659.78,
+    "timestamp": "2026-02-26T04:33:14.468898"
+  }
+]

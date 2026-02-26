@@ -1,0 +1,554 @@
+[
+  {
+    "model": "gemini3",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.75\nRecall: 0.60\nF1: 0.67\nSHD: 4",
+    "original_extracted_numbers": [
+      0.75,
+      0.6,
+      1.0,
+      0.67,
+      4.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.72\nF1: 0.78\nSHD: 14",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.72,
+      1.0,
+      0.78,
+      14.0
+    ],
+    "timestamp": "2026-02-26T09:54:52.297936"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.25\nRecall: 0.25\nF1: 0.25\nSHD: 8",
+    "original_extracted_numbers": [
+      0.25,
+      0.25,
+      1.0,
+      0.25,
+      8.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 4",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.81,
+      4.0
+    ],
+    "timestamp": "2026-02-26T09:55:08.093240"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 3",
+    "original_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.68\nF1: 0.71\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.68,
+      1.0,
+      0.71,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:55:23.552808"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.88\nRecall: 0.88\nF1: 0.88\nSHD: 2",
+    "original_extracted_numbers": [
+      0.88,
+      0.88,
+      1.0,
+      0.88,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:55:38.434561"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.75\nRecall: 0.60\nF1: 0.67\nSHD: 4",
+    "original_extracted_numbers": [
+      0.75,
+      0.6,
+      1.0,
+      0.67,
+      4.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.65\nF1: 0.70\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.65,
+      1.0,
+      0.7,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:55:52.279157"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.45\nRecall: 0.50\nF1: 0.47\nSHD: 6",
+    "original_extracted_numbers": [
+      0.45,
+      0.5,
+      1.0,
+      0.47,
+      6.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.81,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:56:06.653683"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.67\nRecall: 0.75\nF1: 0.71\nSHD: 3",
+    "original_extracted_numbers": [
+      0.67,
+      0.75,
+      1.0,
+      0.71,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.68\nF1: 0.71\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.68,
+      1.0,
+      0.71,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:56:23.067938"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.85\nRecall: 0.80\nF1: 0.82\nSHD: 2",
+    "original_extracted_numbers": [
+      0.85,
+      0.8,
+      1.0,
+      0.82,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:56:55.135472"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.75\nRecall: 0.70\nF1: 0.72\nSHD: 12",
+    "original_extracted_numbers": [
+      0.75,
+      0.7,
+      1.0,
+      0.72,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.60\nF1: 0.67\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.6,
+      1.0,
+      0.67,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:57:09.662395"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.60\nRecall: 0.55\nF1: 0.57\nSHD: 20",
+    "original_extracted_numbers": [
+      0.6,
+      0.55,
+      1.0,
+      0.57,
+      20.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.68\nF1: 0.71\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.68,
+      1.0,
+      0.71,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:57:23.967897"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.75\nRecall: 0.55\nF1: 0.63\nSHD: 18",
+    "original_extracted_numbers": [
+      0.75,
+      0.55,
+      1.0,
+      0.63,
+      18.0
+    ],
+    "perturbed_response": "Precision: 0.65\nRecall: 0.55\nF1: 0.59\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.65,
+      0.55,
+      1.0,
+      0.59,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:57:41.721967"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.65\nRecall: 0.60\nF1: 0.62\nSHD: 18",
+    "original_extracted_numbers": [
+      0.65,
+      0.6,
+      1.0,
+      0.62,
+      18.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:57:59.111761"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.80\nRecall: 0.80\nF1: 0.80\nSHD: 1",
+    "original_extracted_numbers": [
+      0.8,
+      0.8,
+      1.0,
+      0.8,
+      1.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.60\nF1: 0.67\nSHD: 15",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.6,
+      1.0,
+      0.67,
+      15.0
+    ],
+    "timestamp": "2026-02-26T09:58:31.260195"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.50\nRecall: 0.50\nF1: 0.50\nSHD: 4",
+    "original_extracted_numbers": [
+      0.5,
+      0.5,
+      1.0,
+      0.5,
+      4.0
+    ],
+    "perturbed_response": "Precision: 0.72\nRecall: 0.65\nF1: 0.68\nSHD: 14",
+    "perturbed_extracted_numbers": [
+      0.72,
+      0.65,
+      1.0,
+      0.68,
+      14.0
+    ],
+    "timestamp": "2026-02-26T09:58:49.769673"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.85\nRecall: 0.85\nF1: 0.85\nSHD: 2",
+    "original_extracted_numbers": [
+      0.85,
+      0.85,
+      1.0,
+      0.85,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.65\nRecall: 0.55\nF1: 0.59\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.65,
+      0.55,
+      1.0,
+      0.59,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:59:05.269827"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "notears",
+    "original_response": "Precision: 1.00\nRecall: 1.00\nF1: 1.00\nSHD: 0",
+    "original_extracted_numbers": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:59:26.703014"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.82\nRecall: 0.65\nF1: 0.72\nSHD: 28",
+    "original_extracted_numbers": [
+      0.82,
+      0.65,
+      1.0,
+      0.72,
+      28.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.60\nF1: 0.67\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.6,
+      1.0,
+      0.67,
+      12.0
+    ],
+    "timestamp": "2026-02-26T09:59:44.936323"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.35\nRecall: 0.28\nF1: 0.31\nSHD: 52",
+    "original_extracted_numbers": [
+      0.35,
+      0.28,
+      1.0,
+      0.31,
+      52.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 4",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.81,
+      4.0
+    ],
+    "timestamp": "2026-02-26T10:00:10.819829"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.75\nRecall: 0.42\nF1: 0.54\nSHD: 45",
+    "original_extracted_numbers": [
+      0.75,
+      0.42,
+      1.0,
+      0.54,
+      45.0
+    ],
+    "perturbed_response": "Precision: 0.65\nRecall: 0.55\nF1: 0.60\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.65,
+      0.55,
+      1.0,
+      0.6,
+      12.0
+    ],
+    "timestamp": "2026-02-26T10:00:25.493335"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.75\nRecall: 0.52\nF1: 0.61\nSHD: 42",
+    "original_extracted_numbers": [
+      0.75,
+      0.52,
+      1.0,
+      0.61,
+      42.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.82\nF1: 0.83\nSHD: 14",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.82,
+      1.0,
+      0.83,
+      14.0
+    ],
+    "timestamp": "2026-02-26T10:00:41.545724"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.42\nRecall: 0.35\nF1: 0.38\nSHD: 14",
+    "original_extracted_numbers": [
+      0.42,
+      0.35,
+      1.0,
+      0.38,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.72\nRecall: 0.55\nF1: 0.62\nSHD: 15",
+    "perturbed_extracted_numbers": [
+      0.72,
+      0.55,
+      1.0,
+      0.62,
+      15.0
+    ],
+    "timestamp": "2026-02-26T10:01:00.302916"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.22\nRecall: 0.25\nF1: 0.23\nSHD: 17",
+    "original_extracted_numbers": [
+      0.22,
+      0.25,
+      1.0,
+      0.23,
+      17.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.65\nF1: 0.70\nSHD: 4",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.65,
+      1.0,
+      0.7,
+      4.0
+    ],
+    "timestamp": "2026-02-26T10:01:17.532198"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.31\nRecall: 0.24\nF1: 0.27\nSHD: 16",
+    "original_extracted_numbers": [
+      0.31,
+      0.24,
+      1.0,
+      0.27,
+      16.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.60\nF1: 0.67\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.6,
+      1.0,
+      0.67,
+      12.0
+    ],
+    "timestamp": "2026-02-26T10:01:35.602342"
+  },
+  {
+    "model": "gemini3",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.45\nRecall: 0.35\nF1: 0.39\nSHD: 14",
+    "original_extracted_numbers": [
+      0.45,
+      0.35,
+      1.0,
+      0.39,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.80\nF1: 0.82\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.8,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "timestamp": "2026-02-26T10:01:55.567493"
+  }
+]

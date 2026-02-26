@@ -1,0 +1,554 @@
+[
+  {
+    "model": "deepseek",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.88\nRecall: 0.88\nF1: 0.88\nSHD: 2",
+    "original_extracted_numbers": [
+      0.88,
+      0.88,
+      1.0,
+      0.88,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 15",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      15.0
+    ],
+    "timestamp": "2026-02-26T04:56:58.098585"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.63\nRecall: 0.71\nF1: 0.67\nSHD: 7",
+    "original_extracted_numbers": [
+      0.63,
+      0.71,
+      1.0,
+      0.67,
+      7.0
+    ],
+    "perturbed_response": "Precision: 0.80\nRecall: 0.70\nF1: 0.75\nSHD: 10",
+    "perturbed_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.75,
+      10.0
+    ],
+    "timestamp": "2026-02-26T04:58:28.117984"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.74\nRecall: 0.64\nF1: 0.68\nSHD: 15",
+    "original_extracted_numbers": [
+      0.74,
+      0.64,
+      1.0,
+      0.68,
+      15.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 15",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      15.0
+    ],
+    "timestamp": "2026-02-26T05:00:54.003106"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.83\nRecall: 0.77\nF1: 0.80\nSHD: 7",
+    "original_extracted_numbers": [
+      0.83,
+      0.77,
+      1.0,
+      0.8,
+      7.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.80\nF1: 0.77\nSHD: 20",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.8,
+      1.0,
+      0.77,
+      20.0
+    ],
+    "timestamp": "2026-02-26T05:07:32.020012"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.67\nRecall: 0.57\nF1: 0.62\nSHD: 3",
+    "original_extracted_numbers": [
+      0.67,
+      0.57,
+      1.0,
+      0.62,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.56\nRecall: 0.45\nF1: 0.50\nSHD: 35",
+    "perturbed_extracted_numbers": [
+      0.56,
+      0.45,
+      1.0,
+      0.5,
+      35.0
+    ],
+    "timestamp": "2026-02-26T05:10:12.446011"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.4\nRecall: 0.2\nF1: 0.3\nSHD: 20",
+    "original_extracted_numbers": [
+      0.4,
+      0.2,
+      1.0,
+      0.3,
+      20.0
+    ],
+    "perturbed_response": "Precision: 0.30\nRecall: 0.40\nF1: 0.34\nSHD: 15",
+    "perturbed_extracted_numbers": [
+      0.3,
+      0.4,
+      1.0,
+      0.34,
+      15.0
+    ],
+    "timestamp": "2026-02-26T05:13:58.965973"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.70\nRecall: 0.60\nF1: 0.65\nSHD: 5",
+    "original_extracted_numbers": [
+      0.7,
+      0.6,
+      1.0,
+      0.65,
+      5.0
+    ],
+    "perturbed_response": "Precision: 0.72\nRecall: 0.68\nF1: 0.70\nSHD: 30",
+    "perturbed_extracted_numbers": [
+      0.72,
+      0.68,
+      1.0,
+      0.7,
+      30.0
+    ],
+    "timestamp": "2026-02-26T05:15:19.507228"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.83\nRecall: 0.83\nF1: 0.83\nSHD: 2",
+    "original_extracted_numbers": [
+      0.83,
+      0.83,
+      1.0,
+      0.83,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.71\nRecall: 0.64\nF1: 0.67\nSHD: 27",
+    "perturbed_extracted_numbers": [
+      0.71,
+      0.64,
+      1.0,
+      0.67,
+      27.0
+    ],
+    "timestamp": "2026-02-26T05:19:32.419727"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.82\nRecall: 0.75\nF1: 0.78\nSHD: 25",
+    "original_extracted_numbers": [
+      0.82,
+      0.75,
+      1.0,
+      0.78,
+      25.0
+    ],
+    "perturbed_response": "Precision: 0.80\nRecall: 0.73\nF1: 0.76\nSHD: 5",
+    "perturbed_extracted_numbers": [
+      0.8,
+      0.73,
+      1.0,
+      0.76,
+      5.0
+    ],
+    "timestamp": "2026-02-26T05:21:18.795921"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.55\nRecall: 0.64\nF1: 0.59\nSHD: 21",
+    "original_extracted_numbers": [
+      0.55,
+      0.64,
+      1.0,
+      0.59,
+      21.0
+    ],
+    "perturbed_response": "Precision: 0.67\nRecall: 0.60\nF1: 0.63\nSHD: 11",
+    "perturbed_extracted_numbers": [
+      0.67,
+      0.6,
+      1.0,
+      0.63,
+      11.0
+    ],
+    "timestamp": "2026-02-26T05:24:58.032887"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.75\nRecall: 0.65\nF1: 0.70\nSHD: 2",
+    "original_extracted_numbers": [
+      0.75,
+      0.65,
+      1.0,
+      0.7,
+      2.0
+    ],
+    "perturbed_response": "Precision: 0.67\nRecall: 0.50\nF1: 0.57\nSHD: 10",
+    "perturbed_extracted_numbers": [
+      0.67,
+      0.5,
+      1.0,
+      0.57,
+      10.0
+    ],
+    "timestamp": "2026-02-26T05:26:39.774140"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.78\nRecall: 0.89\nF1: 0.77\nSHD: 9",
+    "original_extracted_numbers": [
+      0.78,
+      0.89,
+      1.0,
+      0.77,
+      9.0
+    ],
+    "perturbed_response": "Precision: 0.68\nRecall: 0.64\nF1: 0.66\nSHD: 22",
+    "perturbed_extracted_numbers": [
+      0.68,
+      0.64,
+      1.0,
+      0.66,
+      22.0
+    ],
+    "timestamp": "2026-02-26T05:28:27.579474"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "pc",
+    "original_response": "Precision: 1.00\nRecall: 1.00\nF1: 1.00\nSHD: 0",
+    "original_extracted_numbers": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.70\nF1: 0.72\nSHD: 15",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.7,
+      1.0,
+      0.72,
+      15.0
+    ],
+    "timestamp": "2026-02-26T05:30:26.003776"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "lingam",
+    "original_response": "Precision: 1.00\nRecall: 1.00\nF1: 1.00\nSHD: 0",
+    "original_extracted_numbers": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.80\nF1: 0.82\nSHD: 10",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.8,
+      1.0,
+      0.82,
+      10.0
+    ],
+    "timestamp": "2026-02-26T05:33:50.109845"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "fci",
+    "original_response": "Precision: 1.00\nRecall: 1.00\nF1: 1.00\nSHD: 0",
+    "original_extracted_numbers": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0
+    ],
+    "perturbed_response": "Precision: 0.35\nRecall: 0.30\nF1: 0.32\nSHD: 40",
+    "perturbed_extracted_numbers": [
+      0.35,
+      0.3,
+      1.0,
+      0.32,
+      40.0
+    ],
+    "timestamp": "2026-02-26T05:35:50.058948"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.72\nRecall: 0.72\nF1: 0.72\nSHD: 20",
+    "original_extracted_numbers": [
+      0.72,
+      0.72,
+      1.0,
+      0.72,
+      20.0
+    ],
+    "perturbed_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 15",
+    "perturbed_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      15.0
+    ],
+    "timestamp": "2026-02-26T05:37:23.934833"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.75\nRecall: 0.82\nF1: 0.78\nSHD: 20",
+    "original_extracted_numbers": [
+      0.75,
+      0.82,
+      1.0,
+      0.78,
+      20.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.80\nF1: 0.82\nSHD: 5",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.8,
+      1.0,
+      0.82,
+      5.0
+    ],
+    "timestamp": "2026-02-26T06:17:02.866474"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.38\nRecall: 0.24\nF1: 0.29\nSHD: 108",
+    "original_extracted_numbers": [
+      0.38,
+      0.24,
+      1.0,
+      0.29,
+      108.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.80\nF1: 0.82\nSHD: 10",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.8,
+      1.0,
+      0.82,
+      10.0
+    ],
+    "timestamp": "2026-02-26T06:18:47.877746"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.65\nRecall: 0.65\nF1: 0.65\nSHD: 25",
+    "original_extracted_numbers": [
+      0.65,
+      0.65,
+      1.0,
+      0.65,
+      25.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 15",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      15.0
+    ],
+    "timestamp": "2026-02-26T06:20:46.089724"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.75\nRecall: 0.58\nF1: 0.65\nSHD: 25",
+    "original_extracted_numbers": [
+      0.75,
+      0.58,
+      1.0,
+      0.65,
+      25.0
+    ],
+    "perturbed_response": "Precision: 0.75\nRecall: 0.80\nF1: 0.77\nSHD: 20",
+    "perturbed_extracted_numbers": [
+      0.75,
+      0.8,
+      1.0,
+      0.77,
+      20.0
+    ],
+    "timestamp": "2026-02-26T06:22:54.140786"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.67\nRecall: 0.67\nF1: 0.67\nSHD: 11",
+    "original_extracted_numbers": [
+      0.67,
+      0.67,
+      1.0,
+      0.67,
+      11.0
+    ],
+    "perturbed_response": "Precision: 0.67\nRecall: 0.67\nF1: 0.67\nSHD: 6",
+    "perturbed_extracted_numbers": [
+      0.67,
+      0.67,
+      1.0,
+      0.67,
+      6.0
+    ],
+    "timestamp": "2026-02-26T05:52:46.644941"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.64\nRecall: 0.46\nF1: 0.53\nSHD: 20",
+    "original_extracted_numbers": [
+      0.64,
+      0.46,
+      1.0,
+      0.53,
+      20.0
+    ],
+    "perturbed_response": "Precision: 0.70\nRecall: 0.60\nF1: 0.65\nSHD: 8",
+    "perturbed_extracted_numbers": [
+      0.7,
+      0.6,
+      1.0,
+      0.65,
+      8.0
+    ],
+    "timestamp": "2026-02-26T05:53:08.732735"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.67\nRecall: 0.50\nF1: 0.57\nSHD: 25",
+    "original_extracted_numbers": [
+      0.67,
+      0.5,
+      1.0,
+      0.57,
+      25.0
+    ],
+    "perturbed_response": "Precision: 0.76\nRecall: 0.64\nF1: 0.69\nSHD: 18",
+    "perturbed_extracted_numbers": [
+      0.76,
+      0.64,
+      1.0,
+      0.69,
+      18.0
+    ],
+    "timestamp": "2026-02-26T05:55:57.652022"
+  },
+  {
+    "model": "deepseek",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.67\nRecall: 0.55\nF1: 0.60\nSHD: 19",
+    "original_extracted_numbers": [
+      0.67,
+      0.55,
+      1.0,
+      0.6,
+      19.0
+    ],
+    "perturbed_response": "Precision: 0.93\nRecall: 0.72\nF1: 0.81\nSHD: 19",
+    "perturbed_extracted_numbers": [
+      0.93,
+      0.72,
+      1.0,
+      0.81,
+      19.0
+    ],
+    "timestamp": "2026-02-26T05:56:51.949762"
+  }
+]

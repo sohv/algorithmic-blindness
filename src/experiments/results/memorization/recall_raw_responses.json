@@ -1,0 +1,519 @@
+{
+  "timestamp": "2026-02-26T04:22:54.547796",
+  "description": "Raw LLM responses with ground truth for manual analysis",
+  "n_total_queries": 32,
+  "results": [
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "metric": "precision",
+      "llm_response": "0.87",
+      "extracted_numbers": [
+        0.87
+      ],
+      "ground_truth_range": [
+        0.4,
+        0.549
+      ],
+      "actual_mean": 0.4744,
+      "timestamp": "2026-02-26T04:22:09.348079"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "metric": "recall",
+      "llm_response": "0.96",
+      "extracted_numbers": [
+        0.96
+      ],
+      "ground_truth_range": [
+        0.633,
+        0.922
+      ],
+      "actual_mean": 0.7775,
+      "timestamp": "2026-02-26T04:22:11.254633"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "metric": "f1",
+      "llm_response": "0.28",
+      "extracted_numbers": [
+        0.28
+      ],
+      "ground_truth_range": [
+        0.511,
+        0.664
+      ],
+      "actual_mean": 0.5876,
+      "timestamp": "2026-02-26T04:22:13.891861"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "metric": "shd",
+      "llm_response": "4",
+      "extracted_numbers": [
+        4.0
+      ],
+      "ground_truth_range": [
+        12,
+        18
+      ],
+      "actual_mean": 14.96,
+      "timestamp": "2026-02-26T04:22:15.778123"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "lingam",
+      "metric": "precision",
+      "llm_response": "0.67",
+      "extracted_numbers": [
+        0.67
+      ],
+      "ground_truth_range": [
+        0.174,
+        0.354
+      ],
+      "actual_mean": 0.2639,
+      "timestamp": "2026-02-26T04:22:18.143339"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "lingam",
+      "metric": "recall",
+      "llm_response": "0.48",
+      "extracted_numbers": [
+        0.48
+      ],
+      "ground_truth_range": [
+        0.253,
+        0.472
+      ],
+      "actual_mean": 0.3625,
+      "timestamp": "2026-02-26T04:22:20.032781"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "lingam",
+      "metric": "f1",
+      "llm_response": "0.30",
+      "extracted_numbers": [
+        0.3
+      ],
+      "ground_truth_range": [
+        0.209,
+        0.401
+      ],
+      "actual_mean": 0.305,
+      "timestamp": "2026-02-26T04:22:22.323343"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "lingam",
+      "metric": "shd",
+      "llm_response": "11",
+      "extracted_numbers": [
+        11.0
+      ],
+      "ground_truth_range": [
+        10,
+        16
+      ],
+      "actual_mean": 13.26,
+      "timestamp": "2026-02-26T04:22:24.095701"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "fci",
+      "metric": "precision",
+      "llm_response": "0.56",
+      "extracted_numbers": [
+        0.56
+      ],
+      "ground_truth_range": [
+        0.4,
+        0.549
+      ],
+      "actual_mean": 0.4744,
+      "timestamp": "2026-02-26T04:22:25.990771"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "fci",
+      "metric": "recall",
+      "llm_response": "0.45",
+      "extracted_numbers": [
+        0.45
+      ],
+      "ground_truth_range": [
+        0.633,
+        0.922
+      ],
+      "actual_mean": 0.7775,
+      "timestamp": "2026-02-26T04:22:28.685824"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "fci",
+      "metric": "f1",
+      "llm_response": "0.77",
+      "extracted_numbers": [
+        0.77
+      ],
+      "ground_truth_range": [
+        0.511,
+        0.664
+      ],
+      "actual_mean": 0.5876,
+      "timestamp": "2026-02-26T04:22:30.956456"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "fci",
+      "metric": "shd",
+      "llm_response": "6",
+      "extracted_numbers": [
+        6.0
+      ],
+      "ground_truth_range": [
+        12,
+        18
+      ],
+      "actual_mean": 14.96,
+      "timestamp": "2026-02-26T04:22:33.302354"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "notears",
+      "metric": "precision",
+      "llm_response": "0.44",
+      "extracted_numbers": [
+        0.44
+      ],
+      "ground_truth_range": [
+        0.019,
+        0.474
+      ],
+      "actual_mean": 0.2464,
+      "timestamp": "2026-02-26T04:22:35.225443"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "notears",
+      "metric": "recall",
+      "llm_response": "0.73",
+      "extracted_numbers": [
+        0.73
+      ],
+      "ground_truth_range": [
+        0.02,
+        0.48
+      ],
+      "actual_mean": 0.25,
+      "timestamp": "2026-02-26T04:22:37.177121"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "notears",
+      "metric": "f1",
+      "llm_response": "0.587",
+      "extracted_numbers": [
+        0.587
+      ],
+      "ground_truth_range": [
+        0.021,
+        0.474
+      ],
+      "actual_mean": 0.2476,
+      "timestamp": "2026-02-26T04:22:39.193533"
+    },
+    {
+      "model": "claude",
+      "dataset": "asia",
+      "algorithm": "notears",
+      "metric": "shd",
+      "llm_response": "3",
+      "extracted_numbers": [
+        3.0
+      ],
+      "ground_truth_range": [
+        8,
+        16
+      ],
+      "actual_mean": 12.1,
+      "timestamp": "2026-02-26T04:22:41.727248"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "metric": "precision",
+      "llm_response": "0.61",
+      "extracted_numbers": [
+        0.61
+      ],
+      "ground_truth_range": [
+        0.4,
+        0.549
+      ],
+      "actual_mean": 0.4744,
+      "timestamp": "2026-02-26T04:22:42.990430"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "metric": "recall",
+      "llm_response": "0.50",
+      "extracted_numbers": [
+        0.5
+      ],
+      "ground_truth_range": [
+        0.633,
+        0.922
+      ],
+      "actual_mean": 0.7775,
+      "timestamp": "2026-02-26T04:22:43.753454"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "metric": "f1",
+      "llm_response": "0.86",
+      "extracted_numbers": [
+        0.86
+      ],
+      "ground_truth_range": [
+        0.511,
+        0.664
+      ],
+      "actual_mean": 0.5876,
+      "timestamp": "2026-02-26T04:22:44.392311"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "metric": "shd",
+      "llm_response": "4",
+      "extracted_numbers": [
+        4.0
+      ],
+      "ground_truth_range": [
+        12,
+        18
+      ],
+      "actual_mean": 14.96,
+      "timestamp": "2026-02-26T04:22:45.069936"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "lingam",
+      "metric": "precision",
+      "llm_response": "0.67",
+      "extracted_numbers": [
+        0.67
+      ],
+      "ground_truth_range": [
+        0.174,
+        0.354
+      ],
+      "actual_mean": 0.2639,
+      "timestamp": "2026-02-26T04:22:45.921482"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "lingam",
+      "metric": "recall",
+      "llm_response": "0.50",
+      "extracted_numbers": [
+        0.5
+      ],
+      "ground_truth_range": [
+        0.253,
+        0.472
+      ],
+      "actual_mean": 0.3625,
+      "timestamp": "2026-02-26T04:22:46.626492"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "lingam",
+      "metric": "f1",
+      "llm_response": "0.67",
+      "extracted_numbers": [
+        0.67
+      ],
+      "ground_truth_range": [
+        0.209,
+        0.401
+      ],
+      "actual_mean": 0.305,
+      "timestamp": "2026-02-26T04:22:47.378428"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "lingam",
+      "metric": "shd",
+      "llm_response": "18",
+      "extracted_numbers": [
+        18.0
+      ],
+      "ground_truth_range": [
+        10,
+        16
+      ],
+      "actual_mean": 13.26,
+      "timestamp": "2026-02-26T04:22:48.319686"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "fci",
+      "metric": "precision",
+      "llm_response": "0.67",
+      "extracted_numbers": [
+        0.67
+      ],
+      "ground_truth_range": [
+        0.4,
+        0.549
+      ],
+      "actual_mean": 0.4744,
+      "timestamp": "2026-02-26T04:22:48.992524"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "fci",
+      "metric": "recall",
+      "llm_response": "0.67",
+      "extracted_numbers": [
+        0.67
+      ],
+      "ground_truth_range": [
+        0.633,
+        0.922
+      ],
+      "actual_mean": 0.7775,
+      "timestamp": "2026-02-26T04:22:49.636190"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "fci",
+      "metric": "f1",
+      "llm_response": "0.86",
+      "extracted_numbers": [
+        0.86
+      ],
+      "ground_truth_range": [
+        0.511,
+        0.664
+      ],
+      "actual_mean": 0.5876,
+      "timestamp": "2026-02-26T04:22:50.371191"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "fci",
+      "metric": "shd",
+      "llm_response": "4",
+      "extracted_numbers": [
+        4.0
+      ],
+      "ground_truth_range": [
+        12,
+        18
+      ],
+      "actual_mean": 14.96,
+      "timestamp": "2026-02-26T04:22:51.084861"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "notears",
+      "metric": "precision",
+      "llm_response": "0.67",
+      "extracted_numbers": [
+        0.67
+      ],
+      "ground_truth_range": [
+        0.019,
+        0.474
+      ],
+      "actual_mean": 0.2464,
+      "timestamp": "2026-02-26T04:22:51.991028"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "notears",
+      "metric": "recall",
+      "llm_response": "0.67",
+      "extracted_numbers": [
+        0.67
+      ],
+      "ground_truth_range": [
+        0.02,
+        0.48
+      ],
+      "actual_mean": 0.25,
+      "timestamp": "2026-02-26T04:22:53.011469"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "notears",
+      "metric": "f1",
+      "llm_response": "0.67",
+      "extracted_numbers": [
+        0.67
+      ],
+      "ground_truth_range": [
+        0.021,
+        0.474
+      ],
+      "actual_mean": 0.2476,
+      "timestamp": "2026-02-26T04:22:53.852529"
+    },
+    {
+      "model": "gpt5",
+      "dataset": "asia",
+      "algorithm": "notears",
+      "metric": "shd",
+      "llm_response": "3.0",
+      "extracted_numbers": [
+        3.0
+      ],
+      "ground_truth_range": [
+        8,
+        16
+      ],
+      "actual_mean": 12.1,
+      "timestamp": "2026-02-26T04:22:54.546290"
+    }
+  ]
+}

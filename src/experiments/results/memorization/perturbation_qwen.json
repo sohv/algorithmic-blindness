@@ -1,0 +1,551 @@
+[
+  {
+    "model": "qwen",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "pc",
+    "original_response": "3.4\n2.1\n3.6\n1.2",
+    "original_extracted_numbers": [
+      3.4,
+      2.1,
+      3.6,
+      1.2
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 2\n\nEstimate for PC on Network-A.",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      2.0
+    ],
+    "timestamp": "2026-02-26T10:13:42.982071"
+  },
+  {
+    "model": "qwen",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:13:44.463099"
+  },
+  {
+    "model": "qwen",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:13:46.516618"
+  },
+  {
+    "model": "qwen",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:13:47.891101"
+  },
+  {
+    "model": "qwen",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 2\n\nEstimate for PC on cancer.",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      2.0
+    ],
+    "perturbed_response": "7.3\n8.1\n6.5\n4.2",
+    "perturbed_extracted_numbers": [
+      7.3,
+      8.1,
+      6.5,
+      4.2
+    ],
+    "timestamp": "2026-02-26T10:13:49.223256"
+  },
+  {
+    "model": "qwen",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:13:50.598144"
+  },
+  {
+    "model": "qwen",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:13:51.902256"
+  },
+  {
+    "model": "qwen",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:13:53.214816"
+  },
+  {
+    "model": "qwen",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 3",
+    "original_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      3.0
+    ],
+    "perturbed_response": "4.5\n3.2\n5.6\n2.1",
+    "perturbed_extracted_numbers": [
+      4.5,
+      3.2,
+      5.6,
+      2.1
+    ],
+    "timestamp": "2026-02-26T10:13:54.446949"
+  },
+  {
+    "model": "qwen",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:13:55.804584"
+  },
+  {
+    "model": "qwen",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.8\nRecall: 0.7\nF1: 0.7\nSHD: 3",
+    "original_extracted_numbers": [
+      0.8,
+      0.7,
+      1.0,
+      0.7,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 2.3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      2.3
+    ],
+    "timestamp": "2026-02-26T10:13:57.274898"
+  },
+  {
+    "model": "qwen",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "notears",
+    "original_response": "Precision: 8.9\nRecall: 7.3\nF1: 8.0\nSHD: 5.1",
+    "original_extracted_numbers": [
+      8.9,
+      7.3,
+      1.0,
+      8.0,
+      5.1
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:13:58.613523"
+  },
+  {
+    "model": "qwen",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3\nPC: 0.7",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0,
+      0.7
+    ],
+    "perturbed_response": "3.4\n2.1\n3.6\n5.2",
+    "perturbed_extracted_numbers": [
+      3.4,
+      2.1,
+      3.6,
+      5.2
+    ],
+    "timestamp": "2026-02-26T10:14:00.090473"
+  },
+  {
+    "model": "qwen",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:14:01.435836"
+  },
+  {
+    "model": "qwen",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:14:02.789105"
+  },
+  {
+    "model": "qwen",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:14:03.969908"
+  },
+  {
+    "model": "qwen",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "pc",
+    "original_response": "3.4\n2.1\n4.5\n1.2",
+    "original_extracted_numbers": [
+      3.4,
+      2.1,
+      4.5,
+      1.2
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:14:05.283720"
+  },
+  {
+    "model": "qwen",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:14:06.873941"
+  },
+  {
+    "model": "qwen",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:14:08.268795"
+  },
+  {
+    "model": "qwen",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 5.2",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      5.2
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:14:09.593402"
+  },
+  {
+    "model": "qwen",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3\n\nEstimate for PC on sachs.",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 8.5\nRecall: 7.3\nF1: 7.9\nSHD: 4.2\nEstimate for PC on Structure-Q: 8.3",
+    "perturbed_extracted_numbers": [
+      8.5,
+      7.3,
+      1.0,
+      7.9,
+      4.2,
+      8.3
+    ],
+    "timestamp": "2026-02-26T10:14:11.248634"
+  },
+  {
+    "model": "qwen",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:14:12.562383"
+  },
+  {
+    "model": "qwen",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:14:13.890624"
+  },
+  {
+    "model": "qwen",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "original_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "perturbed_response": "Precision: 0.9\nRecall: 0.8\nF1: 0.8\nSHD: 3",
+    "perturbed_extracted_numbers": [
+      0.9,
+      0.8,
+      1.0,
+      0.8,
+      3.0
+    ],
+    "timestamp": "2026-02-26T10:14:15.278342"
+  }
+]

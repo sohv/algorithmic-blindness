@@ -49,14 +49,14 @@ class LLMQueryInterface:
     """
 
     SUPPORTED_MODELS = {
-        'gpt5': 'GPT-5.2',
-        'deepseek': 'DeepSeek-R1-0528',
-        'deepseekthink': 'DeepSeek-V3.2-Reasoner',
-        'claude': 'Claude-Opus-4.6',
-        'gemini3': 'Gemini3-Pro-Preview',
-        'llama': 'LLaMA-3.3-70B',
-        'qwen': 'Qwen2.5-7B',
-        'qwenthink': 'Qwen3-Next-80B-A3B-Thinking'
+        'gpt5': 'gpt-5.2-2025-12-11',
+        'deepseek': 'deepseek-ai/DeepSeek-R1',
+        'deepseekthink': 'deepseek-reasoner',
+        'claude': 'claude-opus-4-6',
+        'gemini3': 'gemini-3.1-pro-preview',
+        'llama': 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
+        'qwen': 'Qwen/Qwen2.5-7B-Instruct-Turbo',
+        'qwenthink': 'Qwen/Qwen3-Next-80B-A3B-Thinking'
     }
 
     def __init__(self, model_name: str, max_retries: int = 3, retry_delay: int = 5):
@@ -89,6 +89,8 @@ class LLMQueryInterface:
             return self._init_deepseek_official()
         elif self.model_name == 'claude':
             return self._init_anthropic()
+        elif self.model_name in ['gemini3']:
+            return self._init_google()
         elif self.model_name in ['llama', 'qwen', 'qwenthink']:
             return self._init_together()
 
