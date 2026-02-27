@@ -385,6 +385,79 @@ Tests generalization to unseen data distributions. Benchmark networks are in lit
 | 8 | Raw responses | CV across formulations | Robustness analysis | JSON + report |
 | 9 | Comparison results | Pattern matching tests | Cross-algo analysis | Reports |
 | 10 | Comparison + metadata | Corpus proxy & expertise correlations | Mechanism evidence | Plots + report |
+| 11 | LLM predictions + names | Perturbation testing (rename datasets) | Precision drops | JSON + heatmap |
+
+---
+
+### Phase 13: Perturbation Test - Dataset Name Memorization
+**Script**: `src/experiments/statistical_analysis.py`, `src/experiments/per_dataset_memorization_analysis.py`
+**Output**: 
+- `src/experiments/results/memorization/statistical_analysis.json`
+- `src/experiments/results/memorization/per_dataset_memorization_analysis.json`
+
+**Hypothesis**: If LLMs memorize benchmark dataset statistics rather than reason algorithmically, renaming the dataset should cause performance collapse. True algorithmic reasoning would be invariant to dataset names.
+
+**What it does**:
+1. **Perturbation Generation**: For each benchmark dataset, generate renamed variants:
+   - asia → Network-A
+   - cancer → Dataset-7
+   - child → Crestwood
+   - earthquake → Greyfield
+   - alarm → System-B
+   - sachs → Structure-Q
+
+2. **Dual Query**: Query each LLM twice per (dataset, algorithm):
+   - Original prompt with true dataset name (e.g., "asia")
+   - Perturbed prompt with unknown name (e.g., "Network-A")
+   - All other context (graph structure, node count) identical
+
+3. **Precision Drop Analysis**:
+   - Extract precision estimates from both responses
+   - Compute difference: Δ = original_precision - perturbed_precision
+   - If Δ > 0: model's performance drops on unknown names (memorization signal)
+   - If Δ ≈ 0: model's performance invariant to names (reasoning signal)
+
+4. **Statistical Testing** (Paired t-test, one-tailed):
+   - H₀: Original and perturbed precisions are equal (no memorization)
+   - H₁: Perturbed < original (memorization hypothesis)
+   - Per-model: aggregate across 24 test cases (6 datasets × 4 algorithms)
+   - Per-dataset: stratified into 4 test cases per dataset × model
+
+5. **Strength Classification**:
+   - strong: Δ ≥ 0.2 or Cohen's d ≥ 0.8
+   - moderate: 0.1 ≤ Δ < 0.2 or 0.5 ≤ Cohen's d < 0.8
+   - weak: Δ ≥ 0.05 or |Cohen's d| ≥ 0.3
+   - none: Δ < 0.05
+
+**Output Structure** (per-dataset analysis):
+```json
+{
+  "gpt5": {
+    "asia": {
+      "n": 4,
+      "mean_original": 0.675,
+      "mean_perturbed": 0.0,
+      "mean_difference": 0.675,
+      "p_value": 0.001448,
+      "cohens_d": 4.5,
+      "significant_at_0_05": 1,
+      "memorization_strength": "strong"
+    }
+  }
+}
+```
+
+**Key Results**:
+- **GPT-5**: Memorizes asia, cancer, alarm (p < 0.05, strong signals Δ ≥ 0.4)
+- **Qwen-Think**: Partial memorization on asia, sachs (descriptive patterns)
+- **Others** (Claude, Gemini, LLaMA, DeepSeek): No systematic memorization signal
+
+**Interpretation**:
+- Strong perturbation effects (precision → 0) indicate the model *recognizes* benchmark names and adjusts behavior
+- Possible mechanisms: (1) explicit refusal when encountering known datasets, (2) reliance on memorized statistics that break when context changes, (3) pattern matching on dataset name as cue
+- Absence of effect in other models (Claude, etc.) does NOT rule out memorization; suggests different mechanisms (algorithmic pattern matching detected in Phase 9)
+
+**Heatmap Output**: Model × Dataset memorization strength matrix showing which specific benchmarks are memorized by which models.
 
 ---
 
@@ -428,12 +501,16 @@ python src/experiments/memorization_consistency_check.py
 # Phase 12: Algorithm vs LLM comprehensive comparison table
 python src/experiments/compare_algo_vs_llm.py
 
+# Phase 13: Perturbation test - dataset name memorization
+python src/experiments/statistical_analysis.py
+python src/experiments/per_dataset_memorization_analysis.py
+
 # Generate all plots
 python src/experiments/analyze_results.py       # Algorithmic performance plots
 python src/llm/plot_llm_results.py              # LLM analysis plots
 ```
 
-**Total runtime**: ~6 hours (mostly API calls and algorithm runs)
+**Total runtime**: ~7 hours (mostly API calls and algorithm runs; Phase 13 adds ~1h for perturbation tests)
 
 ---
 
