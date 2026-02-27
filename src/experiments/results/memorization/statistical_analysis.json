@@ -1,0 +1,66 @@
+{
+  "gpt5": {
+    "sample_size": 24,
+    "mean_difference": 0.32,
+    "p_value": 0.0005181755013384488,
+    "cohens_d": 0.7661082495834024,
+    "significant": 1,
+    "interpretation": "*** | Strong memorization signal (effect size: medium, d=0.766)"
+  },
+  "deepseek": {
+    "sample_size": 24,
+    "mean_difference": 0.00041666666666666474,
+    "p_value": 0.496098613325202,
+    "cohens_d": 0.0020180401386672153,
+    "significant": 0,
+    "interpretation": "ns | No significant memorization signal detected"
+  },
+  "deepseekthink": {
+    "sample_size": 24,
+    "mean_difference": -0.04416666666666667,
+    "p_value": 0.9343094081037826,
+    "cohens_d": -0.3193305204046686,
+    "significant": 0,
+    "interpretation": "ns | No significant memorization signal detected"
+  },
+  "claude": {
+    "sample_size": 24,
+    "mean_difference": -0.08375,
+    "p_value": 0.993302971019233,
+    "cohens_d": -0.5469005493662663,
+    "significant": 0,
+    "interpretation": "ns | No significant memorization signal detected"
+  },
+  "gemini3": {
+    "sample_size": 24,
+    "mean_difference": -0.13416666666666666,
+    "p_value": 0.9944780598029063,
+    "cohens_d": -0.5642082806554586,
+    "significant": 0,
+    "interpretation": "ns | No significant memorization signal detected"
+  },
+  "llama": {
+    "sample_size": 24,
+    "mean_difference": -0.06374999999999997,
+    "p_value": 0.9970479523093932,
+    "cohens_d": -0.6192423633430939,
+    "significant": 0,
+    "interpretation": "ns | No significant memorization signal detected"
+  },
+  "qwen": {
+    "sample_size": 17,
+    "mean_difference": -0.00588235294117647,
+    "p_value": 0.8339025076735103,
+    "cohens_d": -0.24253562503633297,
+    "significant": 0,
+    "interpretation": "ns | No significant memorization signal detected"
+  },
+  "qwenthink": {
+    "sample_size": 24,
+    "mean_difference": 0.11041666666666666,
+    "p_value": 0.13604028508058785,
+    "cohens_d": 0.22969480433917913,
+    "significant": 0,
+    "interpretation": "ns | No significant memorization signal detected"
+  }
+}
