@@ -1,0 +1,578 @@
+[
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.83\nRecall: 0.81\nF1: 0.82\nSHD: 12",
+    "original_extracted_numbers": [
+      0.83,
+      0.81,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.82\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:37:55.094259"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.83\nRecall: 0.81\nF1: 0.82\nSHD: 12",
+    "original_extracted_numbers": [
+      0.83,
+      0.81,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.75\nF1: 0.80\nSHD: 23",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.75,
+      1.0,
+      0.8,
+      23.0
+    ],
+    "timestamp": "2026-02-27T06:37:56.121432"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.73\nRecall: 0.81\nF1: 0.76\nSHD: 14",
+    "original_extracted_numbers": [
+      0.73,
+      0.81,
+      1.0,
+      0.76,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.62\nF1: 0.68\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.62,
+      1.0,
+      0.68,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:37:57.099816"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.83\nRecall: 0.81\nF1: 0.82\nSHD: 14",
+    "original_extracted_numbers": [
+      0.83,
+      0.81,
+      1.0,
+      0.82,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.62\nF1: 0.67\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.62,
+      1.0,
+      0.67,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:37:58.095353"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.83\nRecall: 0.75\nF1: 0.79\nSHD: 12",
+    "original_extracted_numbers": [
+      0.83,
+      0.75,
+      1.0,
+      0.79,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.82\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:37:59.132351"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.73\nRecall: 0.81\nF1: 0.76\nSHD: 12",
+    "original_extracted_numbers": [
+      0.73,
+      0.81,
+      1.0,
+      0.76,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.83\nRecall: 0.75\nF1: 0.79\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.83,
+      0.75,
+      1.0,
+      0.79,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:00.116337"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.73\nRecall: 0.81\nF1: 0.77\nSHD: 12",
+    "original_extracted_numbers": [
+      0.73,
+      0.81,
+      1.0,
+      0.77,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.85\nF1: 0.79\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.85,
+      1.0,
+      0.79,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:01.125929"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.73\nRecall: 0.64\nF1: 0.69\nSHD: 12",
+    "original_extracted_numbers": [
+      0.73,
+      0.64,
+      1.0,
+      0.69,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.62\nF1: 0.68\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.62,
+      1.0,
+      0.68,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:02.145979"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.82\nSHD: 12",
+    "original_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.83\nRecall: 0.75\nF1: 0.79\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.83,
+      0.75,
+      1.0,
+      0.79,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:03.263495"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.73\nRecall: 0.85\nF1: 0.79\nSHD: 12",
+    "original_extracted_numbers": [
+      0.73,
+      0.85,
+      1.0,
+      0.79,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.85\nF1: 0.78\nSHD: 123",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.85,
+      1.0,
+      0.78,
+      123.0
+    ],
+    "timestamp": "2026-02-27T06:38:04.267150"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.73\nRecall: 0.64\nF1: 0.69\nSHD: 12",
+    "original_extracted_numbers": [
+      0.73,
+      0.64,
+      1.0,
+      0.69,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.64\nF1: 0.69\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.64,
+      1.0,
+      0.69,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:05.799922"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.73\nRecall: 0.63\nF1: 0.68\nSHD: 12",
+    "original_extracted_numbers": [
+      0.73,
+      0.63,
+      1.0,
+      0.68,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.65\nF1: 0.69\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.65,
+      1.0,
+      0.69,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:06.776075"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.73\nRecall: 0.85\nF1: 0.78\nSHD: 12",
+    "original_extracted_numbers": [
+      0.73,
+      0.85,
+      1.0,
+      0.78,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.82\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:07.804763"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.73\nRecall: 0.81\nF1: 0.77\nSHD: 123",
+    "original_extracted_numbers": [
+      0.73,
+      0.81,
+      1.0,
+      0.77,
+      123.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.63\nF1: 0.68\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.63,
+      1.0,
+      0.68,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:09.317110"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.73\nRecall: 0.64\nF1: 0.69\nSHD: 34",
+    "original_extracted_numbers": [
+      0.73,
+      0.64,
+      1.0,
+      0.69,
+      34.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.62\nF1: 0.68\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.62,
+      1.0,
+      0.68,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:10.283955"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.73\nRecall: 0.63\nF1: 0.68\nSHD: 12",
+    "original_extracted_numbers": [
+      0.73,
+      0.63,
+      1.0,
+      0.68,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.64\nF1: 0.69\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.64,
+      1.0,
+      0.69,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:11.269988"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.83\nRecall: 0.75\nF1: 0.79\nSHD: 12",
+    "original_extracted_numbers": [
+      0.83,
+      0.75,
+      1.0,
+      0.79,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.82\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:12.277049"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.83\nRecall: 0.81\nF1: 0.82\nSHD: 12",
+    "original_extracted_numbers": [
+      0.83,
+      0.81,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.82\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:13.252779"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.73\nRecall: 0.81\nF1: 0.77\nSHD: 12",
+    "original_extracted_numbers": [
+      0.73,
+      0.81,
+      1.0,
+      0.77,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.62\nF1: 0.68\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.62,
+      1.0,
+      0.68,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:14.264871"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.73\nRecall: 0.64\nF1: 0.69\nSHD: 12",
+    "original_extracted_numbers": [
+      0.73,
+      0.64,
+      1.0,
+      0.69,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.82\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:15.258702"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.83\nRecall: 0.81\nF1: 0.82\nSHD: 12",
+    "original_extracted_numbers": [
+      0.83,
+      0.81,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.82\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:16.280019"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.83\nRecall: 0.81\nF1: 0.82\nSHD: 12",
+    "original_extracted_numbers": [
+      0.83,
+      0.81,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.65\nF1: 0.69\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.65,
+      1.0,
+      0.69,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:17.305287"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.73\nRecall: 0.81\nF1: 0.77\nSHD: 14",
+    "original_extracted_numbers": [
+      0.73,
+      0.81,
+      1.0,
+      0.77,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.64\nF1: 0.69\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.64,
+      1.0,
+      0.69,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:18.273076"
+  },
+  {
+    "model": "llama4",
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.83\nRecall: 0.81\nF1: 0.82\nSHD: 12",
+    "original_extracted_numbers": [
+      0.83,
+      0.81,
+      1.0,
+      0.82,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.73\nRecall: 0.63\nF1: 0.68\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.73,
+      0.63,
+      1.0,
+      0.68,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:38:19.317424"
+  }
+]

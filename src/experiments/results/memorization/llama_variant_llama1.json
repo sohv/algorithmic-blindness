@@ -1,0 +1,578 @@
+[
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.76\nRecall: 0.63\nF1: 0.69\nSHD: 11",
+    "original_extracted_numbers": [
+      0.76,
+      0.63,
+      1.0,
+      0.69,
+      11.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.81,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:35:50.875232"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.63\nRecall: 0.47\nF1: 0.54\nSHD: 14",
+    "original_extracted_numbers": [
+      0.63,
+      0.47,
+      1.0,
+      0.54,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.81,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:35:53.583397"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.88\nRecall: 0.54\nF1: 0.67\nSHD: 12",
+    "original_extracted_numbers": [
+      0.88,
+      0.54,
+      1.0,
+      0.67,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.72\nF1: 0.78\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.72,
+      1.0,
+      0.78,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:35:55.009377"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "asia",
+    "perturbed_name": "Network-A",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.44\nRecall: 0.63\nF1: 0.52\nSHD: 14",
+    "original_extracted_numbers": [
+      0.44,
+      0.63,
+      1.0,
+      0.52,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.81,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:35:56.858552"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.42\nRecall: 0.29\nF1: 0.34\nSHD: 14",
+    "original_extracted_numbers": [
+      0.42,
+      0.29,
+      1.0,
+      0.34,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.82\nRecall: 0.71\nF1: 0.76\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.82,
+      0.71,
+      1.0,
+      0.76,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:35:58.319989"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.17\nRecall: 0.12\nF1: 0.14\nSHD: 44",
+    "original_extracted_numbers": [
+      0.17,
+      0.12,
+      1.0,
+      0.14,
+      44.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.71\nF1: 0.77\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.71,
+      1.0,
+      0.77,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:36:01.855053"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.25\nRecall: 0.38\nF1: 0.30\nSHD: 14",
+    "original_extracted_numbers": [
+      0.25,
+      0.38,
+      1.0,
+      0.3,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.82\nRecall: 0.78\nF1: 0.80\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.82,
+      0.78,
+      1.0,
+      0.8,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:36:07.339077"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "cancer",
+    "perturbed_name": "Dataset-7",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.33\nRecall: 0.14\nF1: 0.20\nSHD: 16",
+    "original_extracted_numbers": [
+      0.33,
+      0.14,
+      1.0,
+      0.2,
+      16.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.81,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:36:10.161991"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.61\nRecall: 0.63\nF1: 0.62\nSHD: 12",
+    "original_extracted_numbers": [
+      0.61,
+      0.63,
+      1.0,
+      0.62,
+      12.0
+    ],
+    "perturbed_response": "Precision: 0.38\nRecall: 0.23\nF1: 0.29\nSHD: 54",
+    "perturbed_extracted_numbers": [
+      0.38,
+      0.23,
+      1.0,
+      0.29,
+      54.0
+    ],
+    "timestamp": "2026-02-27T06:36:12.655241"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.04\nRecall: 0.06\nF1: 0.05\nSHD: 55",
+    "original_extracted_numbers": [
+      0.04,
+      0.06,
+      1.0,
+      0.05,
+      55.0
+    ],
+    "perturbed_response": "Precision: 0.25\nRecall: 0.33\nF1: 0.29\nSHD: 14",
+    "perturbed_extracted_numbers": [
+      0.25,
+      0.33,
+      1.0,
+      0.29,
+      14.0
+    ],
+    "timestamp": "2026-02-27T06:36:14.149026"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.26\nRecall: 0.23\nF1: 0.24\nSHD: 58",
+    "original_extracted_numbers": [
+      0.26,
+      0.23,
+      1.0,
+      0.24,
+      58.0
+    ],
+    "perturbed_response": "Precision: 0.42\nRecall: 0.67\nF1: 0.52\nSHD: 14",
+    "perturbed_extracted_numbers": [
+      0.42,
+      0.67,
+      1.0,
+      0.52,
+      14.0
+    ],
+    "timestamp": "2026-02-27T06:36:15.541945"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "child",
+    "perturbed_name": "Crestwood",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.62\nRecall: 0.91\nF1: 0.74\nSHD: 13",
+    "original_extracted_numbers": [
+      0.62,
+      0.91,
+      1.0,
+      0.74,
+      13.0
+    ],
+    "perturbed_response": "Precision: 0.23\nRecall: 0.38\nF1: 0.29\nSHD: 54",
+    "perturbed_extracted_numbers": [
+      0.23,
+      0.38,
+      1.0,
+      0.29,
+      54.0
+    ],
+    "timestamp": "2026-02-27T06:36:17.111319"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.25\nRecall: 0.17\nF1: 0.20\nSHD: 14",
+    "original_extracted_numbers": [
+      0.25,
+      0.17,
+      1.0,
+      0.2,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.42\nRecall: 0.29\nF1: 0.34\nSHD: 54",
+    "perturbed_extracted_numbers": [
+      0.42,
+      0.29,
+      1.0,
+      0.34,
+      54.0
+    ],
+    "timestamp": "2026-02-27T06:36:18.631303"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.17\nRecall: 0.12\nF1: 0.14\nSHD: 14",
+    "original_extracted_numbers": [
+      0.17,
+      0.12,
+      1.0,
+      0.14,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.42\nRecall: 0.67\nF1: 0.52\nSHD: 14",
+    "perturbed_extracted_numbers": [
+      0.42,
+      0.67,
+      1.0,
+      0.52,
+      14.0
+    ],
+    "timestamp": "2026-02-27T06:36:20.242667"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.25\nRecall: 0.33\nF1: 0.29\nSHD: 14",
+    "original_extracted_numbers": [
+      0.25,
+      0.33,
+      1.0,
+      0.29,
+      14.0
+    ],
+    "perturbed_response": "Precision: 0.83\nRecall: 0.71\nF1: 0.77\nSHD: 14",
+    "perturbed_extracted_numbers": [
+      0.83,
+      0.71,
+      1.0,
+      0.77,
+      14.0
+    ],
+    "timestamp": "2026-02-27T06:36:21.833278"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "earthquake",
+    "perturbed_name": "Greyfield",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.33\nRecall: 0.17\nF1: 0.22\nSHD: 17",
+    "original_extracted_numbers": [
+      0.33,
+      0.17,
+      1.0,
+      0.22,
+      17.0
+    ],
+    "perturbed_response": "Precision: 0.42\nRecall: 0.67\nF1: 0.52\nSHD: 14",
+    "perturbed_extracted_numbers": [
+      0.42,
+      0.67,
+      1.0,
+      0.52,
+      14.0
+    ],
+    "timestamp": "2026-02-27T06:36:24.244170"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.76\nRecall: 0.38\nF1: 0.51\nSHD: 13",
+    "original_extracted_numbers": [
+      0.76,
+      0.38,
+      1.0,
+      0.51,
+      13.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.81,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:36:25.570387"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.23\nRecall: 0.28\nF1: 0.25\nSHD: 74",
+    "original_extracted_numbers": [
+      0.23,
+      0.28,
+      1.0,
+      0.25,
+      74.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 4",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.81,
+      4.0
+    ],
+    "timestamp": "2026-02-27T06:36:27.245538"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.38\nRecall: 0.28\nF1: 0.32\nSHD: 68",
+    "original_extracted_numbers": [
+      0.38,
+      0.28,
+      1.0,
+      0.32,
+      68.0
+    ],
+    "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.85,
+      0.78,
+      1.0,
+      0.81,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:36:28.652539"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "alarm",
+    "perturbed_name": "System-B",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.26\nRecall: 0.31\nF1: 0.28\nSHD: 73",
+    "original_extracted_numbers": [
+      0.26,
+      0.31,
+      1.0,
+      0.28,
+      73.0
+    ],
+    "perturbed_response": "Precision: 0.83\nRecall: 0.71\nF1: 0.77\nSHD: 4",
+    "perturbed_extracted_numbers": [
+      0.83,
+      0.71,
+      1.0,
+      0.77,
+      4.0
+    ],
+    "timestamp": "2026-02-27T06:36:30.091920"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "pc",
+    "original_response": "Precision: 0.26\nRecall: 0.31\nF1: 0.28\nSHD: 16",
+    "original_extracted_numbers": [
+      0.26,
+      0.31,
+      1.0,
+      0.28,
+      16.0
+    ],
+    "perturbed_response": "Precision: 0.83\nRecall: 0.71\nF1: 0.77\nSHD: 5",
+    "perturbed_extracted_numbers": [
+      0.83,
+      0.71,
+      1.0,
+      0.77,
+      5.0
+    ],
+    "timestamp": "2026-02-27T06:36:31.655030"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "lingam",
+    "original_response": "Precision: 0.17\nRecall: 0.14\nF1: 0.15\nSHD: 18",
+    "original_extracted_numbers": [
+      0.17,
+      0.14,
+      1.0,
+      0.15,
+      18.0
+    ],
+    "perturbed_response": "Precision: 0.83\nRecall: 0.71\nF1: 0.77\nSHD: 4",
+    "perturbed_extracted_numbers": [
+      0.83,
+      0.71,
+      1.0,
+      0.77,
+      4.0
+    ],
+    "timestamp": "2026-02-27T06:36:33.853097"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "fci",
+    "original_response": "Precision: 0.24\nRecall: 0.31\nF1: 0.27\nSHD: 54",
+    "original_extracted_numbers": [
+      0.24,
+      0.31,
+      1.0,
+      0.27,
+      54.0
+    ],
+    "perturbed_response": "Precision: 0.78\nRecall: 0.65\nF1: 0.71\nSHD: 12",
+    "perturbed_extracted_numbers": [
+      0.78,
+      0.65,
+      1.0,
+      0.71,
+      12.0
+    ],
+    "timestamp": "2026-02-27T06:36:37.256218"
+  },
+  {
+    "model": "llama1",
+    "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "dataset": "sachs",
+    "perturbed_name": "Structure-Q",
+    "algorithm": "notears",
+    "original_response": "Precision: 0.17\nRecall: 0.14\nF1: 0.15\nSHD: 18",
+    "original_extracted_numbers": [
+      0.17,
+      0.14,
+      1.0,
+      0.15,
+      18.0
+    ],
+    "perturbed_response": "Precision: 0.42\nRecall: 0.67\nF1: 0.52\nSHD: 14",
+    "perturbed_extracted_numbers": [
+      0.42,
+      0.67,
+      1.0,
+      0.52,
+      14.0
+    ],
+    "timestamp": "2026-02-27T06:36:38.868914"
+  }
+]

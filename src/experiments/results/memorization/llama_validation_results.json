@@ -1,0 +1,4260 @@
+{
+  "llama2": [
+    {
+      "model": "llama2",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "For the Asia benchmark dataset using the PC algorithm, the performance metrics are:\n\nPrecision: 0.83\nRecall: 0.78\nF1 Score: 0.80\nSHD: 24",
+          "extracted_numbers": [
+            0.83,
+            0.78,
+            1.0,
+            0.8,
+            24.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.73\nRecall: 0.85\nF1: 0.79\nSHD: 23",
+          "extracted_numbers": [
+            0.73,
+            0.85,
+            1.0,
+            0.79,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "I'll provide a hypothetical example of a PC on Asia model's performance metrics. \n\nP [0.85] R [0.92] F1 [0.88] SHD [92]\n\nHere's a brief explanation of each metric:\n\n- Precision (P): The ratio of true positives to the sum of true positives and false positives. In this case, the model has a precision of 0.85, meaning it correctly identifies 85% of the actual positives as true positives.\n- Recall (R): The ratio of true positives to the sum of true positives and false negatives. In this case, the model has a recall of 0.92, meaning it correctly identifies 92% of the actual positives as true positives.\n- F1 Score (F1): The harmonic mean of precision and recall. It provides a balanced measure of both precision and recall. In this case, the model has an F1 score of 0.88, indicating a good balance between precision and recall.\n- SHD (S\u00f8rensen\u2013Hennequin Distance): A measure of the similarity between two sets. It's often used in the context of set prediction tasks, such as predicting the presence or absence of a disease. In this case, the model has an SHD of 92, indicating a high similarity between the predicted and actual sets.",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            92.0,
+            0.85,
+            85.0,
+            0.92,
+            92.0,
+            1.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.83 F1=0.83 SHD=0",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            0.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "For the Asia benchmark dataset using the PC algorithm, the performance metrics are:\n\nPrecision: 0.83\nRecall: 0.78\nF1 Score: 0.80\nSHD: 23",
+          "extracted_numbers": [
+            0.83,
+            0.78,
+            1.0,
+            0.8,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.83\nRecall: 0.72\nF1: 0.77\nSHD: 23",
+          "extracted_numbers": [
+            0.83,
+            0.72,
+            1.0,
+            0.77,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "I'll provide a hypothetical example of a PC on Asia model's performance metrics. Please note that these values are fictional and for demonstration purposes only.\n\n**PC on Asia Model Performance Metrics:**\n\nP (Precision) [0-1] : 0.85\nR (Recall) [0-1] : 0.92\nF1 [0-1] : 0.88\nSHD (S\u00f8rensen-H\u00f8gh Index) [0-100] : 72\n\n**Interpretation:**\n\n- Precision (P): 0.85 indicates that 85% of the predicted positive cases are actually positive.\n- Recall (R): 0.92 indicates that 92% of the actual positive cases are correctly predicted.\n- F1 Score: 0.88 is the harmonic mean of precision and recall, indicating a good balance between the two.\n- SHD (S\u00f8rensen-H\u00f8gh Index): 72 indicates that 72% of the predicted cases match the actual cases, with 28% of the predicted cases not matching the actual cases.\n\nPlease note that these values are hypothetical and may vary based on the actual model performance and the specific dataset used.",
+          "extracted_numbers": [
+            0.0,
+            -1.0,
+            0.85,
+            0.0,
+            -1.0,
+            0.92,
+            1.0,
+            0.0,
+            -1.0,
+            0.88
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.83 F1=0.83 SHD=0",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            0.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "For the Asia benchmark dataset using the PC algorithm, the performance metrics are:\n\nPrecision: 0.85\nRecall: 0.88\nF1 Score: 0.865\nSHD: 15",
+          "extracted_numbers": [
+            0.85,
+            0.88,
+            1.0,
+            0.865,
+            15.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.72\nRecall: 0.68\nF1: 0.70\nSHD: 34.2",
+          "extracted_numbers": [
+            0.72,
+            0.68,
+            1.0,
+            0.7,
+            34.2
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "I'm not able to give you a precise answer as the actual values depend on the specific dataset and model used. However, I can provide some general information about the metrics you've asked for.\n\nPrecision (P) is the ratio of true positives to the sum of true positives and false positives.\n\nRecall (R) is the ratio of true positives to the sum of true positives and false negatives.\n\nF1 is the harmonic mean of precision and recall, calculated as 2 * P * R / (P + R).\n\nSHD (S\u00f8rensen\u2013Huang Distance) is a metric used to evaluate the similarity between two sets, typically clustering or segmentation results. It is calculated as the number of elements in the ground truth set that are not in the predicted set, plus the number of elements in the predicted set that are not in the ground truth set.\n\nHere are the estimated values:\n\nAssuming a model trained on a typical PC dataset, I would estimate the values as follows:\n\n- Precision (P): 0.8\n- Recall (R): 0.7\n- F1: 0.75\n- SHD: 20\n\nPlease note that these are rough estimates and actual values depend on the specific dataset and model used.",
+          "extracted_numbers": [
+            1.0,
+            2.0,
+            0.8,
+            0.7,
+            1.0,
+            0.75,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "P=0.57 R=0.89 F1=0.67 SHD=2",
+          "extracted_numbers": [
+            0.57,
+            0.89,
+            1.0,
+            0.67,
+            2.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 8,
+        "unique_precision_values": 7,
+        "all_extracted_numbers": [
+          0.83,
+          0.78,
+          1.0,
+          0.8,
+          24.0,
+          0.73,
+          0.85,
+          1.0,
+          0.79,
+          23.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          92.0,
+          0.85,
+          85.0,
+          0.92,
+          92.0,
+          1.0,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          0.0,
+          0.83,
+          0.78,
+          1.0,
+          0.8,
+          23.0,
+          0.83,
+          0.72,
+          1.0,
+          0.77,
+          23.0,
+          0.0,
+          -1.0,
+          0.85,
+          0.0,
+          -1.0,
+          0.92,
+          1.0,
+          0.0,
+          -1.0,
+          0.88,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          0.0,
+          0.85,
+          0.88,
+          1.0,
+          0.865,
+          15.0,
+          0.72,
+          0.68,
+          1.0,
+          0.7,
+          34.2,
+          1.0,
+          2.0,
+          0.8,
+          0.7,
+          1.0,
+          0.75,
+          20.0,
+          0.57,
+          0.89,
+          1.0,
+          0.67,
+          2.0
+        ],
+        "number_stats": {
+          "total_count": 72,
+          "unique_count": 28,
+          "mean": 6.622708333333334,
+          "stdev": 18.76564826712798,
+          "min": -1.0,
+          "max": 92.0,
+          "range": 93.0
+        },
+        "temperature_consistency": {
+          "0.0": 13,
+          "0.1": 10,
+          "0.7": 14
+        },
+        "prompt_sensitivity": {
+          "variant_1": 3,
+          "variant_2": 3,
+          "variant_3": 3,
+          "variant_4": 2
+        }
+      },
+      "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+    },
+    {
+      "model": "llama2",
+      "dataset": "cancer",
+      "algorithm": "lingam",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "I'm a causal discovery expert, and I can provide you with the performance metrics for the cancer benchmark dataset using the LiNGAM algorithm. \n\nPrecision: 0.83\nRecall: 0.81\nF1 Score: 0.82\nSHD: 12",
+          "extracted_numbers": [
+            0.83,
+            0.81,
+            1.0,
+            0.82,
+            12.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.82\nRecall: 0.75\nF1: 0.78\nSHD: 32",
+          "extracted_numbers": [
+            0.82,
+            0.75,
+            1.0,
+            0.78,
+            32.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "I'm not aware of any specific information about a model called \"lingam on cancer.\" However, I can provide a general example of how you might estimate these metrics for a model that predicts cancer diagnosis.\n\nLet's assume we have a model that predicts cancer diagnosis with the following results:\n\n- True Positives (TP): 80\n- False Positives (FP): 20\n- True Negatives (TN): 70\n- False Negatives (FN): 30\n\nPrecision = TP / (TP + FP) = 80 / (80 + 20) = 0.8\nRecall = TP / (TP + FN) = 80 / (80 + 30) = 0.727\nF1 = 2 * (Precision * Recall) / (Precision + Recall) = 2 * (0.8 * 0.727) / (0.8 + 0.727) = 0.755\nSHD (Sensitivity, Hit Rate, or Probability of Detection) = TP / (TP + FN) = 80 / (80 + 30) = 0.727\n\nFormat: P [0-1] R [0-1] F1 [0-1] SHD [0-100]\n0.8 0.727 0.755 72.7",
+          "extracted_numbers": [
+            80.0,
+            20.0,
+            70.0,
+            30.0,
+            80.0,
+            80.0,
+            20.0,
+            0.8,
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.83 F1=0.83 SHD=20",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "I'm a causal discovery expert, and I can provide you with the performance metrics for the cancer benchmark dataset using the LiNGAM algorithm. \n\nPrecision: 0.85\nRecall: 0.92\nF1 Score: 0.88\nSHD: 12",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            12.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.82\nRecall: 0.75\nF1: 0.78\nSHD: 32",
+          "extracted_numbers": [
+            0.82,
+            0.75,
+            1.0,
+            0.78,
+            32.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "I'm not aware of any specific information about a \"lingam on cancer\" model. However, I can provide a general example of how to calculate precision, recall, F1 score, and SHD (Set Hit Difference) for a binary classification model.\n\nLet's assume we have a model that predicts cancer diagnosis with the following results:\n\n- True Positives (TP): 80\n- False Positives (FP): 20\n- True Negatives (TN): 70\n- False Negatives (FN): 30\n\nPrecision = TP / (TP + FP) = 80 / (80 + 20) = 0.8\nRecall = TP / (TP + FN) = 80 / (80 + 30) = 0.727\nF1 = 2 * (Precision * Recall) / (Precision + Recall) = 2 * (0.8 * 0.727) / (0.8 + 0.727) = 0.755\nSHD = ((TP + FP) - (TN + FN)) / (TP + FP + TN + FN) * 100 = ((80 + 20) - (70 + 30)) / (80 + 20 + 70 + 30) * 100 = 20\n\nFormat: P [0-1] R [0-1] F1 [0-1] SHD [0-100]\n0.8 0.727 0.755 20",
+          "extracted_numbers": [
+            1.0,
+            80.0,
+            20.0,
+            70.0,
+            30.0,
+            80.0,
+            80.0,
+            20.0,
+            0.8,
+            80.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.83 F1=0.83 SHD=20",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "I'm a causal discovery expert, but I need to simulate a result. Based on simulated performance metrics for the cancer benchmark dataset using the LiNGAM algorithm, here are the results:\n\nPrecision: 0.85\nRecall: 0.92\nF1 Score: 0.88\nSHD: 23",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.75\nRecall: 0.82\nF1: 0.78\nSHD: 20",
+          "extracted_numbers": [
+            0.75,
+            0.82,
+            1.0,
+            0.78,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "I'm unable to provide real-time data or specific results for lingam on cancer. However, I can provide a general framework for how you might estimate these metrics. \n\nSince I don't have any more information, let's assume we're evaluating a model for predicting cancer based on the Lingam model. \n\nFor this example, we'll use hypothetical metrics. \n\nPrecision = 0.8 (TP/TP + FP), \nRecall = 0.9 (TP/TP + FN), \nTP = 90, FP = 20, FN = 10\n\nF1 Score = 2*(Precision * Recall)/(Precision + Recall) = 2*(0.8*0.9)/(0.8+0.9) = 0.83\nSHD = 100*((TP + FP + FN - TP) / (TP + FP + FN)) = 100*((20 + 10 - 90)/ (20 + 10)) = 50\n\nThe estimated metrics are: \nP [0.8] R [0.9] F1 [0.83] SHD [50]",
+          "extracted_numbers": [
+            0.8,
+            0.9,
+            90.0,
+            20.0,
+            10.0,
+            1.0,
+            2.0,
+            2.0,
+            0.8,
+            0.9
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "P=0.74 R=0.75 F1=0.74 SHD=6",
+          "extracted_numbers": [
+            0.74,
+            0.75,
+            1.0,
+            0.74,
+            6.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 8,
+        "unique_precision_values": 8,
+        "all_extracted_numbers": [
+          0.83,
+          0.81,
+          1.0,
+          0.82,
+          12.0,
+          0.82,
+          0.75,
+          1.0,
+          0.78,
+          32.0,
+          80.0,
+          20.0,
+          70.0,
+          30.0,
+          80.0,
+          80.0,
+          20.0,
+          0.8,
+          80.0,
+          80.0,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          20.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          12.0,
+          0.82,
+          0.75,
+          1.0,
+          0.78,
+          32.0,
+          1.0,
+          80.0,
+          20.0,
+          70.0,
+          30.0,
+          80.0,
+          80.0,
+          20.0,
+          0.8,
+          80.0,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          20.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          23.0,
+          0.75,
+          0.82,
+          1.0,
+          0.78,
+          20.0,
+          0.8,
+          0.9,
+          90.0,
+          20.0,
+          10.0,
+          1.0,
+          2.0,
+          2.0,
+          0.8,
+          0.9,
+          0.74,
+          0.75,
+          1.0,
+          0.74,
+          6.0
+        ],
+        "number_stats": {
+          "total_count": 75,
+          "unique_count": 23,
+          "mean": 17.8536,
+          "stdev": 28.38820594656987,
+          "min": 0.74,
+          "max": 90.0,
+          "range": 89.26
+        },
+        "temperature_consistency": {
+          "0.0": 12,
+          "0.1": 14,
+          "0.7": 15
+        },
+        "prompt_sensitivity": {
+          "variant_1": 3,
+          "variant_2": 2,
+          "variant_3": 3,
+          "variant_4": 2
+        }
+      },
+      "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+    },
+    {
+      "model": "llama2",
+      "dataset": "child",
+      "algorithm": "fci",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "For the child benchmark dataset using the FCI (Fast Causal Inference) algorithm, the performance metrics are:\n\nPrecision: 0.8\nRecall: 0.85\nF1 Score: 0.825\nSHD: 20",
+          "extracted_numbers": [
+            0.8,
+            0.85,
+            1.0,
+            0.825,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.72\nF1: 0.78\nSHD: 32",
+          "extracted_numbers": [
+            0.85,
+            0.72,
+            1.0,
+            0.78,
+            32.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "I don't have enough information to estimate the metrics for a specific child. However, I can provide a general example of how these metrics might be calculated for a child's facial recognition system (FCS) or facial classification system (FCS) using a hypothetical dataset.\n\nLet's assume we have a dataset of 100 images of children, with 50 images of the child in question and 50 images of other children. We'll use this dataset to train and test a facial recognition model.\n\n**Precision**: The precision of the model is the proportion of true positives (correctly identified images of the child) among all predicted positives (images identified as the child).\n\n| Predicted Positive | True Positive |\n| --- | --- |\n| 80 | 70 |\n\nPrecision = 70 / 80 = 0.875\n\n**Recall**: The recall of the model is the proportion of true positives among all actual positives (all images of the child).\n\n| Actual Positive | True Positive |\n| --- | --- |\n| 50 | 70 |\n\nRecall = 70 / 50 = 0.14\n\n**F1**: The F1 score is the harmonic mean of precision and recall.\n\nF1 = 2 \\* (Precision \\* Recall) / (Precision + Recall)\n= 2 \\* (0.875 \\* 0.14) / (0.875 + 0.14)\n= 0.196\n\n**SHD (Symmetric Hard Metric)**: The SHD is a measure of the difference between the predicted and actual labels. It is calculated as the number of false positives, false negatives, and misclassifications.\n\n| Predicted Label | Actual Label | SHD |\n| --- | --- | --- |\n| Child | Child | 0 |\n| Child | Other | 1 (false positive) |\n| Other | Child | 1 (false negative) |\n| Other | Other | 0 |\n\nSHD = 2 (1 false positive + 1 false negative)\n= 200\n\nFormat: P [0-1] R [0-1] F1 [0-1] SHD [0-100]\nP 0.875 R 0.14 F1 0.196 SHD 200",
+          "extracted_numbers": [
+            100.0,
+            50.0,
+            50.0,
+            80.0,
+            70.0,
+            70.0,
+            80.0,
+            0.875,
+            50.0,
+            70.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.83 F1=0.83 SHD=0",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            0.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "For the child benchmark dataset using the FCI (Fast Causal Inference) algorithm, the performance metrics are:\n\nPrecision: 0.85\nRecall: 0.92\nF1 Score: 0.88\nSHD: 10",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            10.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.72\nF1: 0.78\nSHD: 32",
+          "extracted_numbers": [
+            0.85,
+            0.72,
+            1.0,
+            0.78,
+            32.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "I'll need more information about the child to estimate the F1 score, Precision, Recall, and SHD (Subjective Human Diagnostic). However, I can provide a general format for the metrics you requested.\n\n**Assumptions:**\n\n- Let's assume we are evaluating a model that predicts whether a child has a certain condition or not.\n- We have a dataset with true labels (actual conditions) and predicted labels (model predictions).\n\n**Metrics:**\n\n- **Precision (P)**: The ratio of true positives (correctly predicted children with the condition) to the sum of true positives and false positives (children incorrectly predicted to have the condition).\n- **Recall (R)**: The ratio of true positives to the sum of true positives and false negatives (children incorrectly predicted to not have the condition).\n- **F1 score**: The harmonic mean of precision and recall, providing a balanced measure of both.\n- **SHD (Subjective Human Diagnostic)**: A subjective measure of how well the model's predictions align with human experts' opinions. It's usually a percentage value between 0 and 100.\n\n**Example:**\n\nLet's say we have a dataset with 100 children, and our model predicts the following:\n\n- True positives: 80 (children correctly predicted to have the condition)\n- False positives: 10 (children incorrectly predicted to have the condition)\n- False negatives: 10 (children incorrectly predicted to not have the condition)\n\n**Calculations:**\n\n- **Precision (P)**: 80 / (80 + 10) = 0.889\n- **Recall (R)**: 80 / (80 + 10) = 0.889\n- **F1 score**: (2 \\* 0.889 \\* 0.889) / (0.889 + 0.889) = 0.889\n- **SHD (Subjective Human Diagnostic)**: This value would depend on human expert opinions and is subjective, so I'll leave it blank for now.\n\n**Result:**\n\nP [0.889] R [0.889] F1 [0.889] SHD [ ]\n\nPlease provide more information about the child and the model's predictions to estimate the SHD value.",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            0.0,
+            100.0,
+            100.0,
+            80.0,
+            10.0,
+            10.0,
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.83 F1=0.83 SHD=16",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            16.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "For the child benchmark dataset using the FCI (Fast Causal Inference) algorithm, the performance metrics are:\n\nPrecision: 0.95\nRecall: 0.93\nF1 Score: 0.94\nSHD: 10",
+          "extracted_numbers": [
+            0.95,
+            0.93,
+            1.0,
+            0.94,
+            10.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.83\nRecall: 0.74\nF1: 0.78\nSHD: 35",
+          "extracted_numbers": [
+            0.83,
+            0.74,
+            1.0,
+            0.78,
+            35.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "To estimate F1 on a child, I'll need some information about the classification task. Please provide the following:\n\n1. Number of true positives (TP): Correctly identified instances\n2. Number of false positives (FP): Incorrectly identified instances\n3. Number of false negatives (FN): Missed instances\n4. Number of true negatives (TN): Correctly rejected instances\n\nOnce I have this information, I can calculate the following metrics:\n\n- Precision (P): TP / (TP + FP)\n- Recall (R): TP / (TP + FN)\n- F1 score: 2 * (P * R) / (P + R)\n- SHD (Subjective Hierarchical Distance): Not a standard metric, but can be calculated based on the hierarchical structure of the classification task. If the task is not hierarchical, SHD will be 0.\n\nFor example, if the task is to classify cats and dogs, and the numbers are:\n\n- TP: 80 (correctly classified cats)\n- FP: 20 (incorrectly classified dogs as cats)\n- FN: 10 (missed cats)\n- TN: 90 (rejected dogs correctly)\n\nThen the metrics would be:\n\n- P: 80 / (80 + 20) = 0.8\n- R: 80 / (80 + 10) = 0.889\n- F1: 2 * (0.8 * 0.889) / (0.8 + 0.889) = 0.853\n- SHD: Not applicable in this case since it's a binary classification task.\n\nPlease provide the numbers for the task you're interested in, and I'll estimate the metrics.",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            1.0,
+            2.0,
+            0.0,
+            80.0,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.92 F1=0.87 SHD=6",
+          "extracted_numbers": [
+            0.83,
+            0.92,
+            1.0,
+            0.87,
+            6.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 9,
+        "unique_precision_values": 6,
+        "all_extracted_numbers": [
+          0.8,
+          0.85,
+          1.0,
+          0.825,
+          20.0,
+          0.85,
+          0.72,
+          1.0,
+          0.78,
+          32.0,
+          100.0,
+          50.0,
+          50.0,
+          80.0,
+          70.0,
+          70.0,
+          80.0,
+          0.875,
+          50.0,
+          70.0,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          0.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          10.0,
+          0.85,
+          0.72,
+          1.0,
+          0.78,
+          32.0,
+          1.0,
+          1.0,
+          0.0,
+          100.0,
+          100.0,
+          80.0,
+          10.0,
+          10.0,
+          80.0,
+          80.0,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          16.0,
+          0.95,
+          0.93,
+          1.0,
+          0.94,
+          10.0,
+          0.83,
+          0.74,
+          1.0,
+          0.78,
+          35.0,
+          1.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          1.0,
+          2.0,
+          0.0,
+          80.0,
+          20.0,
+          0.83,
+          0.92,
+          1.0,
+          0.87,
+          6.0
+        ],
+        "number_stats": {
+          "total_count": 75,
+          "unique_count": 29,
+          "mean": 18.526266666666668,
+          "stdev": 30.688073307171084,
+          "min": 0.0,
+          "max": 100.0,
+          "range": 100.0
+        },
+        "temperature_consistency": {
+          "0.0": 14,
+          "0.1": 12,
+          "0.7": 15
+        },
+        "prompt_sensitivity": {
+          "variant_1": 3,
+          "variant_2": 2,
+          "variant_3": 3,
+          "variant_4": 3
+        }
+      },
+      "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+    },
+    {
+      "model": "llama2",
+      "dataset": "earthquake",
+      "algorithm": "notears",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "For the earthquake benchmark dataset using the notears algorithm, the performance metrics are:\n\nPrecision: 0.8\nRecall: 0.85\nF1 Score: 0.825\nSHD: 20",
+          "extracted_numbers": [
+            0.8,
+            0.85,
+            1.0,
+            0.825,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.72\nF1: 0.78\nSHD: 32",
+          "extracted_numbers": [
+            0.85,
+            0.72,
+            1.0,
+            0.78,
+            32.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "I'll provide an example of estimating the performance metrics for a no-tears model on an earthquake dataset. Please note that actual values may vary based on the specific model, dataset, and implementation.\n\n**Assumptions:**\n\n- The model is a binary classification model (e.g., predicting whether an earthquake will occur or not).\n- The dataset is a balanced dataset with equal numbers of positive and negative samples.\n- The model is trained and evaluated on a specific earthquake dataset.\n\n**Estimated Performance Metrics:**\n\nP (Precision) = 0.85\nR (Recall) = 0.92\nF1 = 0.88\nSHD (Simplified Hausdorff Distance) = 23\n\n**Explanation:**\n\n- **Precision (P)**: The ratio of true positives (correctly predicted earthquakes) to the sum of true positives and false positives (incorrectly predicted earthquakes). In this case, the model correctly predicts 85% of the earthquakes.\n- **Recall (R)**: The ratio of true positives to the sum of true positives and false negatives (missed earthquakes). The model correctly predicts 92% of the earthquakes.\n- **F1**: The harmonic mean of precision and recall, providing a balanced measure of both. In this case, the F1 score is 0.88.\n- **SHD (Simplified Hausdorff Distance)**: A measure of the average distance between the predicted and actual earthquake locations. A lower SHD value indicates better performance. In this case, the SHD is 23, indicating a relatively good performance.\n\n**Note:** These values are hypothetical and may vary based on the actual model, dataset, and implementation.",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            23.0,
+            85.0,
+            92.0,
+            1.0,
+            1.0,
+            0.88
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.83 F1=0.83 SHD=20",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "For the earthquake benchmark dataset using the notears algorithm, the performance metrics are:\n\nPrecision: 0.85\nRecall: 0.78\nF1 Score: 0.81\nSHD: 22",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            22.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.83\nRecall: 0.72\nF1: 0.77\nSHD: 23",
+          "extracted_numbers": [
+            0.83,
+            0.72,
+            1.0,
+            0.77,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "To estimate the performance of a model in predicting no-tears (i.e., no damage or minimal damage) in an earthquake, we'll use the following metrics:\n\n- Precision (P): The ratio of true positives (correctly predicted no-tears) to the sum of true positives and false positives (incorrectly predicted no-tears).\n- Recall (R): The ratio of true positives to the sum of true positives and false negatives (actual no-tears not predicted).\n- F1 Score (F1): The harmonic mean of precision and recall, providing a balanced measure of both.\n- SHD (Structural Damage Index): A measure of the structural damage, ranging from 0 (no damage) to 100 (complete damage).\n\nAssuming the model has the following performance:\n\n- True Positives (TP): 80 (correctly predicted no-tears)\n- False Positives (FP): 20 (incorrectly predicted no-tears)\n- True Negatives (TN): 70 (correctly predicted damage)\n- False Negatives (FN): 30 (actual no-tears not predicted)\n\nWe can calculate the metrics as follows:\n\n- Precision (P): TP / (TP + FP) = 80 / (80 + 20) = 0.8\n- Recall (R): TP / (TP + FN) = 80 / (80 + 30) = 0.727\n- F1 Score (F1): 2 * (P * R) / (P + R) = 2 * (0.8 * 0.727) / (0.8 + 0.727) = 0.755\n- SHD (Structural Damage Index): Assuming the model is designed to predict no-tears, we'll use the SHD as a measure of the model's performance. For simplicity, let's assume the SHD is directly related to the number of correctly predicted no-tears. SHD = (TP / (TP + FN)) * 100 = (80 / (80 + 30)) * 100 = 72.7\n\nFormat: P [0-1] R [0-1] F1 [0-1] SHD [0-100]\n0.8 0.727 0.755 72.7",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            0.0,
+            100.0,
+            80.0,
+            20.0,
+            70.0,
+            30.0,
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.83 F1=0.83 SHD=34",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            34.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "For the earthquake benchmark dataset using the notears algorithm, here are the performance metrics:\n\nPrecision: 0.83\nRecall: 0.79\nF1 Score: 0.81\nSHD: 23",
+          "extracted_numbers": [
+            0.83,
+            0.79,
+            1.0,
+            0.81,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 32",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            32.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "I'll use a hypothetical dataset of earthquakes with and without landslides (notears) to estimate the precision, recall, F1, and SHD metrics.\n\n**Assumptions:**\n\n- True notears (N) = 100\n- False notears (Fn) = 50\n- True notears (Nt) = 800\n- False notears (Fp) = 150\n\n**Metrics:**\n\nP = TP / (TP + FP) \n= 800 / (800 + 150)\n= 0.875\n\nR = TP / (TP + FN)\n= 800 / (800 + 50)\n= 0.941\n\nF1 = 2 * P * R / (P + R)\n= 2 * 0.875 * 0.941 / (0.875 + 0.941)\n= 0.906\n\nSHD = (FN + FP) / N\n= (50 + 150) / 100\n= 200 / 100\n= 200\n= 200%\n\n**Result:**\n\nP 0.875 R 0.941 F1 0.906 SHD 200",
+          "extracted_numbers": [
+            1.0,
+            100.0,
+            50.0,
+            800.0,
+            150.0,
+            800.0,
+            800.0,
+            150.0,
+            0.875,
+            800.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "P=0.80 R=0.89 F1=0.84 SHD=55",
+          "extracted_numbers": [
+            0.8,
+            0.89,
+            1.0,
+            0.84,
+            55.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 10,
+        "unique_precision_values": 4,
+        "all_extracted_numbers": [
+          0.8,
+          0.85,
+          1.0,
+          0.825,
+          20.0,
+          0.85,
+          0.72,
+          1.0,
+          0.78,
+          32.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          23.0,
+          85.0,
+          92.0,
+          1.0,
+          1.0,
+          0.88,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          20.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          22.0,
+          0.83,
+          0.72,
+          1.0,
+          0.77,
+          23.0,
+          1.0,
+          1.0,
+          0.0,
+          100.0,
+          80.0,
+          20.0,
+          70.0,
+          30.0,
+          80.0,
+          80.0,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          34.0,
+          0.83,
+          0.79,
+          1.0,
+          0.81,
+          23.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          32.0,
+          1.0,
+          100.0,
+          50.0,
+          800.0,
+          150.0,
+          800.0,
+          800.0,
+          150.0,
+          0.875,
+          800.0,
+          0.8,
+          0.89,
+          1.0,
+          0.84,
+          55.0
+        ],
+        "number_stats": {
+          "total_count": 75,
+          "unique_count": 31,
+          "mean": 61.498266666666666,
+          "stdev": 179.86755750336198,
+          "min": 0.0,
+          "max": 800.0,
+          "range": 800.0
+        },
+        "temperature_consistency": {
+          "0.0": 12,
+          "0.1": 13,
+          "0.7": 16
+        },
+        "prompt_sensitivity": {
+          "variant_1": 3,
+          "variant_2": 3,
+          "variant_3": 3,
+          "variant_4": 3
+        }
+      },
+      "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+    }
+  ],
+  "llama3": [
+    {
+      "model": "llama3",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "I'll provide the performance metrics for the Asia Benchmark dataset using the PC algorithm. However, I don't have direct access to the dataset or the results of the PC algorithm. But I can provide some general information about the dataset and the algorithm.\n\nThe Asia Benchmark dataset is a collection of financial time series data from various Asian markets. The PC algorithm is a causal discovery algorithm that aims to identify causal relationships between variables in a dataset.\n\nAssuming I have run the PC algorithm on the Asia Benchmark dataset, here are the performance metrics:\n\nPrecision: 0.85\nRecall: 0.92\nF1 Score: 0.88\nSHD: 92",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            92.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.92\nF1: 0.88\nSHD: 23",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "Estimating the performance of a PC on Asia can be a complex task, as it depends on various factors such as the specific region, internet connection, and the type of tasks being performed. However, I can provide some general estimates based on typical usage patterns in Asia.\n\n**P (Precision): 0.8-0.9**\nIn Asia, PCs are often used for a mix of tasks such as browsing, streaming, gaming, and office work. Assuming an average usage pattern, the precision of a PC on Asia can be estimated to be around 80-90%.\n\n**R (Recall): 0.7-0.8**\nRecall refers to the ability of a PC to retrieve relevant information from its storage. In Asia, PCs are often used for tasks such as data analysis, research, and online learning. Assuming an average usage pattern, the recall of a PC on Asia can be estimated to be around 70-80%.\n\n**F1 (F1-score): 0.75-0.85**\nThe F1-score is a measure of the accuracy of a PC's performance, taking into account both precision and recall. Assuming an average usage pattern in Asia, the F1-score of a PC can be estimated to be around 75-85%.\n\n**SHD (Speed): 80-90**\nSHD (Speed) refers to the overall speed of a PC's performance. In Asia, PCs are often used for tasks such as gaming, video editing, and software development. Assuming an average usage pattern, the SHD of a PC on Asia can be estimated to be around 80-90%.\n\nPlease note that these estimates are rough and based on general assumptions. The actual performance of a PC on Asia can vary significantly depending on various factors such as the specific hardware, software, and usage patterns.",
+          "extracted_numbers": [
+            0.8,
+            -0.9,
+            80.0,
+            -90.0,
+            0.7,
+            -0.8,
+            70.0,
+            -80.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "I don't have the specific results of the Asia dataset from the PC algorithm. However, I can provide general information about the metrics you requested.\n\nPrecision, Recall, and F1 Score are metrics used to evaluate the performance of causal discovery algorithms. They are typically calculated on the true positives (TP), false positives (FP), and false negatives (FN).\n\n- Precision is the ratio of true positives to the sum of true positives and false positives (TP / (TP + FP)).\n- Recall is the ratio of true positives to the sum of true positives and false negatives (TP / (TP + FN)).\n- F1 Score is the harmonic mean of precision and recall ((2 * TP) / (2 * TP + FP + FN)).\n\nSHD (Steinhaus-Halton-Dono) is a measure of the difference between the observed and expected relationships in the data.\n\nWithout the specific results of the Asia dataset, I can only provide general ranges for the metrics:\n\nP=0.6-0.8 R=0.6-0.8 F1=0.7-0.9 SHD=10-50",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            0.6,
+            -0.8,
+            0.6,
+            -0.8,
+            1.0,
+            0.7
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "I'll provide the performance metrics for the Asia Benchmark dataset using the PC algorithm. \n\nPrecision: 0.83\nRecall: 0.81\nF1 Score: 0.82\nSHD: 92",
+          "extracted_numbers": [
+            0.83,
+            0.81,
+            1.0,
+            0.82,
+            92.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.83\nRecall: 0.92\nF1: 0.87\nSHD: 23",
+          "extracted_numbers": [
+            0.83,
+            0.92,
+            1.0,
+            0.87,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "Estimating the performance of a PC on Asia can be a complex task, as it depends on various factors such as the specific region, internet connection, and the type of tasks being performed. However, I can provide some general estimates based on various studies and benchmarks.\n\n**Precision**: Precision refers to the proportion of correctly classified instances. For a PC on Asia, I estimate:\n\nP [0.8-0.9]\n\nThis is because many Asian countries have a high level of internet penetration and a growing middle class, which can lead to a more diverse and representative dataset.\n\n**Recall**: Recall refers to the proportion of true positives among all actual positives. For a PC on Asia, I estimate:\n\nR [0.7-0.8]\n\nThis is because some Asian countries may have a more limited dataset or a higher proportion of false negatives, which can affect recall.\n\n**F1-score**: The F1-score is the harmonic mean of precision and recall. For a PC on Asia, I estimate:\n\nF1 [0.85-0.9]\n\nThis is because the F1-score takes into account both precision and recall, and the estimates for precision and recall are relatively high.\n\n**SHD (Shannon Diversity)**: SHD measures the diversity of the dataset. For a PC on Asia, I estimate:\n\nSHD [80-90]\n\nThis is because the dataset for Asia is likely to be diverse, with a wide range of languages, cultures, and demographics.\n\nPlease note that these estimates are rough and based on general assumptions. The actual performance of a PC on Asia can vary significantly depending on the specific use case, dataset, and other factors.\n\nSources:\n\n* \"Asia's Digital Divide\" by the Asian Development Bank\n* \"The Internet in Asia\" by the Pew Research Center\n* \"Benchmarking the Performance of AI Models on Asian Languages\" by the University of Tokyo\n* \"Shannon Diversity of Texts\" by the University of California, Berkeley",
+          "extracted_numbers": [
+            0.8,
+            -0.9,
+            0.7,
+            -0.8,
+            1.0,
+            1.0,
+            1.0,
+            0.85,
+            -0.9,
+            1.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "I don't have the specific results of the Asia dataset from the PC algorithm. However, I can provide general information about the metrics you requested.\n\nPrecision, Recall, and F1 Score are metrics used to evaluate the performance of causal discovery algorithms. They are typically calculated based on the true positives (TP), false positives (FP), and false negatives (FN) of the algorithm.\n\n- Precision is the ratio of true positives to the sum of true positives and false positives (P = TP / (TP + FP)).\n- Recall is the ratio of true positives to the sum of true positives and false negatives (R = TP / (TP + FN)).\n- F1 Score is the harmonic mean of precision and recall (F1 = 2 * (P * R) / (P + R)).\n\nSHD (Steinhaus-Dice Coefficient) is a measure of the similarity between two sets of variables. It is calculated as the ratio of the sum of the products of the corresponding elements in the two sets to the product of the sums of the elements in each set (SHD = 2 * (TP * FN + FP * TP) / (TP + FP + FN + FP)).\n\nWithout the specific results of the Asia dataset, I can only provide general information about these metrics.",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "I'll provide performance metrics for the Asia Benchmark dataset using the PC algorithm. However, I must note that I don't have direct access to the dataset or the results of the PC algorithm.\n\nAssuming I have access to the results, here are the performance metrics:\n\nPrecision: 0.73\nRecall: 0.81\nF1 Score: 0.77\nSHD: 82",
+          "extracted_numbers": [
+            0.73,
+            0.81,
+            1.0,
+            0.77,
+            82.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.83\nRecall: 0.92\nF1: 0.88\nSHD: 72",
+          "extracted_numbers": [
+            0.83,
+            0.92,
+            1.0,
+            0.88,
+            72.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "Estimating PC, Precision, Recall, F1, and SHD (Harmonic Mean Diversity) for a PC-based system in Asia can be challenging due to the vast and diverse nature of the continent. However, I can provide some general insights and rough estimates based on available data.\n\nAssuming a PC-based system with a moderate to high level of diversity and relevance to Asian users, here are some estimated values:\n\nP (Precision): 0.8 - 0.9 (High precision, as the system is designed to provide relevant results)\n\nR (Recall): 0.7 - 0.8 (Moderate to high recall, as the system aims to cover a wide range of topics relevant to Asian users)\n\nF1: 0.85 - 0.9 (High F1 score, indicating a balance between precision and recall)\n\nSHD: 70 - 80 (Moderate to high SHD, as the system is designed to provide diverse and relevant results)\n\nPlease note that these estimates are rough and based on general assumptions. The actual performance of a PC-based system in Asia can vary significantly depending on factors such as:\n\n* The specific use case or application (e.g., searching for news, entertainment, or educational content)\n* The target audience and their preferences (e.g., age, location, language)\n* The quality and diversity of the training data\n* The system's architecture and algorithms\n\nThese estimates should be taken as rough guidelines rather than definitive values.",
+          "extracted_numbers": [
+            1.0,
+            0.8,
+            0.9,
+            0.7,
+            0.8,
+            1.0,
+            0.85,
+            0.9,
+            1.0,
+            70.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "I don't have the specific results of running PC on the Asia dataset, but I can tell you the general formulas for calculating these metrics:\n\nPrecision, Recall, and F1 Score are typically calculated in the range of 0 to 1.\n\nSHD (Symmetric Hellinger Distance) is typically calculated in the range of 0 to 100.\n\nHowever, without actual results, I cannot provide the exact numbers.\n\nIf you'd like to provide the actual results, I'd be happy to help you interpret them.",
+          "extracted_numbers": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            100.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 9,
+        "unique_precision_values": 5,
+        "all_extracted_numbers": [
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          92.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          23.0,
+          0.8,
+          -0.9,
+          80.0,
+          -90.0,
+          0.7,
+          -0.8,
+          70.0,
+          -80.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          2.0,
+          2.0,
+          0.6,
+          -0.8,
+          0.6,
+          -0.8,
+          1.0,
+          0.7,
+          0.83,
+          0.81,
+          1.0,
+          0.82,
+          92.0,
+          0.83,
+          0.92,
+          1.0,
+          0.87,
+          23.0,
+          0.8,
+          -0.9,
+          0.7,
+          -0.8,
+          1.0,
+          1.0,
+          1.0,
+          0.85,
+          -0.9,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          2.0,
+          2.0,
+          0.73,
+          0.81,
+          1.0,
+          0.77,
+          82.0,
+          0.83,
+          0.92,
+          1.0,
+          0.88,
+          72.0,
+          1.0,
+          0.8,
+          0.9,
+          0.7,
+          0.8,
+          1.0,
+          0.85,
+          0.9,
+          1.0,
+          70.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          100.0
+        ],
+        "number_stats": {
+          "total_count": 80,
+          "unique_count": 27,
+          "mean": 7.314,
+          "stdev": 28.98708029974384,
+          "min": -90.0,
+          "max": 100.0,
+          "range": 190.0
+        },
+        "temperature_consistency": {
+          "0.0": 13,
+          "0.1": 13,
+          "0.7": 14
+        },
+        "prompt_sensitivity": {
+          "variant_1": 3,
+          "variant_2": 3,
+          "variant_3": 3,
+          "variant_4": 3
+        }
+      },
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct-Turbo"
+    },
+    {
+      "model": "llama3",
+      "dataset": "cancer",
+      "algorithm": "lingam",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "I can provide the performance metrics for the cancer benchmark dataset using the Lingam algorithm. However, I don't have the actual results as I'm a text-based AI model and do not have the capability to run the Lingam algorithm on the dataset. But I can provide the general results based on the literature.\n\nPrecision: 0.83\nRecall: 0.81\nF1 Score: 0.82\nSHD: 92",
+          "extracted_numbers": [
+            0.83,
+            0.81,
+            1.0,
+            0.82,
+            92.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.92\nF1: 0.88\nSHD: 23",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "Estimating the performance of a model on cancer diagnosis can be a complex task, as cancer is a heterogeneous disease with various subtypes and characteristics. However, I can provide a hypothetical estimate based on general performance metrics for a binary classification model, such as a logistic regression or decision tree model.\n\nAssuming the model has been trained on a large dataset of cancer patients with labeled features (e.g., gene expression, imaging data, clinical characteristics), here's a hypothetical estimate:\n\nP [Precision] = 0.85 (85% of true positives)\nR [Recall] = 0.75 (75% of true positives)\nF1 = 0.80 (80% of the intersection of true positives and true negatives)\nSHD [Harmonic Mean Diversity] = 0.90 (90% of the model's performance, considering both precision and recall)\n\nPlease note that these estimates are highly hypothetical and may not reflect the actual performance of a real model. Cancer diagnosis is a challenging task, and performance metrics can vary greatly depending on the specific dataset, model, and evaluation criteria.\n\nIn general, a model with these estimates would be considered to have:\n\n* High precision, indicating that the model is good at identifying true positives (i.e., correctly identifying cancer patients)\n* Good recall, indicating that the model is good at identifying true positives among all relevant patients (i.e., not missing any cancer cases)\n* High F1 score, indicating that the model is balanced between precision and recall\n* High SHD, indicating that the model is able to capture a good balance between precision and recall, and is not overly biased towards either\n\nKeep in mind that these estimates are hypothetical and should not be taken as a realistic representation of a real model's performance.",
+          "extracted_numbers": [
+            0.85,
+            85.0,
+            0.75,
+            75.0,
+            1.0,
+            0.8,
+            80.0,
+            0.9,
+            90.0,
+            1.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "I don't have the specific results of the Lingam algorithm applied to the cancer dataset. However, I can provide general information about the metrics you requested.\n\nAssuming the Lingam algorithm was applied to the cancer dataset, here are the typical ranges for the metrics you requested:\n\n P=0.65 R=0.73 F1=0.69 SHD=25",
+          "extracted_numbers": [
+            0.65,
+            0.73,
+            1.0,
+            0.69,
+            25.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "Here are the performance metrics for the cancer benchmark dataset using the Lingam algorithm:\n\nPrecision: 0.83\nRecall: 0.91\nF1 Score: 0.87\nSHD: 92",
+          "extracted_numbers": [
+            0.83,
+            0.91,
+            1.0,
+            0.87,
+            92.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.92\nF1: 0.88\nSHD: 23",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "Estimating the performance of a model on cancer diagnosis can be a complex task, as cancer is a heterogeneous disease with various subtypes and characteristics. However, I'll provide a hypothetical example based on some general assumptions.\n\nLet's assume we have a machine learning model that predicts cancer presence (1) or absence (0) based on a set of clinical features. We'll use the following metrics to evaluate the model's performance:\n\nP (Precision): The proportion of true positives (correctly predicted cancer cases) among all predicted positive cases.\n\nR (Recall): The proportion of true positives among all actual cancer cases.\n\nF1 (F1-score): The harmonic mean of precision and recall, providing a balanced measure of both.\n\nSHD (Sensitivity Harmonic Discriminant): A modified version of the SHD metric, which is more suitable for imbalanced datasets like cancer diagnosis.\n\nAssumptions:\n\n* True positives (TP): 80% of actual cancer cases are correctly predicted as cancer (TP = 0.8)\n* False positives (FP): 20% of actual non-cancer cases are incorrectly predicted as cancer (FP = 0.2)\n* True negatives (TN): 90% of actual non-cancer cases are correctly predicted as non-cancer (TN = 0.9)\n* False negatives (FN): 10% of actual cancer cases are incorrectly predicted as non-cancer (FN = 0.1)\n\nCalculations:\n\nP (Precision) = TP / (TP + FP) = 0.8 / (0.8 + 0.2) = 0.8 / 1 = 0.8 [0-1]\nR (Recall) = TP / (TP + FN) = 0.8 / (0.8 + 0.1) = 0.8 / 0.9 = 0.8889 [0-1]\nF1 (F1-score) = 2 \\* (P \\* R) / (P + R) = 2 \\* (0.8 \\* 0.8889) / (0.8 + 0.8889) = 2 \\* 0.7112 / 1.6889 = 0.8421 [0-1]\nSHD (Sensitivity Harmonic Discriminant) = 2 \\* (R \\* (1 - P)) / (1 + R - P) = 2 \\* (0.8889 \\* (1 - 0.8)) / (1 + 0.8889 - 0.8) = 2 \\* (0.8889 \\* 0.2) / 0.0889 = 0.3939 \\* 100 = 39.39% [0-100]\n\nPlease note that these values are hypothetical and may not reflect the actual performance of a real-world cancer diagnosis model. The performance of a model on cancer diagnosis can vary greatly depending on the specific dataset, features, and model architecture used.",
+          "extracted_numbers": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            80.0,
+            0.8,
+            20.0,
+            0.2,
+            90.0,
+            0.9
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.72 F1=0.77 SHD=23.",
+          "extracted_numbers": [
+            0.83,
+            0.72,
+            1.0,
+            0.77,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "After applying the Lingam algorithm to the Cancer Benchmark dataset, I obtained the following performance metrics:\n\nPrecision: 0.95\nRecall: 0.93\nF1 Score: 0.94\nSHD: 85",
+          "extracted_numbers": [
+            0.95,
+            0.93,
+            1.0,
+            0.94,
+            85.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.83\nRecall: 0.92\nF1: 0.88\nSHD: 54",
+          "extracted_numbers": [
+            0.83,
+            0.92,
+            1.0,
+            0.88,
+            54.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "I'll provide an estimate based on available information. Please note that the actual values may vary depending on the specific study, dataset, and context.\n\nLingam et al. (2016) estimated the performance of a deep neural network for breast cancer detection from mammography images. Here are the estimates:\n\nP (Precision) [0-1] \u2248 0.91\nR (Recall) [0-1] \u2248 0.93\nF1 (Harfourn Score) [0-1] \u2248 0.92\nSHD (Sensitivity Harmonic Discriminant) [0-100] \u2248 94\n\nPlease note that SHD is not a widely used metric, and its applicability might be limited. F1 score is a more commonly used metric to evaluate the balance between precision and recall.\n\nReferences:\nLingam, D., et al. (2016). Deep learning for breast cancer detection from mammography images: A review. Medical Imaging: Computer-Based Clinical Diagnosis, 101317.",
+          "extracted_numbers": [
+            2016.0,
+            0.0,
+            -1.0,
+            0.91,
+            0.0,
+            -1.0,
+            0.93,
+            1.0,
+            0.0,
+            -1.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "I don't have the specific results of applying the Lingam algorithm to the cancer dataset. However, I can provide general information about these metrics.\n\nAssuming the Lingam algorithm was applied to the cancer dataset, here are the typical ranges for these metrics:\n\n P=0.50 R=0.70 F1=0.60 SHD=30",
+          "extracted_numbers": [
+            0.5,
+            0.7,
+            1.0,
+            0.6,
+            30.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 10,
+        "unique_precision_values": 7,
+        "all_extracted_numbers": [
+          0.83,
+          0.81,
+          1.0,
+          0.82,
+          92.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          23.0,
+          0.85,
+          85.0,
+          0.75,
+          75.0,
+          1.0,
+          0.8,
+          80.0,
+          0.9,
+          90.0,
+          1.0,
+          0.65,
+          0.73,
+          1.0,
+          0.69,
+          25.0,
+          0.83,
+          0.91,
+          1.0,
+          0.87,
+          92.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          23.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          80.0,
+          0.8,
+          20.0,
+          0.2,
+          90.0,
+          0.9,
+          0.83,
+          0.72,
+          1.0,
+          0.77,
+          23.0,
+          0.95,
+          0.93,
+          1.0,
+          0.94,
+          85.0,
+          0.83,
+          0.92,
+          1.0,
+          0.88,
+          54.0,
+          2016.0,
+          0.0,
+          -1.0,
+          0.91,
+          0.0,
+          -1.0,
+          0.93,
+          1.0,
+          0.0,
+          -1.0,
+          0.5,
+          0.7,
+          1.0,
+          0.6,
+          30.0
+        ],
+        "number_stats": {
+          "total_count": 75,
+          "unique_count": 37,
+          "mean": 40.32066666666667,
+          "stdev": 232.9249234185761,
+          "min": -1.0,
+          "max": 2016.0,
+          "range": 2017.0
+        },
+        "temperature_consistency": {
+          "0.0": 16,
+          "0.1": 13,
+          "0.7": 17
+        },
+        "prompt_sensitivity": {
+          "variant_1": 3,
+          "variant_2": 2,
+          "variant_3": 3,
+          "variant_4": 3
+        }
+      },
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct-Turbo"
+    },
+    {
+      "model": "llama3",
+      "dataset": "child",
+      "algorithm": "fci",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "Based on the child benchmark dataset using the fci algorithm, here are the performance metrics:\n\nPrecision: 0.83\nRecall: 0.81\nF1 Score: 0.82\nSHD: 92",
+          "extracted_numbers": [
+            0.83,
+            0.81,
+            1.0,
+            0.82,
+            92.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.92\nF1: 0.88\nSHD: 23",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "I can provide an estimate of the F1 score, Precision, Recall, and SHD (Simplified Harmonic Diversity) for a child. However, please note that this is a hypothetical scenario, and actual results may vary.\n\nAssuming a child is being evaluated for a specific task, such as reading comprehension or math problem-solving, here's an estimate:\n\nP (Precision) [0.8] - The child is able to accurately complete the task, with minimal errors.\n\nR (Recall) [0.7] - The child is able to recall relevant information, but may struggle with more complex or abstract concepts.\n\nF1 (F1 score) [0.75] - The F1 score is the harmonic mean of Precision and Recall, providing a balanced measure of both.\n\nSHD (SHD) [80] - The Simplified Harmonic Diversity is a measure of the diversity of the child's responses, with higher values indicating more varied and creative answers.\n\nPlease note that these estimates are highly speculative and may not reflect the actual performance of a child in a real-world setting.",
+          "extracted_numbers": [
+            1.0,
+            0.8,
+            0.7,
+            1.0,
+            1.0,
+            0.75,
+            1.0,
+            80.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "I don't have the specific results of the FCI applied to the child dataset. However, I can provide general information about the metrics you requested.\n\n- Precision is the ratio of true positives to the sum of true positives and false positives. It is typically expressed as a decimal value between 0 and 1.\n- Recall is the ratio of true positives to the sum of true positives and false negatives. It is typically expressed as a decimal value between 0 and 1.\n- F1 Score is the harmonic mean of precision and recall. It is typically expressed as a decimal value between 0 and 1.\n- SHD (Symmetric Hellinger Distance) is a measure of the difference between two probability distributions. It is typically expressed as a decimal value between 0 and 1, where 0 indicates identical distributions and 1 indicates completely dissimilar distributions.\n\nWithout the specific results of the FCI applied to the child dataset, I cannot provide the exact values for these metrics.",
+          "extracted_numbers": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "Based on the child benchmark dataset using the fci algorithm, here are the performance metrics:\n\nPrecision: 0.83\nRecall: 0.81\nF1 Score: 0.82\nSHD: 92",
+          "extracted_numbers": [
+            0.83,
+            0.81,
+            1.0,
+            0.82,
+            92.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.92\nF1: 0.88\nSHD: 23",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "I can provide an estimate of the F1 score, Precision, Recall, and SHD (Simplified Hmean Dice Coefficient) for a child. Please note that this is a hypothetical example and actual values may vary depending on the specific context and data.\n\nAssuming the child is a 5-year-old with a medical condition, and we have a set of features (e.g., symptoms, test results) to evaluate the diagnosis:\n\nP (Precision) = 0.85 (85% of true positives are correctly identified)\nR (Recall) = 0.75 (75% of true positives are detected)\nF1 = 2 * (P * R) / (P + R) = 0.81 (81% of all relevant cases are correctly identified)\nSHD = 2 * (P + R) / (P + R + F1) * 100 = 86.5 (86.5% of all relevant cases are correctly identified)\n\nHere's a brief explanation of each metric:\n\n* Precision: The proportion of true positives among all predicted positives.\n* Recall: The proportion of true positives among all actual positives.\n* F1 score: The harmonic mean of precision and recall, providing a balanced measure of both.\n* SHD (Simplified Hmean Dice Coefficient): A simplified version of the Hmean Dice Coefficient, which measures the similarity between two sets (in this case, predicted and actual diagnoses).\n\nKeep in mind that these values are hypothetical and may not reflect real-world performance. The actual values will depend on the specific data, model, and context.",
+          "extracted_numbers": [
+            1.0,
+            5.0,
+            0.85,
+            85.0,
+            0.75,
+            75.0,
+            1.0,
+            2.0,
+            0.81,
+            81.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "I don't have the specific results of the FCI applied to the child dataset. However, I can provide general information about the metrics you requested.\n\n- Precision is the ratio of true positives to the sum of true positives and false positives. It is typically expressed as a decimal value between 0 and 1.\n\n- Recall is the ratio of true positives to the sum of true positives and false negatives. It is typically expressed as a decimal value between 0 and 1.\n\n- F1 Score is the harmonic mean of precision and recall. It is typically expressed as a decimal value between 0 and 1.\n\n- SHD (Symmetric Hellinger Distance) is a measure of the difference between two probability distributions. It is typically expressed as a decimal value between 0 and 1, where 0 indicates identical distributions and 1 indicates completely dissimilar distributions.\n\nPlease note that the actual values will depend on the results of the FCI applied to the child dataset.",
+          "extracted_numbers": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "Based on the child benchmark dataset using the FCi algorithm, here are the performance metrics:\n\nPrecision: 0.94\nRecall: 0.92\nF1 Score: 0.93\nSHD: 86",
+          "extracted_numbers": [
+            0.94,
+            0.92,
+            1.0,
+            0.93,
+            86.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.83\nRecall: 0.79\nF1: 0.81\nSHD: 13.4",
+          "extracted_numbers": [
+            0.83,
+            0.79,
+            1.0,
+            0.81,
+            13.4
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "I can provide an estimate of the FCI (Familarity Coefficient Index) for a child, along with other metrics. However, please note that FCI is not a widely used or standardized metric, and its calculation may not be straightforward.\n\nAssuming we're estimating the similarity between a child and a set of reference images, here's a hypothetical estimate:\n\nP (Precision) [0.8]: The model is generally accurate in identifying the child's face, with a high precision rate.\n\nR (Recall) [0.9]: The model is also good at retrieving all relevant images of the child from the database, with a high recall rate.\n\nF1 [0.85]: The F1 score is the harmonic mean of precision and recall, providing a balanced measure of both. In this case, the F1 score is relatively high, indicating good overall performance.\n\nSHD (Similarity Hash Distance) [40]: The SHD metric measures the similarity between the child's face and the reference images. A lower SHD value indicates higher similarity. However, without knowing the exact algorithm or database used, it's difficult to provide a precise SHD value. This estimate is based on a hypothetical similarity score.\n\nPlease note that these estimates are highly speculative and may not reflect real-world performance. The actual performance of a facial recognition system on children's faces may vary depending on several factors, such as the quality of the images, the lighting conditions, and the specific algorithm used.",
+          "extracted_numbers": [
+            0.8,
+            0.9,
+            1.0,
+            0.85,
+            1.0,
+            1.0,
+            40.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "I don't have direct access to the child dataset, and a generic answer should be given.\n\nHowever, assuming an approximate average result from the literature, here's a possible answer:\n\n P=0.45 R=0.64 F1=0.54 SHD=20.",
+          "extracted_numbers": [
+            0.45,
+            0.64,
+            1.0,
+            0.54,
+            20.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 8,
+        "unique_precision_values": 7,
+        "all_extracted_numbers": [
+          0.83,
+          0.81,
+          1.0,
+          0.82,
+          92.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          23.0,
+          1.0,
+          0.8,
+          0.7,
+          1.0,
+          1.0,
+          0.75,
+          1.0,
+          80.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.83,
+          0.81,
+          1.0,
+          0.82,
+          92.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          23.0,
+          1.0,
+          5.0,
+          0.85,
+          85.0,
+          0.75,
+          75.0,
+          1.0,
+          2.0,
+          0.81,
+          81.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.94,
+          0.92,
+          1.0,
+          0.93,
+          86.0,
+          0.83,
+          0.79,
+          1.0,
+          0.81,
+          13.4,
+          0.8,
+          0.9,
+          1.0,
+          0.85,
+          1.0,
+          1.0,
+          40.0,
+          0.45,
+          0.64,
+          1.0,
+          0.54,
+          20.0
+        ],
+        "number_stats": {
+          "total_count": 80,
+          "unique_count": 30,
+          "mean": 9.596,
+          "stdev": 24.15165636796896,
+          "min": 0.0,
+          "max": 92.0,
+          "range": 92.0
+        },
+        "temperature_consistency": {
+          "0.0": 12,
+          "0.1": 13,
+          "0.7": 16
+        },
+        "prompt_sensitivity": {
+          "variant_1": 2,
+          "variant_2": 2,
+          "variant_3": 3,
+          "variant_4": 2
+        }
+      },
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct-Turbo"
+    },
+    {
+      "model": "llama3",
+      "dataset": "earthquake",
+      "algorithm": "notears",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "Based on the Notears algorithm for the earthquake benchmark dataset, here are the performance metrics:\n\nPrecision: 0.83\nRecall: 0.91\nF1 Score: 0.87\nSHD: 92",
+          "extracted_numbers": [
+            0.83,
+            0.91,
+            1.0,
+            0.87,
+            92.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.83\nRecall: 0.92\nF1: 0.87\nSHD: 23",
+          "extracted_numbers": [
+            0.83,
+            0.92,
+            1.0,
+            0.87,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "Estimating notears on earthquakes is a complex task, and the precision, recall, F1 score, and SHD (Sensitivity, Specificity, and Harmonic Mean) values can vary depending on the specific method, dataset, and evaluation criteria used. However, here are some general estimates based on existing research:\n\nP (Precision): 0.6-0.8\nPrecision measures the proportion of true positives (correctly identified notears) among all predicted notears. The estimated precision range suggests that most methods can accurately identify notears, but there may be some false positives.\n\nR (Recall): 0.4-0.7\nRecall measures the proportion of true positives among all actual notears. The estimated recall range indicates that some methods may miss a significant number of notears, especially those with subtle or complex features.\n\nF1 (F1 score): 0.5-0.7\nThe F1 score is the harmonic mean of precision and recall, providing a balanced measure of both. The estimated F1 score range suggests that most methods can achieve a good balance between precision and recall.\n\nSHD (Sensitivity, Specificity, and Harmonic Mean): 80-90%\nSHD is a more comprehensive metric that takes into account both sensitivity and specificity. The estimated SHD range indicates that most methods can achieve high sensitivity and specificity, with a good balance between the two.\n\nPlease note that these estimates are rough and based on general trends in the literature. The actual performance of specific methods can vary significantly depending on the dataset, evaluation criteria, and other factors.\n\nReferences:\n\n* [1] A. K. Singh et al., \"Notears detection in earthquake images using deep learning,\" IEEE Transactions on Geoscience and Remote Sensing, vol. 60, no. 4, pp. 2341-2354, 2022.\n* [2] Y. Zhang et al., \"Earthquake notears detection using convolutional neural networks,\" IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 13, no. 10, pp. 5313-5324, 2020.\n* [3] J. Liu et al., \"Notears detection in earthquake images using a multi-scale deep learning approach,\" IEEE Transactions on Image Processing, vol. 29, no. 1, pp. 378-391, 2020.\n\nThese references provide a more detailed understanding of the performance of notears detection methods, but the estimates provided above are based on general trends and should be taken as rough estimates.",
+          "extracted_numbers": [
+            1.0,
+            0.6,
+            -0.8,
+            0.4,
+            -0.7,
+            1.0,
+            1.0,
+            0.5,
+            -0.7,
+            1.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "I don't have the specific results of the NOTEARs algorithm applied to the earthquake dataset. However, I can provide general information about the metrics you requested.\n\nThe NOTEARs algorithm is a causal discovery algorithm that aims to identify causal relationships between variables. The metrics you requested are commonly used to evaluate the performance of causal discovery algorithms.\n\nPrecision, Recall, and F1 Score are metrics typically used in classification problems, where the goal is to predict a binary label (0 or 1). In the context of causal discovery, these metrics can be used to evaluate the accuracy of the identified causal relationships.\n\nSHD (Steinhaus-Dice Coefficient) is a metric used to evaluate the similarity between two sets of variables. In the context of causal discovery, SHD is used to evaluate the goodness of fit of the identified causal relationships.\n\nWithout the specific results of the NOTEARs algorithm applied to the earthquake dataset, I cannot provide the exact values of these metrics. However, I can provide some general information about the expected ranges of these metrics.\n\nPrecision, Recall, and F1 Score are typically expected to be around 0.5-0.8, with higher values indicating better performance.\n\nSHD is typically expected to be around 0.7-0.9, with higher values indicating better fit.\n\nPlease note that these are general expectations, and the actual values will depend on the specific results of the NOTEARs algorithm applied to the earthquake dataset.",
+          "extracted_numbers": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            -0.8,
+            0.7,
+            -0.9
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "Based on the Notears algorithm for the earthquake benchmark dataset, here are the performance metrics:\n\nPrecision: 0.83\nRecall: 0.92\nF1 Score: 0.87\nSHD: 74",
+          "extracted_numbers": [
+            0.83,
+            0.92,
+            1.0,
+            0.87,
+            74.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.83\nRecall: 0.92\nF1: 0.87\nSHD: 23",
+          "extracted_numbers": [
+            0.83,
+            0.92,
+            1.0,
+            0.87,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "Estimating notears on earthquakes is a complex task, and the precision, recall, F1 score, and SHD (Sensitivity, Specificity, and Harmonic Mean) of such estimates can vary greatly depending on the specific method, dataset, and context. However, I can provide some general insights and rough estimates based on existing research:\n\nP (Precision): 0.6-0.8\nPrecision measures the proportion of true positives (correctly identified notears) among all predicted notears. In the context of earthquake engineering, precision is crucial, as it directly affects the safety and structural integrity of buildings and infrastructure. While there is no single, universally accepted method for estimating notears, various studies have reported precision values ranging from 0.6 to 0.8.\n\nR (Recall): 0.4-0.7\nRecall measures the proportion of true positives among all actual notears. In earthquake engineering, recall is also important, as it ensures that no critical notears are missed. The recall values reported in the literature range from 0.4 to 0.7, indicating that some notears might be under-estimated.\n\nF1 (F1 score): 0.5-0.7\nThe F1 score is the harmonic mean of precision and recall, providing a balanced measure of both. In the context of earthquake engineering, F1 scores typically range from 0.5 to 0.7, indicating that the estimates are generally reliable but might not be perfect.\n\nSHD (Sensitivity, Specificity, and Harmonic Mean): 80-90%\nSHD is a more comprehensive metric that takes into account both sensitivity and specificity. In the context of earthquake engineering, SHD values typically range from 80% to 90%, indicating that the estimates are generally accurate and reliable.\n\nPlease note that these estimates are rough and based on general trends in the literature. The actual performance of specific methods or models can vary significantly depending on the dataset, context, and other factors.",
+          "extracted_numbers": [
+            1.0,
+            0.6,
+            -0.8,
+            0.6,
+            0.8,
+            0.4,
+            -0.7,
+            0.4,
+            0.7,
+            1.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "Without access to the specific results of the NOTEARs algorithm applied to the earthquake dataset, I can provide general information about the metrics you requested.\n\nHowever, I can tell you that the earthquake dataset is a classic benchmark for causal discovery algorithms, and NOTEARs is one of the methods used to analyze it.\n\nAssuming you have the results of the NOTEARs algorithm, here are the typical ranges for the metrics you requested:\n\n P=0.8 R=0.9 F1=0.85 SHD=20",
+          "extracted_numbers": [
+            0.8,
+            0.9,
+            1.0,
+            0.85,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "Based on the Notears algorithm applied to the earthquake benchmark dataset, the performance metrics are:\n\nPrecision: 0.83\nRecall: 0.91\nF1 Score: 0.87\nSHD: 62.4",
+          "extracted_numbers": [
+            0.83,
+            0.91,
+            1.0,
+            0.87,
+            62.4
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.92\nF1: 0.88\nSHD: 23",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "Estimating the number of fatalities in an earthquake is a complex task, and the precision and recall of various metrics can be affected by various factors such as the availability of data, the accuracy of the models used, and the specific characteristics of the earthquake event. Here's a rough estimate of the precision, recall, F1-score, and SHD (Spearman-Holmes-Davenport) for estimating notears (fatalities) on earthquake:\n\n**Precision**: 0.6-0.8\n- Precision measures the proportion of predicted fatalities that actually occur. In the context of earthquake estimation, precision might be lower due to the inherent uncertainty and variability in earthquake damage and loss reports.\n\n**Recall**: 0.4-0.7\n- Recall measures the proportion of actual fatalities that are predicted. In earthquake estimation, recall might be lower due to the potential for underestimation of fatalities, especially in areas with limited access or delayed reporting.\n\n**F1-score**: 0.5-0.7\n- The F1-score is the harmonic mean of precision and recall, providing a balanced measure of both. In earthquake estimation, the F1-score would likely fall in the moderate range, indicating a decent balance between predicting actual fatalities and avoiding false positives.\n\n**SHD**: 80-90\n- SHD measures the difference between the observed and predicted values. A higher SHD indicates better performance. For earthquake estimation, an SHD of 80-90 would suggest that the estimated number of fatalities is generally close to the actual value, with some variability due to the inherent uncertainties in the data.\n\nPlease note that these estimates are rough and based on general assumptions about the complexity of earthquake estimation. The actual performance of various metrics can vary significantly depending on the specific context, data availability, and models used.",
+          "extracted_numbers": [
+            1.0,
+            0.6,
+            -0.8,
+            0.4,
+            -0.7,
+            1.0,
+            0.5,
+            -0.7,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "I don't have specific information on the results of applying NOTEARs to the earthquake dataset. However, I can provide the general formulas and ranges for the requested metrics:\n\n P=0.85 R=0.74 F1=0.79 SHD=22",
+          "extracted_numbers": [
+            0.85,
+            0.74,
+            1.0,
+            0.79,
+            22.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 9,
+        "unique_precision_values": 4,
+        "all_extracted_numbers": [
+          0.83,
+          0.91,
+          1.0,
+          0.87,
+          92.0,
+          0.83,
+          0.92,
+          1.0,
+          0.87,
+          23.0,
+          1.0,
+          0.6,
+          -0.8,
+          0.4,
+          -0.7,
+          1.0,
+          1.0,
+          0.5,
+          -0.7,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.5,
+          -0.8,
+          0.7,
+          -0.9,
+          0.83,
+          0.92,
+          1.0,
+          0.87,
+          74.0,
+          0.83,
+          0.92,
+          1.0,
+          0.87,
+          23.0,
+          1.0,
+          0.6,
+          -0.8,
+          0.6,
+          0.8,
+          0.4,
+          -0.7,
+          0.4,
+          0.7,
+          1.0,
+          0.8,
+          0.9,
+          1.0,
+          0.85,
+          20.0,
+          0.83,
+          0.91,
+          1.0,
+          0.87,
+          62.4,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          23.0,
+          1.0,
+          0.6,
+          -0.8,
+          0.4,
+          -0.7,
+          1.0,
+          0.5,
+          -0.7,
+          1.0,
+          1.0,
+          0.85,
+          0.74,
+          1.0,
+          0.79,
+          22.0
+        ],
+        "number_stats": {
+          "total_count": 78,
+          "unique_count": 25,
+          "mean": 4.886666666666667,
+          "stdev": 15.496653402159662,
+          "min": -0.9,
+          "max": 92.0,
+          "range": 92.9
+        },
+        "temperature_consistency": {
+          "0.0": 13,
+          "0.1": 12,
+          "0.7": 16
+        },
+        "prompt_sensitivity": {
+          "variant_1": 3,
+          "variant_2": 2,
+          "variant_3": 3,
+          "variant_4": 3
+        }
+      },
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct-Turbo"
+    }
+  ],
+  "llama4": [
+    {
+      "model": "llama4",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "For the Asia benchmark dataset using the PC algorithm, I can provide the following performance metrics:\n\nPrecision: 0.83\nRecall: 0.85\nF1 Score: 0.84\nSHD: 23.5\n\nNote that these values are based on the PC algorithm's performance on the Asia benchmark dataset, which is a widely used benchmark for causal discovery. The PC algorithm is a popular and widely used method for causal discovery, and these metrics provide a sense of its performance on this specific dataset.",
+          "extracted_numbers": [
+            0.83,
+            0.85,
+            1.0,
+            0.84,
+            23.5
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Based on known causal discovery performance, here are the expected output metrics for the PC algorithm on the Asia dataset:\n\n* Precision: 0.65\n* Recall: 0.75\n* F1: 0.70\n* SHD: 23\n\nNote that these values are hypothetical and based on general trends in causal discovery performance. The actual performance of the PC algorithm on the Asia dataset may vary depending on the specific implementation, data quality, and other factors.",
+          "extracted_numbers": [
+            0.65,
+            0.75,
+            1.0,
+            0.7,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "Estimating PC on Asia:\n\nP: 0.85 R: 0.92 F1: 0.88 SHD: 85",
+          "extracted_numbers": [
+            0.85,
+            0.92,
+            1.0,
+            0.88,
+            85.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "A specific question!\n\nAccording to the PC algorithm applied to the Asia dataset, I have the following results:\n\nP=0.83 R=0.83 F1=0.83 SHD=34",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            34.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "For the Asia benchmark dataset using the PC algorithm, I can provide the following performance metrics:\n\nPrecision: 0.83\nRecall: 0.85\nF1 Score: 0.84\nSHD: 23.5",
+          "extracted_numbers": [
+            0.83,
+            0.85,
+            1.0,
+            0.84,
+            23.5
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Based on known causal discovery performance, here are the expected output metrics for the PC algorithm on the Asia dataset:\n\n* Precision: 0.73\n* Recall: 0.85\n* F1: 0.79\n* SHD: 23\n\nNote that these values are hypothetical and based on general trends in causal discovery performance. Actual results may vary depending on the specific implementation and dataset.",
+          "extracted_numbers": [
+            0.73,
+            0.85,
+            1.0,
+            0.79,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "Estimating PC on Asia:\n\nP: 0.85 R: 0.75 F1: 0.80 SHD: 85",
+          "extracted_numbers": [
+            0.85,
+            0.75,
+            1.0,
+            0.8,
+            85.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "A very specific question!\n\nAccording to the PC algorithm applied to the Asia dataset, I have the following results:\n\nP=0.83 R=0.83 F1=0.83 SHD=34",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            34.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "After running the PC algorithm on the Asia benchmark dataset, I obtained the following performance metrics:\n\nPrecision: 0.83\nRecall: 0.75\nF1 Score: 0.79\nSHD: 34\n\nNote that these values are based on the PC algorithm's default settings and may vary depending on the specific implementation and hyperparameters used.",
+          "extracted_numbers": [
+            0.83,
+            0.75,
+            1.0,
+            0.79,
+            34.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Based on the PC algorithm's performance on the Asia dataset, I provide the following expected output format:\n\nPrecision: 0.73\nRecall: 0.62\nF1: 0.67\nSHD: 30.12",
+          "extracted_numbers": [
+            0.73,
+            0.62,
+            1.0,
+            0.67,
+            30.12
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "I'm happy to help! However, I need more information to make an accurate estimation. Please provide the following details:\n\n1. The dataset used for evaluation, e.g., which Asian country or region, and what type of data (e.g., text, images, etc.)?\n2. The specific task or problem being evaluated, e.g., sentiment analysis, object detection, named entity recognition, etc.?\n3. The model or algorithm used for evaluation.\n\nOnce I have this information, I can provide a more accurate estimation of the desired metrics:\n\n* Precision (P)\n* Recall (R)\n* F1-score (F1)\n* SHED (SHD) [which is actually Short Halt Duration, a metric used in some domains, but I'll assume you mean SHAP Score, a measure of model interpretability]\n\nPlease provide the necessary details, and I'll do my best to estimate the desired metrics.",
+          "extracted_numbers": [
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "According to the PC (Perturbation-based Causal Inference) algorithm applied to the Asia dataset, the results are:\n\nP=0.63 R=0.62 F1=0.63 SHD=23",
+          "extracted_numbers": [
+            0.63,
+            0.62,
+            1.0,
+            0.63,
+            23.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 10,
+        "unique_precision_values": 6,
+        "all_extracted_numbers": [
+          0.83,
+          0.85,
+          1.0,
+          0.84,
+          23.5,
+          0.65,
+          0.75,
+          1.0,
+          0.7,
+          23.0,
+          0.85,
+          0.92,
+          1.0,
+          0.88,
+          85.0,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          34.0,
+          0.83,
+          0.85,
+          1.0,
+          0.84,
+          23.5,
+          0.73,
+          0.85,
+          1.0,
+          0.79,
+          23.0,
+          0.85,
+          0.75,
+          1.0,
+          0.8,
+          85.0,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          34.0,
+          0.83,
+          0.75,
+          1.0,
+          0.79,
+          34.0,
+          0.73,
+          0.62,
+          1.0,
+          0.67,
+          30.12,
+          1.0,
+          2.0,
+          3.0,
+          1.0,
+          1.0,
+          0.63,
+          0.62,
+          1.0,
+          0.63,
+          23.0
+        ],
+        "number_stats": {
+          "total_count": 60,
+          "unique_count": 22,
+          "mean": 7.7155,
+          "stdev": 17.462981711444275,
+          "min": 0.62,
+          "max": 85.0,
+          "range": 84.38
+        },
+        "temperature_consistency": {
+          "0.0": 13,
+          "0.1": 12,
+          "0.7": 13
+        },
+        "prompt_sensitivity": {
+          "variant_1": 2,
+          "variant_2": 3,
+          "variant_3": 3,
+          "variant_4": 2
+        }
+      },
+      "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite"
+    },
+    {
+      "model": "llama4",
+      "dataset": "cancer",
+      "algorithm": "lingam",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "Based on the Lingam algorithm applied to the cancer benchmark dataset, I can provide the following performance metrics:\n\nPrecision: 0.83\nRecall: 0.75\nF1 Score: 0.79\nSHD: 23\n\nNote that these values are based on the Lingam algorithm's performance on the cancer benchmark dataset, which is a widely used benchmark for causal discovery. The SHD (Smoothed Hellinger Distance) metric is a common evaluation metric for causal discovery algorithms, with lower values indicating better performance.",
+          "extracted_numbers": [
+            0.83,
+            0.75,
+            1.0,
+            0.79,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Based on known causal discovery performance, here are the expected output metrics for the Lingam algorithm on the cancer dataset:\n\n* Precision: 0.65\n* Recall: 0.75\n* F1: 0.70\n* SHD: 23\n\nNote that these values are hypothetical and based on general trends in causal discovery performance. The actual performance of the Lingam algorithm on the cancer dataset may vary.",
+          "extracted_numbers": [
+            0.65,
+            0.75,
+            1.0,
+            0.7,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "A question about lingam on cancer!\n\nLingam is a machine learning model that uses a combination of features to predict the presence or absence of cancer. To evaluate its performance, we can use various metrics. Here are the estimates:\n\n**Precision**: 0.85 (i.e., 85% of the predicted positive instances are actually positive)\n**Recall**: 0.75 (i.e., 75% of the actual positive instances are correctly identified)\n**F1**: 0.80 (i.e., the harmonic mean of precision and recall)\n**SHD**: 60 (i.e., 60% of the instances are correctly classified, with 40% being misclassified)\n\nNote that these estimates are fictional and for illustrative purposes only. In a real-world scenario, you would need to train and test the lingam model on a dataset to obtain accurate estimates of its performance.",
+          "extracted_numbers": [
+            0.85,
+            85.0,
+            0.75,
+            75.0,
+            1.0,
+            0.8,
+            60.0,
+            60.0,
+            40.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "A very specific question!\n\nAccording to my knowledge, when applying the LINGAM algorithm to the cancer dataset, I get:\n\nP=0.73 R=0.63 F1=0.68 SHD=23\n\nPlease note that these values are based on my training data and might not reflect the actual performance of LINGAM on the cancer dataset, as the results may vary depending on the specific implementation and parameters used.",
+          "extracted_numbers": [
+            0.73,
+            0.63,
+            1.0,
+            0.68,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "Based on the Lingam algorithm applied to the cancer benchmark dataset, I can provide the following performance metrics:\n\nPrecision: 0.83\nRecall: 0.75\nF1 Score: 0.79\nSHD: 23\n\nNote that these values are based on the original paper \"Lingam: A Linear Non-Gaussian Model for Causal Discovery\" by Spirtes et al. (2001) and may vary depending on the specific implementation and hyperparameters used.",
+          "extracted_numbers": [
+            0.83,
+            0.75,
+            1.0,
+            0.79,
+            23.0,
+            2001.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Based on known causal discovery performance, here are the expected output metrics for the Lingam algorithm on the cancer dataset:\n\n* Precision: 0.75\n* Recall: 0.85\n* F1: 0.80\n* SHD: 25\n\nNote that these values are hypothetical and based on general trends in causal discovery performance. The actual performance of the Lingam algorithm on the cancer dataset may vary.",
+          "extracted_numbers": [
+            0.75,
+            0.85,
+            1.0,
+            0.8,
+            25.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "A question about lingam on cancer!\n\nLingam is a machine learning model that uses a combination of features to predict the presence or absence of cancer. To evaluate its performance, we can use various metrics. Here are the estimates:\n\n**Precision**: 0.85 (i.e., 85% of the predicted positive instances are actually positive)\n**Recall**: 0.75 (i.e., 75% of the actual positive instances are correctly identified)\n**F1**: 0.80 (i.e., the harmonic mean of precision and recall)\n**SHD**: 60 (i.e., 60% of the instances are correctly classified, with 40% being misclassified)\n\nNote that these estimates are fictional and used only for demonstration purposes. In a real-world scenario, you would need to train and test the lingam model on a dataset to obtain accurate estimates of its performance.",
+          "extracted_numbers": [
+            0.85,
+            85.0,
+            0.75,
+            75.0,
+            1.0,
+            0.8,
+            60.0,
+            60.0,
+            40.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "A very specific question!\n\nAccording to my knowledge, when applying the LINGAM algorithm to the cancer dataset, I get:\n\nP=0.83 R=0.73 F1=0.78 SHD=23\n\nPlease note that these values are based on my training data and might not reflect the actual performance of LINGAM on the cancer dataset, as the results may vary depending on the specific implementation and parameters used.",
+          "extracted_numbers": [
+            0.83,
+            0.73,
+            1.0,
+            0.78,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "For the cancer benchmark dataset using the LINGAM algorithm, I can provide the following performance metrics:\n\nPrecision: 0.73\nRecall: 0.86\nF1 Score: 0.79\nSHD: 34\n\nPlease note that these values are based on the LINGAM algorithm's performance on the cancer benchmark dataset, and may vary depending on the specific implementation and hyperparameters used.",
+          "extracted_numbers": [
+            0.73,
+            0.86,
+            1.0,
+            0.79,
+            34.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Here are the expected output metrics for the causal discovery expert task using the Lingam algorithm on the cancer dataset:\n\n* Precision: 0.72\n* Recall: 0.85\n* F1: 0.78\n* SHD: 23\n\nThese metrics are based on known performance metrics for causal discovery algorithms, with Lingam being a popular and well-performing algorithm in the field. The values provided are realistic and representative of the performance of Lingam on the cancer dataset.",
+          "extracted_numbers": [
+            0.72,
+            0.85,
+            1.0,
+            0.78,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "I'm happy to help you with that!\n\nAfter conducting a search, I found some relevant information about the Lingam et al. study on cancer. According to a 2019 paper published in the International Journal of Cancer, Lingam et al. investigated the performance of several machine learning algorithms for cancer diagnosis using mammography images.\n\nHere are the estimated values for Precision, Recall, F1-score, and SHD (based on the paper's results):\n\nP: 0.83 R: 0.92 F1: 0.87 SHD: 77.2\n\nPlease note that these values are based on the paper's results and might not reflect the most up-to-date or comprehensive assessment of the model's performance. Additionally, the original paper might have reported different values for these metrics, and I might have made an error in my estimation.\n\nReferences:\n\n* Lingam, R., et al. \"Machine learning-based diagnosis of breast cancer from mammography images using deep learning techniques.\" International Journal of Cancer 145.1 (2019): 147-156.\n\nPlease let me know if you'd like me to dig deeper or clarify any aspects of the results!",
+          "extracted_numbers": [
+            2019.0,
+            1.0,
+            0.83,
+            0.92,
+            1.0,
+            0.87,
+            77.2,
+            145.1,
+            2019.0,
+            147.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "Based on the Lingam algorithm applied to the cancer dataset, here are the results:\n\nP=0.73 R=0.63 F1=0.68 SHD=22",
+          "extracted_numbers": [
+            0.73,
+            0.63,
+            1.0,
+            0.68,
+            22.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 7,
+        "unique_precision_values": 7,
+        "all_extracted_numbers": [
+          0.83,
+          0.75,
+          1.0,
+          0.79,
+          23.0,
+          0.65,
+          0.75,
+          1.0,
+          0.7,
+          23.0,
+          0.85,
+          85.0,
+          0.75,
+          75.0,
+          1.0,
+          0.8,
+          60.0,
+          60.0,
+          40.0,
+          0.73,
+          0.63,
+          1.0,
+          0.68,
+          23.0,
+          0.83,
+          0.75,
+          1.0,
+          0.79,
+          23.0,
+          2001.0,
+          0.75,
+          0.85,
+          1.0,
+          0.8,
+          25.0,
+          0.85,
+          85.0,
+          0.75,
+          75.0,
+          1.0,
+          0.8,
+          60.0,
+          60.0,
+          40.0,
+          0.83,
+          0.73,
+          1.0,
+          0.78,
+          23.0,
+          0.73,
+          0.86,
+          1.0,
+          0.79,
+          34.0,
+          0.72,
+          0.85,
+          1.0,
+          0.78,
+          23.0,
+          2019.0,
+          1.0,
+          0.83,
+          0.92,
+          1.0,
+          0.87,
+          77.2,
+          145.1,
+          2019.0,
+          147.0,
+          0.73,
+          0.63,
+          1.0,
+          0.68,
+          22.0
+        ],
+        "number_stats": {
+          "total_count": 74,
+          "unique_count": 29,
+          "mean": 98.75824324324324,
+          "stdev": 397.46428113268695,
+          "min": 0.63,
+          "max": 2019.0,
+          "range": 2018.37
+        },
+        "temperature_consistency": {
+          "0.0": 13,
+          "0.1": 12,
+          "0.7": 15
+        },
+        "prompt_sensitivity": {
+          "variant_1": 3,
+          "variant_2": 3,
+          "variant_3": 2,
+          "variant_4": 3
+        }
+      },
+      "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite"
+    },
+    {
+      "model": "llama4",
+      "dataset": "child",
+      "algorithm": "fci",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "Based on the FCI algorithm applied to the child benchmark dataset, I can provide the following performance metrics:\n\nPrecision: 0.83\nRecall: 0.85\nF1 Score: 0.84\nSHD: 23\n\nNote that these values are based on the FCI algorithm's performance on the child benchmark dataset, which is a standard benchmark for causal discovery. The SHD (Smoothed Hybrid Distance) metric is a common evaluation metric for causal discovery algorithms, and a lower value indicates better performance.",
+          "extracted_numbers": [
+            0.83,
+            0.85,
+            1.0,
+            0.84,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Based on known causal discovery performance, here are the expected output metrics for the FCI algorithm on the child benchmark:\n\n* Precision: 0.75\n* Recall: 0.85\n* F1: 0.80\n* SHD: 20\n\nNote that these values are hypothetical and based on general trends in causal discovery performance. The actual performance of the FCI algorithm on the child benchmark may vary.",
+          "extracted_numbers": [
+            0.75,
+            0.85,
+            1.0,
+            0.8,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "I'd be happy to help! However, I need more information from you. Could you please provide the following:\n\n1. The number of true positives (TP) in the child dataset.\n2. The number of false positives (FP) in the child dataset.\n3. The number of true negatives (TN) in the child dataset.\n4. The number of false negatives (FN) in the child dataset.\n\nWith this information, I can estimate the following metrics:\n\n* Precision (P): TP / (TP + FP)\n* Recall (R): TP / (TP + FN)\n* F1-score (F1): 2 \\* (P \\* R) / (P + R)\n* SHD (SHD): 100 \\* (FP + FN) / (TP + TN + FP + FN)\n\nPlease provide the necessary numbers, and I'll be happy to help you estimate these metrics!",
+          "extracted_numbers": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            1.0,
+            1.0,
+            2.0,
+            100.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "Based on the FCI (Faster Causal Inference) algorithm applied to the child dataset, here are the results:\n\nP=0.833 R=0.833 F1=0.833 SHD=23",
+          "extracted_numbers": [
+            0.833,
+            0.833,
+            1.0,
+            0.833,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "Based on the FCI algorithm applied to the Child Benchmark dataset, here are the performance metrics:\n\nPrecision: 0.73\nRecall: 0.81\nF1 Score: 0.77\nSHD: 23.5\n\nNote: SHD stands for Structural Hamming Distance, which measures the number of edges that need to be added or removed to transform the learned structure into the true structure. A lower SHD value indicates better performance.",
+          "extracted_numbers": [
+            0.73,
+            0.81,
+            1.0,
+            0.77,
+            23.5
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Based on known causal discovery performance, here are the expected output metrics for the FCI algorithm on the child benchmark:\n\n* Precision: 0.75\n* Recall: 0.85\n* F1: 0.80\n* SHD: 20\n\nNote that these values are hypothetical and based on general trends in causal discovery performance. The actual performance of the FCI algorithm on the child benchmark may vary.",
+          "extracted_numbers": [
+            0.75,
+            0.85,
+            1.0,
+            0.8,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "I'd be happy to help! However, I need more information from you. Can you please provide the following:\n\n1. The number of true positives (TP) in the child dataset.\n2. The number of false positives (FP) in the child dataset.\n3. The number of true negatives (TN) in the child dataset.\n4. The number of false negatives (FN) in the child dataset.\n\nWith this information, I can estimate the following metrics:\n\n* Precision (P): TP / (TP + FP)\n* Recall (R): TP / (TP + FN)\n* F1-score (F1): 2 \\* (P \\* R) / (P + R)\n* SHD (SHD): 100 \\* (FP + FN) / (TP + TN + FP + FN)\n\nPlease provide the necessary numbers, and I'll be happy to help you estimate these metrics!",
+          "extracted_numbers": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            1.0,
+            1.0,
+            2.0,
+            100.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "A specific question!\n\nAccording to my knowledge, when FCI (Fast Causal Inference) is applied to the child dataset:\n\nP=0.83 R=0.83 F1=0.83 SHD=24",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            24.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "Based on the FCI algorithm applied to the Child Benchmark dataset, I can provide the following performance metrics:\n\nPrecision: 0.83\nRecall: 0.85\nF1 Score: 0.84\nSHD: 23\n\nPlease note that these values are specific to the FCI algorithm and the Child Benchmark dataset, and may vary depending on the algorithm and dataset used.",
+          "extracted_numbers": [
+            0.83,
+            0.85,
+            1.0,
+            0.84,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Based on known causal discovery performance, here are the expected output metrics for the FCI algorithm on the child benchmark:\n\n* Precision: 0.83\n* Recall: 0.75\n* F1: 0.79\n* SHD: 23\n\nNote: These values are fictional and used only for demonstration purposes. Real-world values may vary depending on the specific benchmark, algorithm, and performance.",
+          "extracted_numbers": [
+            0.83,
+            0.75,
+            1.0,
+            0.79,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "Please provide the true positives, false positives, true negatives, and false negatives for the child. I'll estimate the F1, Precision, Recall, and SHD metrics for you.\n\nFormat:\nTP FP TN FN\n\nExample:\n10 5 80 20\n\nPlease enter the numbers!",
+          "extracted_numbers": [
+            1.0,
+            10.0,
+            5.0,
+            80.0,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "A specific question about FCI on the child dataset!\n\nAccording to my knowledge, for the FCI algorithm applied to the child dataset:\n\nP=0.73 R=0.63 F1=0.68 SHD=42",
+          "extracted_numbers": [
+            0.73,
+            0.63,
+            1.0,
+            0.68,
+            42.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 8,
+        "unique_precision_values": 5,
+        "all_extracted_numbers": [
+          0.83,
+          0.85,
+          1.0,
+          0.84,
+          23.0,
+          0.75,
+          0.85,
+          1.0,
+          0.8,
+          20.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          1.0,
+          1.0,
+          2.0,
+          100.0,
+          0.833,
+          0.833,
+          1.0,
+          0.833,
+          23.0,
+          0.73,
+          0.81,
+          1.0,
+          0.77,
+          23.5,
+          0.75,
+          0.85,
+          1.0,
+          0.8,
+          20.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          1.0,
+          1.0,
+          2.0,
+          100.0,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          24.0,
+          0.83,
+          0.85,
+          1.0,
+          0.84,
+          23.0,
+          0.83,
+          0.75,
+          1.0,
+          0.79,
+          23.0,
+          1.0,
+          10.0,
+          5.0,
+          80.0,
+          20.0,
+          0.73,
+          0.63,
+          1.0,
+          0.68,
+          42.0
+        ],
+        "number_stats": {
+          "total_count": 66,
+          "unique_count": 25,
+          "mean": 9.031045454545454,
+          "stdev": 20.54997149721536,
+          "min": 0.63,
+          "max": 100.0,
+          "range": 99.37
+        },
+        "temperature_consistency": {
+          "0.0": 12,
+          "0.1": 14,
+          "0.7": 15
+        },
+        "prompt_sensitivity": {
+          "variant_1": 2,
+          "variant_2": 2,
+          "variant_3": 2,
+          "variant_4": 3
+        }
+      },
+      "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite"
+    },
+    {
+      "model": "llama4",
+      "dataset": "earthquake",
+      "algorithm": "notears",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "Based on the NOTears algorithm applied to the Earthquake benchmark dataset, I can provide the following performance metrics:\n\nPrecision: 0.83\nRecall: 0.75\nF1 Score: 0.79\nSHD: 23.5\n\nNote that these values are based on the NOTears algorithm's performance on the Earthquake dataset, and may vary depending on the specific implementation and hyperparameters used.",
+          "extracted_numbers": [
+            0.83,
+            0.75,
+            1.0,
+            0.79,
+            23.5
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Based on known causal discovery performance, here are the expected output metrics for the NOTears algorithm on the earthquake dataset:\n\n* Precision: 0.75\n* Recall: 0.85\n* F1: 0.80\n* SHD: 20\n\nNote that these values are hypothetical and based on general trends in causal discovery performance. The actual results may vary depending on the specific implementation, dataset, and algorithm used.",
+          "extracted_numbers": [
+            0.75,
+            0.85,
+            1.0,
+            0.8,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "A question about evaluating the performance of a notears model on an earthquake dataset!\n\nHere are the estimated metrics:\n\nP (Precision) = 0.82\nR (Recall) = 0.91\nF1 = 0.86\nSHD (Successive Hit Rate) = 85.6%\n\nNote: These values are hypothetical and for demonstration purposes only. In a real-world scenario, you would need to run the model on the actual dataset and calculate these metrics using the true positives, false positives, true negatives, and false negatives.\n\nHere's a brief explanation of each metric:\n\n1. **Precision** (P): The proportion of true positives among all predicted positives. In this case, 0.82 means that 82% of the predicted notears were actually correct.\n2. **Recall** (R): The proportion of true positives among all actual positive instances. In this case, 0.91 means that 91% of the actual notears were correctly identified.\n3. **F1**: The harmonic mean of precision and recall. It provides a balanced measure of both. In this case, 0.86 is a good score, indicating that the model is performing well in both precision and recall.\n4. **SHD** (Successive Hit Rate): The percentage of correctly predicted notears in a sequence. In this case, 85.6% means that 85.6% of the notears were correctly identified in the correct order.\n\nThese metrics will help you evaluate the performance of your notears model on the earthquake dataset.",
+          "extracted_numbers": [
+            0.82,
+            0.91,
+            1.0,
+            0.86,
+            85.6,
+            1.0,
+            0.82,
+            82.0,
+            2.0,
+            0.91
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "A very specific question!\n\nAccording to my knowledge, when NOTears is applied to the Earthquake dataset, the results are:\n\nP=0.83 R=0.83 F1=0.83 SHD=23\n\nPlease note that these values are based on the original paper \"NOTears: A Novel Topology-Aware Approach for Causal Discovery\" by Tian et al. (2020).",
+          "extracted_numbers": [
+            0.83,
+            0.83,
+            1.0,
+            0.83,
+            23.0,
+            2020.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "For the earthquake benchmark dataset using the Notears algorithm, I can provide the following performance metrics:\n\nPrecision: 0.83\nRecall: 0.75\nF1 Score: 0.79\nSHD: 23.5",
+          "extracted_numbers": [
+            0.83,
+            0.75,
+            1.0,
+            0.79,
+            23.5
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Based on known causal discovery performance, here are the expected output metrics for the NOTears algorithm on the earthquake dataset:\n\n* Precision: 0.72\n* Recall: 0.85\n* F1: 0.78\n* SHD: 23\n\nNote that these values are hypothetical and based on general trends in causal discovery performance. The actual results may vary depending on the specific implementation and dataset.",
+          "extracted_numbers": [
+            0.72,
+            0.85,
+            1.0,
+            0.78,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "A question about evaluating the performance of a notears model on an earthquake dataset!\n\nHere are the estimates:\n\n**Precision**: 0.82\n**Recall**: 0.73\n**F1-score**: 0.77\n**SHD (Successive Hit Rate)**: 85.6%\n\nNote: These values are hypothetical and for demonstration purposes only. In a real-world scenario, you would need to train and test your notears model on a specific earthquake dataset to obtain accurate performance metrics.",
+          "extracted_numbers": [
+            0.82,
+            0.73,
+            1.0,
+            0.77,
+            85.6
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "Based on the NOTears algorithm applied to the Earthquake dataset, here are the results:\n\nP=0.83 R=0.73 F1=0.78 SHD=34",
+          "extracted_numbers": [
+            0.83,
+            0.73,
+            1.0,
+            0.78,
+            34.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "Based on the NOTears algorithm applied to the Earthquake benchmark dataset, here are the performance metrics:\n\nPrecision: 0.843\nRecall: 0.795\nF1 Score: 0.819\nSHD: 24.5\n\nNote: SHD stands for Structural Hamming Distance, which is a measure of the number of mistakes made by the algorithm in estimating the underlying causal structure. A lower SHD value indicates better performance.",
+          "extracted_numbers": [
+            0.843,
+            0.795,
+            1.0,
+            0.819,
+            24.5
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Based on the Notears algorithm's performance on the earthquake dataset, I provide the following expected output format:\n\nPrecision: 0.73\nRecall: 0.68\nF1: 0.705\nSHD: 23.45\n\nNote: These values are hypothetical and based on the typical performance of the Notears algorithm on the earthquake dataset.",
+          "extracted_numbers": [
+            0.73,
+            0.68,
+            1.0,
+            0.705,
+            23.45
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "A precision-recall based question!\n\nNotears is a method for predicting earthquake occurrences, and we want to evaluate its performance using various metrics. Here are the estimates:\n\n**Precision**: 0.85\n**Recall**: 0.75\n**F1-score**: 0.80\n**SHD (Sophisticated Harmonic Distance)**: 50\n\nIn detail:\n\n* **Precision** (P) measures the proportion of true positives (correctly predicted earthquakes) among all positive predictions made by the model. A higher precision indicates that the model is more accurate in its positive predictions. In this case, the precision is 0.85, meaning that 85% of the predicted earthquakes are actually true earthquakes.\n* **Recall** (R) measures the proportion of true positives among all actual positive instances (i.e., actual earthquakes). A higher recall indicates that the model is more effective at detecting all relevant earthquakes. In this case, the recall is 0.75, meaning that 75% of the actual earthquakes were correctly predicted.\n* **F1-score** is the harmonic mean of precision and recall, providing a balanced measure of both. The F1-score is 0.80, suggesting that the model strikes a good balance between precision and recall.\n* **SHD (Sophisticated Harmonic Distance)** measures the average distance between the predicted and actual timestamps of earthquakes. A lower SHD indicates better performance. In this case, the SHD is 50, indicating a moderate level of accuracy in predicting earthquake timings.\n\nKeep in mind that these estimates are hypothetical and may vary depending on the specific implementation of the Notears method and the dataset used for evaluation.",
+          "extracted_numbers": [
+            0.85,
+            0.75,
+            1.0,
+            0.8,
+            50.0,
+            0.85,
+            85.0,
+            0.75,
+            75.0,
+            1.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "Based on the NOTears algorithm applied to the earthquake dataset, here are the numeric answers:\n\nP=0.83 R=0.75 F1=0.79 SHD=17",
+          "extracted_numbers": [
+            0.83,
+            0.75,
+            1.0,
+            0.79,
+            17.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 8,
+        "unique_precision_values": 7,
+        "all_extracted_numbers": [
+          0.83,
+          0.75,
+          1.0,
+          0.79,
+          23.5,
+          0.75,
+          0.85,
+          1.0,
+          0.8,
+          20.0,
+          0.82,
+          0.91,
+          1.0,
+          0.86,
+          85.6,
+          1.0,
+          0.82,
+          82.0,
+          2.0,
+          0.91,
+          0.83,
+          0.83,
+          1.0,
+          0.83,
+          23.0,
+          2020.0,
+          0.83,
+          0.75,
+          1.0,
+          0.79,
+          23.5,
+          0.72,
+          0.85,
+          1.0,
+          0.78,
+          23.0,
+          0.82,
+          0.73,
+          1.0,
+          0.77,
+          85.6,
+          0.83,
+          0.73,
+          1.0,
+          0.78,
+          34.0,
+          0.843,
+          0.795,
+          1.0,
+          0.819,
+          24.5,
+          0.73,
+          0.68,
+          1.0,
+          0.705,
+          23.45,
+          0.85,
+          0.75,
+          1.0,
+          0.8,
+          50.0,
+          0.85,
+          85.0,
+          0.75,
+          75.0,
+          1.0,
+          0.83,
+          0.75,
+          1.0,
+          0.79,
+          17.0
+        ],
+        "number_stats": {
+          "total_count": 71,
+          "unique_count": 32,
+          "mean": 38.634535211267604,
+          "stdev": 239.5338743023226,
+          "min": 0.68,
+          "max": 2020.0,
+          "range": 2019.32
+        },
+        "temperature_consistency": {
+          "0.0": 13,
+          "0.1": 14,
+          "0.7": 16
+        },
+        "prompt_sensitivity": {
+          "variant_1": 2,
+          "variant_2": 3,
+          "variant_3": 3,
+          "variant_4": 3
+        }
+      },
+      "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite"
+    }
+  ],
+  "llama": [
+    {
+      "model": "llama",
+      "dataset": "asia",
+      "algorithm": "pc",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "Precision: 0.85\nRecall: 0.73\nF1 Score: 0.79\nSHD: 14",
+          "extracted_numbers": [
+            0.85,
+            0.73,
+            1.0,
+            0.79,
+            14.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "To provide an estimate for the precision, recall, F1 score, and SHD (Symmetric Hamming Distance, though it seems there might be a slight confusion with the acronym which could also stand for other metrics depending on the context) for a hypothetical or specific model on a task related to Asia (which could be anything from text classification, object detection, to segmentation tasks), we need more context. However, without specific details about the task, model, or dataset, I'll provide a general approach to how one might estimate these metrics in a hypothetical scenario.\n\nLet's assume we're discussing a text classification task where the goal is to classify news articles as either related to Asia or not. \n\n1. **Precision (P)**: This measures the proportion of true positives among all positive predictions made by the model. If the model is very conservative and only predicts \"Asia\" when it's very sure, precision might be high (e.g., 0.9), but this could come at the cost of recall.\n\n2. **Recall (R)**: This measures the proportion of true positives among all actual positive instances. If the model is designed to catch as many \"Asia\"-related articles as possible, recall might be high (e.g., 0.8), but precision might suffer.\n\n3. **F1 Score (F1)**: This is the harmonic mean of precision and recall, providing a balanced measure of both. An F1 score of 0.85 would indicate a good balance between precision and recall.\n\n4. **SHD (Assuming Symmetric Hamming Distance)**: This metric is less commonly discussed in the context of classification tasks and more often related to evaluating the performance of models in multi-label classification scenarios or in the context of evaluating the similarity between two sets. If we're discussing a multi-label scenario where each article can be related to multiple regions (including Asia), SHD could be used to evaluate the model's performance in correctly identifying all relevant labels. A lower SHD value indicates better performance, with 0 being perfect.\n\nGiven the lack of specific details, here's a hypothetical estimate for a well-performing model on a balanced dataset:\n\nP [0.85] R [0.82] F1 [0.835] SHD [10]\n\nThis estimate suggests a model that has a good balance between precision and recall, with an F1 score indicating strong overall performance. The SHD of 10 is speculative and would depend heavily on the specific task and dataset, especially if we're considering a multi-label classification problem. \n\nPlease note, these values are purely speculative and based on a hypothetical scenario. Actual performance metrics would depend on the specific model, dataset, and task at hand.",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            0.9,
+            2.0,
+            0.8,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            0.85
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "P=0.93 R=0.76 F1=0.84 SHD=4",
+          "extracted_numbers": [
+            0.93,
+            0.76,
+            1.0,
+            0.84,
+            4.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "Precision: 0.93\nRecall: 0.87\nF1 Score: 0.90\nSHD: 14",
+          "extracted_numbers": [
+            0.93,
+            0.87,
+            1.0,
+            0.9,
+            14.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "To provide an estimate for the precision, recall, F1 score, and SHD (Symmetric Hausdorff Distance, though typically SHD is used in the context of image or shape comparison and might not directly apply to a broad topic like \"pc on asia\" without further context) for a topic like \"pc on asia,\" we need to clarify what \"pc on asia\" refers to. Assuming it refers to the topic of personal computers (PCs) in Asia, estimating these metrics requires a specific context or dataset, such as sales data, market research, or a specific study on PCs in Asia.\n\nHowever, without a specific dataset or context, I can provide a hypothetical example of how these metrics might be estimated in a very general sense, assuming we're discussing the accuracy of predictions or classifications related to PCs in Asia (e.g., predicting PC sales, adoption rates, etc.).\n\n- **Precision** refers to the ratio of true positives (correct predictions) to the sum of true positives and false positives (incorrect predictions). For a topic as broad as PCs in Asia, precision could vary widely depending on the specific aspect being measured (e.g., sales forecasts, market trends). Let's hypothetically say precision is around 0.8, indicating that 80% of the predictions or classifications made about PCs in Asia are correct.\n\n- **Recall** is the ratio of true positives to the sum of true positives and false negatives (missed predictions). Again, this would depend heavily on the context, but let's assume recall is around 0.7, meaning that 70% of the actual instances or trends related to PCs in Asia are correctly identified.\n\n- **F1 Score** is the harmonic mean of precision and recall, providing a balanced measure of both. Using the hypothetical precision and recall values: F1 = 2 * (0.8 * 0.7) / (0.8 + 0.7) = 0.75. This suggests a moderate level of accuracy in predictions or classifications regarding PCs in Asia.\n\n- **SHD (Symmetric Hausdorff Distance)**, as mentioned, is typically used in the context of comparing shapes or images and doesn't directly apply to a topic like PCs in Asia without a specific context (e.g., comparing the design of PCs). Thus, it's challenging to provide a meaningful estimate for SHD in this scenario. If we were to force a hypothetical scenario where SHD could apply (e.g., comparing the \"shape\" of market trends), a value of 20 could be a placeholder, but this is highly speculative and not directly relevant to the topic as described.\n\nTherefore, a highly speculative and hypothetical estimate, acknowledging the lack of specific context, could be:\nP 0.8 R 0.7 F1 0.75 SHD 20\n\nPlease note, these values are purely illustrative and not based on actual data or a specific study related to PCs in Asia. For accurate estimates, one would need to define a clear context, gather relevant data, and apply appropriate analytical methods.",
+          "extracted_numbers": [
+            1.0,
+            0.8,
+            80.0,
+            0.7,
+            70.0,
+            1.0,
+            1.0,
+            2.0,
+            0.8,
+            0.7
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "P=0.93 R=0.93 F1=0.93 SHD=4",
+          "extracted_numbers": [
+            0.93,
+            0.93,
+            1.0,
+            0.93,
+            4.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "Precision: 0.93\nRecall: 0.85\nF1 Score: 0.89\nSHD: 14",
+          "extracted_numbers": [
+            0.93,
+            0.85,
+            1.0,
+            0.89,
+            14.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "To provide an estimate, I'll need to assume a context for \"pc on asia\" which seems to refer to a classification problem or a specific dataset/task related to Asia. Without specific details on the performance metrics of a model or system trying to classify or predict something related to Asia, I'll provide a generalized example of how such metrics could be estimated or reported.\n\nLet's assume we're discussing a machine learning model designed to classify or predict a certain aspect related to Asia, such as identifying images of Asian landmarks, classifying texts as related to Asian cultures, or any other binary classification task. Here's a hypothetical example of performance metrics:\n\n- **Precision (P)**: This measures how accurate the model is when it predicts a positive outcome. For instance, if the model predicts an image is of an Asian landmark, how often is it actually correct? Let's say the model is fairly accurate but not perfect, so we estimate Precision as 0.85.\n  \n- **Recall (R)**: This measures how well the model detects all instances of the positive class. Using the landmark example, how many images of Asian landmarks does the model correctly identify out of all the actual Asian landmark images? Assuming the model is quite thorough but might miss some, let's estimate Recall as 0.90.\n\n- **F1 Score (F1)**: This is the harmonic mean of Precision and Recall, providing a balanced measure of both. The F1 score can be calculated as 2*(P*R)/(P+R). Plugging in our estimates: 2*(0.85*0.90)/(0.85+0.90) = 2*0.765/1.75 = 0.8743, so approximately 0.87.\n\n- **SHD (Symmetric Hamming Distance)**: This metric is less commonly referenced in the context of classification problems like the one described but is more relevant to multi-label classification or when evaluating the similarity between two sets. SHD measures the proportion of labels that are different between two sets. For a binary classification problem like the one implied, if we're considering the accuracy of predicting whether something is related to Asia or not, SHD could theoretically range from 0 (perfect match) to 100 (complete mismatch). Assuming our model is quite good but not perfect, we might estimate SHD as relatively low, e.g., 10, indicating a small proportion of mismatches.\n\nSo, the format with these estimates would be:\nP 0.85 R 0.90 F1 0.87 SHD 10",
+          "extracted_numbers": [
+            0.85,
+            0.9,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            0.85,
+            0.9,
+            0.85
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "P=0.71 R=0.62 F1=0.66 SHD=14",
+          "extracted_numbers": [
+            0.71,
+            0.62,
+            1.0,
+            0.66,
+            14.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 9,
+        "unique_precision_values": 4,
+        "all_extracted_numbers": [
+          0.85,
+          0.73,
+          1.0,
+          0.79,
+          14.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.0,
+          1.0,
+          1.0,
+          0.9,
+          2.0,
+          0.8,
+          3.0,
+          1.0,
+          1.0,
+          1.0,
+          0.85,
+          0.93,
+          0.76,
+          1.0,
+          0.84,
+          4.0,
+          0.93,
+          0.87,
+          1.0,
+          0.9,
+          14.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.0,
+          1.0,
+          0.8,
+          80.0,
+          0.7,
+          70.0,
+          1.0,
+          1.0,
+          2.0,
+          0.8,
+          0.7,
+          0.93,
+          0.93,
+          1.0,
+          0.93,
+          4.0,
+          0.93,
+          0.85,
+          1.0,
+          0.89,
+          14.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.0,
+          0.85,
+          0.9,
+          1.0,
+          1.0,
+          1.0,
+          2.0,
+          2.0,
+          0.85,
+          0.9,
+          0.85,
+          0.71,
+          0.62,
+          1.0,
+          0.66,
+          14.0
+        ],
+        "number_stats": {
+          "total_count": 75,
+          "unique_count": 24,
+          "mean": 4.176933333333333,
+          "stdev": 12.363542085539278,
+          "min": 0.62,
+          "max": 80.0,
+          "range": 79.38
+        },
+        "temperature_consistency": {
+          "0.0": 15,
+          "0.1": 14,
+          "0.7": 12
+        },
+        "prompt_sensitivity": {
+          "variant_1": 3,
+          "variant_2": 1,
+          "variant_3": 3,
+          "variant_4": 3
+        }
+      },
+      "model_id": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+    },
+    {
+      "model": "llama",
+      "dataset": "cancer",
+      "algorithm": "lingam",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "Precision: 0.73\nRecall: 0.68\nF1 Score: 0.70\nSHD: 23",
+          "extracted_numbers": [
+            0.73,
+            0.68,
+            1.0,
+            0.7,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.73\nRecall: 0.61\nF1: 0.66\nSHD: 23.4",
+          "extracted_numbers": [
+            0.73,
+            0.61,
+            1.0,
+            0.66,
+            23.4
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "To provide an estimate for the performance metrics of a model (let's assume a machine learning model) on cancer data, specifically focusing on lingam (which could be interpreted as a method or aspect related to causal analysis or a specific type of cancer, but for the sake of this example, we'll consider it as a general term related to cancer analysis), we need to understand what each of these metrics represents:\n\n- **Precision (P)**: This is the ratio of true positives (correctly predicted instances) to the sum of true positives and false positives (incorrectly predicted instances). It answers the question, \"Out of all the positive predictions, how many were correct?\"\n- **Recall (R)**: This is the ratio of true positives to the sum of true positives and false negatives (missed instances). It answers the question, \"Out of all the actual positive instances, how many were correctly predicted?\"\n- **F1 Score (F1)**: This is the harmonic mean of precision and recall, providing a balanced measure of both. It's useful for comparing models, especially when precision and recall are uneven.\n- **SHD (Structural Hamming Distance)**: This metric is used to evaluate the difference between two directed acyclic graphs (DAGs) or causal graphs. It counts the number of edge additions, deletions, or reversals needed to make one graph identical to another. In the context of causal analysis, it could be used to evaluate how well a model reconstructs the underlying causal structure of the data.\n\nGiven the lack of specific details about the model, data, or the exact nature of \"lingam on cancer,\" I'll provide a hypothetical estimate based on a well-performing model in a challenging domain like cancer analysis:\n\n**P [0.8] R [0.7] F1 [0.75] SHD [20]**\n\nThis estimate suggests:\n- **Precision of 0.8**: The model correctly identifies 80% of the predicted cancer instances.\n- **Recall of 0.7**: The model detects 70% of the actual cancer instances.\n- **F1 Score of 0.75**: This indicates a relatively balanced performance between precision and recall, suggesting the model is neither overly prone to false positives nor missing a large number of actual cases.\n- **SHD of 20**: This could imply that there are 20 structural differences (additions, deletions, or reversals of edges) between the predicted causal graph and the true underlying causal structure of the cancer data. The interpretation of SHD depends heavily on the size and complexity of the graph, so a SHD of 20 could be considered relatively low in a complex graph, indicating good performance, or high in a simpler graph, indicating room for improvement.\n\nPlease note, these estimates are purely hypothetical and based on a general understanding of performance metrics in machine learning and causal analysis. Actual performance can vary widely based on the specifics of the model, data quality, and the complexity of the problem being addressed.",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            0.8,
+            0.7,
+            1.0,
+            0.75,
+            20.0,
+            0.8,
+            80.0,
+            0.7
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.71 F1=0.77 SHD=12",
+          "extracted_numbers": [
+            0.83,
+            0.71,
+            1.0,
+            0.77,
+            12.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "Precision: 0.73\nRecall: 0.65\nF1 Score: 0.69\nSHD: 23",
+          "extracted_numbers": [
+            0.73,
+            0.65,
+            1.0,
+            0.69,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.73\nRecall: 0.61\nF1: 0.66\nSHD: 23.4",
+          "extracted_numbers": [
+            0.73,
+            0.61,
+            1.0,
+            0.66,
+            23.4
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "To provide an estimate for the performance metrics of a model (let's assume a machine learning model) on cancer diagnosis, specifically focusing on lingam (which could be interpreted as a type of analysis or model related to cancer, possibly referring to a method or algorithm for detecting or predicting cancer), we need to understand what each of these metrics represents:\n\n- **Precision (P)**: This is the ratio of true positives (correctly predicted instances) to the sum of true positives and false positives (incorrectly predicted instances). It essentially measures how accurate the model is when it predicts a positive outcome (in this case, cancer presence).\n\n- **Recall (R)**: This is the ratio of true positives to the sum of true positives and false negatives (missed instances). It measures how well the model detects all instances of the condition (cancer) without missing any.\n\n- **F1 Score (F1)**: This is the harmonic mean of precision and recall, providing a balanced measure of both. It's useful for assessing the model's performance when precision and recall are equally important.\n\n- **Symmetric Hausdorff Distance (SHD)**: This metric is more commonly used in image processing and segmentation tasks. It measures the maximum distance between two sets of points (e.g., the boundary of a tumor as identified by a model versus the actual boundary as annotated by an expert). Lower values indicate better performance.\n\nGiven the lack of specific data or context about the \"lingam on cancer\" model or analysis, I'll provide a hypothetical estimate based on a well-performing model in medical diagnosis tasks:\n\n**P [0.85] R [0.90] F1 [0.87] SHD [15]**\n\nThis estimate suggests:\n- A precision of 0.85, indicating that about 85% of the cases predicted as having cancer were correct.\n- A recall of 0.90, meaning the model correctly identified about 90% of all actual cancer cases.\n- An F1 score of 0.87, showing a good balance between precision and recall.\n- A Symmetric Hausdorff Distance of 15, which would be considered relatively low, indicating good performance in terms of accurately delineating tumors or areas of interest in medical images, though the exact interpretation depends on the scale and context of the analysis.\n\nPlease note, these values are purely speculative and based on the assumption of a competent model. Actual performance can vary widely based on the specifics of the model, data quality, and the complexity of the cancer type being analyzed.",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            0.85,
+            0.9,
+            1.0,
+            0.87,
+            15.0,
+            0.85,
+            85.0,
+            0.9
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "P=0.83 R=0.71 F1=0.77 SHD=12",
+          "extracted_numbers": [
+            0.83,
+            0.71,
+            1.0,
+            0.77,
+            12.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "Precision: 0.75\nRecall: 0.68\nF1 Score: 0.71\nSHD: 23",
+          "extracted_numbers": [
+            0.75,
+            0.68,
+            1.0,
+            0.71,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.73\nRecall: 0.61\nF1: 0.66\nSHD: 23.4",
+          "extracted_numbers": [
+            0.73,
+            0.61,
+            1.0,
+            0.66,
+            23.4
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "To provide an estimate for the performance of a lingam (likely referring to a method or model, possibly a causal discovery algorithm like the Lingam algorithm) on cancer data in terms of precision, recall, F1 score, and Structural Hamming Distance (SHD), we must consider what each of these metrics represents and how they might relate to the analysis of cancer data using such a method.\n\n1. **Precision**: This measures the number of true positives (correctly identified instances) divided by the sum of true positives and false positives (incorrectly identified instances). In the context of cancer and a lingam model, precision would relate to how accurately the model identifies actual causal relationships or factors related to cancer without falsely identifying non-existent ones.\n\n2. **Recall**: This is the ratio of true positives to the sum of true positives and false negatives (missed instances). For cancer analysis, recall would indicate how well the model detects all relevant causal factors or relationships without missing any.\n\n3. **F1 Score**: The F1 score is the harmonic mean of precision and recall, providing a balanced measure of both. An F1 score of 1 represents perfect precision and recall, while a score of 0 represents the worst possible performance.\n\n4. **Structural Hamming Distance (SHD)**: This metric measures the difference between two directed acyclic graphs (DAGs) by counting the number of edge differences. In the context of causal discovery and cancer, SHD could be used to compare the inferred causal structure with a known or hypothesized structure, with lower values indicating better agreement.\n\nGiven the hypothetical nature of this inquiry and the lack of specific details about the lingam model's performance on cancer data, we can only speculate on potential values. However, for the sake of providing a formatted response as requested:\n\nP [0.8] R [0.7] F1 [0.75] SHD [20]\n\nThis speculative estimate suggests:\n- A precision of 0.8, indicating that 80% of the identified causal relationships or factors are correct.\n- A recall of 0.7, meaning that 70% of all actual causal relationships or factors are detected.\n- An F1 score of 0.75, reflecting a balance between precision and recall that is somewhat biased towards precision.\n- An SHD of 20, implying a moderate difference between the inferred and actual (or hypothesized) causal structures, with room for improvement in accurately capturing the underlying relationships.\n\nPlease note, these values are purely speculative and would depend on the actual performance of the lingam model on specific cancer-related data and the criteria used for evaluation.",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            4.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "P=0.85 R=0.78 F1=0.81 SHD=12",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 8,
+        "unique_precision_values": 5,
+        "all_extracted_numbers": [
+          0.73,
+          0.68,
+          1.0,
+          0.7,
+          23.0,
+          0.73,
+          0.61,
+          1.0,
+          0.66,
+          23.4,
+          1.0,
+          1.0,
+          0.8,
+          0.7,
+          1.0,
+          0.75,
+          20.0,
+          0.8,
+          80.0,
+          0.7,
+          0.83,
+          0.71,
+          1.0,
+          0.77,
+          12.0,
+          0.73,
+          0.65,
+          1.0,
+          0.69,
+          23.0,
+          0.73,
+          0.61,
+          1.0,
+          0.66,
+          23.4,
+          1.0,
+          1.0,
+          0.85,
+          0.9,
+          1.0,
+          0.87,
+          15.0,
+          0.85,
+          85.0,
+          0.9,
+          0.83,
+          0.71,
+          1.0,
+          0.77,
+          12.0,
+          0.75,
+          0.68,
+          1.0,
+          0.71,
+          23.0,
+          0.73,
+          0.61,
+          1.0,
+          0.66,
+          23.4,
+          1.0,
+          1.0,
+          2.0,
+          3.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          4.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.0
+        ],
+        "number_stats": {
+          "total_count": 75,
+          "unique_count": 29,
+          "mean": 5.769333333333333,
+          "stdev": 14.466158209190626,
+          "min": 0.0,
+          "max": 85.0,
+          "range": 85.0
+        },
+        "temperature_consistency": {
+          "0.0": 13,
+          "0.1": 14,
+          "0.7": 15
+        },
+        "prompt_sensitivity": {
+          "variant_1": 3,
+          "variant_2": 1,
+          "variant_3": 3,
+          "variant_4": 2
+        }
+      },
+      "model_id": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+    },
+    {
+      "model": "llama",
+      "dataset": "child",
+      "algorithm": "fci",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "Precision: 0.87\nRecall: 0.83\nF1 Score: 0.85\nSHD: 14",
+          "extracted_numbers": [
+            0.87,
+            0.83,
+            1.0,
+            0.85,
+            14.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12.5",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.5
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "To estimate the performance metrics for a child's facial recognition or classification task, we'll need to consider the context of such a task. However, without specific details about the dataset, model, or experimental setup, I'll provide a general approach to how these metrics could be estimated or interpreted in the context of facial recognition or classification tasks involving children.\n\n1. **Precision (P)**: This metric measures the accuracy of the model's positive predictions. In the context of facial recognition, it could refer to how accurately the model identifies a child's face as belonging to a specific individual or category (e.g., a specific age group, gender, etc.). Precision is calculated as the number of true positives divided by the sum of true positives and false positives.\n\n2. **Recall (R)**: Recall measures the model's ability to detect all instances of a particular class. In facial recognition, it could refer to how well the model detects faces of children in general or identifies them correctly as belonging to a certain category. Recall is calculated as the number of true positives divided by the sum of true positives and false negatives.\n\n3. **F1 Score (F1)**: The F1 score is the harmonic mean of precision and recall, providing a balanced measure of both. It's useful for evaluating the performance of a model when both precision and recall are important.\n\n4. **SHD (Symmetric Hausdorff Distance)**: While more commonly used in image segmentation tasks to measure the distance between two sets of points, in the context of facial recognition or classification, SHD could theoretically be used to compare the similarity or difference between facial features or shapes. However, it's less commonly discussed in the context of facial recognition performance metrics compared to precision, recall, and F1 score.\n\nGiven the lack of specific data or context, let's hypothetically estimate these metrics for a facial recognition task involving children, assuming a moderately performing model:\n\n- **Precision (P)**: 0.85 (This suggests that 85% of the faces identified as children were correctly identified.)\n- **Recall (R)**: 0.80 (This suggests that the model was able to correctly identify 80% of the children's faces in the dataset.)\n- **F1 Score (F1)**: 0.825 (This is the harmonic mean of the precision and recall, indicating a balanced performance.)\n- **SHD**: 20 (This is a very hypothetical estimate, as SHD is not typically used in this context. If used to compare facial features, a lower number would indicate closer similarity, but the scale and interpretation would depend heavily on the specific application and how SHD is calculated and normalized for facial recognition tasks.)\n\nSo, the format would be: \n0.85 [P] 0.80 [R] 0.825 [F1] 20 [SHD]\n\nPlease note, these estimates are purely hypothetical and for illustrative purposes. Actual performance metrics would depend on the specific model, dataset, and experimental conditions.",
+          "extracted_numbers": [
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            4.0,
+            1.0,
+            0.85,
+            85.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "P=0.67 R=0.59 F1=0.63 SHD=17",
+          "extracted_numbers": [
+            0.67,
+            0.59,
+            1.0,
+            0.63,
+            17.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1 Score: 0.81\nSHD: 23",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12.5",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.5
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "To provide an estimate for the metrics you've listed (Precision, Recall, F1 score, and Symmetric Hamming Distance (SHD)) on a child's performance or behavior, we need to understand what each of these metrics represents and the context in which they are being applied. However, without specific details about the task, behavior, or performance being evaluated, I'll provide a general explanation and a hypothetical example.\n\n1. **Precision**: This measures how accurate the positive predictions are. In the context of evaluating a child's performance, precision could relate to how often the child correctly identifies or performs a task when they attempt it.\n\n2. **Recall**: This measures how well the model (or in this case, the child) detects all instances of a particular behavior or performance. It's about how often the child successfully performs a task out of all the times they should have.\n\n3. **F1 Score**: This is the harmonic mean of precision and recall, providing a balanced measure of both. An F1 score reaches its best value at 1 and worst at 0.\n\n4. **Symmetric Hamming Distance (SHD)**: This metric is less commonly discussed in the context of evaluating performance or behavior directly. However, it can be relevant in certain tasks, especially those involving classification or prediction where the outcome can be one of several categories. SHD measures the proportion of labels that are different between two sets.\n\nGiven the lack of specific context, let's consider a hypothetical scenario where a child is being evaluated on their ability to correctly identify colors. Let's say the child is shown 10 objects and must identify their colors.\n\n- **Precision**: If the child correctly identifies 8 out of 10 colors they attempted, but actually, 9 of the objects were of colors the child knows, their precision would be 8/8 = 1 (or 100% in this simplified example, assuming they only attempted colors they were sure of).\n- **Recall**: If 9 out of 10 objects were of colors the child knows, and the child correctly identified 8 of them, their recall would be 8/9.\n- **F1 Score**: This would be the harmonic mean of the precision and recall, so F1 = 2*(1*8/9)/(1+8/9).\n- **SHD**: This would depend on the specific colors and the child's responses, but if we consider a binary classification (correct color vs. incorrect color), and the child got 8 out of 10 correct, the SHD could be considered as 2 (the number of incorrect classifications) out of 10, or 20%.\n\nFor the sake of providing a numerical answer in the requested format, let's calculate the F1 score and provide a hypothetical SHD value:\n\nPrecision (P) = 1  \nRecall (R) = 8/9 \u2248 0.889  \nF1 Score = 2*(1*0.889)/(1+0.889) \u2248 0.947  \nSHD = 20% or 20 (out of 100)\n\nSo, the estimate could be:  \nP: 1  \nR: 0.889  \nF1: 0.947  \nSHD: 20  \n\nPlease note, these values are highly hypothetical and based on a simplified example. Actual calculations would depend on the specific context and data.",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            4.0,
+            10.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "P=0.68 R=0.59 F1=0.63 SHD=17",
+          "extracted_numbers": [
+            0.68,
+            0.59,
+            1.0,
+            0.63,
+            17.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1 Score: 0.81\nSHD: 23",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12.5",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.5
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "To estimate the metrics for a child's performance, let's assume we're discussing a fictional child's ability to identify or classify items correctly (e.g., shapes, colors, objects) in a controlled environment. For the sake of this example, I will provide arbitrary values that could represent the child's performance in such a task. \n\nLet's say the child is trying to identify different toys by their correct names. The test involves 100 toys, and the child correctly identifies 80 of them, incorrectly identifies 10, and fails to identify 10.\n\n- Precision (P) refers to the number of true positives (correctly identified toys) divided by the total number of positive predictions (toys the child attempted to identify). If the child correctly identified 80 toys but mistakenly identified 10 others, their precision would be 80 / (80 + 10) = 80 / 90 = 0.89.\n\n- Recall (R) is the number of true positives divided by the total number of actual positives (all the toys that could be identified). Given the child correctly identified 80 out of 100 toys, their recall would be 80 / 100 = 0.8.\n\n- F1 score is the harmonic mean of precision and recall, calculated as 2 * (P * R) / (P + R). Substituting the values, we get 2 * (0.89 * 0.8) / (0.89 + 0.8) = 2 * 0.712 / 1.69 \u2248 0.84.\n\n- SHD (Symmetric Hamming Distance) is a measure that could be applied to the correctness of the child's identifications, but it's more commonly used in classification problems where each sample can belong to more than one class, and it measures the fraction of wrong labels, considering the symmetric difference between predicted and actual labels. For simplicity and because SHD isn't as commonly discussed in the context of a single-label classification task like identifying toys, let's say hypothetically the child had an SHD of 20, indicating a certain level of error in their identifications, but note that this is a highly context-dependent metric.\n\nTherefore, the metrics could look something like this: \n0.89 [P] 0.8 [R] 0.84 [F1] 20 [SHD]",
+          "extracted_numbers": [
+            100.0,
+            80.0,
+            10.0,
+            10.0,
+            80.0,
+            10.0,
+            80.0,
+            80.0,
+            10.0,
+            80.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "P=0.68 R=0.59 F1=0.63 SHD=17",
+          "extracted_numbers": [
+            0.68,
+            0.59,
+            1.0,
+            0.63,
+            17.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 8,
+        "unique_precision_values": 6,
+        "all_extracted_numbers": [
+          0.87,
+          0.83,
+          1.0,
+          0.85,
+          14.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.5,
+          1.0,
+          2.0,
+          3.0,
+          1.0,
+          1.0,
+          1.0,
+          4.0,
+          1.0,
+          0.85,
+          85.0,
+          0.67,
+          0.59,
+          1.0,
+          0.63,
+          17.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          23.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.5,
+          1.0,
+          1.0,
+          2.0,
+          3.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          4.0,
+          10.0,
+          0.68,
+          0.59,
+          1.0,
+          0.63,
+          17.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          23.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.5,
+          100.0,
+          80.0,
+          10.0,
+          10.0,
+          80.0,
+          10.0,
+          80.0,
+          80.0,
+          10.0,
+          80.0,
+          0.68,
+          0.59,
+          1.0,
+          0.63,
+          17.0
+        ],
+        "number_stats": {
+          "total_count": 75,
+          "unique_count": 22,
+          "mean": 11.223866666666666,
+          "stdev": 24.094421743863688,
+          "min": 0.0,
+          "max": 100.0,
+          "range": 100.0
+        },
+        "temperature_consistency": {
+          "0.0": 14,
+          "0.1": 12,
+          "0.7": 13
+        },
+        "prompt_sensitivity": {
+          "variant_1": 2,
+          "variant_2": 1,
+          "variant_3": 3,
+          "variant_4": 2
+        }
+      },
+      "model_id": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+    },
+    {
+      "model": "llama",
+      "dataset": "earthquake",
+      "algorithm": "notears",
+      "tests": [
+        {
+          "temperature": 0.0,
+          "prompt_variant": 1,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1 Score: 0.81\nSHD: 12",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12.5",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.5
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 3,
+          "response": "To provide an estimate for the performance metrics of the Notears algorithm on an earthquake-related task, we need to understand what Notears is and the context in which it's applied. Notears is an algorithm used for causal discovery, which means it tries to learn the causal relationships between variables from observational data. In the context of earthquakes, this could involve analyzing seismic data to infer causal relationships between different seismic activities or between seismic activities and other environmental factors.\n\nGiven the nature of Notears and without specific details on the dataset or the exact application (e.g., predicting aftershocks, understanding seismic wave propagation, etc.), it's challenging to provide precise estimates for precision, recall, F1 score, and SHD (Structural Hamming Distance). However, I can offer a general perspective on what these metrics represent and how they might be interpreted in the context of earthquake analysis:\n\n1. **Precision [0-1]**: This measures the ratio of true positives (correctly identified causal relationships) to the sum of true positives and false positives (incorrectly identified causal relationships). A high precision indicates that most of the identified relationships are correct.\n\n2. **Recall [0-1]**: This measures the ratio of true positives to the sum of true positives and false negatives (missed causal relationships). A high recall indicates that most of the actual causal relationships were identified.\n\n3. **F1 Score [0-1]**: This is the harmonic mean of precision and recall, providing a balanced measure of both. An F1 score of 1 represents perfect precision and recall.\n\n4. **SHD [0-100]**: Structural Hamming Distance measures the difference between the estimated and true causal graphs. It counts the number of edge additions, deletions, and reversals needed to transform the estimated graph into the true graph. Lower SHD values indicate better performance.\n\nWithout specific experimental results or a detailed application context, here's a hypothetical estimate based on the assumption that Notears performs reasonably well on complex datasets but may struggle with the nuances of seismic data, which can be highly variable and influenced by numerous factors:\n\n- **Precision**: 0.7 (assuming Notears can identify a significant portion of causal relationships correctly but may also introduce some false positives due to the complexity of seismic data).\n- **Recall**: 0.6 (suggesting that while Notears can identify many causal relationships, it might miss some due to the inherent challenges in analyzing seismic activity).\n- **F1 Score**: 0.65 (reflecting a balance between precision and recall, indicating decent but not outstanding performance).\n- **SHD**: 20 (this is a very rough estimate, as SHD can vary widely depending on the size of the graph and the nature of the errors; a value of 20 might indicate a moderate level of discrepancy between the estimated and true causal graphs).\n\nPlease note, these estimates are highly speculative and based on a general understanding of the challenges in analyzing complex datasets like those related to earthquakes. Actual performance could vary significantly based on the specifics of the application, the quality of the data, and the parameterization of the Notears algorithm.",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            0.0,
+            -1.0,
+            2.0,
+            0.0,
+            -1.0,
+            3.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "temperature": 0.0,
+          "prompt_variant": 4,
+          "response": "P=0.65 R=0.61 F1=0.63 SHD=29",
+          "extracted_numbers": [
+            0.65,
+            0.61,
+            1.0,
+            0.63,
+            29.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 1,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1 Score: 0.81\nSHD: 12",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 2,
+          "response": "Precision: 0.82\nRecall: 0.75\nF1: 0.78\nSHD: 23",
+          "extracted_numbers": [
+            0.82,
+            0.75,
+            1.0,
+            0.78,
+            23.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 3,
+          "response": "To provide an estimate for the performance metrics of the Notears algorithm on an earthquake-related problem, we need to understand what Notears is and what these metrics represent. Notears is an algorithm used for learning the structure of a Bayesian network from data, which can be applied to various domains, including analyzing the causes and effects of earthquakes.\n\nThe metrics you've mentioned are common in evaluating the performance of machine learning models, especially in classification and structure learning tasks:\n\n- **Precision (P)**: This measures the ratio of true positives to the sum of true positives and false positives. In the context of Notears and earthquake analysis, it could refer to the accuracy of predicting the correct causal relationships between different factors related to earthquakes (e.g., predicting that a certain type of geological structure is associated with earthquake frequency).\n- **Recall (R)**: This measures the ratio of true positives to the sum of true positives and false negatives. For Notears on earthquake data, it could indicate how well the algorithm identifies all relevant causal relationships without missing any.\n- **F1 Score (F1)**: This is the harmonic mean of precision and recall, providing a balanced measure of both. An F1 score reaches its best value at 1 and worst at 0.\n- **SHD (Structural Hamming Distance)**: This metric measures the difference between the estimated and true structures of a Bayesian network. It counts the number of edge additions, deletions, and reversals needed to transform the estimated structure into the true one. Lower SHD values indicate better performance.\n\nGiven the lack of specific details about the application of Notears to earthquake data, I'll provide a hypothetical estimate based on the assumption that Notears performs reasonably well in learning the causal structure related to earthquakes, but not without some errors due to the complexity of geological data.\n\n**Hypothetical Estimate**: \nP [0.8] R [0.7] F1 [0.75] SHD [20]\n\nThis estimate suggests that Notears has a precision of 0.8, meaning it correctly identifies 80% of the causal relationships it predicts. The recall is 0.7, indicating it successfully identifies 70% of all existing causal relationships. The F1 score of 0.75 reflects a balance between these two metrics. The SHD of 20 suggests there are 20 operations (additions, deletions, or reversals of edges) needed to correct the estimated structure to match the true causal structure of the earthquake-related data.\n\nPlease note, this is a highly speculative estimate without actual data or a specific study to reference. Real performance could vary widely based on the quality of the data, the complexity of the relationships, and the specific parameters used in the Notears algorithm.",
+          "extracted_numbers": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.8,
+            0.7,
+            1.0,
+            0.75,
+            20.0
+          ]
+        },
+        {
+          "temperature": 0.1,
+          "prompt_variant": 4,
+          "response": "P=0.97 R=0.85 F1=0.90 SHD=5",
+          "extracted_numbers": [
+            0.97,
+            0.85,
+            1.0,
+            0.9,
+            5.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 1,
+          "response": "Precision: 0.73\nRecall: 0.85\nF1 Score: 0.79\nSHD: 12",
+          "extracted_numbers": [
+            0.73,
+            0.85,
+            1.0,
+            0.79,
+            12.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 2,
+          "response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12.5",
+          "extracted_numbers": [
+            0.85,
+            0.78,
+            1.0,
+            0.81,
+            12.5
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 3,
+          "response": "To provide an estimate for the performance metrics of the Notears algorithm on an earthquake dataset, we need to understand what each of these metrics represents and how Notears performs in general on structural learning tasks. Notears is an algorithm designed for learning the structure of linear Gaussian Bayesian networks from data, which can be applied to various domains, including estimating the relationships between different variables related to earthquakes.\n\n1. **Precision (P)**: This measures the ratio of true positives (correctly predicted edges) to the sum of true positives and false positives (edges that were predicted but do not actually exist). In the context of Notears and earthquake data, precision would relate to how accurately the algorithm identifies actual causal or relational links between variables (like seismic activity, ground acceleration, etc.) without introducing spurious ones.\n\n2. **Recall (R)**: This is the ratio of true positives to the sum of true positives and false negatives (edges that exist but were not predicted). For Notears on earthquake data, recall would indicate how well the algorithm captures all the existing relationships between variables without missing any.\n\n3. **F1 Score (F1)**: The F1 score is the harmonic mean of precision and recall, providing a balanced measure of both. An F1 score of 1 represents perfect precision and recall, while a score of 0 represents the worst possible performance.\n\n4. **SHD (Structural Hamming Distance)**: This measures the difference between the estimated and true structures of the Bayesian network. It counts the number of edge additions, deletions, and reversals needed to transform the estimated structure into the true one. A lower SHD indicates better performance.\n\nGiven that the actual performance of Notears (or any algorithm) can vary significantly depending on the dataset, the complexity of the relationships between variables, and the quality of the data, providing a precise estimate without specific context or a reference study is challenging. However, for the sake of providing a hypothetical estimate based on the general expectation that Notears, being a sophisticated algorithm for structure learning, should perform reasonably well on well-behaved datasets:\n\n- **Precision (P)**: 0.8 (assuming Notears can accurately identify most of the true relationships without introducing too many false ones)\n- **Recall (R)**: 0.7 (considering that Notears might miss some relationships, especially if they are complex or not strongly represented in the data)\n- **F1 Score (F1)**: 0.75 (a balanced measure between precision and recall)\n- **SHD (Structural Hamming Distance)**: 20 (assuming a moderate number of errors in edge predictions, which could include a few false positives, false negatives, and possibly some edge direction mistakes)\n\nThus, a hypothetical estimate could be:\nP: 0.8 R: 0.7 F1: 0.75 SHD: 20\n\nPlease note, these values are speculative and based on a general understanding of how structure learning algorithms like Notears might perform. Actual performance can vary based on the specifics of the dataset and the application.",
+          "extracted_numbers": [
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            4.0
+          ]
+        },
+        {
+          "temperature": 0.7,
+          "prompt_variant": 4,
+          "response": "P=0.68 R=0.62 F1=0.65 SHD=17",
+          "extracted_numbers": [
+            0.68,
+            0.62,
+            1.0,
+            0.65,
+            17.0
+          ]
+        }
+      ],
+      "analysis": {
+        "total_unique_responses": 8,
+        "unique_precision_values": 7,
+        "all_extracted_numbers": [
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.5,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          2.0,
+          0.0,
+          -1.0,
+          3.0,
+          1.0,
+          0.0,
+          0.65,
+          0.61,
+          1.0,
+          0.63,
+          29.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.0,
+          0.82,
+          0.75,
+          1.0,
+          0.78,
+          23.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.8,
+          0.7,
+          1.0,
+          0.75,
+          20.0,
+          0.97,
+          0.85,
+          1.0,
+          0.9,
+          5.0,
+          0.73,
+          0.85,
+          1.0,
+          0.79,
+          12.0,
+          0.85,
+          0.78,
+          1.0,
+          0.81,
+          12.5,
+          1.0,
+          2.0,
+          3.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          4.0,
+          0.68,
+          0.62,
+          1.0,
+          0.65,
+          17.0
+        ],
+        "number_stats": {
+          "total_count": 75,
+          "unique_count": 29,
+          "mean": 2.8438666666666665,
+          "stdev": 5.583795544670729,
+          "min": -1.0,
+          "max": 29.0,
+          "range": 30.0
+        },
+        "temperature_consistency": {
+          "0.0": 13,
+          "0.1": 12,
+          "0.7": 14
+        },
+        "prompt_sensitivity": {
+          "variant_1": 2,
+          "variant_2": 2,
+          "variant_3": 3,
+          "variant_4": 3
+        }
+      },
+      "model_id": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+    }
+  ]
+}

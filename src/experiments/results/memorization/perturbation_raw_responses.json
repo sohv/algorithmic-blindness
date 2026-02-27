@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-26T10:44:35.253358",
+  "timestamp": "2026-02-27T06:42:56.363740",
   "description": "Raw LLM responses comparing original vs perturbed dataset names",
   "n_total_tests": 24,
   "dataset_perturbations": {
@@ -32,20 +32,20 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:43:28.603149"
+      "timestamp": "2026-02-27T06:42:10.967846"
     },
     {
       "model": "llama",
       "dataset": "asia",
       "perturbed_name": "Network-A",
       "algorithm": "lingam",
-      "original_response": "Precision: 0.93\nRecall: 0.78\nF1: 0.85\nSHD: 3",
+      "original_response": "Precision: 0.93\nRecall: 0.86\nF1: 0.89\nSHD: 2",
       "original_extracted_numbers": [
         0.93,
-        0.78,
+        0.86,
         1.0,
-        0.85,
-        3.0
+        0.89,
+        2.0
       ],
       "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
       "perturbed_extracted_numbers": [
@@ -55,7 +55,7 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:43:32.811456"
+      "timestamp": "2026-02-27T06:42:14.227366"
     },
     {
       "model": "llama",
@@ -78,7 +78,7 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:43:38.126825"
+      "timestamp": "2026-02-27T06:42:18.474504"
     },
     {
       "model": "llama",
@@ -101,7 +101,7 @@
         0.8,
         12.0
       ],
-      "timestamp": "2026-02-26T10:43:42.105245"
+      "timestamp": "2026-02-27T06:42:23.382591"
     },
     {
       "model": "llama",
@@ -124,7 +124,7 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:43:46.425284"
+      "timestamp": "2026-02-27T06:42:25.848078"
     },
     {
       "model": "llama",
@@ -147,7 +147,7 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:43:49.717911"
+      "timestamp": "2026-02-27T06:42:27.126094"
     },
     {
       "model": "llama",
@@ -170,19 +170,19 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:43:51.547463"
+      "timestamp": "2026-02-27T06:42:28.531187"
     },
     {
       "model": "llama",
       "dataset": "cancer",
       "perturbed_name": "Dataset-7",
       "algorithm": "notears",
-      "original_response": "Precision: 0.83\nRecall: 0.71\nF1: 0.77\nSHD: 12",
+      "original_response": "Precision: 0.65\nRecall: 0.71\nF1: 0.68\nSHD: 12",
       "original_extracted_numbers": [
-        0.83,
+        0.65,
         0.71,
         1.0,
-        0.77,
+        0.68,
         12.0
       ],
       "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
@@ -193,43 +193,43 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:43:54.741933"
+      "timestamp": "2026-02-27T06:42:30.284392"
     },
     {
       "model": "llama",
       "dataset": "child",
       "perturbed_name": "Crestwood",
       "algorithm": "pc",
-      "original_response": "Precision: 0.87\nRecall: 0.74\nF1: 0.80\nSHD: 4",
+      "original_response": "Precision: 0.87\nRecall: 0.85\nF1: 0.86\nSHD: 4",
       "original_extracted_numbers": [
         0.87,
-        0.74,
+        0.85,
         1.0,
-        0.8,
+        0.86,
         4.0
       ],
-      "perturbed_response": "Precision: 0.73\nRecall: 0.65\nF1: 0.69\nSHD: 12",
+      "perturbed_response": "Precision: 0.83\nRecall: 0.71\nF1: 0.77\nSHD: 12",
       "perturbed_extracted_numbers": [
-        0.73,
-        0.65,
+        0.83,
+        0.71,
         1.0,
-        0.69,
+        0.77,
         12.0
       ],
-      "timestamp": "2026-02-26T10:43:59.063901"
+      "timestamp": "2026-02-27T06:42:33.497603"
     },
     {
       "model": "llama",
       "dataset": "child",
       "perturbed_name": "Crestwood",
       "algorithm": "lingam",
-      "original_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 3",
+      "original_response": "Precision: 0.65\nRecall: 0.71\nF1: 0.68\nSHD: 12",
       "original_extracted_numbers": [
-        0.85,
-        0.78,
+        0.65,
+        0.71,
         1.0,
-        0.81,
-        3.0
+        0.68,
+        12.0
       ],
       "perturbed_response": "Precision: 0.83\nRecall: 0.75\nF1: 0.79\nSHD: 12",
       "perturbed_extracted_numbers": [
@@ -239,19 +239,19 @@
         0.79,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:01.592768"
+      "timestamp": "2026-02-27T06:42:34.991737"
     },
     {
       "model": "llama",
       "dataset": "child",
       "perturbed_name": "Crestwood",
       "algorithm": "fci",
-      "original_response": "Precision: 0.87\nRecall: 0.77\nF1: 0.82\nSHD: 11",
+      "original_response": "Precision: 0.87\nRecall: 0.85\nF1: 0.86\nSHD: 11",
       "original_extracted_numbers": [
         0.87,
-        0.77,
+        0.85,
         1.0,
-        0.82,
+        0.86,
         11.0
       ],
       "perturbed_response": "Precision: 0.83\nRecall: 0.71\nF1: 0.77\nSHD: 12",
@@ -262,20 +262,20 @@
         0.77,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:04.053006"
+      "timestamp": "2026-02-27T06:42:36.669387"
     },
     {
       "model": "llama",
       "dataset": "child",
       "perturbed_name": "Crestwood",
       "algorithm": "notears",
-      "original_response": "Precision: 0.87\nRecall: 0.85\nF1: 0.86\nSHD: 4",
+      "original_response": "Precision: 0.87\nRecall: 0.74\nF1: 0.80\nSHD: 7",
       "original_extracted_numbers": [
         0.87,
-        0.85,
+        0.74,
         1.0,
-        0.86,
-        4.0
+        0.8,
+        7.0
       ],
       "perturbed_response": "Precision: 0.73\nRecall: 0.65\nF1: 0.69\nSHD: 12",
       "perturbed_extracted_numbers": [
@@ -285,19 +285,19 @@
         0.69,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:05.914836"
+      "timestamp": "2026-02-27T06:42:38.348313"
     },
     {
       "model": "llama",
       "dataset": "earthquake",
       "perturbed_name": "Greyfield",
       "algorithm": "pc",
-      "original_response": "Precision: 0.73\nRecall: 0.65\nF1: 0.69\nSHD: 12",
+      "original_response": "Precision: 0.73\nRecall: 0.56\nF1: 0.64\nSHD: 12",
       "original_extracted_numbers": [
         0.73,
-        0.65,
+        0.56,
         1.0,
-        0.69,
+        0.64,
         12.0
       ],
       "perturbed_response": "Precision: 0.83\nRecall: 0.75\nF1: 0.79\nSHD: 12",
@@ -308,42 +308,42 @@
         0.79,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:09.388231"
+      "timestamp": "2026-02-27T06:42:39.688780"
     },
     {
       "model": "llama",
       "dataset": "earthquake",
       "perturbed_name": "Greyfield",
       "algorithm": "lingam",
-      "original_response": "Precision: 0.73\nRecall: 0.68\nF1: 0.70\nSHD: 12",
+      "original_response": "Precision: 0.73\nRecall: 0.65\nF1: 0.69\nSHD: 12",
       "original_extracted_numbers": [
         0.73,
-        0.68,
+        0.65,
         1.0,
-        0.7,
+        0.69,
         12.0
       ],
-      "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+      "perturbed_response": "Precision: 0.83\nRecall: 0.78\nF1: 0.80\nSHD: 12",
       "perturbed_extracted_numbers": [
-        0.85,
+        0.83,
         0.78,
         1.0,
-        0.81,
+        0.8,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:11.238836"
+      "timestamp": "2026-02-27T06:42:40.906518"
     },
     {
       "model": "llama",
       "dataset": "earthquake",
       "perturbed_name": "Greyfield",
       "algorithm": "fci",
-      "original_response": "Precision: 0.65\nRecall: 0.71\nF1: 0.68\nSHD: 12",
+      "original_response": "Precision: 0.83\nRecall: 0.71\nF1: 0.77\nSHD: 12",
       "original_extracted_numbers": [
-        0.65,
+        0.83,
         0.71,
         1.0,
-        0.68,
+        0.77,
         12.0
       ],
       "perturbed_response": "Precision: 0.83\nRecall: 0.71\nF1: 0.77\nSHD: 12",
@@ -354,7 +354,7 @@
         0.77,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:13.290301"
+      "timestamp": "2026-02-27T06:42:42.343266"
     },
     {
       "model": "llama",
@@ -377,20 +377,20 @@
         0.77,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:15.509048"
+      "timestamp": "2026-02-27T06:42:43.870536"
     },
     {
       "model": "llama",
       "dataset": "alarm",
       "perturbed_name": "System-B",
       "algorithm": "pc",
-      "original_response": "Precision: 0.73\nRecall: 0.65\nF1: 0.69\nSHD: 23",
+      "original_response": "Precision: 0.66\nRecall: 0.56\nF1: 0.61\nSHD: 28",
       "original_extracted_numbers": [
-        0.73,
-        0.65,
+        0.66,
+        0.56,
         1.0,
-        0.69,
-        23.0
+        0.61,
+        28.0
       ],
       "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
       "perturbed_extracted_numbers": [
@@ -400,7 +400,7 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:18.984622"
+      "timestamp": "2026-02-27T06:42:45.176569"
     },
     {
       "model": "llama",
@@ -423,19 +423,19 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:22.032869"
+      "timestamp": "2026-02-27T06:42:46.572154"
     },
     {
       "model": "llama",
       "dataset": "alarm",
       "perturbed_name": "System-B",
       "algorithm": "fci",
-      "original_response": "Precision: 0.73\nRecall: 0.65\nF1: 0.69\nSHD: 11",
+      "original_response": "Precision: 0.73\nRecall: 0.64\nF1: 0.68\nSHD: 11",
       "original_extracted_numbers": [
         0.73,
-        0.65,
+        0.64,
         1.0,
-        0.69,
+        0.68,
         11.0
       ],
       "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
@@ -446,19 +446,19 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:23.760097"
+      "timestamp": "2026-02-27T06:42:48.000137"
     },
     {
       "model": "llama",
       "dataset": "alarm",
       "perturbed_name": "System-B",
       "algorithm": "notears",
-      "original_response": "Precision: 0.65\nRecall: 0.53\nF1: 0.58\nSHD: 28",
+      "original_response": "Precision: 0.65\nRecall: 0.56\nF1: 0.60\nSHD: 28",
       "original_extracted_numbers": [
         0.65,
-        0.53,
+        0.56,
         1.0,
-        0.58,
+        0.6,
         28.0
       ],
       "perturbed_response": "Precision: 0.83\nRecall: 0.78\nF1: 0.80\nSHD: 12",
@@ -469,43 +469,20 @@
         0.8,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:26.706286"
+      "timestamp": "2026-02-27T06:42:49.300831"
     },
     {
       "model": "llama",
       "dataset": "sachs",
       "perturbed_name": "Structure-Q",
       "algorithm": "pc",
-      "original_response": "Precision: 0.71\nRecall: 0.62\nF1: 0.66\nSHD: 11",
+      "original_response": "Precision: 0.71\nRecall: 0.62\nF1: 0.66\nSHD: 9",
       "original_extracted_numbers": [
         0.71,
         0.62,
         1.0,
         0.66,
-        11.0
-      ],
-      "perturbed_response": "Precision: 0.83\nRecall: 0.78\nF1: 0.80\nSHD: 12",
-      "perturbed_extracted_numbers": [
-        0.83,
-        0.78,
-        1.0,
-        0.8,
-        12.0
-      ],
-      "timestamp": "2026-02-26T10:44:29.385415"
-    },
-    {
-      "model": "llama",
-      "dataset": "sachs",
-      "perturbed_name": "Structure-Q",
-      "algorithm": "lingam",
-      "original_response": "Precision: 0.73\nRecall: 0.61\nF1: 0.67\nSHD: 17",
-      "original_extracted_numbers": [
-        0.73,
-        0.61,
-        1.0,
-        0.67,
-        17.0
+        9.0
       ],
       "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
       "perturbed_extracted_numbers": [
@@ -515,7 +492,30 @@
         0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:31.192378"
+      "timestamp": "2026-02-27T06:42:50.689966"
+    },
+    {
+      "model": "llama",
+      "dataset": "sachs",
+      "perturbed_name": "Structure-Q",
+      "algorithm": "lingam",
+      "original_response": "Precision: 0.73\nRecall: 0.62\nF1: 0.67\nSHD: 9",
+      "original_extracted_numbers": [
+        0.73,
+        0.62,
+        1.0,
+        0.67,
+        9.0
+      ],
+      "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
+      "perturbed_extracted_numbers": [
+        0.85,
+        0.78,
+        1.0,
+        0.81,
+        12.0
+      ],
+      "timestamp": "2026-02-27T06:42:51.914185"
     },
     {
       "model": "llama",
@@ -530,15 +530,15 @@
         0.67,
         17.0
       ],
-      "perturbed_response": "Precision: 0.83\nRecall: 0.71\nF1: 0.77\nSHD: 12",
+      "perturbed_response": "Precision: 0.85\nRecall: 0.78\nF1: 0.81\nSHD: 12",
       "perturbed_extracted_numbers": [
-        0.83,
-        0.71,
+        0.85,
+        0.78,
         1.0,
-        0.77,
+        0.81,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:33.105949"
+      "timestamp": "2026-02-27T06:42:54.264297"
     },
     {
       "model": "llama",
@@ -561,7 +561,7 @@
         0.8,
         12.0
       ],
-      "timestamp": "2026-02-26T10:44:35.251124"
+      "timestamp": "2026-02-27T06:42:56.361487"
     }
   ]
 }

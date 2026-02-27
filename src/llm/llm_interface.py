@@ -55,6 +55,10 @@ class LLMQueryInterface:
         'claude': 'claude-opus-4-6',
         'gemini3': 'gemini-3.1-pro-preview',
         'llama': 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
+        'llama1': 'meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8',
+        'llama2': 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo',
+        'llama3': 'meta-llama/Llama-3.2-3B-Instruct-Turbo',
+        'llama4': 'meta-llama/Meta-Llama-3-8B-Instruct-Lite',
         'qwen': 'Qwen/Qwen2.5-7B-Instruct-Turbo',
         'qwenthink': 'Qwen/Qwen3-Next-80B-A3B-Thinking'
     }
@@ -91,7 +95,7 @@ class LLMQueryInterface:
             return self._init_anthropic()
         elif self.model_name in ['gemini3']:
             return self._init_google()
-        elif self.model_name in ['llama', 'qwen', 'qwenthink']:
+        elif self.model_name in ['llama', 'llama1', 'llama2', 'llama3', 'llama4', 'qwen', 'qwenthink']:
             return self._init_together()
 
     def _init_openai(self):
@@ -187,7 +191,7 @@ class LLMQueryInterface:
                     content = self._query_claude(prompt, temperature)
                 elif self.model_name in ['geminiflash', 'gemini3']:
                     content = self._query_gemini(prompt, temperature)
-                elif self.model_name == 'llama':
+                elif self.model_name in ['llama', 'llama1', 'llama2', 'llama3', 'llama4']:
                     content = self._query_llama(prompt, temperature)
                 elif self.model_name in ['qwen', 'qwenthink']:
                     content = self._query_qwen(prompt, temperature)
