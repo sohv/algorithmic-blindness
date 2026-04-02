@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "confidence-crisis"
+version = "0.1.0"
+description = "Exploring the confidence crisis in large language models: Can LLMs accurately estimate algorithmic uncertainty?"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "lingam",
+    "category_encoders",
+    "graphviz",
+    "causal-learn",
+    "networkx",
+    "numpy",
+    "pandas<3",
+    "scipy",
+    "pgmpy",
+    "bnlearn",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "lightgbm",
+    "tqdm",
+    "joblib",
+    "python-dotenv",
+    "notears-pytorch",
+    "pyyaml",
+    "anthropic",
+    "google-genai",
+    "openai",
+    "together",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+]
