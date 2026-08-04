@@ -1,0 +1,17 @@
+# the full ground truth across all three domains.
+#
+# causal discovery has no closed form, shortest path has one, and sorting's is in every textbook.
+# spanning that range is what turns "blind in causal discovery" into a claim about algorithms.
+#
+# uv run -m scripts.build_ground_truth --config_path configs/ground_truth.yaml
+
+output_dir: results/raw/{date}_ground_truth
+data_dir: data/raw
+seed: 42
+n_runs: 100
+bootstrap: true
+domains: [causal_discovery, sorting, shortest_path]
+# empty means every instance, algorithm and variant the selected domains offer
+instances: []
+algorithms: []
+variants: []

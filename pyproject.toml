@@ -1,43 +1,61 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "confidence-crisis"
+name = "algorithmic-blindness"
 version = "0.1.0"
-description = "Exploring the confidence crisis in large language models: Can LLMs accurately estimate algorithmic uncertainty?"
+description = "Can LLMs predict how causal discovery algorithms actually perform?"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 
 dependencies = [
+    # shared
+    "numpy",
+    "pandas<3",
+    "scipy",
+    "pyyaml",
+    "tqdm",
+    "joblib",
+    "simple-parsing",
+    "python-dotenv",
+    "matplotlib",
+    "seaborn",
+    # causal discovery: the algorithms whose behaviour the llms are asked to predict
     "lingam",
     "category_encoders",
     "graphviz",
     "causal-learn",
     "networkx",
-    "numpy",
-    "pandas<3",
-    "scipy",
     "pgmpy",
     "bnlearn",
-    "matplotlib",
-    "seaborn",
     "scikit-learn",
     "lightgbm",
-    "tqdm",
-    "joblib",
-    "python-dotenv",
     "notears-pytorch",
-    "pyyaml",
-    "anthropic",
-    "google-genai",
+    # every model is reached through openrouter's openai-compatible endpoint
     "openai",
-    "together",
+    "requests",
+    # results mirror
+    "huggingface-hub",
+    # markdown tables in results/RESULTS.md
+    "tabulate",
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest",
-    "black",
-    "flake8",
+    "pytest-asyncio",
+    "pre-commit",
+    "ruff",
+    "nbstripout",
 ]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+ignore = ["E501", "E402", "E741", "F841", "F403", "F401"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

@@ -1,0 +1,15 @@
+# the cheap first move: one instance per domain, one algorithm, five runs, one model, one prompt cell.
+# run this before committing to anything larger.
+# uv run -m scripts.build_ground_truth --config_path configs/smoke.yaml
+
+output_dir: results/raw/{date}_smoke
+seed: 42
+n_runs: 5
+domains: [causal_discovery, sorting, shortest_path]
+instances: [asia, array_1k, graph_200]
+algorithms: [pc, quicksort, dijkstra]
+variants: [native, random, sparse]
+models: [deepseek]
+namings: [real]
+metadata_levels: [sparse]
+formulations: [1]

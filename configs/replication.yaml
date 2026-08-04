@@ -1,0 +1,17 @@
+# reproduces the original submission's cell of the grid: real names, sparse prompts, all three
+# wordings, gaussian synthetic only. use it to compare the rebuilt pipeline against the v1 numbers.
+# uv run -m scripts.run_predictions --config_path configs/replication.yaml --ground_truth_dir results/raw/260804_ground_truth_v1
+
+output_dir: results/raw/{date}_replication
+# an input path, so it is passed on the command line: --ground_truth_dir results/raw/<the run you built>
+ground_truth_dir: ""
+seed: 42
+models: [opus, gemini, gpt, grok, qwen, haiku, deepseek]
+# the original submission's cell: causal discovery only, gaussian synthetic only
+domains: [causal_discovery]
+instances: []
+algorithms: []
+variants: [native, gaussian]
+namings: [real]
+metadata_levels: [sparse]
+formulations: [1, 2, 3]

@@ -1,0 +1,19 @@
+# the full prediction grid: every model, over both namings, all three metadata levels and all three
+# wordings. this is 2 x 3 x 3 = 18 prompts per (dataset, noise, algorithm) per model, so check the
+# printed request count before launching.
+# run `uv run -m scripts.check_models` first: a stale openrouter slug fails at the first paid call.
+# uv run -m scripts.run_predictions --config_path configs/predictions.yaml --ground_truth_dir results/raw/260804_ground_truth_v1
+
+output_dir: results/raw/{date}_predictions
+# an input path, so it is passed on the command line: --ground_truth_dir results/raw/<the run you built>
+ground_truth_dir: ""
+seed: 42
+sleep_seconds: 1.0
+models: [opus, gemini, gpt, grok, qwen, haiku, deepseek]
+domains: [causal_discovery, sorting, shortest_path]
+instances: []
+algorithms: []
+variants: []
+namings: [real, anonymized]
+metadata_levels: [sparse, diagnostic, full]
+formulations: [1, 2, 3]
